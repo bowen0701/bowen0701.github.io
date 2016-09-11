@@ -4,8 +4,10 @@ title: "Notes on 'Learning How to Learn'"
 date: 2016-09-11
 ---
 
-On 2015/02/25, I ran across a fantastic talk ["Learning How to Learn"](https://www.youtube.com/watch?v=vd2dtkMINIw), on Youtube, which was given by [Barbara Oakley](http://www.barbaraoakley.com/), Professor of engineering at Oakland University in Rochester, Michigan.
-<p style="text-align:center;"><span style="text-align:center;line-height:1.5;">[embed]https://www.youtube.com/watch?v=vd2dtkMINIw[/embed]</span></p>
+On 2015/02/25, I ran across a fantastic talk ["Learning How to Learn"](https://www.youtube.com/watch?v=vd2dtkMINIw), on Youtube, which was given by [Barbara Oakley](http://www.barbaraoakley.com/), Professor of engineering at Oakland University in Rochester, Michigan. 
+
+## Focused mode vs. diffuse mode
+
 At first she talked about two thinking modes in our brains: focused mode vs. diffuse mode. In focused mode of thinking, you think a thought using some techqniues, for example multiplication, you previously have already learned. In the other mode of thinking, diffuse mode, you go at new ideas you have never accoutered before. She suggested that if you want to solve a really difficult problem, you have to go back and forth between these two modes of thinking, and it often takes a lot of time. During that time, relaxation process can be very important.
 
 ## Pomodoro technique
