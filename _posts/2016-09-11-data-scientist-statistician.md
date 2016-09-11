@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Among Data Scientists are Statisticians"
-date: 2016-09-10
+date: 2016-09-11
 ---
 
 ## The death of the statistician?
