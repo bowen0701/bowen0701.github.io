@@ -11,6 +11,8 @@ I enjoy applying and developing statistical and machine learning methods for ana
 
 The best email address to contact me is bowen0701 at gmail.com.
 
+**Test:** Testing here
+
 ## Research Interests
 - Survival analysis
 - Statistical modeling
