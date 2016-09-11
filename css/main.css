@@ -1,9 +1,9 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
     margin: 60px auto;
     width: 72.5%;
 }
 nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: 300;
@@ -15,9 +15,9 @@ nav ul li, footer ul li {
 a         { color: #2a7ae2; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 a:visited { color: #205caa; }
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%; 
-    font-weight: 400;
+h1 {
+    font-size: 2.2em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
     font-size: 1em;
