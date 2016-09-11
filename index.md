@@ -32,8 +32,8 @@ The best email address to contact me is bowen0701 at gmail.com.
 - 1998--2002: B.S. in Industrial Engineering, National Tsing Hua University
 
 ## Publications
+- C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen (2016). Subdistribution regression for recurrent events under competing risks: with application to shunt thrombosis study in dialysis patients. *Statistics in Biosciences*.
 - B. Li, W. Wang, and Y.-H. Chen. Nonparametric marginal analysis of recurrent events data under competing risks. Under revision.
-- C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen. Subdistribution regression for recurrent events under competing risks: with application to shunt thrombosis study in dialysis patients. *Statistics in Biosciences*.
 - B. Li (2014). *Nonparametric marginal analysis of recurrent events data under competing risks*. Ph.D. dissertation, Institute of Statistics, National Chiao Tung University. Advisors: W. Wang and Y.-H. Chen.
 
 ## Talks
