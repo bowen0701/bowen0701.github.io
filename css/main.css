@@ -42,3 +42,8 @@ ul.posts li {
     list-style: none;
     margin: 10px;
 }
+
+strong, b, strong *, b * {
+  font-weight: bold;
+}
+
