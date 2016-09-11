@@ -31,5 +31,15 @@ The best email address to contact me is bowen0701 at gmail.com.
 - 2002--2004: M.S. in Statistics, National Central University
 - 1998--2002: B.S. in Industrial Engineering, National Tsing Hua University
 
+## Publications
+- B. Li, W. Wang, and Y.-H. Chen. Nonparametric marginal analysis of recurrent events data under competing risks. Under revision.
+- C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen. Subdistribution regression for recurrent events under competing risks: with application to shunt thrombosis study in dialysis patients. *Statistics in Biosciences*.
+- B. Li (2014). *Nonparametric marginal analysis of recurrent events data under competing risks*. Ph.D. dissertation, Institute of Statistics, National Chiao Tung University. Advisors: W. Wang and Y.-H. Chen.
+
+## Talks
+- Marginal inference on recurrent events data under competing risks. [ERCIM 2014 Conference](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, 2014/12/06.
+- Introductory analysis of competing risks data. Biostatistics Center, Taipei Medical University, 2014/10/27.
+- Nonparametric marginal analysis of recurrent events data under competing risks. University System of Taiwan-Statistics Conference 2014, National Chiao Tung University, 2014/5/24.
+
 ## Awards
 - Winner of Ph.D. Dissertation Award, University System of Taiwan’s Statistics Conference 2014.
