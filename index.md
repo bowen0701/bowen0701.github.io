@@ -37,7 +37,7 @@ The best email address to contact me is bowen0701 at gmail.com.
 - [Nonparametric marginal analysis of recurrent events data under competing risks.](http://etd.lib.nctu.edu.tw/cgi-bin/gs32/tugsweb.cgi/ccd=rPD.JH/record?r1=1&h1=4) B. Li. Ph.D. dissertation, Institute of Statistics, National Chiao Tung University, 2014.
 
 ## Talks
-- Marginal inference on recurrent events data under competing risks. [ERCIM 2014 Conference](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, 2014/12/06.
+- Marginal inference on recurrent events data under competing risks. [ERCIM Conference 2014](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, 2014/12/06.
 - Introductory analysis of competing risks data. Biostatistics Center, Taipei Medical University, 2014/10/27.
 - Nonparametric marginal analysis of recurrent events data under competing risks. University System of Taiwan-Statistics Conference 2014, National Chiao Tung University, 2014/5/24.
 
