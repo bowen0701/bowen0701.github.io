@@ -43,7 +43,3 @@ ul.posts li {
     margin: 10px;
 }
 
-strong, b, strong *, b * {
-  font-weight: bold;
-}
-
