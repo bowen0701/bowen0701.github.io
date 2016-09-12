@@ -7,7 +7,6 @@ body {
 nav ul, footer ul {
     padding: 0px;
     list-style: none;
-    font-weight: 300;
 }
 nav ul li, footer ul li {
     display: inline;
@@ -23,7 +22,6 @@ h1 {
 h2, h3, h4, h5, h6 { font-weight: 400; }
 p {
     font-size: 1em;
-    font-weight: 350;
     line-height: 1.5em;
     color: #333;
 }
