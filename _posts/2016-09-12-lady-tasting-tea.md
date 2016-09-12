@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On 'The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century'"
+title: "On 'The Lady Tasting Tea'"
 date: 2016-09-12
 ---
 
