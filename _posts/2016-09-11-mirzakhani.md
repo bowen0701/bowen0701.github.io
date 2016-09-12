@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes on Mathematician Quotes: Maryam Mirzakhani"
+title: "Notes on Mathematician Quotes: Mirzakhani"
 date: 2016-09-11
 ---
 
