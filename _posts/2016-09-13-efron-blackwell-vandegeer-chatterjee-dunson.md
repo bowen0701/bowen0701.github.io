@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes on Statistician Quotes: Efron, Blackwell, van de Geer, Chatterjee & Dunson"
+title: "Statistician Quotes: Efron, Blackwell, van de Geer, Chatterjee & Dunson"
 date: 2016-09-13
 ---
 
