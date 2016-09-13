@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes on Statistician Quotes: Neyman, Box & Mosteller"
+title: "Statistician Quotes: Neyman, Box & Mosteller"
 date: 2016-09-12
 ---
 
