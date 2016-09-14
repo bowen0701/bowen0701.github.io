@@ -14,6 +14,8 @@ We can solve this problem "temporariy" by the following shell script for removin
 
 ```bash
 rm -r ~/.rstudio-desktop/monitored/user-settings/
+rm -r ~/.rstudio-desktop/monitored/user-settings/
+rm -r ~/.rstudio-desktop/monitored/user-settings/
 ```
 
 - then load forecast package (and TSA, mgcv, among others) first,
