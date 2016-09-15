@@ -56,8 +56,12 @@ ul.posts li {
   overflow:auto;
 }
 
-/*.post code { padding: 1px 5px; }
-
+/*.post code { padding: 1px 5px; }*/
+.post pre code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
 
 /* Syntax highlighting styles */
 /* ----------------------------------------------------------*/
