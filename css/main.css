@@ -57,6 +57,7 @@ ul.posts li {
 }
 
 /*.post code { padding: 1px 5px; }*/
+.post ol { margin-left: 1.35em; }
 .post pre code {
   border: 0;
   padding-right: 0;
