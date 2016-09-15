@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Quotes: Jerzy Neyman, George Box & Fred Mosteller"
+title: "Quotes: Neyman, Box & Mosteller"
 date: 2016-09-12
 ---
 
