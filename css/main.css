@@ -56,7 +56,7 @@ ul.posts li {
   overflow:auto;
 }
 
-/*.post code { padding: 1px 5px; }*/
+.post code { padding: 1px 5px; }
 .post ol { margin-left: 1.35em; }
 .post pre code {
   border: 0;
