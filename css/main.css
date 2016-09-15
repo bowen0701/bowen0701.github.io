@@ -61,12 +61,6 @@ ul.posts li {
 .post ul,
 .post ol { margin-left: 1.35em; }
 
-.post pre code {
-  border: 0;
-  padding-right: 0;
-  padding-left: 0;
-}
-
 
 /* Syntax highlighting styles */
 /* ----------------------------------------------------------*/
