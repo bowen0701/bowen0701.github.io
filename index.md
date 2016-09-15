@@ -31,6 +31,9 @@ The best email address to contact me is bowen0701 at gmail.com.
 - 2002--2004: M.S. in Statistics, National Central University
 - 1998--2002: B.S. in Industrial Engineering, National Tsing Hua University
 
+## Awards
+- Winner of Ph.D. Dissertation Award, University System of Taiwan’s Statistics Conference 2014.
+
 ## Publications
 - [Subdistribution regression for recurrent events under competing risks: with application to shunt thrombosis study in dialysis patients.](http://link.springer.com/article/10.1007/s12561-016-9161-0)
 C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen. Statistics in Biosciences 2016.
@@ -41,6 +44,3 @@ C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen. Statistics in Bioscienc
 - Marginal inference on recurrent events data under competing risks. [ERCIM Conference 2014](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, 2014/12/06.
 - Introductory analysis of competing risks data. Biostatistics Center, Taipei Medical University, 2014/10/27.
 - Nonparametric marginal analysis of recurrent events data under competing risks. University System of Taiwan-Statistics Conference 2014, National Chiao Tung University, 2014/5/24.
-
-## Awards
-- Winner of Ph.D. Dissertation Award, University System of Taiwan’s Statistics Conference 2014.
