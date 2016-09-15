@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Statistician Quotes: Neyman, Box & Mosteller"
+title: "Quotes: Jerzy Neyman, George Box & Fred Mosteller"
 date: 2016-09-12
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Statistician Quotes: Efron, Blackwell, van de Geer, Chatterjee & Dunson"
+title: "Quotes: Bradley Efron, David Blackwell, Sara van de Geer, Nilanjan Chatterjee & David Dunson"
 date: 2016-09-13
 ---
 
