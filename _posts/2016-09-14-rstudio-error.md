@@ -4,7 +4,7 @@ title: "Loading R Packages Error on RStudio"
 date: 2016-09-14
 ---
 
-My R version is 3.2.1, on Macbook Air, but I cannot load some useful packages (including forecast, TSA and mgcv packages) on RStudio; attached is the error message:
+My R version is 3.2.1, on Macbook Air, but I cannot load some useful packages (including `forecast`, `TSA` and `mgcv` packages) on RStudio; attached is the error message:
 
 > Error : .onAttach failed in attachNamespace() for 'forecast', details: call: formatDL(nm, txt, indent = max(nchar(nm, "w")) + 3) error: incorrect values of 'indent' and 'width'
 
@@ -18,7 +18,7 @@ We can solve this problem "temporariy" by the following shell script for removin
 rm -r ~/.rstudio-desktop/monitored/user-settings/
 ```
 
-- then load forecast package (and TSA, mgcv, among others) first,
+- then load `forecast` package (and `TSA`, `mgcv`, among others) first,
 - finally reset my RStudio setting.
 
 Why I say it's temporarily is because every time when I restart RStudio, I must repeat the above procedure. Otherwise those packages would not be able to upload.
