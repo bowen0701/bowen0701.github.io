@@ -1,4 +1,7 @@
-# Collection
+---
+layout: default
+title: Bowen Li's Collected Blogs
+---
 
 The following are blogs I am following. :-)
 
