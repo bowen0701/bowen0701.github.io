@@ -12,9 +12,9 @@ Then I spent so much time on this issue this afternoon (2015/08/03) and finally 
 
 We can solve this problem "temporariy" by the following shell script for removing the RStudio user setting,
 
-{% highlight bash %}
+```bash
 rm -r ~/.rstudio-desktop/monitored/user-settings/
-{% highlight %}
+```
 
 - then load forecast package (and TSA, mgcv, among others) first,
 - finally reset my RStudio setting.
