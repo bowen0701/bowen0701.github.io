@@ -5,7 +5,9 @@ date: 2016-09-14
 ---
 
 My R version is 3.2.1, on Macbook Air, but I cannot load some useful packages (including forecast, TSA and mgcv packages) on RStudio; attached is the error message:
+
 > Error : .onAttach failed in attachNamespace() for 'forecast', details: call: formatDL(nm, txt, indent = max(nchar(nm, "w")) + 3) error: incorrect values of 'indent' and 'width'
+
 Then I spent so much time on this issue this afternoon (2015/08/03) and finally found a [StackOverFlow article](http://stackoverflow.com/questions/19086111/package-mgcv-could-not-be-loaded-only-in-rstudio) which provided two methods to solve this serious problem (Yes, it's serious, I mean it.) Now I summarize both methods as the following.
 
 ## Method 1
