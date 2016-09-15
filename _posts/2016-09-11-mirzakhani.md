@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Quotes: Maryam Mirzakhani"
+title: "Quotes: Mirzakhani"
 date: 2016-09-11
 ---
 
