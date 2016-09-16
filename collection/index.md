@@ -7,7 +7,7 @@ The following are blogs I am following. :-)
 
 ## Tech Blogs
 - Google Official Blog:
-[googleblog.blogspot.tw](googleblog.blogspot.tw)		
+[googleblog.blogspot.tw](https://googleblog.blogspot.tw)		
 - Google Research Blog:
 [googleresearch.blogspot.tw](googleresearch.blogspot.tw)
 - The Unofficial Google Data Science Blog:
