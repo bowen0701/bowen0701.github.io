@@ -23,7 +23,7 @@ The following are blogs I am following. :-)
 - Spotify Labs:
 [labs.spotify.com](https://labs.spotify.com)
 - Microsoft Experiment Platform:
-[exp-platform.com/Pages/default.aspx](https://exp-platform.com/Pages/default.aspx)
+[www.exp-platform.com/Pages/default.aspx](http://www.exp-platform.com/Pages/default.aspx)
 - Kaggle's no free lunch:
 [blog.kaggle.com](https://blog.kaggle.com)
 - reddit/machinelearning:
