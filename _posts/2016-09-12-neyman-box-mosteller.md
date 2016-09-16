@@ -4,7 +4,7 @@ title: "Quotes: Neyman, Box & Mosteller"
 date: 2016-09-12
 ---
 
-## Jerzy Neyman
+## Jerzy Neyman (Statistician)
 
 "Statistical theory needed to be motivated by its importance and usefulness for *applications*."
 
