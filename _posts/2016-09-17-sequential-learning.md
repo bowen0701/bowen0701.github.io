@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes: Sequential Learning"
+title: "Notes on Sequential Learning"
 date: 2016-09-17
 ---
 
