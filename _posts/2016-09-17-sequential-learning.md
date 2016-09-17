@@ -4,7 +4,7 @@ title: "Notes on Sequential Learning"
 date: 2016-09-17
 ---
 
-I just (on 2015/05/07) read a clear and insightful article on what is the **Sequential Learning problem**, so-called the [Multi-arm Bandit problem](http://www.quora.com/What-is-the-multi-arm-bandit-problem-What-are-some-of-its-implications), on Quora, which was provided by Professor [Yisong Yue](http://www.yisongyue.com/) at Caltech, and finally got a basic understanding about the problem and its potential applications. This topic is interesting to me and will be one of my research projects. Thus I will begin to wrap up some notes on what I've learned during the journey. In this preliminary note, I will quickly summarize, from that article, the basic notions of sequential learning problem and give some of their application examples.
+I just (actually it was on 2015/05/07) read a clear and insightful [Quora anwser](http://www.quora.com/What-is-the-multi-arm-bandit-problem-What-are-some-of-its-implications), provided by Professor [Yisong Yue](http://www.yisongyue.com/) at Caltech, to what is the **Multi-arm Bandit problem**, also called the **Sequential Learning problem**, and finally got a basic understanding about the problem and its potential applications. This topic is interesting to me and will be one of my research projects. Thus I will begin to wrap up some notes on what I've learned during the journey. In this preliminary note, I will quickly summarize, from that article, the basic notions of sequential learning problem and give some of their application examples.
 
 ## 1. Multi-arm bandit problem
 
