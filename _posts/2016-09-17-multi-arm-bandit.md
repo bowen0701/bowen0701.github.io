@@ -30,16 +30,16 @@ How to **balance the trade-off between**
 - Music or movie recommender system,
 - Clinical trial.
 
-### 3.1 Example: Music recommender system
+**Example: Music recommender system**
 
 - Exploitation: recommend a song which we are confident is good from our past experience to our user,
 - Exploration: try out recommending a new song to see if it may be better and gather more information.
 
-### 3.2 Example: Online advertising
+**Example: Online advertising**
 
 - Exploitation: run an ad that we are confident is good from our past experience,
 - Exploration: try out a new ad to see if it may be better and gether more information.
 
-Thus the sequential learning problem is also known as the **problem of sequential experimental design**.
+Thus the multi-armed bandits problem is also known as the **problem of sequential experimental design**.
 
 I definitely will exploit and explore this topic further in the near future. :-)
