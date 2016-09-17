@@ -10,12 +10,12 @@ I just (on 2015/05/07) read a clear and insightful article on what is the **Seq
 
 The multi-arm bandit problem is a **partial-information sequential decision making problem:**
 
-- There are $$ K $$ slot machines, where each slot machine is also called an one-armed bandit.
-- The setting proceeds over $$ T $$ iterations; hence **sequential**.
+- There are $K$ slot machines, where each slot machine is also called an one-armed bandit.
+- The setting proceeds over $T$ iterations; hence **sequential**.
 - During each iteration, the decision maker chooses an arm to "pull", and receives reward from that action.
 - Each arm pull gives a **random** reward, with an unknown but fixed expected value. Of course rewards from pulling different arms are random variables with different expected values.
 
-The goal of the decision maker is to maximize the total reward over all $$ T $$ arm pulls. The decision maker only learns about arms by pulling them; hence **partial information**.
+The goal of the decision maker is to maximize the total reward over all $T$ arm pulls. The decision maker only learns about arms by pulling them; hence **partial information**.
 
 ## 2. The central question for multi-arm bandit problem
 
