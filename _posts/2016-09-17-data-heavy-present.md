@@ -24,6 +24,7 @@ Who are you presenting to, and how much do they know about the topic? A good rul
 It’s easy to let the data overtake your presentation, so be sure you know the overall story you’re trying to tell, and use charts sparingly to support your story.
 
 **Example:**
+
 - Show a photo of a shopping cart, and tell people that you now know which cash register displays are most likely to yield impulse purchases;
 - Then show the chart displaying the sales figures for different items.
 - Follow that chart with an image or a few short bullets that emphasizes the actionable insights and implications of your data.
