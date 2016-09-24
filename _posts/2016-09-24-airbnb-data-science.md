@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Notes on 'How We Scaled Data Science to all Sides of Airbnb over 5 Years of Hypergrowth'"
+title: "Notes on 'At Airbnb, Data Science Belongs Everywhere'"
 date: 2016-09-24
 ---
 
-Today (actually it was on 2015/07/12) I was so fortunate to read this excellent VentureBeat article: ["How we scaled data science to all sides of Airbnb over 5 years of hypergrowth"](http://bit.ly/1dwakuc), which was written by Riley Newman, head of data science at Airbnb. Here I took some notes consisting of lots of quotes and a little rewriting.
+Today (actually it was on 2015/07/12) I was so fortunate to read this excellent VentureBeat article: ["At Airbnb, Data Science Belongs Everywhere"](http://nerds.airbnb.com/scaling-data-science/), which was written by Riley Newman, head of data science at Airbnb. Here I took some notes consisting of lots of quotes and a little rewriting.
 
 ## 1. The higher-level issues data science teams encounter
 
