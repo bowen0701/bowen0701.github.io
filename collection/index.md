@@ -53,7 +53,7 @@ The following are blogs I am following. :-)
 - Shakir Mohamed's The Spectator:
 [blog.shakirm.com](http://blog.shakirm.com)
 - Christopher Olah's blog:
-[colah.github.io/archive.html](https://colah.github.io/archive.html)
+[colah.github.io](http://colah.github.io/)
 - Moritz Hardt's Moody Rd:
 [blog.mrtz.org](http://blog.mrtz.org)
 - Charles Sutton's The Exclusive Or:
