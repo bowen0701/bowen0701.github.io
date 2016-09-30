@@ -11,6 +11,7 @@ I recently (actually it was on 2015/09/23) attended an insightful talk, given by
 He first commented that for statistical modeling and machine learning, the must-learn for *big* data is almost equivalent to that for *small* data, but the former is with bigger seriousness.
 
 Then he noted that finding (big) data questions equals to finding research topics:
+
 - **Motivation:** what are you interested in?
     1. Something publishable?
     2. Something that improves xyz performance?
@@ -26,6 +27,7 @@ Motivation helps generate questions; feasibility helps filter questions. Further
 ## 2. What is the best machine learning model for (big) data?
 
 The answer: the best model is **data-dependent!**
+
 - Let's talk about our *data* first
 - Perhaps we can start by thinking about *simple* models.
 
@@ -40,6 +42,7 @@ I totally agree with his points, but think that these criticism shall not preven
 ## 3. What is the first machine learning model for (big) data?
 
 **Linear model** first: Because
+
 - Easy to train and predict,
 - Easy to tune and modify,
 - Somewhat analyzable,
@@ -50,6 +53,7 @@ I totally agree with his points, but think that these criticism shall not preven
 ** KISS priciple: Keep it simple, safe.** Keep it in mind.
 
 The must-learn models include
+
 - Linear models,
 - Simple models with frequency-based probability estimates, such as Naive Bayes,
 - Decision Tree (or perhaps even better, Random Forest) as a KISS non-linear model.
@@ -59,6 +63,7 @@ The must-learn models include
 Do we have domain knowledge about our problem? Perhaps we can start by encoding our human intelligence and knowledge. In Lin's opinion, data construction is more important for big data than machine learning is. But what is data construction?
 
 **Feature engineering:** make our feature data concrete by embedding domain knowledge:
+
 - If available, great!
 - If not, start by **analyzing data** first, not learning from data.
 
@@ -67,6 +72,7 @@ Common feature engineering techniques include encoding, combination, importance 
 ## 5. How to improve unsatisfactory test performance on (big) data?
 
 **Step by step diagonosis:**
+
 - If (training performance is ok, say 90% of the time)
 - Combat **overfitting**
 - Correct **training/testing mismatch**
@@ -77,12 +83,14 @@ Common feature engineering techniques include encoding, combination, importance 
 ## 5.1 Combating overfitting
 
 *Myth:* Our big data is so big that overfitting is impossible. No, big data still require carefull treatment of overfitting, because
+
 - Big data usually are high-dimensional
 - Big data usually are heterogeneous
 - Big data usually are redundant
 - Big data usually are noisy
 
 Hence we need the following two techniques
+
 - **Regularization:** Put brake for models - important to know where the brake is.
 - **Validation:** Monitor dashboard - important to ensure correctness.
 
@@ -95,12 +103,14 @@ Hence we need the following two techniques
 Data snooping is equal to human overfitting. We all know honesty matters, however, it is very hard to avoid data snooping.
 
 **Guidlines:**
+
 - Be blind: avoid making modeling decision completely by data,
 - Be suspicious: interpret findings by proper feeling of contamination. Keep our data fresh if possible.
 
 ## 6. Lin's last secret to winning KDDCups
 
 Carefully balance between
+
 - Data-driven modeling (snooping) and
 - Validation (no snooping).
 
