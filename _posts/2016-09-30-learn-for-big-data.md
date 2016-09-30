@@ -50,7 +50,7 @@ I totally agree with his points, but think that these criticism shall not preven
 - If linear model is good enough, we live happily thereafter. :-)
 - Otherwise, try something more complicated, with theoretically nothing lost except *wasted little* computation.
 
-** KISS priciple: Keep it simple, safe.** Keep it in mind.
+**KISS priciple: Keep it simple, safe.** Keep it in mind.
 
 The must-learn models include
 
