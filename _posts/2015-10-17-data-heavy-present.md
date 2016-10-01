@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Notes on 'How to Give a Data-heavy Presentation'"
-date: 2016-09-17
+date: 2015-10-17
 ---
 
-Today (actually, it was on 2015/10/17), I read an insightful Harvard Business Review article, ["How to Give a Data-Heavy Presentation"](https://hbr.org/2015/10/how-to-give-a-data-heavy-presentation), on data-heavy presentation and data visualization. The following are my notes.
+I read an insightful Harvard Business Review article, ["How to Give a Data-Heavy Presentation"](https://hbr.org/2015/10/how-to-give-a-data-heavy-presentation), on data-heavy presentation and data visualization. The following are my notes.
 
 ## Introduction
 Knowing how to develop and deliver a data-driven presentation is now a crucial skill for many professionals, since we often have to tell our colleagues a story about

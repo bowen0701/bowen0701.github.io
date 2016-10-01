@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Loading R Packages Error on RStudio"
-date: 2016-09-14
+date: 2015-08-03
 ---
 
 My R version is 3.2.1, on Macbook Air, but I cannot load some useful packages (including `forecast`, `TSA` and `mgcv` packages) on RStudio; attached is the error message:
