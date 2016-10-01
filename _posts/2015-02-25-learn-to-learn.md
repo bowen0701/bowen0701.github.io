@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Notes on 'Learning How to Learn'"
-date: 2016-09-11
+date: 2015-02-25
 ---
 
-On 2015/02/25, I ran across a fantastic talk ["Learning How to Learn"](https://www.youtube.com/watch?v=vd2dtkMINIw), on Youtube, which was given by [Barbara Oakley](http://www.barbaraoakley.com/), Professor of engineering at Oakland University in Rochester, Michigan. 
+I ran across a fantastic talk ["Learning How to Learn"](https://www.youtube.com/watch?v=vd2dtkMINIw), on Youtube, which was given by [Barbara Oakley](http://www.barbaraoakley.com/), Professor of engineering at Oakland University in Rochester, Michigan. 
 
 ## Focused mode vs. diffuse mode
 

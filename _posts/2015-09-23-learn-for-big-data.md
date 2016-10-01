@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Notes on 'Learning for Big Data'"
-date: 2016-09-30
+date: 2015-09-23
 ---
 
-I recently (actually it was on 2015/09/23) attended an insightful talk, given by [Hsuan-Tien Lin](http://www.csie.ntu.edu.tw/~htlin/) (Professor of Computer Science at National Taiwan University). The topic was about (human) learning for big data. (Yes, not learning *from* big data.) I learned a lots from the talk and would like to take some notes here.
+I recently attended an insightful talk, given by [Hsuan-Tien Lin](http://www.csie.ntu.edu.tw/~htlin/) (Professor of Computer Science at National Taiwan University). The topic was about (human) learning for big data. (Yes, not learning *from* big data.) I learned a lots from the talk and would like to take some notes here.
 
 ## 1. How to find big data questions?
 

@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Among Data Scientists are Statisticians"
-date: 2016-09-11
+date: 2013-08-28
 ---
 
 ## The death of the statistician?
 
-Three year ago (2013/08/28), I read a *shocking* article, at least for me, ["The Death of the Statistician"](http://www.analyticbridge.com/profiles/blogs/the-death-of-the-statistician), posted by Vincent Granville, a co-founder of Big Data Scientist. In brief, that article claimed that statisticians will become extinct in this big data era. Surely, it has inspired lots of interesting but conflicting discussions. As a statistician, here are my few thoughts.
+Recently I read a *shocking* article, at least for me, ["The Death of the Statistician"](http://www.analyticbridge.com/profiles/blogs/the-death-of-the-statistician), posted by Vincent Granville, a co-founder of Big Data Scientist. In brief, that article claimed that statisticians will become extinct in this big data era. Surely, it has inspired lots of interesting but conflicting discussions. As a statistician, here are my few thoughts.
 
 ## Statisticians are data scientists
 
