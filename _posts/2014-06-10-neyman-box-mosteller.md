@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Quotes: Neyman, Box & Mosteller"
-date: 2016-09-12
+date: 2014-06-10
 ---
 
 ## Jerzy Neyman (Statistician)
