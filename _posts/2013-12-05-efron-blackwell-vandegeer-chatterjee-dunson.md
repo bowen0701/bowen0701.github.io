@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Quotes: Efron, Blackwell, van de Geer, Chatterjee & Dunson"
-date: 2016-09-13
+date: 2013-12-05
 ---
 
 ## Bradley Efron (Statistician)

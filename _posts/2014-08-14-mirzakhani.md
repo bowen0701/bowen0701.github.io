@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Quotes: Mirzakhani"
-date: 2016-09-11
+date: 2014-08-14
 ---
 
 ## Maryam Mirzakhani (First female Fields medalist)
