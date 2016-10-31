@@ -54,6 +54,8 @@ The following are blogs I am following. :-)
 [blog.shakirm.com](http://blog.shakirm.com)
 - Christopher Olah's blog:
 [colah.github.io](http://colah.github.io/)
+- Denny Britz's WILDML:
+[http://www.wildml.com/](http://www.wildml.com/)
 - Moritz Hardt's Moody Rd:
 [blog.mrtz.org](http://blog.mrtz.org)
 - Charles Sutton's The Exclusive Or:
