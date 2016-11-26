@@ -6,8 +6,8 @@ date: 2016-07-22
 
 ## Paper
 
-- Link: https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf
-- Authors: Linden, Smith & York (IEEE Internet Computing, 2003)
+- Link: [https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf)
+- Linden, Smith & York (IEEE Internet Computing, 2003)
 - Company: Amazon
 - Citations: 3819
 - Test of Time Award from The International World Wide Web Conference committee: "this outstanding paper has had a considerable real-world impact".
@@ -98,7 +98,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
   * Calculate the (cosine) similarity between a "single" item and "all related" items
 
 <div class="imgcap">
-<img style="float:middle" src="/images/amazon_item2itemCF_algo.png" />
+<img style="float: middle" src="/images/amazon_item2itemCF_algo.png" />
 </div>
 
 - The offline computation of the similar-items table: computationally expensive.
