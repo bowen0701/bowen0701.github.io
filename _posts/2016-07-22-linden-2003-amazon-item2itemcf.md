@@ -97,7 +97,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
   * Represent a "item" as an M-dimensional vector of users (M: # of customers who have purchase that item)
   * Calculate the (cosine) similarity between a "single" item and "all related" items
 
-<div class="imgcap" style="vertical-align:middle">>
+<div class="imgcap" style="vertical-align:middle">
 <img src="/images/amazon_item2itemCF_algo.png">
 </div>
 
