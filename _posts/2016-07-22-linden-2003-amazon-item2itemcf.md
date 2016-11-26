@@ -89,7 +89,6 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
   * Recommendation quality is relatively poor.
 
 **Proposed item-to-item CF:**
-
 - Match each of the user's purchased and rated "items" to similar "items".
 - Combine those similar items into a recommendation list.
 - Since many item pairs have no common customers, all pairs computation of similar-items table by building product-to-product matrix is inefficient.
