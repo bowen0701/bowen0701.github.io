@@ -19,6 +19,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
 ## Key Points
 
 **Recommendation system:** Use input about a customer's interest to generate a list of a recommendated items. Customer's interest can be
+
 - items that customers purchase and 
 - items that customers explicitly rate
 - items viewed
@@ -27,13 +28,15 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
 - favorite artists, etc.
 
 **Challenges:**
+
 - Huge amount of data: ten of millions of customers and millions of distinct catalog items.
 - Require the recommendation results set to be returned in realtime.
 - Cold start: New customers typically have extremely limited information.
 - Information glut: Old customers can have a glut of information.
 - Each interaction provides valuable customer data, and algorithm must respond immediately to new information.
 
-**Literature Review:**
+**Literature review:**
+
 - Common recsys approaches (different from the work):
   * Traditional collaborative filtering (CF)
   * Cluster models
@@ -41,12 +44,14 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
 - This work: Item-to-item CF.
 
 **Two types of RecSys:**
+
 - Finding similar "customers" whose purchased and rated items overlap the user's purchased and rated items.
   * Traditional CF / cluster models.
 - Finding similar "items", not similar customers.
   * Content-based methods / item-to-item CF.
 
 **Traditional CF:**
+
 - Represent a customer as an N-dimensional vector of items (N: # of distinct catalog items).
 - Typically multiply user vector components by the inverse frequency to make the less well-known items much more relevant.
 - User vectors are generally sparse.
@@ -61,6 +66,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
   * The above methods may reduce recommendation quality.
 
 **Cluster models:**
+
 - Divide the customers into many segments and treat recommendation as a classification problem.
   * Applying clustering or other unsupervised learning algortihms via similarity measures.
   * Manually determined segments.
@@ -73,6 +79,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
   * The recommendation may be less relevant: similar customers that the cluster models find are not the most similar customers.
 
 **Content-based methods:**
+
 - Treat the recommendation as a "search query" to find other popular items: Information retrieval.
   * same author / director
   * similar keywords or subjects.
@@ -82,6 +89,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
   * Recommendation quality is relatively poor.
 
 **Proposed item-to-item CF:**
+
 - Match each of the user's purchased and rated "items" to similar "items".
 - Combine those similar items into a recommendation list.
 - Since many item pairs have no common customers, all pairs computation of similar-items table by building product-to-product matrix is inefficient.
