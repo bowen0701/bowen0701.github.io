@@ -87,6 +87,6 @@ date: 2016-07-22
 ## Comments
 
 - One of the best and valuable and production-efficient recommendation algorithm, massively applied by Amazon.
-- I think the literature review for RecSys types may be not clear enough and missing one important type: (1) the traditional CF shall be clarified as user-to-user CF, and (2) there shall be user-to-item CF which forms a user-to-item feedback matrix and compute latent vectors of users and items by applying stochastic gradient descent (SGD) or alternative least squares (ALS).
+- I think the literature review for RecSys types may be not clear enough and be missing one important type: (1) the traditional CF shall be clarified as the user-to-user CF, and (2) there shall exist the user-to-item CF which forms an user-to-item feedback matrix and compute the latent vectors of users and items by applying the stochastic gradient descent (SGD) or alternative least squares (ALS).
 
 
