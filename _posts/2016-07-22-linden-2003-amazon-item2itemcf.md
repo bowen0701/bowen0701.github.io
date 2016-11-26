@@ -71,7 +71,7 @@ date: 2016-07-22
     - For old users with thousands of purchases, it is impractical.
     - Resolve by random sampling subset / summary of the data.
     - Recommendation quality is relatively poor.
-- Item-to-item CF:
+- Proposed item-to-item CF:
   * Match each of the user's purchased and rated "items" to similar "items".
   * Combine those similar items into a recommendation list.
   * Since many item pairs have no common customers, all pairs computation of similar-items table by building product-to-product matrix is inefficient.
