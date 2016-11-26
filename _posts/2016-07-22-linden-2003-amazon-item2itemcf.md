@@ -98,7 +98,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
   * Calculate the (cosine) similarity between a "single" item and "all related" items
 
 <div class="imgcap">
-<img src="/images/amazon_item2itemCF_algo.png" align="middle">
+<img src="/images/amazon_item2itemCF_algo.png" align="middle"/>
 </div>
 
 - The offline computation of the similar-items table: computationally expensive.
