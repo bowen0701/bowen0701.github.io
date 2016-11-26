@@ -96,6 +96,10 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
 - Proposed algorithm: 
   * Represent a "item" as an M-dimensional vector of users (M: # of customers who have purchase that item)
   * Calculate the (cosine) similarity between a "single" item and "all related" items
+
+<div class="imgcap">
+<img src="/images/amazon_item2itemCF_algo.png">
+
 - The offline computation of the similar-items table: computationally expensive.
 - The online recommendation: very quick, depending only on the number of items the user purchased or rated.
   * Find similar items to the user's purchases and ratings.
