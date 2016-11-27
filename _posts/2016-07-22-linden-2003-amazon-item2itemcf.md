@@ -50,12 +50,14 @@ This work focuses on the item-to-item CF.
 - Measure user vectors's similarity by cosine similarity measure.
 - Collect similar customers's items.
 - Rank each item according to how many similar customers purchased it.
-- Remarks:
-  * Scaling issue due to expensive computational cost.
-    - Reduce customer size by (1) random sampling or (2) discarding customers with fewer purchases.
-    - Reduce item size by (1) partitioning item space.
-    - Dimensionality reduction techniques: (1) Clustering, and (2) PCA.
-  * The above methods may reduce recommendation quality.
+
+Remarks:
+
+- Scaling issue due to expensive computational cost.
+  * Reduce customer size by (1) random sampling or (2) discarding customers with fewer purchases.
+  * Reduce item size by (1) partitioning item space.
+  * Dimensionality reduction techniques: (1) Clustering, and (2) PCA.
+- The above methods may reduce recommendation quality.
 
 **Cluster models:**
 
@@ -64,21 +66,24 @@ This work focuses on the item-to-item CF.
   * Manually determined segments.
 - Assign the user to the segment containing the most similar customers.
 - Generate recommendations by using the purchased and ratings of the customers in the segment.
-- Remarks:
-  * Better scalability than tranditional CF: complex and expensive clustering is run offline, improved by
-    - Sampling
-    - Dimensionality reduction.
-  * The recommendation may be less relevant: similar customers that the cluster models find are not the most similar customers.
+
+Remarks:
+- Better scalability than tranditional CF: complex and expensive clustering is run offline, improved by
+  * Sampling
+  * Dimensionality reduction.
+- The recommendation may be less relevant: similar customers that the cluster models find are not the most similar customers.
 
 **Content-based methods:**
 
-- Treat the recommendation as a "search query" to find other popular items: Information retrieval.
-  * same author / director
-  * similar keywords or subjects.
-- Remarks:
-  * For old users with thousands of purchases, it is impractical.
-  * Resolve by random sampling subset / summary of the data.
-  * Recommendation quality is relatively poor.
+Treat the recommendation as a "search query" to find other popular items: Information retrieval.
+- same author / director
+- similar keywords or subjects.
+
+Remarks:
+
+- For old users with thousands of purchases, it is impractical.
+- Resolve by random sampling subset / summary of the data.
+- Recommendation quality is relatively poor.
 
 **Proposed item-to-item CF:**
 
