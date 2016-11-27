@@ -6,8 +6,7 @@ date: 2016-07-22
 
 ## Paper
 
-- Link: [https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf)
-- Linden, Smith & York (IEEE Internet Computing, 2003)
+- [Linden, Smith & York (IEEE Internet Computing, 2003)](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf)
 - Company: Amazon
 - Citations: 3819
 - Test of Time Award from The International World Wide Web Conference committee: "this outstanding paper has had a considerable real-world impact".
@@ -18,14 +17,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
 
 ## Key Points
 
-**Recommendation system:** Use input about a customer's interest to generate a list of a recommendated items. Customer's interest can be
-
-- items that customers purchase and 
-- items that customers explicitly rate
-- items viewed
-- demographic data
-- suject interests
-- favorite artists, etc.
+**Recommendation system:** Use input about a customer's interest to generate a list of a recommendated items. Customer's interest can be items that customers purchase, items that customers explicitly rate, items viewed, demographic data, suject interests, and favorite artists, etc.
 
 **Challenges:**
 
@@ -35,13 +27,13 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
 - Information glut: Old customers can have a glut of information.
 - Each interaction provides valuable customer data, and algorithm must respond immediately to new information.
 
-**Literature review:**
+**Literature review:** Common recsys approaches include
 
-- Common recsys approaches (different from the work):
-  * Traditional collaborative filtering (CF)
-  * Cluster models
-  * Content-based (or search-based) methods
-- This work: Item-to-item CF.
+- Traditional collaborative filtering (CF)
+- Cluster models
+- Content-based (or search-based) methods.
+
+This work focuses on the item-to-item CF.
 
 **Two types of RecSys:**
 
