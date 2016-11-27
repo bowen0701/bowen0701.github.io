@@ -68,6 +68,7 @@ Remarks:
 - Generate recommendations by using the purchased and ratings of the customers in the segment.
 
 Remarks:
+
 - Better scalability than tranditional CF: complex and expensive clustering is run offline, improved by
   * Sampling
   * Dimensionality reduction.
@@ -76,6 +77,7 @@ Remarks:
 **Content-based methods:**
 
 Treat the recommendation as a "search query" to find other popular items: Information retrieval.
+
 - same author / director
 - similar keywords or subjects.
 
