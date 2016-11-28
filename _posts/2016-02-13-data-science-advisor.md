@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Precious Quotes by My Data Science Advisor"
+title: "Precious Lecture by My Data Science Advisor"
 date: 2016-02-13
 ---
 
