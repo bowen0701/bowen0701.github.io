@@ -4,6 +4,8 @@ title: "Precious Quotes by My Data Science Advisor"
 date: 2016-02-13
 ---
 
+I recently obtained a precious lecture from my data science advisor; I will keep his words in mind on my way towards that goal:
+
 "[A] general way to improve is to think constantly about how a very smart person would criticize your work as you do it, asking: 
 
 - why did you do it that way? Why not simpler? Why not more complicated? 
