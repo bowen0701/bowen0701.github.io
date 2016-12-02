@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Quotes: Mirzakhani"
+title: "Quotes by Mirzakhani"
 date: 2014-08-14
 ---
 
