@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Notes: Learning How to Learn"
-excerpt: "I will share some notes on the talk, Learning How to Learn, by Barbara Oakley."
 date: 2015-02-25
 ---
 

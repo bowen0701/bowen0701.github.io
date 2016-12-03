@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Quotes by Mirzakhani"
-excerpt: "I will collect my favorite quotes by Maryam Mirzakhani."
 date: 2014-08-14
 ---
 

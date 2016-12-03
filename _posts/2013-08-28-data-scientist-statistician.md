@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Among data scientists are statisticians"
-excerpt: "Instead of becoming extinct, I'll explain that statistician is one of team members among data scientists."
 date: 2013-08-28
 ---
 
