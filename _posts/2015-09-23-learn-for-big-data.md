@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Notes on 'Learning for Big Data'"
+title: "Notes: Learning for Big Data"
+excerpt: "I will share some notes on the talk: How to Learning Big Data" by Hsuan-Tien Lin.
 date: 2015-09-23
 ---
 
