@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Quotes by Efron, Blackwell, van de Geer, Chatterjee & Dunson"
+excerpt: "I will collect some of my favorite quotes by Bradley Efron, David Blackwell, Sara van de Geer, Nilanjan Chatterjee and David Dunson."
 date: 2013-12-05
 ---
 
