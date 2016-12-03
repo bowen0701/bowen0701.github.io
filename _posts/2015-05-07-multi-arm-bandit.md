@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Notes on Multi-armed Bandits"
+title: "Notes: Multi-armed bandits"
+excerpt: "I will share some notes on multi-armed bandits by Yisong Yue."
 date: 2015-05-07
 ---
 
