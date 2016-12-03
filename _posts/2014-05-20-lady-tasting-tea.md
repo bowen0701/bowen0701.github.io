@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On The Lady Tasting Tea"
+title: "Notes: The Lady Tasting Tea"
 date: 2014-05-20
 ---
 
