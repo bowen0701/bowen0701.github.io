@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Precious lecture by my data dcience advisor"
-excerpt: "Previously I got an amazing expereience, in which I obtained some precious advices from a kind data science master. Now I review them everytime when I am performing a data science project."
 date: 2016-02-13
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Loading R packages error on RStudio"
-excerpt: "I will share some methods to solve the error of loaing R packages on RStudio."
 date: 2015-08-03
 ---
 
