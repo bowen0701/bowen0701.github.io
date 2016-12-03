@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Notes: Amazon.com Recommendations Item-to-Item Collaborative Filtering"
-excerpt: "I will share some notes on this seminal paper which summarizes Amazon's recommender system algorithm and implementation."
 date: 2016-07-22
 ---
 
