@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Quotes by Neyman, Box & Mosteller"
+excerpt: "I will collect my favorite quotes by Jerzy Neyman, George Box and Fred Mosteller.
 date: 2014-06-10
 ---
 
