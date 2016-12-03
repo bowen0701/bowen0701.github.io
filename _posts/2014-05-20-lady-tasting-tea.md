@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "On 'The Lady Tasting Tea'"
+title: "On The Lady Tasting Tea"
+excerpt: "Share the book: The Lady Tasting Tea: How Statistics Revolutionized Science in the Twentieth Century by David Salsburg."
 date: 2014-05-20
 ---
 
