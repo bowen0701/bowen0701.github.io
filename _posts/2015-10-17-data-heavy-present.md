@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Notes on 'How to Give a Data-heavy Presentation'"
+title: "Notes: How to Give a Data-heavy Presentation"
+excerpt: "I will share some notes on the Harvard Business Review article, How to Give a Data-Heavy Presentation"
 date: 2015-10-17
 ---
 
