@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Notes: Amazon.com Recommendations Item-to-Item Collaborative Filtering"
+title: "RecSys Notes 1: Amazon.com Recommendations Item-to-Item Collaborative Filtering"
 date: 2016-07-22
 ---
 
-## Paper
+## [Paper: Linden, Smith & York (IEEE Internet Computing, 2003)](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf)
 
-- [Linden, Smith & York (IEEE Internet Computing, 2003)](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf)
 - Company: Amazon
 - Test of Time Award from The International World Wide Web Conference committee: "this outstanding paper has had a considerable real-world impact".
 
