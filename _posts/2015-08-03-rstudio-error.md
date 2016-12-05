@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Loading R packages error on RStudio"
+title: "Loading R Packages Error on RStudio"
 date: 2015-08-03
 ---
 

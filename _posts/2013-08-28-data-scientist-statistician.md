@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Among data scientists are statisticians"
+title: "Among Data Scientists are Statisticians"
 date: 2013-08-28
 ---
 
