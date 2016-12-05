@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes: Multi-armed bandits"
+title: "Notes: Multi-armed Bandits"
 date: 2015-05-07
 ---
 
