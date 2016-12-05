@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RecSys Notes 1: Amazon.com Recommendations Item-to-Item Collaborative Filtering"
+title: "Notes: Amazon.com Recommendations Item-to-Item Collaborative Filtering"
 date: 2016-07-22
 ---
 
