@@ -12,11 +12,12 @@ I enjoy applying and developing statistical and machine learning methods for ana
 The best email address to contact me is bowen0701 at gmail.com.
 
 ## Research Interests
-- Survival analysis
-- Statistical modeling
-- Machine learning
-- Recommender systems
-- Online experiments
+- Survival Analysis
+- Statistical Modeling
+- Machine Learning
+- User Behavior Analytics
+- Recommender Systems
+- Online Experiments
 
 ## Experiences
 - 2016--now: Staff Data Scientist at Vpon
