@@ -7,7 +7,7 @@ title: Bowen Li's Website
 
 ## Staff Data Scientist @Vpon
 
-I enjoy applying and developing statistical and machine learning methods for analyzing massive datasets to solve problems, extract insights and build data products.
+I enjoy breaking down hard business problems and finding solutions with real-world massive datasets, by applying and developing statistical machine learning models, to extract insights and build data products.
 
 The best email address to contact me is bowen0701 at gmail.com.
 
