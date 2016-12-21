@@ -29,7 +29,7 @@ $$
 **Chi-squared test statistics under $$H_0$$:**
 
 $$
-X_p = \frac{(\widehat {p}_B - \widehat {p}_A)^2}{\widehat{p} (1 - \widehat{p}) \left ( \frac{1}{n_B} + \frac{1}{n_A} \right )} = \frac{n (ad - bc)^2}{(a + b) (a + c) (b + d) (c + d)} //
+X_p = \frac{(\widehat {p}_B - \widehat {p}_A)^2}{\widehat{p} (1 - \widehat{p}) \left ( \frac{1}{n_B} + \frac{1}{n_A} \right )} = \frac{n (ad - bc)^2}{(a + b) (a + c) (b + d) (c + d)} \\
 = \sum_{i=1}^2 \sum_{j=1}^2 \frac{(O_{ij} - E_{ij})^2}{E_{ij}} \rightarrow^d \chi^2_{(1)}
 \quad \text{(1)}
 $$
@@ -48,14 +48,14 @@ By applying (1) we can obtain the corresponding testing procedure or confidence 
 Let $$p_B = \Pr(D | E)$$, and $$p_A = \Pr(D | \bar E)$$,
 
 $$
-\widehat p_B = \frac{a}{a+b} = \frac{a}{n_B}, //
+\widehat p_B = \frac{a}{a+b} = \frac{a}{n_B}, \\
 \widehat p_A = \frac{c}{c+d} = \frac{c}{n_A}
 $$
 
 Under $$H_0: p_B = p_A = p$$,
 
 $$
-E(\widehat p_B - \widehat p_A) = 0, //
+E(\widehat p_B - \widehat p_A) = 0, \\
 Var(\widehat p_B - \widehat p_A) = \frac{1}{n_B} p_B (1 - p_B) + \frac{1}{n_A} p_A (1 - p_A) = p (1 - p) \left [ \frac{1}{n_B} + \frac{1}{n_A} \right ] := \widehat V
 $$
 
