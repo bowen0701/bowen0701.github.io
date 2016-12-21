@@ -18,12 +18,12 @@ We summarize data in the following $$2 \times 2$$ table:
 
 ## Pearson (1900)'s chi-squared test
 
-Let $$p_B = Pr(D | E)$$ be the conditional probability of event, $$D$$, given the exposure group, $$E$$, and $$p_A = Pr(D | \bar E)$$ the conditional probability of event, $$D$$, given the non-exposure group, A.
+Let $$p_B = Pr(D \| E)$$ be the conditional probability of event, $$D$$, given the exposure group, B, and $$p_A = Pr(D \| \bar E)$$ the conditional probability of event, $$D$$, given the non-exposure group, A.
 
 The interested hypothesis can be represented as
 
 $$
-H_0: p_B = p_A, vs. H_1: p_B \neq p_A
+H_0: p_B = p_A vs. H_1: p_B \neq p_A
 $$
 
 **Chi-squared test statistics under $$H_0$$:**
