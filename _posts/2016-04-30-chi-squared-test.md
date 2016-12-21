@@ -18,7 +18,7 @@ We summarize data in the following $$2 \times 2$$ table:
 
 ## Pearson (1900)'s chi-squared test
 
-Let $$p_B = Pr(D \| E)$$ be the conditional probability of event, $$D$$, given the exposure group, B, and $$p_A = Pr(D \| \bar E)$$ the conditional probability of event, $$D$$, given the non-exposure group, A.
+Let $$p_B = Pr(D|E)$$ be the conditional probability of event, $$D$$, given the exposure group, B, and $$p_A = Pr(D \| \bar E)$$ the conditional probability of event, $$D$$, given the non-exposure group, A.
 
 The interested hypothesis can be represented as
 
