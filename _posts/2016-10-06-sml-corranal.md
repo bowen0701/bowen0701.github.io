@@ -108,7 +108,7 @@ data = pd.DataFrame(data, columns=['period', 'comma', 'others'],
 data
 ```
 
-<div style="text-align:center">
+<div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -185,7 +185,7 @@ plot(ca(data))
 ```
 
 <div style="text-align:center">
-<img src="/images/ca_demo_ggplot.png" alt="Drawing" style="width: 700px;"/>
+<img src="/images/ca_vis_ggplot.png" alt="Drawing" style="width: 700px;"/>
 </div>
 
 ## 2. Methodology Summary
@@ -219,18 +219,14 @@ $$
 - **Row and column profiles:**
 
 $$
-r_i = \sum_{j=1}^J p_{ij} = \frac{1}{n} \sum_{j=1}^J x_{ij}, or \underset{I \times 1} r = P \mathbf{1}_J
-$$
-$$
+r_i = \sum_{j=1}^J p_{ij} = \frac{1}{n} \sum_{j=1}^J x_{ij}, or \underset{I \times 1} r = P \mathbf{1}_J \\
 c_j = \sum_{i=1}^I p_{ij} = \frac{1}{n} \sum_{i=1}^I x_{ij}, or \underset{J \times 1} c = P^T \mathbf{1}_I
 $$
 
 - Diagonal matrices with elements of $$r$$ and $$c$$:
 
 $$
-D_r = diag(r_1,...,r_I)
-$$
-$$
+D_r = diag(r_1,...,r_I) \\
 D_c = diag(c_1,...,c_J)
 $$
 
@@ -336,9 +332,7 @@ $$
 Relationship:
 
 $$
-F^T D_r F = G^T D_c G = \Sigma^2
-$$
-$$
+F^T D_r F = G^T D_c G = \Sigma^2 \\
 \Phi^T D_r \Phi = \Gamma^T D_c \Gamma = I
 $$
 
@@ -376,11 +370,13 @@ $$
 - Notice that the **row and column points in biplot lie in the same space**, with the column points defining the most extreme profiles possible, and for example, row profiles are at weighted averages of the column points, the weights being the profile elements.
 - Hence, closeness of a row and column point indicates a high association; we can calculate **row-to-column distances for one column at a time.**
 
-Figures 9.4 and 9.5 in Greenacre (2007):
+Figures 9.4 in Greenacre (2007):
 
 <div style="text-align:center">
 <img src="/images/symmetric_map.png" alt="Drawing" style="width: 550px;"/>
 </div>
+
+Figures 9.5 in Greenacre (2007):
 
 <div style="text-align:center">
 <img src="/images/asymmetric_map.png" alt="Drawing" style="width: 550px;"/>
