@@ -59,9 +59,9 @@ However, common data visualizations of type by site (left) and site by type (rig
   * Sites *P1*, *P2* and *P3* (to lesser degrees) are associated with type *A*
 - **Measure of retained information:**
   * **Inertia:** amount of retained information with
-    - 1st dimension: $\lambda^2_1 = 0.28 (55\%)$
-    - 2nd dimension: $\lambda^2_2 = 0.17 (28\%)$
-  * The two dimensions account for $55\% + 28\% = 88\%$ of the total inertia
+    - 1st dimension: $$\lambda^2_1 = 0.28 (55\%)$$
+    - 2nd dimension: $$\lambda^2_2 = 0.17 (28\%)$$
+  * The two dimensions account for $$55\% + 28\% = 88\%$$ of the total inertia
   * The representations fits the data well
 
 ## Why Correspondence Analysis?
@@ -108,7 +108,7 @@ data = pd.DataFrame(data, columns=['period', 'comma', 'others'],
 data
 ```
 
-<div>
+<div style="text-align:center">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -185,12 +185,12 @@ plot(ca(data))
 ```
 
 <div style="text-align:center">
-<img src="./images/ca_demo_ggplot.png" alt="Drawing" style="width: 700px;"/>
+<img src="/images/ca_demo_ggplot.png" alt="Drawing" style="width: 700px;"/>
 </div>
 
 ## 2. Methodology Summary
 
-Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is equivalent to **principal component analysis (PCA);** for introduction see [post](./2016-10-05-sml-pca-svd.md).
+Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is equivalent to **principal component analysis (PCA);** for introduction see [post](https://bowen0701.github.io/blog/2016/10/05/sml-pca-svd).
 
 ### Correspondence analysis methodology
 
@@ -205,11 +205,11 @@ x_{I1} & \cdots & x_{IJ}
 \end{bmatrix}
 $$
 
-The rows and columns of $X$ correspond to different **categories (groups)** of different **characteristics.**
+The rows and columns of $$X$$ correspond to different **categories (groups)** of different **characteristics.**
 
 Define:
 
-- **Correspondence matrix**: divide $x_{ij}$ by **total count,** $n = \textstyle \sum_{i=1}^I \sum_{j=1}^J x_{ij}$, to obtain
+- **Correspondence matrix**: divide $$x_{ij}$$ by **total count,** $$n = \textstyle \sum_{i=1}^I \sum_{j=1}^J x_{ij}$$, to obtain
 
 $$
 p_{ij} = \frac{1}{n} x_{ij}, or 
@@ -225,7 +225,7 @@ $$
 c_j = \sum_{i=1}^I p_{ij} = \frac{1}{n} \sum_{i=1}^I x_{ij}, or \underset{J \times 1} c = P^T \mathbf{1}_I
 $$
 
-- Diagonal matrices with elements of $r$ and $c$:
+- Diagonal matrices with elements of $$r$$ and $$c$$:
 
 $$
 D_r = diag(r_1,...,r_I)
@@ -236,33 +236,33 @@ $$
 
 **Correspondence analysis:**
 
-It can be formulated as the **reduced rank-K "weighted" least squares approximation** to select $\widehat{P} = \{p_{ij}\}$ which **minimizes**
+It can be formulated as the **reduced rank-K "weighted" least squares approximation** to select $$\widehat{P} = \{p_{ij}\}$$ which **minimizes**
 
 $$
 \sum_{i=1}^I \sum_{j=1}^J \frac{\left( p_{ij} - \widehat{p}_{ij} \right)^2}{r_i c_j}
 = tr \left[ \left( D_r^{-1/2} (P - \widehat{P}) D_c^{-1/2} \right) \left( D_r^{-1/2} (P - \widehat{P}) D_c^{-1/2} \right)^T \right]
 $$
 
-From the **result of Johnson & Wichern (2002), p. 72:** The term $r c^T$ is common to the approximation $\widehat{P}$ whatever the correspondence matrix $P$. Thus, it is equivalent to minimize
+From the **result of Johnson & Wichern (2002), p. 72:** The term $$r c^T$$ is common to the approximation $$\widehat{P}$$ whatever the correspondence matrix $$P$$. Thus, it is equivalent to minimize
 
 $$
 tr \left[ \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right) \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right)^T \right]
 $$
 
-Similarly with [SVD](./2016-10-05-sml-pca-svd.md), compute the **SVD of $D_r^{-1/2} (P - r c^T) D_c^{-1/2}$**:
+Similarly with [SVD](https://bowen0701.github.io/blog/2016/10/05/sml-pca-svd), compute the **SVD of $$D_r^{-1/2} (P - r c^T) D_c^{-1/2}$$**:
 
 $$
 D_r^{-1/2} (P - r c^T) D_c^{-1/2} = U \Sigma V^T
 $$
 
-where $U$ and $V$ are *orthogonal* matrices with $U^T U = V^T V = I$, and $\Sigma$ is a rank-K *diagonal* matrix. Thus,
+where $$U$$ and $$V$$ are *orthogonal* matrices with $$U^T U = V^T V = I$$, and $$\Sigma$$ is a rank-K *diagonal* matrix. Thus,
 
 $$
 P - r c^T = D_r^{1/2} \left( U \Sigma V^T \right) D_c^{1/2}
           = A \Sigma B
 $$
 
-where $A = D_r^{1/2} U$ and $B = D_c^{1/2} V$.
+where $$A = D_r^{1/2} U$$ and $$B = D_c^{1/2} V$$.
 
 The above decomposition is often called **generalized SVD:**
 
@@ -309,13 +309,13 @@ $$
                         =  D_c^{-1/2} V \Sigma A^T 
 $$
 
-- **Principal coordinates of rows:** The coordinates for $(R - \mathbf{1}_I c^T)$ w.r.t. the axes of $b_1,...,b_k$ are given by the columns of
+- **Principal coordinates of rows:** The coordinates for $$(R - \mathbf{1}_I c^T)$$ w.r.t. the axes of $$b_1,...,b_k$$ are given by the columns of
 
 $$
 F = D_r^{-1/2} U \Sigma
 $$
 
-- **Principal coordinates of columns:** The coordinates for $(C - r\mathbf{1}_J^T)^T$ w.r.t. the axes of $b_1,...,b_k$ are given by the columns of
+- **Principal coordinates of columns:** The coordinates for $$(C - r\mathbf{1}_J^T)^T$$ w.r.t. the axes of $$b_1,...,b_k$$ are given by the columns of
 
 $$
 G = D_c^{-1/2} V \Sigma
@@ -342,7 +342,7 @@ $$
 \Phi^T D_r \Phi = \Gamma^T D_c \Gamma = I
 $$
 
-**Inertia:** total variance of the correspondence matrix $P$, which resembles a chi-square statistic,
+**Inertia:** total variance of the correspondence matrix $$P$$, which resembles a chi-square statistic,
 
 $$
 Inertia = \sum_{i=1}^I \sum_{j=1}^J \frac{\left( p_{ij} - r_i c_j \right)^2}{r_i c_j} 
@@ -352,7 +352,7 @@ $$
 
 **Evaluation of 2D graphical display:**
 
-- **Inertia associated with dimension $k$, for $k = 1,2$:** $\lambda_k^2$.
+- **Inertia associated with dimension $$k$$, for $$k = 1,2$$:** $$\lambda_k^2$$.
 - **Proportion of total inertia:** explained total variance, total the larger, the better.
 
 $$
@@ -361,13 +361,13 @@ $$
 
 ## Visualization Maps
 
-- **(1) Symmetric map:** $(F, G)$, rows and columns in principal coordinates.
-- **(2) Asymmetric map with row principal:** $(F, \Gamma)$, rows (of more interest) in principal and columns in standard coordinates.
-- **(3) Asymmetric map with column principal:** $(\Phi, G)$, rows in standard and columns (of more interest) in principal corordinates. 
+- **(1) Symmetric map:** $$(F, G)$$, rows and columns in principal coordinates.
+- **(2) Asymmetric map with row principal:** $$(F, \Gamma)$$, rows (of more interest) in principal and columns in standard coordinates.
+- **(3) Asymmetric map with column principal:** $$(\Phi, G)$$, rows in standard and columns (of more interest) in principal corordinates. 
 
 **Symmetric map (1):**
 
-- Since principal coordinates of rows and columns, $(F, G)$, are scaled similarly, **joint display of two separate maps** finds some justification.
+- Since principal coordinates of rows and columns, $$(F, G)$$, are scaled similarly, **joint display of two separate maps** finds some justification.
 - Distances between row points (and between column points) are meaningful.
 - However, there is a **danger in interpreting row-to-column distances directly:** not possible to deduce from the closeness of a row and column point the fact that the corresponding row and column necessarily have a high association.
 
@@ -383,7 +383,7 @@ Figures 9.4 and 9.5 in Greenacre (2007):
 </div>
 
 <div style="text-align:center">
-<img src="./images/asymmetric_map.png" alt="Drawing" style="width: 550px;"/>
+<img src="/images/asymmetric_map.png" alt="Drawing" style="width: 550px;"/>
 </div>
 
 ## References
