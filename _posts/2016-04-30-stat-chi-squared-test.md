@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ML Notes: Chi-squared Test in 2x2 Table"
+title: "Stat Notes: Chi-squared Test in 2x2 Table"
 date: 2016-04-30
 ---
 
@@ -45,7 +45,7 @@ By applying (1) we can obtain the corresponding testing procedure or confidence 
 
 ## Derivations of (1)
 
-Let $$p_B = \Pr(D | E)$$, and $$p_A = \Pr(D | \bar E)$$,
+Let $$p_B = \Pr(D\vert E)$$, and $$p_A = \Pr(D\vert\bar E)$$,
 
 $$
 \widehat p_B = \frac{a}{a+b} = \frac{a}{n_B}, \\
