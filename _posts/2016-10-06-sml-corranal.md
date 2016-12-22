@@ -108,7 +108,7 @@ data = pd.DataFrame(data, columns=['period', 'comma', 'others'],
 data
 ```
 
-<div>
+<div style="text-align:right">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -185,7 +185,7 @@ plot(ca(data))
 ```
 
 <div style="text-align:center">
-<img src="/images/ca_vis_ggplot.png" alt="Drawing" style="width: 700px;"/>
+<img src="/images/ca_vis_ggplot.png" alt="Drawing" style="width: 600px;"/>
 </div>
 
 ## 2. Methodology Summary
