@@ -171,12 +171,12 @@ data
 - That is because **PCA is mainly sensitive to the number** of produced punctuation marks. 
 
 <div style="text-align:center">
-<img src="/images/bad_pca.png" alt="Drawing" style="width: 700px;" align="left" />
+<img src="/images/bad_pca.png" alt="Drawing" style="width: 700px;"/>
 </div>
 
 **Correspondence analysis is successful:**
 
-- From correspondence analysis results, Aloz and Zola are close together!
+- From correspondence analysis results, Aloz and Zola are close together.
 - It successfully **reveals profile (style) similarity.**
 
 ```python
@@ -185,12 +185,12 @@ plot(ca(data))
 ```
 
 <div style="text-align:center">
-<img src="./images/ca_demo_ggplot.png" alt="Drawing" style="width: 700px;" align="left" />
+<img src="./images/ca_demo_ggplot.png" alt="Drawing" style="width: 700px;"/>
 </div>
 
 ## 2. Methodology Summary
 
-Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is equivalent to **principal component analysis (PCA);** for introduction see [notebook](./pca_svd.ipynb).
+Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is equivalent to **principal component analysis (PCA);** for introduction see [post](./2016-10-05-sml-pca-svd.md).
 
 ### Correspondence analysis methodology
 
@@ -249,7 +249,7 @@ $$
 tr \left[ \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right) \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right)^T \right]
 $$
 
-Similarly with [SVD](http://bit.ly/2d564F5), compute the **SVD of $D_r^{-1/2} (P - r c^T) D_c^{-1/2}$**:
+Similarly with [SVD](./2016-10-05-sml-pca-svd.md), compute the **SVD of $D_r^{-1/2} (P - r c^T) D_c^{-1/2}$**:
 
 $$
 D_r^{-1/2} (P - r c^T) D_c^{-1/2} = U \Sigma V^T
