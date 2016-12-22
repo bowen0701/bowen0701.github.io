@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stat Notes: Chi-squared Test in 2x2 Table"
+title: "SML Notes: Chi-squared Test in 2x2 Table"
 date: 2016-04-30
 ---
 

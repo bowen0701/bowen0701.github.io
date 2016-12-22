@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ML Notes: Principal Component Analysis and Singular Value Decomposition"
+title: "SML Notes: Principal Component Analysis and Singular Value Decomposition"
 date: 2016-10-05
 ---
 
