@@ -4,7 +4,7 @@ title: "SML Notes: Chi-squared Test in 2x2 Table"
 date: 2016-04-30
 ---
 
-## Observed data
+## 1. Observed data in 2x2 table
 
 We summarize data in the following $$2 \times 2$$ table:
 
@@ -16,7 +16,7 @@ We summarize data in the following $$2 \times 2$$ table:
 
 **The interested hypothesis: the exposure $$E$$ and the event $$D$$ are independent.**
 
-## Pearson (1900)'s chi-squared test
+## 2. Pearson (1900)'s chi-squared test
 
 Let $$p_B = Pr(D\vert E)$$ be the conditional probability of event, $$D$$, given the exposure group, B, and $$p_A = Pr(D\vert\bar E)$$ the conditional probability of event, $$D$$, given the non-exposure group, A.
 
@@ -43,7 +43,7 @@ where
 
 By applying (1) we can obtain the corresponding testing procedure or confidence interval.
 
-## Derivations of (1)
+## Appendix. Derivations of (1)
 
 Let $$p_B = \Pr(D\vert E)$$, and $$p_A = \Pr(D\vert\bar E)$$,
 
