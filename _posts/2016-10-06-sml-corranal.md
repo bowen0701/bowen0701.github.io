@@ -347,7 +347,7 @@ $$
 **Evaluation of 2D graphical display:**
 
 - **Inertia associated with dimension $$k$$, for $$k = 1,2$$:** $$\lambda_k^2$$.
-- **Proportion of total inertia:** explained total variance, total the larger, the better.
+- **Proportion of total inertia:** explained total variance; the larger, the better.
 
 $$
 \frac{\left(\lambda_1^2 + \lambda_2^2 \right)}{\sum_{k=1}^K \lambda_k^2}
