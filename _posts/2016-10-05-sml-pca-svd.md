@@ -165,7 +165,7 @@ That is, **normalized $$X$$ multiplied by an eigenvector of covariance of $$X$$,
 **Matrix version of SVD:**
 
 $$
-\left( \frac{1}{\sqrt{n}}X \right) V = U \Sigma,
+\left( \frac{1}{\sqrt{n}}X \right) V = U \Sigma, \\
 \frac{1}{\sqrt{n}}X = U \Sigma V^T
 $$
 
