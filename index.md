@@ -39,7 +39,7 @@ The best email address to contact me is bowen0701 at gmail.com.
 - [Subdistribution regression for recurrent events under competing risks: with application to shunt thrombosis study in dialysis patients.](http://link.springer.com/article/10.1007/s12561-016-9161-0)
 C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen. Statistics in Biosciences 2016.
 - Nonparametric marginal analysis of recurrent events data under competing risks. B. Li, W. Wang, and Y.-H. Chen. Under revision.
-- [Nonparametric marginal analysis of recurrent events data under competing risks.](http://etd.lib.nctu.edu.tw/cgi-bin/gs32/gsweb.cgi?o=dallcdr&s=id=%22GT079826802%22.&searchmode=basic) B. Li. Ph.D. Dissertation, Institute of Statistics, National Chiao Tung University, 2014.
+- [xxxNonparametric marginal analysis of recurrent events data under competing risks.](http://etd.lib.nctu.edu.tw/cgi-bin/gs32/gsweb.cgi?o=dallcdr&s=id=%22GT079826802%22.&searchmode=basic) B. Li. Ph.D. Dissertation, Institute of Statistics, National Chiao Tung University, 2014.
 
 ## Talks
 - Marginal inference on recurrent events data under competing risks. [ERCIM Conference 2014](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, 2014/12/06.
