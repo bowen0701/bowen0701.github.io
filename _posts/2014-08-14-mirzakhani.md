@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Quotes by Mirzakhani"
 date: 2014-08-14
 ---

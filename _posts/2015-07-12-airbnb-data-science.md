@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Notes: At Airbnb, Data Science Belongs Everywhere"
 date: 2015-07-12
 ---

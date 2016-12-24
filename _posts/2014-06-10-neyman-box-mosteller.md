@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Quotes by Neyman, Box & Mosteller"
 date: 2014-06-10
 ---

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Quotes by Efron, Blackwell, van de Geer, Chatterjee & Dunson"
 date: 2013-12-05
 ---

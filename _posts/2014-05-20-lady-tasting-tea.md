@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Notes: The Lady Tasting Tea"
 date: 2014-05-20
 ---

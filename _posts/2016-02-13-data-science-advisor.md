@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Precious Lecture by my Data Science Advisor"
 date: 2016-02-13
 ---

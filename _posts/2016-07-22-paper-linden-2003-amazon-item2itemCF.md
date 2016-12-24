@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Paper Notes: Amazon.com Recommendations Item-to-Item Collaborative Filtering"
 date: 2016-07-22
 ---
