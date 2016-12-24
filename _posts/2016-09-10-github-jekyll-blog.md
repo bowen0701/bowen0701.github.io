@@ -19,6 +19,8 @@ You may ask the above question. "Let's see, everything," quotes from Karpathy, a
 - Your posts are stuck forever in an ugly, Wordpress-specific SQL database (ew). You can't easily import/export posts. You do not really own your content in raw and nimble form.
 - Wordpress is blocked in China.
 
+I used Wordpress for blogging for more than three years (you can see this from my old blog posts) and totally aggreed his concerns.
+
 ## Jekyll on Github <3
 
 [Jekyll](http://jekyllrb.com/) introduces itself as a tool for building "Simple, blog-aware, static sites", and was originally written by one of the Github co-founders, Tom Preston-Werner. In Karpathy's words: "It is flat and transparent: Your blog workspace is a single folder with a config file, and a few folders for CSS and HTML templates." With Jekyll you can write your blog posts in simple [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), which is easy to use with script and mathjax and image syntax. Further, as you might expect, Karpathy added, "Jekyll is tightly integrated with [Github](https://github.com): create a repository that looks like `username.github.io` and add your files to the repo. Github will automatically compile your files with Jekyll." For example, mine lives on [bowen0701.github.io](bowen0701.github.io). Thus, Github makes sure that your blog is backed up forever in markdown, and also hosts your content!
