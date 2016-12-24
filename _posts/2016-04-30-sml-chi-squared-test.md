@@ -7,7 +7,7 @@ date: 2016-04-30
 
 ## 1. Aggregate data in a 2x2 Table
 
-In many applications, for example, exposure-disease association, classifications, etc, we can summarize data in the following $2 \times 2$ table:
+In many applications, for example, exposure-disease association, classifications, etc, we can summarize data in the following $$2 \times 2$$ table:
 
 |                        |  Event: $$D$$   | No Event: $$\bar D$$ |         |
 |------------------------|-----------------|----------------------|---------|
