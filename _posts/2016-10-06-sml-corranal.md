@@ -65,7 +65,7 @@ However, common data visualizations of type by site (left) and site by type (rig
   * The two dimensions account for $$55\% + 28\% = 88\%$$ of the total inertia
   * The representations fits the data well
 
-## Why Correspondence Analysis?
+## 2. Why Correspondence Analysis?
 
 Reference: Abdi & Williams (2010).
 
@@ -189,7 +189,7 @@ plot(ca(data))
 <img src="/images/ca_vis_ggplot.png" alt="Drawing" style="width: 600px;"/>
 </div>
 
-## 2. Methodology Summary
+## 3. Methodology Summary
 
 Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is equivalent to **principal component analysis (PCA);** for introduction see [post](https://bowen0701.github.io/blog/2016/10/05/sml-pca-svd).
 
