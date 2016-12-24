@@ -5,13 +5,11 @@ title: "Moving my Blog from Wordpress to Jekyll"
 date: 2016-09-10
 ---
 
-## Thank you and Byebye Wordpress!
-
 Inspired by Andrej Karpathy's blog post ["Switching Blog from Wordpress to Jekyll"](http://karpathy.github.io/2014/07/01/switching-to-jekyll/), I decide to move my blog from Wordpress to Jekyll as well. After some practices, similarly as Karpathy, I can confidently say that I could not be happier about this decision.
 
-## So What's Wrong with Wordpress?
+## Thank you and Byebye Wordpress!
 
-You may ask the above question. "Let's see, everything," quotes from Karpathy, and he clarified his conclusion in the following bullets:
+So What's Wrong with Wordpress? You may ask the above question. "Let's see, everything," quotes from Karpathy, and he clarified his conclusion in the following bullets:
 
 - Wordpress blogs are clunky, slow and bloated.
 - Wordpress is dynamically rendered with .php. There are really only few niche applications where this is necessary. Dynamic code execution exposes your blog to hackers and exploits: zero-day attacks, viruses, etc. My own blog was hacked ~2 months ago and all my posts had been infected with spammy content that kept re-inserting itself magically when I removed it.
