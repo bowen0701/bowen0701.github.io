@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Notes: Learning for Big Data"
 date: 2015-09-23
 ---

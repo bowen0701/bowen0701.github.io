@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Notes: Learning How to Learn"
 date: 2015-02-25
 ---

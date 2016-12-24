@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "SML Notes: Correspondence Analysis"
 date: 2016-10-06
 ---

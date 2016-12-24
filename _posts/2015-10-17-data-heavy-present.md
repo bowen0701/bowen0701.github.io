@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Notes: How to Give a Data-heavy Presentation"
 date: 2015-10-17
 ---

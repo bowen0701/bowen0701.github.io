@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "SML Notes: Chi-squared Test in 2x2 Table"
 date: 2016-04-30
 ---
