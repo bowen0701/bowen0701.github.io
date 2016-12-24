@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Among Data Scientists are Statisticians"
 date: 2013-08-28
 ---
