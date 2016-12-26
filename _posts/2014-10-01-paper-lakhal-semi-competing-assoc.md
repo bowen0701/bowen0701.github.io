@@ -11,7 +11,7 @@ date: 2014-10-01
 
 ## Key Points
 
-The main idea of the work is to utilize smartly the relationships between the Archemedean copulas and [Kendall's tau](http://en.wikipedia.org/wiki/Kendall_tau_rank_correlation_coefficient) and the cross-ratio for establishing the estimating equations for the association parameter.
+The main idea of the work is to utilize smartly the relationships between the Archemedean copulas and [Kendall's tau](http://en.wikipedia.org/wiki/Kendall_tau_rank_correlation_coefficient) and the **cross-ratio** for establishing the estimating equations for the association parameter.
 
 ## Summary
 
