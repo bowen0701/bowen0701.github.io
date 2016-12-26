@@ -130,7 +130,8 @@ D}_{1}}{{D}_{2}}F(x,y) \\ =+\frac{\partial }{\partial x}\frac{1}{{{{{\phi }'}}_{
 =\frac{\partial }{\partial u}\frac{1}{{{{{\phi }'}}_{\alpha }}(v)}\frac{\partial u}{\partial x}\frac{\partial u}{\partial y} \\
 =\frac{\partial }{\partial {{\phi }_{\alpha }}(v)}\frac{1}{{{{{\phi }'}}_{\alpha }}(v)}\frac{\partial u}{\partial x}\frac{\partial u}{\partial y} \\
 =\frac{\partial v}{\partial {{\phi }_{\alpha }}(v)}\frac{\partial {{{{\phi }'}}_{\alpha }}(v)}{\partial v}\left[ \frac{\partial }{\partial {{{{\phi }'}}_{\alpha }}(v)}\frac{1}{{{{{\phi }'}}_{\alpha }}(v)} \right]\frac{\partial u}{\partial x}\frac{\partial u}{\partial y} \\
-=-\frac{{{{{\phi }''}}_{\alpha }}(v)}{{{{{\phi }'}}_{\alpha }}(v)}\frac{1}{{{[{{{{\phi }'}}_{\alpha }}(v)]}^{2}}}\frac{\partial u}{\partial x}\frac{\partial u}{\partial y}=-\frac{{{{{\phi }''}}_{\alpha }}(v)}{{{[{{{{\phi }'}}_{\alpha }}(v)]}^{3}}}\frac{\partial u}{\partial x}\frac{\partial u}{\partial y}.$$
+=-\frac{{{{{\phi }''}}_{\alpha }}(v)}{{{{{\phi }'}}_{\alpha }}(v)}\frac{1}{{{[{{{{\phi }'}}_{\alpha }}(v)]}^{2}}}\frac{\partial u}{\partial x}\frac{\partial u}{\partial y}=-\frac{{{{{\phi }''}}_{\alpha }}(v)}{{{[{{{{\phi }'}}_{\alpha }}(v)]}^{3}}}\frac{\partial u}{\partial x}\frac{\partial u}{\partial y}.
+$$
 
 Plugging the four components of $$\theta _{\alpha }^{*}(x,y)$$ the result follows.
 
