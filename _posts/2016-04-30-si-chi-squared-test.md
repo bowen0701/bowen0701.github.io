@@ -1,13 +1,13 @@
 ---
 layout: post
 comments: true
-title: "SML Notes: Chi-squared Test in 2x2 Table"
+title: "SI Notes: Chi-Squared Test in 2x2 Contingency Table"
 date: 2016-04-30
 ---
 
-## 1. Aggregate data in a 2x2 Table
+## 1. Aggregate data in a 2x2 contingency table
 
-In many applications, for example, exposure-disease association, classifications, etc, we can summarize data in the following $$2 \times 2$$ table:
+In many applications, for example, exposure-disease association, classifications, etc, we can summarize data in the following 2x2 contingency table:
 
 |                        |  Event: $$D$$   | No Event: $$\bar D$$ |         |
 |------------------------|-----------------|----------------------|---------|
