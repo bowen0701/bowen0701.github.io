@@ -386,7 +386,7 @@ Figures 9.5 in Greenacre (2007):
 
 ## 5. Implementation from Scratch
 
-I implement Correspondence Analysis from scratch as follows; to download the scripts please refert to my corresponding [GitHub repor](https://github.com/bowen0701/corranal).
+I implement Correspondence Analysis from scratch as follows; to download the scripts please refert to my corresponding [GitHub repo](https://github.com/bowen0701/corranal).
 
 ```python
 # corranal.py: Python Correspondence Analysis
