@@ -6,6 +6,7 @@ title: Bowen Li's Collected Blogs
 The following are blogs I am following. :-)
 
 ## Tech Blogs
+
 - Google Official Blog:
 [googleblog.blogspot.tw](https://googleblog.blogspot.tw)		
 - Google Research Blog:
@@ -48,6 +49,9 @@ The following are blogs I am following. :-)
 [statslife.org.uk](https://statslife.org.uk)
 
 ## Professional Blogs
+
+- Terence Tao's What’s new:
+[terrytao.wordpress.com](https://terrytao.wordpress.com)
 - Andrej Karpathy blog:
 [karpathy.github.io](https://karpathy.github.io)
 - Shakir Mohamed's The Spectator:
@@ -96,12 +100,14 @@ The following are blogs I am following. :-)
 [xianblog.wordpress.com](https://xianblog.wordpress.com)
 - Larry Wasserman's Normal Deviate:
 [normaldeviate.wordpress.com](https://normaldeviate.wordpress.com)
-- Terence Tao's What’s new:
-[terrytao.wordpress.com](https://terrytao.wordpress.com)
 - mytestmy:
 [blog.csdn.net/mytestmy](http://blog.csdn.net/mytestmy)
+- Sebastian Raschka's blog
+[sebastianraschka.com/blog](https://sebastianraschka.com/blog)
+
 
 ## Misc Blogs
+
 - Matt Welsh's Volatile and Decentralized:
 [matt-welsh.blogspot.tw](http://matt-welsh.blogspot.tw)
 - Daniel Lemire's blog:
