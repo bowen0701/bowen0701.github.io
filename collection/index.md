@@ -9,7 +9,7 @@ The following are blogs I am following. :-)
 
 - [Google Official Blog](https://googleblog.blogspot.tw)		
 - [Google Research Blog](https://googleresearch.blogspot.tw)
-- [Google Deepmind News & Blog]:(https://deepmind.com/blog/)
+- [Google Deepmind News & Blog](https://deepmind.com/blog/)
 - [The Unofficial Google Data Science Blog](http://www.unofficialgoogledatascience.com)
 - [Import AI Newsletter (OpenAI)](http://us13.campaign-archive1.com/home/?u=67bd06787e84d73db24fb0aa5&id=6c9d98ff2c)
 - [Facebook's Research Blog](https://research.facebook.com/blog)
@@ -27,6 +27,9 @@ The following are blogs I am following. :-)
 - [R-bloggers](https://r-bloggers.com)
 - [Capital of Statistics](http://cos.name)
 - [Hacker News](https://news.ycombinator.com/news)
+- [Stack Overflow](http://stackoverflow.com/)
+- [Cross Validated](http://stats.stackexchange.com/)
+- [Data Science Stack Exchange](http://datascience.stackexchange.com/)
 - [reddit/machinelearning](https://reddit.com/r/machinelearning)
 
 
