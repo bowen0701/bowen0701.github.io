@@ -13,7 +13,7 @@ The best email address to contact me is bowen0701 at gmail.com.
 
 ## Research Interests
 
-- Survival Analysis
+- Time-to-Event Analysis
 - Statistical Modeling
 - Machine Learning
 - User Behavior Analytics
@@ -32,7 +32,6 @@ The best email address to contact me is bowen0701 at gmail.com.
 ## Education
 
 - 2009--2014: Ph.D. in Statistics, National Chiao Tung University
-  * PhD Dissertation: Nonparametric Marginal Analysis of Recurrent Events Data under Competing Risks.
 - 2002--2004: M.S. in Statistics, National Central University
 - 1998--2002: B.S. in Industrial Engineering, National Tsing Hua University
 
@@ -42,9 +41,9 @@ The best email address to contact me is bowen0701 at gmail.com.
 
 ## Publications
 
-- [Subdistribution regression for recurrent events under competing risks: with application to shunt thrombosis study in dialysis patients.](http://link.springer.com/article/10.1007/s12561-016-9161-0)
-C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen. Statistics in Biosciences 2016.
-- Nonparametric Marginal Analysis of Recurrent Events Data under Competing Risks. B. Li, W. Wang, and Y.-H. Chen. Under revision.
+- C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen (2016). [Subdistribution regression for recurrent events under competing risks: with application to shunt thrombosis study in dialysis patients.](http://link.springer.com/article/10.1007/s12561-016-9161-0). Statistics in Biosciences.
+- B. Li (2014). [Nonparametric marginal analysis of recurrent events data under competing risks](http://etd.lib.nctu.edu.tw/cgi-bin/gs32/tugsweb.cgi/ccd=rMazT3/record?r1=1&h1=1). PhD Dissertation, National Chiao Tung University.
+
 
 ## Talks
 
