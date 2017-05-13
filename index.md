@@ -5,7 +5,7 @@ title: Bowen Li's Website
 
 # Bowen Li
 
-## Staff Data Scientist @Vpon
+## Data Scientist @Vpon
 
 I enjoy breaking down hard business problems and finding solutions with real-world massive datasets by applying and developing statistical machine learning models, to extract insights and build data products.
 
