@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Paper Notes: Amazon.com Recommendations Item-to-Item Collaborative Filtering"
+title: "Review: Amazon.com Recommendations Item-to-Item Collaborative Filtering"
 date: 2016-07-22
 ---
 
@@ -26,7 +26,7 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
 - Information glut: Old customers can have a glut of information.
 - Each interaction provides valuable customer data, and algorithm must respond immediately to new information.
 
-**Literature review:** Common recsys approaches include
+**Literature review:** Common RecSys approaches include
 
 - Traditional collaborative filtering (CF)
 - Cluster models
