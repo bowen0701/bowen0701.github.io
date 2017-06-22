@@ -80,7 +80,7 @@ This work focuses on the item-to-item CF.
 
 ## Content-based methods
 
-Treat the recommendation as a "search query" to find other popular items: Information retrieval.
+Treat the recommendation as a "search query" to find other popular items: **information retrieval.**
 
 - same author / director
 - similar keywords or subjects.
