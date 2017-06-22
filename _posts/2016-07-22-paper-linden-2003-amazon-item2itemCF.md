@@ -43,6 +43,7 @@ This work focuses on the item-to-item CF.
 - Finding similar "items", not similar users.
   * Content-based methods / item-to-item CF.
 
+
 ## Traditional CF
 
 - Represent a user as an N-dimensional vector of items (N: # of distinct catalog items).
@@ -60,6 +61,7 @@ This work focuses on the item-to-item CF.
   * Dimensionality reduction techniques: (1) Clustering, and (2) PCA.
 - The above methods may reduce recommendation quality.
 
+
 ## Cluster models
 
 - Divide the users into many segments and treat recommendation as a classification problem.
@@ -75,6 +77,7 @@ This work focuses on the item-to-item CF.
   * Dimensionality reduction.
 - The recommendation may be less relevant: similar users that the cluster models find are not the most similar users.
 
+
 ## Content-based methods
 
 Treat the recommendation as a "search query" to find other popular items: Information retrieval.
@@ -87,6 +90,7 @@ Treat the recommendation as a "search query" to find other popular items: Inform
 - For old users with thousands of purchases, it is impractical.
 - Resolve by random sampling subset / summary of the data.
 - Recommendation quality is relatively poor.
+
 
 ## Proposed item-to-item CF
 
@@ -110,6 +114,7 @@ Treat the recommendation as a "search query" to find other popular items: Inform
   * Find similar items to the user's purchases and ratings.
   * Aggregate those items.
   * Recommend the most popular or correlated items.
+
 
 ## Comments
 
