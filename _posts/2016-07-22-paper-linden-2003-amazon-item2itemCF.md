@@ -14,8 +14,6 @@ date: 2016-07-22
 
 This seminal paper introduced what is recommender system (RecSys) and the corresponding challenges. Futher, it reviews two types of RecSys and summarizes the tradictional user-to-user collaborative filtering (CF), cluster models, content-based methods and the proposed item-to-item CF.
 
-## Key Points
-
 **Recommendation system:** Use input about a user's interest to generate a list of a recommendated items. user's interest can be items that users purchase, items that users explicitly rate, items viewed, demographic data, suject interests, and favorite artists, etc.
 
 **Challenges:**
@@ -41,7 +39,7 @@ This work focuses on the item-to-item CF.
 - Finding similar "items", not similar users.
   * Content-based methods / item-to-item CF.
 
-**Traditional CF:**
+## Traditional CF
 
 - Represent a user as an N-dimensional vector of items (N: # of distinct catalog items).
 - Typically multiply user vector components by the inverse frequency to make the less well-known items much more relevant.
@@ -50,7 +48,7 @@ This work focuses on the item-to-item CF.
 - Collect similar users's items.
 - Rank each item according to how many similar users purchased it.
 
-Remarks:
+**Remarks:**
 
 - Scaling issue due to expensive computational cost.
   * Reduce user size by (1) random sampling or (2) discarding users with fewer purchases.
@@ -58,7 +56,7 @@ Remarks:
   * Dimensionality reduction techniques: (1) Clustering, and (2) PCA.
 - The above methods may reduce recommendation quality.
 
-**Cluster models:**
+## Cluster models
 
 - Divide the users into many segments and treat recommendation as a classification problem.
   * Applying clustering or other unsupervised learning algortihms via similarity measures.
@@ -66,27 +64,27 @@ Remarks:
 - Assign the user to the segment containing the most similar users.
 - Generate recommendations by using the purchased and ratings of the users in the segment.
 
-Remarks:
+**Remarks:**
 
 - Better scalability than tranditional CF: complex and expensive clustering is run offline, improved by
   * Sampling
   * Dimensionality reduction.
 - The recommendation may be less relevant: similar users that the cluster models find are not the most similar users.
 
-**Content-based methods:**
+## Content-based methods
 
 Treat the recommendation as a "search query" to find other popular items: Information retrieval.
 
 - same author / director
 - similar keywords or subjects.
 
-Remarks:
+**Remarks:**
 
 - For old users with thousands of purchases, it is impractical.
 - Resolve by random sampling subset / summary of the data.
 - Recommendation quality is relatively poor.
 
-**Proposed item-to-item CF:**
+## Proposed item-to-item CF
 
 - Match each of the user's purchased and rated "items" to similar "items".
 - Combine those similar items into a recommendation list.
@@ -98,6 +96,10 @@ Remarks:
 <div style="text-align:center">
 <img src="/images/amazon_item2itemCF_algo.png"/>
 </div>
+
+- Specifically, for item $$I_1$$, there are users, $$(C_1,...,C_M)$$, who purchased or rated this item. For each user, $$C_m, m = 1,...,M$$, collect all of her other purchased or rated items, say item $$I_2$$. After going through all of users's purchased or rated items, compute the similarity between all pairs of $$(I_1, I_2)$$, where $$I_2$$ are all related items to $$I_1$$.
+
+**Remarks:**
 
 - The offline computation of the similar-items table: computationally expensive.
 - The online recommendation: very quick, depending only on the number of items the user purchased or rated.
