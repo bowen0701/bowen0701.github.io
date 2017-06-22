@@ -16,15 +16,15 @@ This seminal paper introduced what is recommender system (RecSys) and the corres
 
 ## Key Points
 
-**Recommendation system:** Use input about a customer's interest to generate a list of a recommendated items. Customer's interest can be items that customers purchase, items that customers explicitly rate, items viewed, demographic data, suject interests, and favorite artists, etc.
+**Recommendation system:** Use input about a user's interest to generate a list of a recommendated items. user's interest can be items that users purchase, items that users explicitly rate, items viewed, demographic data, suject interests, and favorite artists, etc.
 
 **Challenges:**
 
-- Huge amount of data: ten of millions of customers and millions of distinct catalog items.
+- Huge amount of data: ten of millions of users and millions of distinct catalog items.
 - Require the recommendation results set to be returned in realtime.
-- Cold start: New customers typically have extremely limited information.
-- Information glut: Old customers can have a glut of information.
-- Each interaction provides valuable customer data, and algorithm must respond immediately to new information.
+- Cold start: New users typically have extremely limited information.
+- Information glut: Old users can have a glut of information.
+- Each interaction provides valuable user data, and algorithm must respond immediately to new information.
 
 **Literature review:** Common RecSys approaches include
 
@@ -36,42 +36,42 @@ This work focuses on the item-to-item CF.
 
 **Two types of RecSys:**
 
-- Finding similar "customers" whose purchased and rated items overlap the user's purchased and rated items.
+- Finding similar "users" whose purchased and rated items overlap the user's purchased and rated items.
   * Traditional CF / cluster models.
-- Finding similar "items", not similar customers.
+- Finding similar "items", not similar users.
   * Content-based methods / item-to-item CF.
 
 **Traditional CF:**
 
-- Represent a customer as an N-dimensional vector of items (N: # of distinct catalog items).
+- Represent a user as an N-dimensional vector of items (N: # of distinct catalog items).
 - Typically multiply user vector components by the inverse frequency to make the less well-known items much more relevant.
 - User vectors are generally sparse.
 - Measure user vectors's similarity by cosine similarity measure.
-- Collect similar customers's items.
-- Rank each item according to how many similar customers purchased it.
+- Collect similar users's items.
+- Rank each item according to how many similar users purchased it.
 
 Remarks:
 
 - Scaling issue due to expensive computational cost.
-  * Reduce customer size by (1) random sampling or (2) discarding customers with fewer purchases.
+  * Reduce user size by (1) random sampling or (2) discarding users with fewer purchases.
   * Reduce item size by (1) partitioning item space.
   * Dimensionality reduction techniques: (1) Clustering, and (2) PCA.
 - The above methods may reduce recommendation quality.
 
 **Cluster models:**
 
-- Divide the customers into many segments and treat recommendation as a classification problem.
+- Divide the users into many segments and treat recommendation as a classification problem.
   * Applying clustering or other unsupervised learning algortihms via similarity measures.
   * Manually determined segments.
-- Assign the user to the segment containing the most similar customers.
-- Generate recommendations by using the purchased and ratings of the customers in the segment.
+- Assign the user to the segment containing the most similar users.
+- Generate recommendations by using the purchased and ratings of the users in the segment.
 
 Remarks:
 
 - Better scalability than tranditional CF: complex and expensive clustering is run offline, improved by
   * Sampling
   * Dimensionality reduction.
-- The recommendation may be less relevant: similar customers that the cluster models find are not the most similar customers.
+- The recommendation may be less relevant: similar users that the cluster models find are not the most similar users.
 
 **Content-based methods:**
 
@@ -90,9 +90,9 @@ Remarks:
 
 - Match each of the user's purchased and rated "items" to similar "items".
 - Combine those similar items into a recommendation list.
-- Since many item pairs have no common customers, all pairs computation of similar-items table by building product-to-product matrix is inefficient.
+- Since many item pairs have no common users, all pairs computation of similar-items table by building product-to-product matrix is inefficient.
 - Proposed algorithm: 
-  * Represent a "item" as an M-dimensional vector of users (M: # of customers who have purchase that item)
+  * Represent a "item" as an M-dimensional vector of users (M: # of users who have purchase that item)
   * Calculate the (cosine) similarity between a "single" item and "all related" items
 
 <div style="text-align:center">
