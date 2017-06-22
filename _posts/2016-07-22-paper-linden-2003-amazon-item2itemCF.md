@@ -10,9 +10,11 @@ date: 2016-07-22
 - Company: Amazon
 - Test of Time Award from The International World Wide Web Conference committee: "this outstanding paper has had a considerable real-world impact".
 
+
 ## Summary
 
 This seminal paper introduced what is recommender system (RecSys) and the corresponding challenges. Futher, it reviews two types of RecSys and summarizes the tradictional user-to-user collaborative filtering (CF), cluster models, content-based methods and the proposed item-to-item CF.
+
 
 ## Introduction
 
