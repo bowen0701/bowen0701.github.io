@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Notes: Multi-armed Bandits"
+title: "ML Notes: Multi-armed Bandits"
 date: 2015-05-07
 ---
 
