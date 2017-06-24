@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "SI Notes: Chi-Squared Test in 2x2 Contingency Table"
+title: "DS Notes: Chi-Squared Test in 2x2 Contingency Table"
 date: 2016-04-30
 ---
 
