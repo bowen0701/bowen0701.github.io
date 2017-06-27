@@ -5,9 +5,12 @@ title: "ML Notes: Multi-Armed Bandits"
 date: 2015-05-07
 ---
 
+## Introduction
+
 I just read a clear and insightful [Quora anwser](http://www.quora.com/What-is-the-multi-arm-bandit-problem-What-are-some-of-its-implications), provided by Professor [Yisong Yue](http://www.yisongyue.com/) at Caltech, to what is the **Multi-armed Bandits problem**, also called the **Sequential Learning problem**, and finally got a basic understanding about the problem and its potential applications. This topic is interesting to me and will be one of my research projects. Thus I will begin to wrap up some notes on what I've learned during the journey. In this preliminary note, I will quickly summarize, from that article, the basic notions of sequential learning problem and give some of their application examples.
 
-## 1. Multi-arm bandit problem
+
+## Multi-arm bandit problem
 
 The multi-arm bandit problem is a **partial-information sequential decision making problem:**
 
@@ -18,14 +21,16 @@ The multi-arm bandit problem is a **partial-information sequential decision maki
 
 The goal of the decision maker is to maximize the total reward over all \\( T \\) arm pulls. The decision maker only learns about arms by pulling them; hence **partial information**.
 
-## 2. The central question for multi-arm bandit problem
+
+## The central question for multi-arm bandit problem
 
 How to **balance the trade-off between**
 
 - **Exploitation:** exploit our past experience to pull arms that appear to have high average reward,
 - **Exploration:** explore by pulling other seemingly poorer arms to gather their information.
 
-## 3. Interesting applications for multi-arm bandit problem
+
+## Interesting applications for multi-arm bandit problem
 
 - Online advertising,
 - Music or movie recommender system,
@@ -43,4 +48,7 @@ How to **balance the trade-off between**
 
 Thus the multi-armed bandits problem is also known as the **problem of sequential experimental design**.
 
-I definitely will exploit and explore this topic further in the near future. :-)
+
+## Discussions
+
+From the above we know that the multi-armed bandits has lots of interesting applications. Thus, I definitely will exploit and explore this topic further in the near future. :-)
