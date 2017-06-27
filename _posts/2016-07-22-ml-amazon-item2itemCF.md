@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "ML Notes: Item-to-Item Collaborative Filtering"
+title: "ML Notes: Item-to-Item Collaborative Filtering by Amazon"
 date: 2016-07-22
 ---
 
