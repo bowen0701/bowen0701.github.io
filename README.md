@@ -6,7 +6,7 @@
 - 06 Oct 2016 » [ML Notes: Correspondence Analysis](https://bowen0701.github.io/blog/2016/10/06/ml-corranal)
 - 05 Oct 2016 » [ML Notes: Principal Component Analysis & Singular Value Decomposition](https://bowen0701.github.io/blog/2016/10/05/ml-pca-svd)
 - 10 Sep 2016 » [Moving my Blog from Wordpress to Jekyll](https://bowen0701.github.io/blog/2016/09/10/github-jekyll-blog)
-- 22 Jul 2016 » [ML Notes: Item-to-Item Collaborative Filtering by Amazon](https://bowen0701.github.io/blog/2016/07/22/ml-amazon-item2itemCF)
+- 22 Jul 2016 » [ML Notes: Amazon's Item-to-Item Collaborative Filtering](https://bowen0701.github.io/blog/2016/07/22/ml-amazon-item2itemCF)
 - 30 Apr 2016 » [DS Notes: Chi-Squared Test in 2x2 Contingency Table](https://bowen0701.github.io/blog/2016/04/30/ds-chi-squared-test)
 - 13 Feb 2016 » [Precious Lecture by my Data Science Advisor](https://bowen0701.github.io/blog/2016/02/13/data-science-advisor)
 - 17 Oct 2015 » [Notes: How to Give a Data-heavy Presentation](https://bowen0701.github.io/blog/2015/10/17/data-heavy-present)
