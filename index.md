@@ -7,15 +7,15 @@ title: Bowen Li's Website
 
 ## Data Scientist @Vpon
 
-I enjoy breaking down hard business problems and finding solutions with real-world massive datasets by applying and developing statistical machine learning models, to extract insights and build data products.
+I enjoy breaking down hard business problems and finding solutions with real-world massive datasets by tailoring machine learning models, to extract insights and build data products.
 
 The best email address to contact me is bowen0701 at gmail.com.
 
 ## Research Interests
 
 - Time-to-Event Analysis
-- Statistical Modeling
 - Machine Learning
+- Statistical Modeling
 - User Behavior Analytics
 - Online Advertising
 - Recommender Systems
