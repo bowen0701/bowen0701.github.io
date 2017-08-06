@@ -1,13 +1,13 @@
 ---
 layout: post
 comments: true
-title: "DS Notes: Chi-Squared Test in 2x2 Contingency Table"
+title: "DS Notes: Chi-Squared Testing"
 date: 2016-04-30
 ---
 
 ## 1. Aggregate data in a 2x2 contingency table
 
-In many applications, for example, exposure-disease association, classifications, etc, we can summarize data in the following 2x2 contingency table:
+In many classification applications, for example, exposure-disease association, we can summarize data in the following 2x2 contingency table:
 
 |                        |  Event: $$D$$   | No Event: $$\bar D$$ |         |
 |------------------------|-----------------|----------------------|---------|
@@ -15,7 +15,7 @@ In many applications, for example, exposure-disease association, classifications
 | No Exposure: $$\bar E$$|      $$c$$      |         $$d$$        | $$n_A$$ |
 |                        |     $$a+c$$     |        $$b+d$$       |  $$n$$  |
 
-**The interested hypothesis: the exposure $$E$$ and the event $$D$$ are independent.**
+**The hypothesis to verify: the exposure $$E$$ and the event $$D$$ are independent?** Actually, we would like to *disprove* this hypothesis, then we can claim the exposure is associated with the event.
 
 ## 2. Pearson (1900)'s chi-squared test
 
