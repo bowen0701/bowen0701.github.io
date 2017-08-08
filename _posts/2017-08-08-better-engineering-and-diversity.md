@@ -5,7 +5,7 @@ title: "Notes: Better Engineering and Diversity"
 date: 2017-08-08
 ---
 
-I recently read a great article ["So, about this Googler’s manifesto"](https://medium.com/@yonatanzunger/so-about-this-googlers-manifesto-1e3773ed1788), which I think is a fair and strong response to improper Googler's manifesto. :-) (That manisfesto is about, essentially, how women and men are intrinsically different, and should stop trying to make it possible for women and colored people to be engineers; those narrow and biased opinions are of course objected by many people, including me.)
+I recently read a great article ["So, about this Googler’s manifesto"](https://medium.com/@yonatanzunger/so-about-this-googlers-manifesto-1e3773ed1788) by Yonatan Zunger, which I think is a fair and strong response to improper Googler's manifesto. :-) (That manisfesto is about, essentially, how women and men are intrinsically different, and should stop trying to make it possible for women and colored people to be engineers; those narrow and biased opinions are of course objected by many people, including me.)
 
 Further, the aritcle shares some of "real" engineering practices, from which we can learn to be "better" engineers, like women are more likely to be. The following are my corresponding notes:
 
