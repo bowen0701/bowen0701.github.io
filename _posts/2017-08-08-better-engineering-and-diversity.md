@@ -15,6 +15,5 @@ Further, the aritcle shares "real" engineering practices, from which we can lear
 - "All of these traits which the manifesto described as “female” are the core traits which make someone successful at engineering. Anyone can learn how to write code... The truly hard parts about this job are knowing 
   * (1) which code to write, 
   * (2) building the clear plan of what has to be done in order to achieve which goal, and 
-  * (3) building the consensus required to make that happen. (all of the three bullets are my own)
-
-All of which is why the conclusions of this manifesto are precisely backwards. It’s true that women are socialized to be better at paying attention to people’s emotional needs and so on — this is something that makes them better engineers, not worse ones.... [I]t’s the heart of the job, and because it turns out that this is where the most extraordinary challenges and worthwhile results happen."
+  * (3) building the consensus required to make that happen. (all of the three bullets are my own)"
+- "All of which is why the conclusions of this manifesto are precisely backwards. It’s true that women are socialized to be better at paying attention to people’s emotional needs and so on — this is something that makes them better engineers, not worse ones.... [I]t’s the heart of the job, and because it turns out that this is where the most extraordinary challenges and worthwhile results happen."
