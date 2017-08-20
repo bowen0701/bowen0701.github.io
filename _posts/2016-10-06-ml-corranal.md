@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "ML Notes: Correspondence Analysis"
+title: "ML Notes: Correspondence Analysis from Scrach"
 date: 2016-10-06
 ---
 
