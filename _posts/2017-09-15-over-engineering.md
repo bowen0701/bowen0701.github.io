@@ -7,7 +7,7 @@ date: 2017-09-15
 
 I recently read an insightful article ["You are not Google"](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb) by Ozan Onay, which I think really resonates me: "if you’re using a technology that originated at a large company, but your use case is very different, it’s unlikely that you arrived there deliberately; no, it’s more likely you got there through a ritualistic belief that imitating the giants would bring the same riches."
 
-The following are my notes of this article:
+The following are my notes on this article:
 
 - "Next time you find yourself Googling some cool new technology to (re)build your architecture around, I urge you to stop and follow UNPHAT instead[.]"
   * "Don’t even start considering solutions until you Understand the problem. Your goal should be to “solve” the problem mostly within the problem domain, not the solution domain."
@@ -22,7 +22,7 @@ Consider a candidate solution, then read the Paper if there is one."
 - "What we’re all imploring you to do is to think! And to actually understand the problem you are trying to solve."
 - "In Polya’s galvanic words: It is foolish to answer a question that you do not understand. It is sad to work for an end that you do not desire."
 
-Speed is the most important factor for company / team / product successes; the shorter time we need from experiments / development to production, the more we can perform prototyping and iterations, and thus the more likely we can achieve our goals. Note that we are data scientists and data engineers in 2017 using "great enough" software stack, such as Spark on AWS, we should first understand the problem we are trying to solve and weigh advantages against disadvantages for all of multiple candidate tools or solutions, but not pursue the "most advanced" ones for us to be "professional" and "scale in the long-term future." The more time we spend on migrating to those "over-engineered infra", the less chance we can get better and better by letting our products interacting with the real-world users.
+Speed is the most important factor for company / team / product successes; the shorter time we need for deploying experiments / development to production, the more we can perform prototyping and iterations, and thus the more likely we can achieve our goals. Note that we are data scientists and data engineers in 2017 using "great enough" software stack, such as Spark on AWS, we should first understand the problem we are trying to solve and weigh advantages against disadvantages for all of multiple candidate tools or solutions, but not pursue the "most advanced" ones for us to be "professional" and "scale in the long-term future." The more time we spend on migrating to those "over-engineered infra", the less likely we can get better and better by letting our products interacting with the real-world users.
 
 Finally, let me recall my blog article: ["Precious Lecture by my Data Science Advisor"](https://bowen0701.github.io/blog/2016/02/13/data-science-advisor), 
 
