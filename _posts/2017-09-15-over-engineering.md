@@ -26,6 +26,6 @@ Speed is the most important factor for company / team / product successes; the s
 
 Finally, let me recall my blog article: ["Precious Lecture by my Data Science Advisor"](https://bowen0701.github.io/blog/2016/02/13/data-science-advisor), 
 
-- "Why did you do it that way? Why not simpler? Why not more complicated?". Note that "simpler" goes before "more complicated".
+- "Why did you do it that way? Why not simpler? Why not more complicated?" (Note that "simpler" goes before "more complicated.")
 - "Why that metric to evaluate yourself?"
 - "What is the purpose of this? Is there a better way to achieve that purpose? And so on."
