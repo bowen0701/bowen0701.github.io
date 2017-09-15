@@ -9,7 +9,7 @@ I recently read an insightful article ["You are not Google"](https://blog.bradfi
 
 The following are my notes on this article:
 
-- "Next time you find yourself Googling some cool new technology to (re)build your architecture around, I urge you to stop and follow UNPHAT instead[.]"
+- "Next time you find yourself Googling some cool new technology to (re)build your architecture around, I urge you to stop and follow UNPHAT instead:"
   * "Don’t even start considering solutions until you Understand the problem. Your goal should be to “solve” the problem mostly within the problem domain, not the solution domain."
   * "eNumerate multiple candidate solutions. Don’t just start prodding at your favorite!
 Consider a candidate solution, then read the Paper if there is one."
