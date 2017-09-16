@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Notes: At Airbnb, Data Science Belongs Everywhere"
+title: "At Airbnb, Data Science Belongs Everywhere, by Riley Newman"
 date: 2015-07-12
 ---
 
