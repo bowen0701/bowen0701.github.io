@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Notes: The Lady Tasting Tea"
+title: "The Lady Tasting Tea, by David Salsburg"
 date: 2014-05-20
 ---
 
