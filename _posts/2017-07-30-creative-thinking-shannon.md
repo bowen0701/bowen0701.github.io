@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Notes: Creative Thinking, by Shannon"
+title: "Creative Thinking, by Claude Shannon"
 date: 2017-07-30
 ---
 
