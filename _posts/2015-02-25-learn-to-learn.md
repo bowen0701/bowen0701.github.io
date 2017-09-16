@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Notes: Learning How to Learn"
+title: "Learning How to Learn, by Barbara Oakley"
 date: 2015-02-25
 ---
 
