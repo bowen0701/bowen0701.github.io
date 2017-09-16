@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Notes: Better Engineering and Diversity"
+title: "Better Engineering and Diversity"
 date: 2017-08-08
 ---
 
