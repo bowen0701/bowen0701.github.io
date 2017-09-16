@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Notes: Please Don't Do Over-Engineering"
+title: "Please Don't Do Over-Engineering"
 date: 2017-09-15
 ---
 
