@@ -13,7 +13,7 @@ The best email address to contact me is bowen0701 at gmail.com.
 
 ## Research Interests
 
-- Time-to-Event Analysis
+- Time-to-Event Modeling
 - Machine Learning
 - Statistical Inference
 - User Behavior Analytics
