@@ -1,5 +1,8 @@
 # bowen0701.github.io
 
+- 15 Sep 2017 » [On Over-Engineering](https://bowen0701.github.io/blog/2017/09/15/over-engineering)
+- 08 Aug 2017 » [Better Engineering and Diversity](https://bowen0701.github.io/blog/2017/08/08/better-engineering-and-diversity)
+- 30 Jul 2017 » [Creative Thinking, by Claude Shannon](https://bowen0701.github.io/blog/2017/07/30/creative-thinking-shannon)
 - 26 Jun 2017 » [ML Notes: Factorization Machine & Field-aware Factorization Machine](https://bowen0701.github.io/blog/2017/06/26/ml-fm-ffm)
 - 13 May 2017 » [The Zen of Python](https://bowen0701.github.io/blog/2017/05/13/zen-python)
 - 03 Feb 2017 » [Notes: Advanced Probability](https://bowen0701.github.io/blog/2017/02/03/adv-prob)
