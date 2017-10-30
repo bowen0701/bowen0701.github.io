@@ -1,6 +1,6 @@
 # bowen0701.github.io
 
-- 15 Sep 2017 » [On Over-Engineering](https://bowen0701.github.io/blog/2017/09/15/over-engineering)
+- 15 Sep 2017 » [The Over-Engineerint Fallacy](https://bowen0701.github.io/blog/2017/09/15/over-engineering)
 - 08 Aug 2017 » [Better Engineering and Diversity](https://bowen0701.github.io/blog/2017/08/08/better-engineering-and-diversity)
 - 30 Jul 2017 » [Creative Thinking, by Claude Shannon](https://bowen0701.github.io/blog/2017/07/30/creative-thinking-shannon)
 - 26 Jun 2017 » [ML Notes: Factorization Machine & Field-aware Factorization Machine](https://bowen0701.github.io/blog/2017/06/26/ml-fm-ffm)
