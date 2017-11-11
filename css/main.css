@@ -36,6 +36,7 @@ ul li {
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.2em;
+    width: 72.5%;
 }
 
 ul.posts li {
