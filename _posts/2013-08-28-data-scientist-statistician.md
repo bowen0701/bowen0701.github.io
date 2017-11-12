@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Among Data Scientists are Statisticians"
-excert: "My thoughts on statisticians in data science era."
+excerpt: "My thoughts on statisticians in data science era. In summary, all the people playing (big) data are data scientists, and old statisticians never die. They only transform."
 date: 2013-08-28
 mathjax: true
 ---
