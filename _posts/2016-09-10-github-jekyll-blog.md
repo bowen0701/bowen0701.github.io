@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Moving my Blog from Wordpress to Jekyll"
-excerpt: "Blogging on Jekyll."
+excerpt: "Jekyll plus Github strike the balance. Now writing blog post is a lot of fun."
 date: 2016-09-10
 mathjax: true
 ---
