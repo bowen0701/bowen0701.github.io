@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Creative Thinking, by Claude Shannon"
-excerpt: "Claude Shannon's problem solving process."
+excerpt: "The father of information theory, Claude Shannon's problem solving process."
 date: 2017-07-30
 mathjax: true
 ---
