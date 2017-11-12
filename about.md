@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-## Introduction
-
 I am **Bowen Li**, Data Scientist @Vpon, enjoying breaking down hard business problems and finding solutions with real-world massive datasets by tailoring machine learning models, to extract insights and build data products.
 
 The best email address to contact me is bowen0701 at gmail.com.
