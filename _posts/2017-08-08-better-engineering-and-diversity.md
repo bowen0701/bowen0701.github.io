@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Better Engineering and Diversity"
-excerpt: ""
+excerpt: "Engineering is not the art of building devices; it’s the art of fixing problems. Fixing problems means first of all understanding them — and since the whole purpose of the things we do is to fix problems in the outside world, problems involving people, that means that understanding people, and the ways in which they will interact with your system, is fundamental to every step of building a system."
 date: 2017-08-08
 mathjax: true
 ---
