@@ -1,3 +1,18 @@
-name: Bowen Li
+# Site settings
+title: Bowen Li's Blog
+email: 
+description: "Musings of a Data Scientist."
+baseurl: ""
+url: "http://bowen0701.github.io"
+twitter_username: bowenli0701
+github_username:  bowen0701
+
+# Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
