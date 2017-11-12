@@ -7,9 +7,9 @@ date: 2017-07-30
 mathjax: true
 ---
 
-I read a fantastic article ["Claude Shannon's Problem Solving Process"](http://www.businessinsider.com/engineer-claude-shannon-problem-solving-process-2017-7), on Business Insider, which introduced to me a Shannon's unpublished paper for lecture to his colleagues at Bell Labs: [Creative Thinking](http://www1.ece.neu.edu/~naderi/Claude%20Shannon.html). 
+Claude Shannon is well known as the father of information theory. Recently I read a fantastic article ["Claude Shannon's Problem Solving Process"](http://www.businessinsider.com/engineer-claude-shannon-problem-solving-process-2017-7), on Business Insider, which introduced to me a Shannon's unpublished paper for lecture to his colleagues at Bell Labs: [Creative Thinking](http://www1.ece.neu.edu/~naderi/Claude%20Shannon.html). I think this paper is a great reference for data scientists about how to solve problem.
 
-The following are my notes on the classic paper, from which I learned a lot:
+The following are my notes on the classic paper:
 
 - "I think we could set down three things that are fairly necessary for scientific research or for any sort of inventing or mathematics or physics or anything along that line. I don’t think a person can get along without any one of these three."
   * "The first one is obvious - training and experience."
