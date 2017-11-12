@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title: "Quotes by Mirzakhani"
+title: "Quotes by Maryam Mirzakhani"
+excerpt: "First female Fields medalist'w words."
 date: 2014-08-14
 ---
 

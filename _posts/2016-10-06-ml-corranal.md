@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "ML Notes: Correspondence Analysis from Scrach"
+excerpt: "Introductory correspondence analysis."
 date: 2016-10-06
+mathjax: true
 ---
 
 ## Outline

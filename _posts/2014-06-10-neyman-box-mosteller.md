@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "Quotes by Neyman, Box & Mosteller"
+excerpt: "Insighful words from Neyman, Box and Mosteller."
 date: 2014-06-10
+mathjax: true
 ---
 
 ## Jerzy Neyman (Statistician)

@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "ML Notes: Multi-Armed Bandits"
+excerpt: "Introductory multi-armed bandits."
 date: 2015-05-07
+mathjax: true
 ---
 
 ## Introduction

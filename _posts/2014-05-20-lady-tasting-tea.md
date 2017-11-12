@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "The Lady Tasting Tea, by David Salsburg"
+except: "Brief review on a great statistics general science book."
 date: 2014-05-20
+mathjax: true
 ---
 
 "At a summer tea party in Cambridge, England, a guest states that tea poured into milk tastes different from milk poured into tea. Her notion is shouted down by the scientific minds of the group. But one man, Ronald Fisher, proposes to scientifically test the hypothesis. There is no better person to conduct such an experiment, for Fisher is a pioneer in the field of statistics...." -- Quotes from the publisher's review.

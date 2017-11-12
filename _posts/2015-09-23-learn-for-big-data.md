@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "Learning for Big Data"
+excerpt: "Hsuan-Tien Lin's talk on learning for big data."
 date: 2015-09-23
+mathjax: true
 ---
 
 I recently attended an insightful talk, given by [Hsuan-Tien Lin](http://www.csie.ntu.edu.tw/~htlin/) (Professor of Computer Science at National Taiwan University). The topic was about (human) learning for big data. (Yes, not learning *from* big data.) I learned a lots from the talk and would like to take some notes here.

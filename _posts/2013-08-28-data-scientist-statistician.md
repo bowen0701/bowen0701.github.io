@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "Among Data Scientists are Statisticians"
+excert: "My thoughts on statisticians in data science era."
 date: 2013-08-28
+mathjax: true
 ---
 
 ## The death of the statistician?
