@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "Creative Thinking, by Claude Shannon"
+excerpt: "Claude Shannon's problem solving process."
 date: 2017-07-30
+mathjax: true
 ---
 
 I read a fantastic article ["Claude Shannon's Problem Solving Process"](http://www.businessinsider.com/engineer-claude-shannon-problem-solving-process-2017-7), on Business Insider, which introduced to me a Shannon's unpublished paper for lecture to his colleagues at Bell Labs: [Creative Thinking](http://www1.ece.neu.edu/~naderi/Claude%20Shannon.html). 

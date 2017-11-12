@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "Quotes by Efron, Blackwell, van de Geer, Chatterjee & Dunson"
+excerpt: "Insightful words from 5 great statisticians."
 date: 2013-12-05
+mathjax: true
 ---
 
 ## Bradley Efron (Statistician)

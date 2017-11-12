@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "Moving my Blog from Wordpress to Jekyll"
+excerpt: "Blogging on Jekyll."
 date: 2016-09-10
+mathjax: true
 ---
 
 Inspired by Andrej Karpathy's blog post ["Switching Blog from Wordpress to Jekyll"](http://karpathy.github.io/2014/07/01/switching-to-jekyll/), I decide to move my blog from Wordpress to Jekyll as well. After some practices, similarly as Karpathy, I can confidently say that I could not be happier about this decision.

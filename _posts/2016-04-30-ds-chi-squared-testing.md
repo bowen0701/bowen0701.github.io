@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "DS Notes: Chi-Squared Testing"
+excerpt: "Pearson's chi-squared test."
 date: 2016-04-30
+mathjax: true
 ---
 
 ## 1. Aggregate data in a 2x2 contingency table

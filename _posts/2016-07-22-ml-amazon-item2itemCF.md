@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "ML Notes: Amazon's Item-to-Item Collaborative Filtering"
+excerpt: "Amazon's item-to-item CF algorithm."
 date: 2016-07-22
+mathjax: true
 ---
 
 ## Paper: Linden, Smith & York (IEEE Internet Computing, 2003)

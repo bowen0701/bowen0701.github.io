@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "At Airbnb, Data Science Belongs Everywhere, by Riley Newman"
+excerpt: "Airbnb's great data science experiences."
 date: 2015-07-12
+mathjax: true
 ---
 
 I was so fortunate to read this excellent Airbnb Engineering Blog article: ["At Airbnb, Data Science Belongs Everywhere"](http://nerds.airbnb.com/scaling-data-science/), which was written by Riley Newman, head of data science at Airbnb. Here I took some notes consisting of lots of quotes and a little rewriting.

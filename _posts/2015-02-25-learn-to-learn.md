@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "Learning How to Learn, by Barbara Oakley"
+excerpt: "Oakley's talk on learning how to learn."
 date: 2015-02-25
+mathjax: true
 ---
 
 I ran across a fantastic talk ["Learning How to Learn"](https://www.youtube.com/watch?v=vd2dtkMINIw), on Youtube, which was given by [Barbara Oakley](http://www.barbaraoakley.com/), Professor of engineering at Oakland University in Rochester, Michigan. 
