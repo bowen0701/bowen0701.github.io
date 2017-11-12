@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "Better Engineering and Diversity"
+excerpt: ""
 date: 2017-08-08
+mathjax: true
 ---
 
 I recently read a great article ["So, about this Googler’s manifesto"](https://medium.com/@yonatanzunger/so-about-this-googlers-manifesto-1e3773ed1788) by Yonatan Zunger, which I think is a fair and strong response to improper Googler's manifesto. :-) (That manisfesto is about, essentially, how women and men are intrinsically different, and should stop trying to make it possible for women and colored people to be engineers; those narrow and biased opinions are of course objected by many people, including me.)
@@ -12,6 +14,12 @@ Further, the aritcle shares some of "real" engineering practices, from which we 
 - "Engineering is not the art of building devices; it’s the art of fixing problems.... Fixing problems means first of all understanding them — and since the whole purpose of the things we do is to fix problems in the outside world, problems involving people, that means that understanding people, and the ways in which they will interact with your system, is fundamental to every step of building a system.... (Engineering leaders absolutely need to understand product deeply; it’s a core job requirement.)"
 - "And once you’ve understood the system, and worked out what has to be built,... [i]f you’re a professional, especially one working on systems that can use terms like “planet-scale” and “carrier-class” without the slightest exaggeration, then you’ll quickly find that the large bulk of your job is about coordinating and cooperating with other groups. It’s about making sure you’re all building one system, instead of twenty different ones; about making sure that dependencies and risks are managed, about designing the right modularity boundaries that make it easy to continue to innovate in the future[.]"
 - "Essentially, engineering is all about cooperation, collaboration, and empathy for both your colleagues and your customers. If someone told you that engineering was a field where you could get away with not dealing with people or feelings, then I’m very sorry to tell you that you have been lied to. Solitary work is something that only happens at the most junior levels, and even then it’s only possible because someone senior to you — most likely your manager — has been putting in long hours to build up the social structures in your group that let you focus on code."
+
+<div style="text-align:center">
+<img src="/images/diversity.png" alt="Drawing" style="width: 550px;"/>
+</div>
+
+
 - "All of these traits which the manifesto described as “female” are the core traits which make someone successful at engineering. Anyone can learn how to write code... The truly hard parts about this job are knowing (all of the three bullets are my own)
   * (1) which code to write, 
   * (2) building the clear plan of what has to be done in order to achieve which goal, and 
