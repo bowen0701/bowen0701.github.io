@@ -2,7 +2,9 @@
 layout: post
 comments: true
 title: "The Over-Engineering Fallacy"
+excerpt: "The more time we spend on migrating to the over-engineering fallacy, the less likely we can make our products interact with the real-world users."
 date: 2017-09-15
+mathjax: true
 ---
 
 I recently read an insightful article ["You are not Google"](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb) by Ozan Onay, which I think really resonates me: "if you’re using a technology that originated at a large company, but your use case is very different, it’s unlikely that you arrived there deliberately; no, it’s more likely you got there through a ritualistic belief that imitating the giants would bring the same riches."
@@ -24,7 +26,7 @@ Consider a candidate solution, then read the Paper if there is one."
 
 Speed is the most important factor for company / team / product successes; the shorter time we need for deploying experiments / development to production, the more we can perform prototyping and iterations, and thus the more likely we can achieve our goals. Note that we are modern day data scientists and data engineers in 2017 using "great" software stack, such as Spark, AWS, and GCP, among many others, we should first understand the problem we are trying to solve and weigh advantages against disadvantages for all of multiple candidate tools or solutions, but not pursue the "most advanced" ones for us to be "professional" and "scale in the long-term future." For example, we shall know that in not too few of cases, Spark would perform slower than Pandas; similarly, EMR would run longer than EC2. It just depends. There is no cure-all medicine. Further, we shall further consider how often and how large are the use cases, just please do not over-kill. Furthermore, cost-effectiveness issue is often overlooked by many, the reason is argued above and I will not repeat. Finally, since the previous issue is important, we could provide some experiments to benchmark important metrics, such as time, cost, conveniency, among many, to persuade ourselves and others to make a "data-driven" conclusion: to migrate or not to migrate, but not by "opinion". Here are interesting discussions about over-engineering on Hacker News: [How to Accept Over-Engineering for What It Really Is](https://news.ycombinator.com/item?id=12766174). Further, as Erik Bernhardsson (former head of analytics & machine learning teams) said in his blog, ["When Machine Learning Matters"](https://erikbern.com/2016/08/05/when-machine-learning-matters.html): "Knowing how to build a convolutional neural network will not be a valuable asset. Hooking it up to a surveillance system and building video distribution system could be a really key piece of technology." So the key is how our products and applications are useful, not what tech we use. 
 
-The more time we spend on migrating to those "over-engineering", the less likely we can get better and better by letting our products interacting with the real-world users.
+The more time we spend on migrating to the over-engineering fallacy, the less likely we can make our products interact with the real-world users, and can iteratively get products better and better.
 
 Finally, let me recall my blog article: ["Precious Lecture by my Data Science Advisor"](https://bowen0701.github.io/blog/2016/02/13/data-science-advisor), 
 
