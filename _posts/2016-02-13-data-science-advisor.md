@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Precious Lecture by my Data Science Advisor"
-excerpt: "Precioud data science lecture."
+excerpt: "Some notes on a precious data science lecture from my data science advisor."
 date: 2016-02-13
 mathjax: true
 ---

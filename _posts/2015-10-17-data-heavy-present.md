@@ -2,12 +2,12 @@
 layout: post
 comments: true
 title: "How to Give a Data-heavy Presentation"
-excerpt: "Good lecture on presentation with data insights."
+excerpt: "Alexandra Samuel's good article on presentation with data insights."
 date: 2015-10-17
 mathjax: true
 ---
 
-I read an insightful Harvard Business Review article, ["How to Give a Data-Heavy Presentation"](https://hbr.org/2015/10/how-to-give-a-data-heavy-presentation), written by Alexandra Samuel, on data-heavy presentation and data visualization. The following are my notes.
+I read an insightful Harvard Business Review article, ["How to Give a Data-Heavy Presentation"](https://hbr.org/2015/10/how-to-give-a-data-heavy-presentation), written by Alexandra Samuel, on data-heavy presentation and data visualization. The The following are my notes.
 
 ## Introduction
 
