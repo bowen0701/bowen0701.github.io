@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Learning How to Learn, by Barbara Oakley"
-excerpt: "Oakley's talk on learning how to learn."
+excerpt: "Barbara Oakley's talk on learning how to learn."
 date: 2015-02-25
 mathjax: true
 ---

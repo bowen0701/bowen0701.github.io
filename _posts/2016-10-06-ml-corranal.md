@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title: "ML Notes: Correspondence Analysis from Scrach"
-excerpt: "Introductory correspondence analysis."
+title: "ML Notes: Correspondence Analysis with Implementation"
+excerpt: "Correspondence analysis is a useful but not so well known dimension reduction technique, which is similart with principal component analysis but focus on categorical data. In this post I would like to summarize its methodology with implementation."
 date: 2016-10-06
 mathjax: true
 ---
@@ -194,7 +194,7 @@ plot(ca(data))
 
 ## 3. Methodology Summary
 
-Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is equivalent to **principal component analysis (PCA);** for introduction see [post](https://bowen0701.github.io/blog/2016/10/05/sml-pca-svd).
+Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is similar to **principal component analysis (PCA),** except that the former applies to categorical rather than continuous data; for introduction see [post](https://bowen0701.github.io/2016/10/05/sml-pca-svd).
 
 ### Correspondence analysis methodology
 
@@ -249,7 +249,7 @@ $$
 tr \left[ \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right) \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right)^T \right]
 $$
 
-Similarly with [SVD](https://bowen0701.github.io/blog/2016/10/05/sml-pca-svd), compute the **SVD of $$D_r^{-1/2} (P - r c^T) D_c^{-1/2}$$**:
+Similarly with [SVD](https://bowen0701.github.io/2016/10/05/sml-pca-svd), compute the **SVD of $$D_r^{-1/2} (P - r c^T) D_c^{-1/2}$$**:
 
 $$
 D_r^{-1/2} (P - r c^T) D_c^{-1/2} = U \Sigma V^T

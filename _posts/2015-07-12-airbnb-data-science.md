@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "At Airbnb, Data Science Belongs Everywhere, by Riley Newman"
-excerpt: "Airbnb's great data science experiences."
+excerpt: "First data scientist at Airbnb, Riley Newman, on data science team."
 date: 2015-07-12
 mathjax: true
 ---

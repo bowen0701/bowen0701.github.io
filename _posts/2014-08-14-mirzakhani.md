@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Quotes by Maryam Mirzakhani"
-excerpt: "First female Fields medalist'w words."
+excerpt: "First female Fields medalist, Maryam Mirzakhani, on research."
 date: 2014-08-14
 ---
 

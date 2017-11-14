@@ -2,24 +2,17 @@
 layout: post
 comments: true
 title: "ML Notes: Amazon's Item-to-Item Collaborative Filtering"
-excerpt: "Amazon's item-to-item CF algorithm."
+excerpt: "Review on paper: Amazon.com Recommendations Item-to-Item Collaborative Filtering."
 date: 2016-07-22
 mathjax: true
 ---
 
-## Paper: Linden, Smith & York (IEEE Internet Computing, 2003)
-
-- [Amazon.com Recommendations Item-to-Item Collaborative Filterin](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf)
-- Company: Amazon
-- Test of Time Award from The International World Wide Web Conference committee: "this outstanding paper has had a considerable real-world impact".
-
-
 ## Introduction
 
-This seminal paper introduced what is recommender system (RecSys) and the corresponding challenges. Futher, it reviews two types of RecSys and summarizes the tradictional user-to-user collaborative filtering (CF), cluster models, content-based methods and the proposed item-to-item CF.
+This post is to review the seminal paper, ["Amazon.com Recommendations Item-to-Item Collaborative Filtering"](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf), proposed by Linden, Smith & York (IEEE Internet Computing, 2003). The paper introduced what is recommender system (RecSys) and the corresponding challenges. Futher, it reviews two types of RecSys and summarizes the tradictional user-to-user collaborative filtering (CF), cluster models, content-based methods and the proposed item-to-item CF, which is successfully applied to Amazon's recommender system. Finally, it won Test of Time Award from The International World Wide Web Conference committee in 2017: "this outstanding paper has had a considerable real-world impact".
 
 
-## Recommendation system
+## Recommendation systems
 
 Use input about a user's interest to generate a list of a recommendated items. user's interest can be items that users purchase, items that users explicitly rate, items viewed, demographic data, suject interests, and favorite artists, etc.
 

@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "DS Notes: Chi-Squared Testing"
-excerpt: "Pearson's chi-squared test."
+excerpt: "Pearson's chi-squared test is old but classic hypothesis testing method to verify exposure-disease association with contingency table."
 date: 2016-04-30
 mathjax: true
 ---

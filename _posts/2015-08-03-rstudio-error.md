@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Loading R Packages Error on RStudio"
-excerpt: "RStudio's loading package bug and how to resolve it."
+excerpt: "Notes on RStudio's loading package bug and how to resolve it."
 date: 2015-08-03
 mathjax: true
 ---
