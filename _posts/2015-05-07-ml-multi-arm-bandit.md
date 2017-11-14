@@ -2,14 +2,16 @@
 layout: post
 comments: true
 title: "ML Notes: Multi-Armed Bandits"
-excerpt: "Introductory multi-armed bandits."
+excerpt: "Introductory multi-armed bandits experiments, which are more advanced and more efficient than popular A/B testing experiments."
 date: 2015-05-07
 mathjax: true
 ---
 
 ## Introduction
 
-I just read a clear and insightful [Quora anwser](http://www.quora.com/What-is-the-multi-arm-bandit-problem-What-are-some-of-its-implications), provided by Professor [Yisong Yue](http://www.yisongyue.com/) at Caltech, to what is the **Multi-armed Bandits problem**, also called the **Sequential Learning problem**, and finally got a basic understanding about the problem and its potential applications. This topic is interesting to me and will be one of my research projects. Thus I will begin to wrap up some notes on what I've learned during the journey. In this preliminary note, I will quickly summarize, from that article, the basic notions of sequential learning problem and give some of their application examples.
+I just read a clear and insightful [Quora anwser](http://www.quora.com/What-is-the-multi-arm-bandit-problem-What-are-some-of-its-implications), provided by Professor [Yisong Yue](http://www.yisongyue.com/) at Caltech, to what is the **Multi-armed Bandits problem**, also called the **Sequential Learning problem**. Multi-armed bandits experiments are typically much more efficient than popular A/B testing experiments. The former are faster because samples that would have gone to obviously inferior variations can be assigned to potential winners. Thus, it can help separate the "good" arms from the "best" ones more quickly.
+
+After reading this quora article, I got a basic understanding about the problem and its potential applications. This topic is interesting to me and will be one of my research projects. Thus I will begin to wrap up some notes on what I've learned during the journey. In this preliminary note, I will quickly summarize, from that article, the basic notions of sequential learning problem and give some of their application examples.
 
 
 ## Multi-arm bandit problem
