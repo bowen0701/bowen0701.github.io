@@ -194,7 +194,7 @@ plot(ca(data))
 
 ## 3. Methodology Summary
 
-Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is similar to **principal component analysis (PCA),** except that the former applies to categorical rather than continuous data; for introduction see [post](https://bowen0701.github.io/2016/10/05/sml-pca-svd).
+Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is similar to **principal component analysis (PCA),** except that the former applies to categorical rather than continuous data; for introduction see [post](https://bowen0701.github.io/2016/10/05/ml-pca-svd).
 
 ### Correspondence analysis methodology
 
