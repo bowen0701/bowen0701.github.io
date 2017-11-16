@@ -27,5 +27,5 @@ Bertrand Russell's 10 commandments, I saw this from Yann LeCun's Facebook post.
 
 9: Be scrupulously truthful, even when truth is inconvenient, for it is more inconvenient when you try to conceal it.
 
-10. Do not feel envious of the happiness of those who live in a fool’s paradise, for only a fool will think that it is happiness.
+10: Do not feel envious of the happiness of those who live in a fool’s paradise, for only a fool will think that it is happiness.
 
