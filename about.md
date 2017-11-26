@@ -12,8 +12,6 @@ The best email address to contact me is bowen0701 at gmail.com.
 
 - Time-to-Event Modeling
 - Machine Learning
-- Statistical Modeling
-- User Behavior Analytics
 - Online Advertising
 - Recommender Systems
 - Online Experiments
