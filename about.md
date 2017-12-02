@@ -20,7 +20,7 @@ The best email address to contact me is bowen0701 at gmail.com.
 
 - 2016--now: Staff Data Scientist, Vpon
 - 2015--2016: Staff Data Scientist, KKBOX
-- 2014--2015: Postdoctoral Fellow, Institute of Statistical Science, Academia Sinica
+- 2014--2015: Postdoctoral Researcher, Statistics, Academia Sinica
 - 2006--2009: Principal Statistician, Macronix
 - 2006--2006: Senior Industrial Engineer, UMC
 
