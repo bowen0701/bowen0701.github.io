@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Bertrand Russell's 10 commandments."
+title: "Bertrand Russell's 10 Commandments"
 excerpt: "Mathematician Bertrand Russell's wise commandments."
 date: 2017-11-17
 mathjax: true
