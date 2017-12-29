@@ -14,8 +14,8 @@ The best email address to contact me is bowen0701 at gmail.com.
 - Machine Learning
 - Online Advertising
 - Recommender Systems
-- Algorithms & Data Structures
 - Online Experiments
+- Algorithms & Data Structures
 
 ## Experiences
 
