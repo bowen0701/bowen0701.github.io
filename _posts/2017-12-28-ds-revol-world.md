@@ -2,12 +2,12 @@
 layout: post
 comments: true
 title: "How Data Science is Revolutionizing World"
-excerpt: "My talk slides for data science general science."
+excerpt: "My talk slides on data science general science."
 date: 2017-12-28
 mathjax: true
 ---
 
-Recently I was invited to give a data science introduction at my friend's company. It was a great pleasure and I enjoyed it much. Since the audience would consist of stakeholders, product managers, marketing / advertising managers, and many software engineers, I basically presented a general science lecture of data science, with title: "The Lady Tasting Tea and Beyond - How Data Science is Revolutionizing World" and outline:
+Recently I was invited to give a data science introduction at my friend's company. It was a great pleasure and I enjoyed it much. Since the audience would consist of stakeholders, product managers, marketing / advertising managers, and many software engineers, I basically presented a general science lecture of data science, with title: **"The Lady Tasting Tea and Beyond - How Data Science is Revolutionizing World"** and outline:
 
 - The 2nd Revolution in Science
 - The Lady Tasting Tea
