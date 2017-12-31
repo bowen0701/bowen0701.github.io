@@ -21,6 +21,6 @@ Recently I was invited to give a data science introduction at my friend's compan
 
 The following is my Slideshare slides linke:
 
-<iframe src="https://www.slideshare.net/BowenLi3/slideshelf" width="760px" height="570px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/c3gZxlb54iUrfW" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/BowenLi3/how-data-science-is-revolutionizing-world-20171228-85204408" title="How Data Science is Revolutionizing World (20171228)" target="_blank">How Data Science is Revolutionizing World (20171228)</a> </strong> from <strong><a href="https://www.slideshare.net/BowenLi3" target="_blank">Bowen Li</a></strong> </div>
 
 Hope you enjoy it as well. :-)
