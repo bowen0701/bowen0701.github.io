@@ -30,8 +30,6 @@ The best email address to contact me is bowen0701 at gmail.com.
 ## Education
 
 - 2009--2014: PhD in Statistics, National Chiao Tung University
-- 2002--2004: MS in Statistics, National Central University
-- 1998--2002: BS in Industrial Engineering, National Tsing Hua University
 
 ## Awards
 
