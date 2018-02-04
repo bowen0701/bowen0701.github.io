@@ -21,15 +21,15 @@ The best email address to contact me is bowen0701 at gmail.com.
 
 ## Experiences
 
-- 2016--now: Staff Data Scientist, Vpon
-- 2015--2016: Staff Data Scientist, KKBOX
-- 2014--2015: Postdoctoral Researcher, Statistics, Academia Sinica
-- 2006--2009: Principal Statistician, Macronix
-- 2006--2006: Senior Industrial Engineer, UMC
+- 2016 - now: Staff Data Scientist, Vpon
+- 2015 - 2016: Staff Data Scientist, KKBOX
+- 2014 - 2015: Postdoctoral Researcher, Statistics, Academia Sinica
+- 2006 - 2009: Principal Statistician, Macronix
+- 2006 - 2006: Senior Industrial Engineer, UMC
 
 ## Education
 
-- 2009--2014: PhD in Statistics, National Chiao Tung University
+- 2009 - 2014: PhD in Statistics, National Chiao Tung University
 
 ## Awards
 
