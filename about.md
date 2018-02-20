@@ -12,9 +12,9 @@ The best email address to contact me is bowen0701 at gmail.com.
 
 - Time-to-Event Modeling
 - Machine Learning
-- Statistical Analysis
-- Online Advertising
+- Statistics
 - Recommender Systems
+- Online Advertising
 - User Behavior
 - Online Experiments
 - Algorithms & Data Structures
@@ -26,10 +26,6 @@ The best email address to contact me is bowen0701 at gmail.com.
 - 2014 - 2015: Postdoctoral Researcher, Statistics, Academia Sinica
 - 2006 - 2009: Principal Statistician, Macronix
 - 2006 - 2006: Senior Industrial Engineer, UMC
-
-## Education
-
-- 2009 - 2014: PhD in Statistics, National Chiao Tung University
 
 ## Awards
 
@@ -43,7 +39,12 @@ The best email address to contact me is bowen0701 at gmail.com.
 ## Talks
 
 - Marginal inference on recurrent events data under competing risks. [ERCIM Conference 2014](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, 2014/12/06.
-- Introductory analysis of competing risks data. Biostatistics Center, Taipei Medical University, 2014/10/27.
 - Nonparametric marginal analysis of recurrent events data under competing risks. University System of Taiwan-Statistics Conference 2014, National Chiao Tung University, 2014/5/24.
+
+## Education
+
+- 2009 - 2014: PhD in Statistics, National Chiao Tung University
+- 2002 - 2004: Master in Statistics, National Central University
+- 1998 - 2002: Bachelor in Industrial Engineering, National Tsing Hua University
 
 Launched on 2016/09/10.
