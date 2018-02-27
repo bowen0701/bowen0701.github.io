@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am Bowen Li, Data Scientist at Vpon and a hybird of researcher/engineer, enjoying breaking down hard business problems and finding solutions with real-world massive datasets by tailoring machine learning models, to extract insights and build data products.
+I am Bowen Li, Data Scientist at Vpon and a hybird of researcher/engineer, enjoying breaking down hard business problems and finding solutions with real-world massive datasets by tailoring machine learning models, to extract insights and build machine learning-based data products.
 
 The best email address to contact me is bowen0701 at gmail.com.
 
@@ -12,7 +12,7 @@ The best email address to contact me is bowen0701 at gmail.com.
 
 - Time-to-Event Modeling
 - Machine Learning
-- Statistics
+- Statistical Modeling
 - Recommender Systems
 - Online Advertising
 - User Behavior
@@ -25,7 +25,6 @@ The best email address to contact me is bowen0701 at gmail.com.
 - 2015 - 2016: Staff Data Scientist, KKBOX
 - 2014 - 2015: Postdoctoral Researcher, Statistics, Academia Sinica
 - 2006 - 2009: Principal Statistician, Macronix
-- 2006 - 2006: Senior Industrial Engineer, UMC
 
 ## Awards
 
@@ -34,7 +33,6 @@ The best email address to contact me is bowen0701 at gmail.com.
 ## Publications
 
 - C.-H. Huang, B. Li, C.-M. Chen, W. Wang, and Y.-H. Chen (2016). [Subdistribution regression for recurrent events under competing risks: with application to shunt thrombosis study in dialysis patients.](http://link.springer.com/article/10.1007/s12561-016-9161-0). Statistics in Biosciences.
-- B. Li (2014). [Nonparametric marginal analysis of recurrent events data under competing risks.](https://arxiv.org/abs/1707.01822) PhD Dissertation, National Chiao Tung University.
 
 ## Talks
 
@@ -44,6 +42,7 @@ The best email address to contact me is bowen0701 at gmail.com.
 ## Education
 
 - 2009 - 2014: PhD in Statistics, National Chiao Tung University
+  * Dissertation: [Nonparametric marginal analysis of recurrent events data under competing risks.](https://arxiv.org/abs/1707.01822)
 - 2002 - 2004: Master in Statistics, National Central University
 - 1998 - 2002: Bachelor in Industrial Engineering, National Tsing Hua University
 
