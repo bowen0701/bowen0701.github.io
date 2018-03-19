@@ -2,12 +2,10 @@
 layout: post
 comments: true
 title: "Docker for Machine Learning with Python3"
-excerpt: "My docker for machine learning with Python3 and Jupyter Notebook."
+excerpt: "Docker for machine learning with Python3 and Jupyter Notebook."
 date: 2018-03-18
 mathjax: true
 ---
-
-# Docker for Machine Learning with Python3
 
 ## Introduction
 
