@@ -26,6 +26,8 @@ mathjax: true
 
 ## Docker Setup
 
+For access the scripts please refer to my corresponding GitHub repo: [https://github.com/bowen0701/docker-python3-ml-jupyter](https://github.com/bowen0701/docker-python3-ml-jupyter).
+
 ### Install Docker
 
 We can download and install docker on [docker website](https://www.docker.com/community-edition#/download), following the instructions we can finish the procedure easily. I choose Docker CE for Mac version. After installing we now have docker and docker-compose.
@@ -34,7 +36,7 @@ We can download and install docker on [docker website](https://www.docker.com/co
 
 Many people leverage dockers contributed from many others, this is convenient and efficient for us to ramp up fast. Nevertheless, I prefer making my own docker (almost) from scratch, from this experience I can learn a lot and acquire fundamental knowledge of docker.
 
-The first step is to create our Dockerfile; for details please refer to [Dockerfile](./Dockerfile). 
+The first step is to create our Dockerfile; for details please refer to [Dockerfile](ttps://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/Dockerfile). 
 
 ```
 # Docker settings: Ubuntu, Python3, pip, general machine learning frameworks, Jupyter Notebook.
@@ -85,10 +87,10 @@ RUN pip3 install --upgrade pip \
 
 # Install machine learning packages.
 RUN pip3 --no-cache-dir install --upgrade \
-        http://download.pytorch.org/whl/cpu/torch-0.3.1-cp35-cp35m-linux_x86_64.whl \
-        torchvision
-        # tensorflow \
-        # tensorflow-tensorboard \
+        tensorflow \
+        tensorflow-tensorboard
+        # http://download.pytorch.org/whl/cpu/torch-0.3.1-cp35-cp35m-linux_x86_64.whl \
+        # torchvision \
         # keras \
         # xgboost \
         # pymc3 \
@@ -106,18 +108,18 @@ COPY notebooks /notebooks
 # Jupyter has issues with being run directly:
 #   https://github.com/ipython/ipython/issues/7062
 # We just add a little wrapper script.
-COPY run_jupyter.sh /
+COPY run_cmd.sh /
 
 # Jupyter Notebook
 EXPOSE 8888
 # TensorBoard
-# EXPOSE 6006
+EXPOSE 6006
 
 WORKDIR /notebooks
 
-RUN chmod +x /run_jupyter.sh
+RUN chmod +x /run_cmd.sh
 
-CMD ["/run_jupyter.sh"]
+CMD ["/run_cmd.sh"]
 ```
 
 The Dockerfile is based on basic docker image for OS only, ubuntu:16.04. Then we install Python3's general packages, including 
@@ -149,7 +151,7 @@ Note that of courese we can add/delete any general / machine learning packages i
 
 ### Create docker-compose.yml
 
-To apply scripts as environment, we could create docker-compose.yml for us to easily launch docker; for details please refer to [docker-compose.yml](./docker-compose.yml). 
+To apply scripts as environment, we could create docker-compose.yml for us to easily launch docker; for details please refer to [docker-compose.yml](ttps://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/docker-compose.yml). 
 
 ```
 version: '3'
@@ -159,15 +161,16 @@ services:
     image: docker-ml:latest
     ports:
      - "8888:8888"
+     - "6006:6006"
     volumes:
      - ./notebooks:/notebooks
 ```
 
-In this file we assign what docker image (docker-ml:latest) we would like to use, what ports (8888:8888) to connect and what volums (./notebooks:/notebooks) to share data between our docker container and the host computer. Note that we use docker-compose.yml's version 3 format.
+In this file we assign what docker image (docker-ml:latest) we would like to use, what ports (8888:8888 and 6006:6006) to connect Jupyter Notebook and TensorBoard respectively, and what volums (./notebooks:/notebooks) to share data between our docker container and the host computer. Note that we use docker-compose.yml's version 3 format.
 
 ### Create jupyter_notebook_config.py
 
-In this file, we set up Jupyter Notebook's IP, port and password, if set in environment; for details please refer to [jupyter_notebook_config.py](./jupyter_notebook_config.py). 
+In this file, we set up Jupyter Notebook's IP, port and password, if set in environment; for details please refer to [jupyter_notebook_config.py](ttps://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/jupyter_notebook_config.py). 
 
 ```
 import os
@@ -186,14 +189,15 @@ if 'PASSWORD' in os.environ:
 
 This jupyter_notebook_config.py will be copied to replace the original one in /root/.jupyter/. Note that basically we do not have to edit this file anymore.
 
-### Create run_jupyter.sh
+### Create run_cmd.sh
 
-Finally, in this file we collect bash scripts to launch Jupyter Notebook; for details please refer to [run_jupyter.sh](./run_jupyter.sh). 
+Finally, in this file we collect bash scripts to launch Jupyter Notebook; for details please refer to [run_cmd.sh](ttps://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/run_cmd.sh). 
 
 ```
 #! /bin/bash
 
-jupyter notebook --no-browser --allow-root --port 8888 --ip 0.0.0.0 --NotebookApp.token=''
+jupyter notebook --no-browser --allow-root --port 8888 --ip 0.0.0.0 --NotebookApp.token='' &
+tensorboard --port 6006 --ip 0.0.0.0 --logdir /logs
 ```
 
 Note that
@@ -202,6 +206,8 @@ Note that
 - `--port 8888`: must be the same as docker's port for Jupyter Notebook.
 - `--ip 0.0.0.0`: reassign Jupyter Notebook server's IP.
 - `--NotebookApp.token=''`: optional, for simplicity we here disable the toker authentification. Note that this is not recommended for security reasons. Nevertheless, since I choose this to test launch on my local laptop I think it is ok for now.
+
+To lanch TensorBoard, the pipielined bash scripts follow similarly.
 
 ## Launch Docker
 
@@ -229,9 +235,9 @@ First based on newly built docker image, `docker-ml:latest`, to create docker co
 
 ```
 # Run docker image to create a container, by docker CLI.
-sudo docker run -it -p 8888:8888 docker-ml:latest
+sudo docker run -it -p 8888:8888 -p 6006:6006 docker-ml:latest
 # Run in background mode.
-sudo docker run -dt -p 8888:8888 docker-ml:latest
+sudo docker run -dt -p 8888:8888 -p 6006:6006 docker-ml:latest
 
 # Alternatively, run using docker-compose with docker-compose.yaml.
 docker-compose up
@@ -279,6 +285,12 @@ Finally, we can access Jupyter Notebook server from the browser at this URL:
 
 ```
 http://0.0.0.0:8888
+```
+
+### Access TensorBoard
+
+```
+http://0.0.0.0:6006
 ```
 
 Now enjoy your docker for machine learning with Python3 and Jupyter Notebook. :-)
