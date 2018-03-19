@@ -36,7 +36,7 @@ We can download and install docker on [docker website](https://www.docker.com/co
 
 Many people leverage dockers contributed from many others, this is convenient and efficient for us to ramp up fast. Nevertheless, I prefer making my own docker (almost) from scratch, from this experience I can learn a lot and acquire fundamental knowledge of docker.
 
-The first step is to create our Dockerfile; for details please refer to [Dockerfile](ttps://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/Dockerfile). 
+The first step is to create our Dockerfile; for details please refer to [Dockerfile](https://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/Dockerfile). 
 
 ```
 # Docker settings: Ubuntu, Python3, pip, general machine learning frameworks, Jupyter Notebook.
@@ -151,7 +151,7 @@ Note that of courese we can add/delete any general / machine learning packages i
 
 ### Create docker-compose.yml
 
-To apply scripts as environment, we could create docker-compose.yml for us to easily launch docker; for details please refer to [docker-compose.yml](ttps://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/docker-compose.yml). 
+To apply scripts as environment, we could create docker-compose.yml for us to easily launch docker; for details please refer to [docker-compose.yml](https://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/docker-compose.yml). 
 
 ```
 version: '3'
@@ -170,7 +170,7 @@ In this file we assign what docker image (docker-ml:latest) we would like to use
 
 ### Create jupyter_notebook_config.py
 
-In this file, we set up Jupyter Notebook's IP, port and password, if set in environment; for details please refer to [jupyter_notebook_config.py](ttps://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/jupyter_notebook_config.py). 
+In this file, we set up Jupyter Notebook's IP, port and password, if set in environment; for details please refer to [jupyter_notebook_config.py](https://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/jupyter_notebook_config.py). 
 
 ```
 import os
@@ -191,7 +191,7 @@ This jupyter_notebook_config.py will be copied to replace the original one in /r
 
 ### Create run_cmd.sh
 
-Finally, in this file we collect bash scripts to launch Jupyter Notebook; for details please refer to [run_cmd.sh](ttps://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/run_cmd.sh). 
+Finally, in this file we collect bash scripts to launch Jupyter Notebook; for details please refer to [run_cmd.sh](https://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/run_cmd.sh). 
 
 ```
 #! /bin/bash
