@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am Bowen Li, a data scientist and hybird of researcher/engineer, enjoying breaking down business/engineering problems and finding solutions using statistical machine learning with real-world datasets. My work is to apply, develop and implement algorithms and build large-scale data processing pipeline/architecture and machine learning-based products. PhD in Statistics from National Chiao Tung University in 2014.
+I am Bowen Li, a data scientist and hybird of researcher/engineer, enjoying breaking down business/engineering problems and finding solutions using statistical machine learning with real-world datasets. My work is to apply, develop and implement algorithms and build large-scale data processing pipelines and machine learning-based products. PhD in Statistics from National Chiao Tung University in 2014.
 
 I just left Vpon as Staff Data Scientist. The best email address to contact me is bowen0701 at gmail.com.
 
