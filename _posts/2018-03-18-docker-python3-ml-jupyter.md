@@ -151,7 +151,7 @@ Note that of courese we can add/delete any general / machine learning packages i
 
 ### Create docker-compose.yml
 
-To apply scripts as environment, we could create docker-compose.yml for us to easily launch docker, that is called configuration as code; for details please refer to [docker-compose.yml](https://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/docker-compose.yml). 
+To apply scripts as environment, we could create docker-compose.yml for us to easily launch docker, that is called **configuration as code;** for details please refer to [docker-compose.yml](https://github.com/bowen0701/docker-python3-ml-jupyter/blob/master/docker-compose.yml). 
 
 ```
 version: '3'
