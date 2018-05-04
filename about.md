@@ -6,7 +6,7 @@ permalink: /about/
 
 I am Bowen Li, a data scientist and hybird of researcher/engineer, enjoying breaking down business/engineering problems and finding solutions using statistical machine learning with real-world datasets. My work is to apply, develop and implement algorithms and build large-scale data processing pipelines and machine learning-based products. PhD in Statistics from National Chiao Tung University.
 
-I just join Zalando as Data Scientist in the Personalization Engineering Team, focusing on personalized recommender system. The best email address to contact me is bowen0701 at gmail.com.
+I just join Zalando as Research Engineer in Personalization Engine Team, focusing on personalized recommender system. The best email address to contact me is bowen0701 at gmail.com.
 
 ## Research Interests
 
@@ -20,6 +20,7 @@ I just join Zalando as Data Scientist in the Personalization Engineering Team, f
 
 ## Experiences
 
+- 2018/05 - now: Research Engineer, Zalando
 - 2016/02 - 2018/03: Staff Data Scientist, Vpon
 - 2015/05 - 2016/02: Staff Data Scientist, KKBOX
 - 2014/08 - 2015/04: Postdoctoral Researcher, Statistics, Academia Sinica
