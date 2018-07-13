@@ -48,15 +48,6 @@ Since I recently joined [Zalando](http://www.zalando.com/) as a Data Scientist w
   * Matrix factorization
   * Learning to Rank
 - Thomas Watson Sr, founder of IBM, put it: “If you want to increase your success rate, double your failure rate.”
-- A/B testing:
-  * 1. Start with a hypothesis: 
-    - Algorithm/feature/design X will increase member engagement with our service and ultimately member retention
-  * 2. Design a test: 
-    - Develop a solution or prototype. Ideal execution can be 2X as effective as a prototype, but not 10X.
-    - Think about dependent & independent variables, control, significance…
-  * 3. Execute the test
-  * 4. Let data speak for itself
-- When we execute A/B tests, we track many different metrics. But we ultimately trust member engagement (e.g. hours of play) and retention... We typically have scores of A/B tests running in parallel.
 - Offline-online testing process: tries to combine the best of both worlds. 
   * The offline testing cycle is a step where we test and optimize our algorithms prior to performing online A/B testing. To measure model performance offline we track multiple metrics used in the machine learning community: from ranking measures such as normalized discounted cumulative gain, mean reciprocal rank, or fraction of concordant pairs, to classification metrics such as accuracy, precision, recall, or F-score. We also use the famous RMSE from the Netflix Prize or other more exotic metrics to track different aspects like diversity. We keep track of how well those metrics correlate to measurable online gains in our A/B tests. However, since the mapping is not perfect, offline performance is used only as an indication to make informed decisions on follow up tests.
   * The online A/B testing: Once offline testing has validated a hypothesis, we are ready to design and launch the A/B test that will prove the new feature valid from a member perspective.
@@ -64,6 +55,16 @@ Since I recently joined [Zalando](http://www.zalando.com/) as a Data Scientist w
 <div style="text-align:center">
 <img src="/images/netflix_personalized_recsys.png" alt="Drawing" style="width: 800px;"/>
 </div>
+
+- A/B testing:
+  1. Start with a hypothesis: 
+    * Algorithm/feature/design X will increase member engagement with our service and ultimately member retention
+  2. Design a test: 
+    * Develop a solution or prototype. Ideal execution can be 2X as effective as a prototype, but not 10X.
+    * Think about dependent & independent variables, control, significance…
+  3. Execute the test
+  4. Let data speak for itself
+- When we execute A/B tests, we track many different metrics. But we ultimately trust member engagement (e.g. hours of play) and retention... We typically have scores of A/B tests running in parallel.
 
 ## Metrics for Optimization
 
