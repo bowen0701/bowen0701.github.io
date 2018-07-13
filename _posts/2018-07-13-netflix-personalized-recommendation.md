@@ -62,7 +62,7 @@ Since I recently joined [Zalando](http://www.zalando.com/) as a Data Scientist w
   * The online A/B testing: Once offline testing has validated a hypothesis, we are ready to design and launch the A/B test that will prove the new feature valid from a member perspective.
 
 <div style="text-align:center">
-<img src="/images/netflix_personalized_recsys.png" alt="Drawing" style="width: 550px;"/>
+<img src="/images/netflix_personalized_recsys.png" alt="Drawing" style="width: 700px;"/>
 </div>
 
 ## Metrics for Optimization
