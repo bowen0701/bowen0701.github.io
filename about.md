@@ -19,7 +19,7 @@ I just joined Zalando as a Data Scientist working on machine learning algorithms
 
 ## Experiences
 
-- 2018/05 - now: Research Engineer, Zalando
+- 2018/05 - now: Data Scientist, Zalando
 - 2016/02 - 2018/03: Staff Data Scientist, Vpon
 - 2015/05 - 2016/02: Staff Data Scientist, KKBOX
 - 2014/08 - 2015/04: Postdoctoral Researcher, Statistics, Academia Sinica
