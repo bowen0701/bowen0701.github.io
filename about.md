@@ -10,11 +10,10 @@ I just joined Zalando as a Data Scientist working on machine learning algorithms
 
 ## Research Interests
 
-- Time-to-Event Modeling
 - Machine Learning
-- Statistical Inference
 - Recommender Systems
 - Online Advertising
+- Time-to-Event Modeling
 - Online Experiments
 - Algorithms & Data Structures
 
