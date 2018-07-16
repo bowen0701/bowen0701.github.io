@@ -9,7 +9,7 @@ mathjax: true
 
 ## Introduction
 
-I read these two famous blog posts from [Netflix](https://www.netflix.com/) many years ago, and I really like them:
+I read these two famous blog posts from [Netflix's tech blog](https://www.netflix.com/) many years ago, and I really like them:
 
 - [Netflix Recommendations: Beyond the 5 stars (Part 1)](https://medium.com/netflix-techblog/netflix-recommendations-beyond-the-5-stars-part-1-55838468f429)
 - [Netflix Recommendations: Beyond the 5 stars (Part 2)](https://medium.com/netflix-techblog/netflix-recommendations-beyond-the-5-stars-part-2-d9b96aa399f5)
@@ -53,7 +53,7 @@ Since I recently joined [Zalando](http://www.zalando.com/) as a Data Scientist w
   * The online A/B testing: Once offline testing has validated a hypothesis, we are ready to design and launch the A/B test that will prove the new feature valid from a member perspective.
 
 <div style="text-align:center">
-<img src="/images/netflix_personalized_recsys.png" alt="Drawing" style="width: 800px;"/>
+<img src="/images/netflix_personalized_recsys.png" alt="Drawing" style="width: 900px;"/>
 </div>
 
 - A/B testing:
