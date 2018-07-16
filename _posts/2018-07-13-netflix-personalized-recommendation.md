@@ -22,7 +22,7 @@ Since I recently joined [Zalando](http://www.zalando.com/) as a Data Scientist w
 - Our business objective is to maximize member satisfaction and month-to-month subscription retention, which correlates well with maximizing consumption of video content. We therefore optimize our algorithms to give the highest scores to titles that a member is most likely to "play" and "enjoy".
 - If you are looking for a ranking function that optimizes consumption, an obvious baseline is item popularity. The reason is clear: on average, a member is most likely to watch what most others are watching. However, popularity is the opposite of personalization: it will produce the same ordering of items for every member. Thus, the goal becomes to find a personalized ranking function that is better than item popularity, so we can better satisfy members with varying tastes.
 
-### Metrics for Optimization
+### Metrics for optimization
 
 - Popularity
 - Predicted Ratings
