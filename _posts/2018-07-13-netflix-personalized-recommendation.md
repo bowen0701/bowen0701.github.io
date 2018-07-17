@@ -39,7 +39,7 @@ Since I recently joined [Zalando](http://www.zalando.com/) as a Data Scientist w
 
 Importance of both data and models in creating an optimal personalized experience for our members.
 
-### Some of the data sources
+### Tons of the data sources
   
 - Several billion item ratings from members. And we receive millions of new ratings a day.
 - We already mentioned item popularity as a baseline. But, there are many ways to compute popularity. We can compute it over various time ranges, for instance hourly, daily, or weekly. Or, we can group members by region or other similarity metrics and compute popularity within that group.
@@ -51,6 +51,7 @@ Importance of both data and models in creating an optimal personalized experienc
 - Our members directly enter millions of search terms in the Netflix service each day.
 - All the data we have mentioned above comes from internal sources. We can also tap into external data to improve our features. For example, we can add external item data features such as box office performance or critic reviews.
 - Of course, that is not all: there are many other features such as demographics, location, language, or temporal data that can be used in our predictive models.
+- Among many.
 
 ### Features from tons of data sources
 
