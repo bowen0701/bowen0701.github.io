@@ -41,7 +41,7 @@ Importance of both data and models in creating an optimal personalized experienc
 
 ### Some of the data sources
   
-- everal billion item ratings from members. And we receive millions of new ratings a day.
+- Several billion item ratings from members. And we receive millions of new ratings a day.
 - We already mentioned item popularity as a baseline. But, there are many ways to compute popularity. We can compute it over various time ranges, for instance hourly, daily, or weekly. Or, we can group members by region or other similarity metrics and compute popularity within that group.
 - We receive several million stream plays each day, which include context such as duration, time of day and device type.
 - Our members add millions of items to their queues each day.
