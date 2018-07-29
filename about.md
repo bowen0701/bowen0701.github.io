@@ -11,6 +11,7 @@ I just joined [Zalando](www.zalando.com) as a Data Scientist working on machine 
 ## Research Interests
 
 - Machine Learning
+- Statistical Inference
 - Recommender Systems
 - Online Advertising
 - Time-to-Event Modeling
