@@ -13,7 +13,7 @@ I just joined [Zalando](www.zalando.com) as a Data Scientist working on machine 
 - Machine Learning
 - Statistical Inference
 - Recommender Systems
-- Online Advertising
+- Computational Advertising
 - Time-to-Event Modeling
 - Online Experiments
 - Algorithms & Data Structures
