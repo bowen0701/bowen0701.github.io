@@ -12,9 +12,13 @@ I just joined [Zalando](https://en.zalando.de/) as a data scientist working on m
 
 - Machine Learning
 - Statistical Inference
-- Recommender Systems
+- Recommender System
+- Personalized Content Selection
 - Computational Advertising
-- Time-to-Event Modeling
+- Bandit Algorithms
+- Bayesian Modeling
+- Natural Language Processing
+- Survival Analysis
 - Online Experiments
 - Algorithms & Data Structures
 
