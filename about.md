@@ -11,7 +11,6 @@ I just joined [Zalando](https://en.zalando.de/) as a data scientist working on m
 ## Research Interests
 
 - Machine Learning
-- Statistical Inference
 - Recommender System
 - Personalized Content Selection
 - Computational Advertising
