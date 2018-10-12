@@ -12,7 +12,7 @@ I just joined [Zalando](https://en.zalando.de/) as a data scientist working on m
 
 - Machine Learning
 - Recommender System
-- Personalized Content Selection
+- Personalization Engine
 - Online Advertising
 - Bandit Algorithms
 - Survival Analysis
