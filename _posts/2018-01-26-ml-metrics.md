@@ -509,8 +509,3 @@ Note tht Precision@k, AP, MAP and MRR are applicable for **binary relevance leve
 ## References
 
 - Burges (2010). From RankNet to LambdaRank to LambdaMART: An Overview.
-
-
-```python
-
-```
