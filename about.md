@@ -14,9 +14,9 @@ I just joined [Zalando](https://en.zalando.de/) as a data scientist working on m
 - Personalization Engine
 - Online Advertising
 - Machine Learning
-- Survival Analysis
 - Bandit Algorithms
 - Online Experiments
+- Survival Analysis
 - Natural Language Processing
 - Algorithms & Data Structures
 
