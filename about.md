@@ -10,8 +10,8 @@ I just joined [Zalando](https://en.zalando.de/) as a data scientist working on m
 
 ## Research Interests
 
-- Recommendations
-- Personalization
+- Recommender Systems
+- Personalization Engine
 - Online Advertising
 - Machine Learning
 - Statistical Inference
