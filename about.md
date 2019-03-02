@@ -4,14 +4,14 @@ title: About
 permalink: /about/
 ---
 
-I am Bowen Li, a data scientist and hybrid of researcher and engineer, enjoying solving business/engineering data science problems and building machine learning systems with real-world datasets. My work is to apply, tailor and implement machine learning algorithms and statistical inference, and build large-scale data processing pipelines and machine learning products. I have a PhD in Statistics from National Chiao Tung University.
+I am Bowen Li, a data scientist and hybrid of researcher and engineer, enjoying solving business/engineering data science problems and building machine learning systems with real-world datasets. I work on machine learning algorithms/engineering and statistical inference, and build large-scale data processing pipelines and machine learning products. I have a PhD in Statistics from National Chiao Tung University.
 
 I just joined [Zalando](https://en.zalando.de/) as a data scientist working on machine learning algorithms/engineering in Personalization Engine; for the brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/bowenli0701/). The best email address to contact me is bowen0701 at gmail.com.
 
 ## Research Interests
 
 - Recommender Systems
-- Personalization Engine
+- Personalization
 - Online Advertising
 - Machine Learning
 - Statistical Inference
