@@ -10,7 +10,7 @@ I just joined [Zalando](https://en.zalando.de/) as a data scientist working on m
 
 ## Research Interests
 
-- Recommender Systems
+- Recommendation
 - Personalization
 - Online Advertising
 - Machine Learning
@@ -18,7 +18,6 @@ I just joined [Zalando](https://en.zalando.de/) as a data scientist working on m
 - Bandit Algorithms
 - Online Experiments
 - Survival Analysis
-- Natural Language Processing
 - Algorithms & Data Structures
 
 ## Experiences
