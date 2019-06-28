@@ -10,8 +10,8 @@ Now I am a data scientist working on machine learning modeling/engineering in fa
 
 ## Research Interests
 
-- Recommendation
-- Personalization
+- Recommendation System
+- Personalization Engine
 - Online Advertising
 - Machine Learning
 - Statistical Inference
@@ -23,7 +23,7 @@ Now I am a data scientist working on machine learning modeling/engineering in fa
 
 ## Experiences
 
-- 2018/05 - Now: Data Scientist, Zalando
+- 2018/05 - Present: Data Scientist, Zalando
 - 2016 - 2018: Staff Data Scientist, Vpon
 - 2015 - 2016: Staff Data Scientist, KKBOX
 - 2014 - 2015: Postdoctoral Researcher, Statistics, Academia Sinica
