@@ -1,12 +1,12 @@
 # Site settings
-title: Bowen Li's Data Science Blog
+title: Bowen Li's Blog
 email: 
-description: "A Data Scientist's Random Thoughts"
+description: ""
 baseurl: ""
 url: "https://bowen0701.github.io"
-twitter_username: bowenli0701
+twitter_username: bowen0701
 github_username: bowen0701
-linkedin_username: bowenli0701
+linkedin_username: bowen0701
 
 # Build settings
 markdown: kramdown
@@ -17,3 +17,5 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+
+theme: jekyll-theme-cayman
