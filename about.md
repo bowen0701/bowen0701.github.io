@@ -11,13 +11,12 @@ Now I am a data scientist working on machine learning modeling/engineering in fa
 ## Research Interests
 
 - Recommendation System
-- Personalization Engine
 - Online Advertising
 - Machine Learning
 - Statistical Inference
 - Bandit Algorithms
-- Online Experiment
 - Causal Inference
+- Online Experiment
 - Time-to-Event Modeling
 - Algorithms & Data Structures
 
@@ -46,7 +45,5 @@ Now I am a data scientist working on machine learning modeling/engineering in fa
 ## Education
 
 - PhD, Statistics, National Chiao Tung University
-- Master, Statistics, National Central University
-- Bachelor, Industrial Engineering, National Tsing Hua University
 
 Launched on 2016/09/10.
