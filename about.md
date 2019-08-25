@@ -12,7 +12,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 
 ## Research Interests
 
-- Recommendation System
+- Recommender System
 - Online Advertising
 - Machine Learning
 - Statistical Inference
