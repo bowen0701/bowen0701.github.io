@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a machine learning scientist at [Zalando](https://en.zalando.de/), with a PhD in Statistics, working on machine learning algorithms/engineering in fashion e-commerce Personalization Engine.
+I am a machine learning scientist at [Zalando](https://en.zalando.de/), with a PhD in Statistics, working on machine learning modeling/engineering in fashion e-commerce Recommender System.
 
 I enjoy solving real-world business/engineering problems and developing data products. I work on machine learning modeling/engineering and statistical inference, and build large-scale data pipelines and machine learning systems.
 
