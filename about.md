@@ -19,7 +19,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 - Bandit Algorithms
 - Causal Inference
 - Online Experiment
-- Time-to-Event Modeling
+- Survival Analysis
 - Algorithms & Data Structures
 
 ## Experiences
