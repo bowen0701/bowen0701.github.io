@@ -4,9 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a machine learning scientist at [Zalando](https://en.zalando.de/), with a PhD in Statistics, working on machine learning modeling/engineering in fashion e-commerce Recommender System.
-
-I enjoy solving real-world business/engineering problems and developing data products. I work on machine learning modeling/engineering and statistical inference, and build large-scale data pipelines and machine learning systems.
+I am currently a Machine Learning Scientist at [Zalando](https://en.zalando.de/), enjoying solving real-world business/engineering problems, working on machine learning modeling/engineering and building machine learning-based products.
 
 For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/bowenli0701/). The best email address to contact me is bowen0701 at gmail.com.
 
