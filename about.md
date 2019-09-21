@@ -12,13 +12,12 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 
 ## Research Interests
 
-- Recommender System
+- Recommender Systems
 - Online Advertising
 - Machine Learning
 - Statistical Inference
 - Bandit Algorithms
 - Causal Inference
-- Online Experiment
 - Survival Analysis
 - Algorithms & Data Structures
 
