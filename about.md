@@ -25,7 +25,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 - 2016 - 2018: Staff Data Scientist, Vpon
 - 2015 - 2016: Staff Data Scientist, KKBOX
 - 2014 - 2015: Postdoctoral Researcher, Statistics, Academia Sinica
-- 2006 - 2009: Senior/Principal Statistician, Macronix
+- 2006 - 2009: Principal Statistician, Macronix
 
 ## Awards
 
