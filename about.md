@@ -13,8 +13,8 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 - Recommendation Systems
 - Online Advertising
 - Machine Learning
-- Bayesian Statistics
 - Bandit Algorithms
+- Bayesian Statistics
 - Causal Inference
 - Survival Analysis
 - Algorithms & Data Structures
