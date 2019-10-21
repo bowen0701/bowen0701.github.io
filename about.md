@@ -21,11 +21,11 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 
 ## Experiences
 
-- Zalando: Research Engineer (2019/11 - Present); Data Scientist (2018/05 - 2019/10)
+- Zalando: Data Scientist (2018/05 - 2019/10); Research Engineer (2019/11 - Present)
 - Vpon: Staff Data Scientist (2016 - 2018)
 - KKBOX: Staff Data Scientist (2015 - 2016)
 - Academia Sinica: Postdoctoral Researcher (2014 - 2015)
-- Macronix: Pricipal Statistician (2008 - 2009); Senior Statistician (2006 - 2008)
+- Macronix: Senior Statistician (2006 - 2008): Pricipal Statistician (2008 - 2009)
 
 ## Awards
 
