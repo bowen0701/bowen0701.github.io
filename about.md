@@ -4,14 +4,14 @@ title: About
 permalink: /about/
 ---
 
-I am a Research Engineer at [Zalando](https://en.zalando.de/), working on machine learning research/engineering and building machine learning products, currently focusing on Recommendation Systems.
+I am a Research Engineer at [Zalando](https://en.zalando.de/), working on machine learning research/engineering and building large-scale machine learning products. Currently focus on Recommendation Systems.
 
 For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/bowenli0701/). The best email address to contact me is bowen0701 at gmail.com.
 
 ## Research Interests
 
 - Recommendation Systems
-- Online Advertising
+- Advertising Systems
 - Machine Learning
 - Bandit Algorithms
 - Bayesian Statistics
