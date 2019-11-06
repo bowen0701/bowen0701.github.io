@@ -43,6 +43,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 
 ## Education
 
-- PhD, Statistics, National Chiao Tung University
+- PhD, Statistics, National Chiao Tung University (2009 - 2014)
+- BS, Industrial Engineering, National Tsing Hua University
 
 Launched on 2016/09/10.
