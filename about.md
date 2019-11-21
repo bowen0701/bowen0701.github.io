@@ -11,8 +11,9 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 ## Research Interests
 
 - Recommendation Systems
-- Online Advertising
+- Advertising Systems
 - Machine Learning
+- Deep Learning
 - Bandit Algorithms
 - Bayesian Statistics
 - Survival Analysis
@@ -42,6 +43,6 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 
 ## Education
 
-- PhD, Statistics, National Chiao Tung University
+- PhD, Statistics, National Chiao Tung University (2014)
 
 Launched on 2016/09/10.
