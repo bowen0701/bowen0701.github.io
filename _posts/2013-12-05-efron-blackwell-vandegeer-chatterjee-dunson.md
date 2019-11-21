@@ -7,7 +7,7 @@ date: 2013-12-05
 mathjax: true
 ---
 
-## Bradley Efron (Statistician)
+## Bradley Efron
 
 "You just can't work in fields like statistics by yourself. You have to have the kind of stimulation that comes from being around smart people challenging you."
 
@@ -25,7 +25,7 @@ mathjax: true
 
 "I always wished I'd made more of an attempt to communicate. Since then I've been careful about trying to write communications to my clients or collaborators in reasonable language, or at least reasonably like what they're used to think in."
 
-## David Blackwell (Statistician)
+## David Blackwell
 
 "Basically, I’m not interested in doing research and I never have been. I’m interested in understanding, which is quite a different thing. And often to understand something you have to work it out yourself because no one else has done it."
 
@@ -33,7 +33,7 @@ mathjax: true
 
 "It's the faith of the statisticians that you have to know lots of about everything. You can use all kinds of math."
 
-## Nilanjan Chatterjee (Statistician)
+## Nilanjan Chatterjee
 
 "I am engaged in important scientific problems."
 
@@ -51,7 +51,7 @@ mathjax: true
 
 "I have always been very independent researcher."
 
-## David Dunson (Statistician)
+## David Dunson
 
 "Enjoy what you are doing, be creative, and take risks in choosing what to work on."
 
