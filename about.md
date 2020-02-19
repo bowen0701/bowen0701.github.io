@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Research Engineer, Machine Learning at [Zalando](https://en.zalando.de/), working on machine learning research/engineering and building large-scale machine learning systems; currently focus on Recommendation Systems.
+I am a Research Engineer at [Zalando](https://en.zalando.de/), working on machine learning research/engineering and building large-scale machine learning systems; currently focus on Recommendation Systems.
 
 For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/bowen0701/). The best email address to contact me is *[bowen0701 at gmail dot com]*.
 
@@ -21,7 +21,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 
 ## Experiences
 
-- Zalando: Data Scientist (2018/05 - 2019/10); Research Engineer, Machine Learning (2019/11 - Present)
+- Zalando: Data Scientist (2018/05 - 2019/10); Research Engineer (2019/11 - Present)
 - Vpon: Staff Data Scientist (2016 - 2018)
 - KKBOX: Staff Data Scientist (2015 - 2016)
 - Academia Sinica: Postdoctoral Researcher (2014 - 2015)
