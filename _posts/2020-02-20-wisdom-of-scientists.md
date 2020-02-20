@@ -148,3 +148,6 @@ mathjax: true
 "Have a skeptical eye and thoughts toward limitations of what people are currently doing and how to do something better fully motivated by applications."
 
 "Don't get bogged down in the details of papers and seminars, but figure out a better 'big-picture' way of doing things."
+
+
+Continue to update...
