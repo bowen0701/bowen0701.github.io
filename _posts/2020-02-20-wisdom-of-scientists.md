@@ -3,9 +3,23 @@ layout: post
 comments: true
 title: "Collected Wisdom of Scientists"
 excerpt: "Computer scientists, statisticians, mathematicians on research and life."
-date: 2020-02-02
+date: 2020-02-20
 mathjax: true
 ---
+
+## Outline
+
+- [Thomas Cover (Computer Scientist, Statistician)](#Thomas-Cover-Computer-Scientist-Statistician)
+- [Maryam Mirzakhani (Mathematician, First Female Fields Medalist)](#Maryam-Mirzakhani-Mathematician-First-Female-Fields-Medalist)
+- [John Tukey (Mathematician, Statistician)](#John-Tukey-Mathematician-Statistician)
+- [George Box (Statistician)](#George-Box-Statistician)
+- [Bradley Efron (Statistician)](#Bradley-Efron-Statistician)
+- [Jerzy Neyman (Statistician)](#Jerzy-Neyman-Statistician)
+- [Fred Mosteller (Statistician)](#Fred-Mosteller-Statistician)
+- [David Blackwell (Statistician)](#David-Blackwell-Statistician)
+- [Sara van de Geer (Mathematician, Statistician)](#Sara-van-de-Geer-Mathematician-Statistician)
+- [Nilanjan Chatterjee (Statistician)](#Nilanjan-Chatterjee-Statistician)
+- [David Dunson (Statistician)](#David-Dunson-Statistician)
 
 ## Thomas Cover (Computer Scientist, Statistician)
 
@@ -75,7 +89,7 @@ mathjax: true
 "Scientific research," he noted, "consisted of more than a single experiment. The scientist arrives at the experiment with a large body of prior knowledge or at least with a prior expectation of what might be the result. The study is designed to refine that knowledge, and the design depends upon what type of refinement is sought....This one experiment is part of a stream of experiments, The previous knowledge is then reconsidered in terms of both the new experiment and new analyses of the old experiments. The scientists never cease to return to older studies to refine their interpretation of them in terms of the newer studies....The procedure continues forever - there is no final *correct* solution....The sequence of scientific experiments followed by examination and reexamination of data has no end - there is no final scientific truth." -- In David Salsburg's word.
 
 
-## Bradley Efron
+## Bradley Efron (Statistician)
 
 "You just can't work in fields like statistics by yourself. You have to have the kind of stimulation that comes from being around smart people challenging you."
 
@@ -150,4 +164,4 @@ mathjax: true
 "Don't get bogged down in the details of papers and seminars, but figure out a better 'big-picture' way of doing things."
 
 
-Continue to update...
+*Continue to update...*
