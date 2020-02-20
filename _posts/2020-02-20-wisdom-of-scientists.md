@@ -10,16 +10,16 @@ mathjax: true
 ## Outline
 
 - [Thomas Cover (Computer Scientist, Statistician)](#thomas-cover-computer-scientist-statistician)
-- [Maryam Mirzakhani (Mathematician, First Female Fields Medalist)](#Maryam-Mirzakhani-Mathematician-First-Female-Fields-Medalist)
-- [John Tukey (Mathematician, Statistician)](#John-Tukey-Mathematician-Statistician)
-- [George Box (Statistician)](#George-Box-Statistician)
-- [Bradley Efron (Statistician)](#Bradley-Efron-Statistician)
-- [Jerzy Neyman (Statistician)](#Jerzy-Neyman-Statistician)
-- [Fred Mosteller (Statistician)](#Fred-Mosteller-Statistician)
-- [David Blackwell (Statistician)](#David-Blackwell-Statistician)
-- [Sara van de Geer (Mathematician, Statistician)](#Sara-van-de-Geer-Mathematician-Statistician)
-- [Nilanjan Chatterjee (Statistician)](#Nilanjan-Chatterjee-Statistician)
-- [David Dunson (Statistician)](#David-Dunson-Statistician)
+- [Maryam Mirzakhani (Mathematician, First Female Fields Medalist)](#maryam-mirzakhani-mathematician-first-female-fields-medalist)
+- [John Tukey (Mathematician, Statistician)](#john-tukey-mathematician-statistician)
+- [George Box (Statistician)](#george-box-statistician)
+- [Bradley Efron (Statistician)](#bradley-efron-statistician)
+- [Jerzy Neyman (Statistician)](#jerzy-neyman-statistician)
+- [Fred Mosteller (Statistician)](#fred-mosteller-statistician)
+- [David Blackwell (Statistician)](#david-blackwell-statistician)
+- [Sara van de Geer (Mathematician, Statistician)](#sara-van-de-geer-mathematician-statistician)
+- [Nilanjan Chatterjee (Statistician)](#nilanjan-chatterjee-statistician)
+- [David Dunson (Statistician)](#david-dunson-statistician)
 
 ## Thomas Cover (Computer Scientist, Statistician)
 
