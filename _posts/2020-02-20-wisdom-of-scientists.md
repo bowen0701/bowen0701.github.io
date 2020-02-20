@@ -9,7 +9,7 @@ mathjax: true
 
 ## Outline
 
-- [Thomas Cover (Computer Scientist, Statistician)](#Thomas-Cover-Computer-Scientist-Statistician)
+- [Thomas Cover (Computer Scientist, Statistician)](#thomas-cover-computer-scientist-statistician)
 - [Maryam Mirzakhani (Mathematician, First Female Fields Medalist)](#Maryam-Mirzakhani-Mathematician-First-Female-Fields-Medalist)
 - [John Tukey (Mathematician, Statistician)](#John-Tukey-Mathematician-Statistician)
 - [George Box (Statistician)](#George-Box-Statistician)
