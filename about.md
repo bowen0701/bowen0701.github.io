@@ -14,7 +14,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 - Advertising Systems
 - Machine Learning
 - Deep Learning
-- Bandit Algorithms
+- Reinforcement Learning
 - Bayesian Statistics
 - Survival Analysis
 - Algorithms & Data Structures
