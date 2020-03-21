@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Machine Learning Software Engineer, working on machine learning research/engineering and building large-scale machine learning systems.
+I am a Software Engineer, working on machine learning research/engineering and building large-scale machine learning systems.
 
 For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/bowen0701/). The best email address to contact me is *[bowen0701 at gmail dot com]*.
 
