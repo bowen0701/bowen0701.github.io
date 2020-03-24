@@ -39,7 +39,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 ## Talks
 
 - Marginal Inference on Recurrent Events Data under Competing Risks. [ERCIM Conference 2014](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, 2014/12/06.
-- Nonparametric Marginal Analysis of Recurrent Events Data under Competing Risks. University System of Taiwan-Statistics Conference 2014, National Chiao Tung University, 2014/5/24.
+- Nonparametric Marginal Analysis of Recurrent Events Data under Competing Risks. University System of Taiwan-Statistics Conference 2014, National Chiao Tung University, 2014/05/24.
 
 ## Education
 
