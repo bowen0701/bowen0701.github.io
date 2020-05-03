@@ -15,6 +15,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 - Machine Learning
 - Deep Learning
 - Reinforcement Learning
+- Natural Language Processing
 - Bayesian Statistics
 - Survival Analysis
 - Algorithms & Data Structures
