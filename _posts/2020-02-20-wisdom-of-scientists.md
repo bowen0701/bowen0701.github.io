@@ -7,8 +7,11 @@ date: 2020-02-20
 mathjax: true
 ---
 
+[Updated on 2020/05/16: add Bertrand Russell's 10 commandments.]
+
 ## Outline
 
+- [Bertrand Russell (Mathematician)](#bertrand-russell-mathematician)
 - [Thomas Cover (Computer Scientist, Statistician)](#thomas-cover-computer-scientist-statistician)
 - [Maryam Mirzakhani (Mathematician, First Female Fields Medalist)](#maryam-mirzakhani-mathematician-first-female-fields-medalist)
 - [John Tukey (Mathematician, Statistician)](#john-tukey-mathematician-statistician)
@@ -20,6 +23,30 @@ mathjax: true
 - [Sara van de Geer (Mathematician, Statistician)](#sara-van-de-geer-mathematician-statistician)
 - [Nilanjan Chatterjee (Statistician)](#nilanjan-chatterjee-statistician)
 - [David Dunson (Statistician)](#david-dunson-statistician)
+
+## Bertrand Russell (Mathematician)
+
+Bertrand Russell's 10 commandments, I saw this from Yann LeCun's Facebook post. 
+
+"Do not feel absolutely certain of anything."
+
+"Do not think it worthwhile to produce belief by concealing evidence, for the evidence is sure to come to light."
+
+"Never try to discourage thinking, for you are sure to succeed."
+
+"When you meet with opposition, even if it should be from your spouse or your children, endeavour to overcome it by argument and not by authority, for a victory dependent upon authority is unreal and illusory."
+
+"Have no respect for the authority of others, for there are always contrary authorities to be found."
+
+"Do not use power to suppress opinions you think pernicious, for if you do the opinions will suppress you."
+
+"Do not fear to be eccentric in opinion, for every opinion now accepted was once eccentric."
+
+"Find more pleasure in intelligent dissent than in passive agreement, for, if you value intelligence as you should, the former implies a deeper agreement than the latter."
+
+"Be scrupulously truthful, even when truth is inconvenient, for it is more inconvenient when you try to conceal it."
+
+"Do not feel envious of the happiness of those who live in a fool’s paradise, for only a fool will think that it is happiness."
 
 ## Thomas Cover (Computer Scientist, Statistician)
 
@@ -35,8 +62,7 @@ mathjax: true
 
 "Vigorous thinking is so much fun, and you can always laugh when you’re doing research."
 
-"Your goal should be to change the way people think."
-
+"Your goal should be to change the way people think.
 
 ## Maryam Mirzakhani (Mathematician, First Female Fields Medalist)
 
@@ -62,7 +88,6 @@ mathjax: true
  
 "I don't think that everyone should become a mathematician, but I do believe that many students don't give mathematics a real chance. I did poorly in math for a couple of years in middle school; I was just not interested in thinking about it. I can see that without being excited mathematics can look pointless and cold. The beauty of mathematics only shows itself to more patient followers."
 
-
 ## John Tukey (Mathematician, Statistician)
 
 "This experience [working on problems related to ordnance] provided him with many examples of statistical problems that he would investigate in future years. It also gave him a great appreciation for the nature of practical problems." -- In David Salsburg's words.
@@ -79,7 +104,6 @@ mathjax: true
 
 "In a world in which the price of calculation continues to decrease rapidly, but the price of theorem proving continues to hold steady or increase, elementary economics indicates that we ought to spend a larger and larger fraction of our time on calculation."
 
-
 ## George Box (Statistician)
 
 "I said [to the colonel] one day, 'You know, we really need to have a statistician look at these data because they are very variable.'"
@@ -87,7 +111,6 @@ mathjax: true
 "Essentially, all models are wrong, but some are useful."
 
 "Scientific research," he noted, "consisted of more than a single experiment. The scientist arrives at the experiment with a large body of prior knowledge or at least with a prior expectation of what might be the result. The study is designed to refine that knowledge, and the design depends upon what type of refinement is sought....This one experiment is part of a stream of experiments, The previous knowledge is then reconsidered in terms of both the new experiment and new analyses of the old experiments. The scientists never cease to return to older studies to refine their interpretation of them in terms of the newer studies....The procedure continues forever - there is no final *correct* solution....The sequence of scientific experiments followed by examination and reexamination of data has no end - there is no final scientific truth." -- In David Salsburg's word.
-
 
 ## Bradley Efron (Statistician)
 
@@ -107,28 +130,23 @@ mathjax: true
 
 "I always wished I'd made more of an attempt to communicate. Since then I've been careful about trying to write communications to my clients or collaborators in reasonable language, or at least reasonably like what they're used to think in."
 
-
 ## Jerzy Neyman (Statistician)
 
 "Statistical theory needed to be motivated by its importance and usefulness for *applications*."
 
 "We didn't have to know and match all the cases and understand all the relationships to find answers to the most important questions." -- In Morris Hansen's words.
 
-
 ## Fred Mosteller (Statistician)
 
 "The only way to find out what will happen when a complex system is disturbed is to disturbed the system, not merely to observe it passively."
-
 
 ## David Blackwell (Statistician)
 
 "Basically, I’m not interested in doing research and I never have been. I’m interested in understanding, which is quite a different thing. And often to understand something you have to work it out yourself because no one else has done it."
 
-
 ## Sara van de Geer (Mathematician, Statistician)
 
 "It's the faith of the statisticians that you have to know lots of about everything. You can use all kinds of math."
-
 
 ## Nilanjan Chatterjee (Statistician)
 
@@ -148,7 +166,6 @@ mathjax: true
 
 "I have always been very independent researcher."
 
-
 ## David Dunson (Statistician)
 
 "Enjoy what you are doing, be creative, and take risks in choosing what to work on."
@@ -162,6 +179,5 @@ mathjax: true
 "Have a skeptical eye and thoughts toward limitations of what people are currently doing and how to do something better fully motivated by applications."
 
 "Don't get bogged down in the details of papers and seminars, but figure out a better 'big-picture' way of doing things."
-
 
 *Continue to update...*
