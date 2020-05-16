@@ -30,7 +30,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 
 ## Awards
 
-- Winner of Ph.D. Dissertation Award, University System of Taiwan’s Statistics Conference 2014.
+- Ph.D. Dissertation Award, University System of Taiwan’s Statistics Conference 2014.
 
 ## Publications
 
