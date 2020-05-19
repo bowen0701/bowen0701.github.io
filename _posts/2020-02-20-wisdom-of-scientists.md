@@ -7,8 +7,9 @@ date: 2020-02-20
 mathjax: true
 ---
 
-[Updated on 2020/05/17: add Claude Shannon.]
-[Updated on 2020/05/16: add Bertrand Russell.]
+<span style="color: #286ee0;">[Updated on 2020/05/17: add Claude Shannon.]</span>
+<br/>
+<span style="color: #286ee0;">[Updated on 2020/05/16: add Bertrand Russell.]</span>
 
 ## Outline
 
