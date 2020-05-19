@@ -1,6 +1,11 @@
-
-# A (Comprehensive) Look into Correspondence Analysis
-2016/10/06 by Bowen Li
+---
+layout: post
+comments: true
+title: "A (Comprehensive) Look into Correspondence Analysis"
+excerpt: "Correspondence analysis is a traditional but also powerful dimension reduction technique. The post introduces motivation for correspondence analsis and provides detailed explanation for it."
+date: 2016-10-06
+mathjax: true
+---
 
 ## Outline
 - [What is Correspondence Analysis?](#What-is-Correspondence-Analysis?)
