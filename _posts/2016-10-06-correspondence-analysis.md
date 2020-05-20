@@ -34,17 +34,17 @@ mathjax: true
 - Other groups vs. characteristics, etc...
 
 ### Correspondence analysis of archaeological data: sites vs. types
-<img src="/images/contingency_table.png" alt="Drawing" width="40%" class="center"/>
+<div style="text-align:center"><img src="/images/contingency_table.png" alt="Drawing" width="40%"/></div>
 
 Common data visualizations:
 
-<img src="/images/site_type_profile.png" alt="Drawing" width="60%" class="center"/>
+<div style="text-align:center"><img src="/images/site_type_profile.png" alt="Drawing" width="60%"/></div>
 
 However, common data visualizations of type by site (left) and site by type (right) **cannot quantify associations.**
 
 **Correspondence analysis vidualization:**
 
-<img src="/images/ca_demo.png" alt="Drawing" width="40%" class="center"/>
+<div style="text-align:center"><img src="/images/ca_demo.png" alt="Drawing" width="40%"/></div>
 
 - **Sites association:** 
   * *P1* and *P2* are close together, and thus have similar **type profiles**
@@ -150,14 +150,14 @@ First (bad) idea: PCA (sometimes)
 - Aloz punctuates the style similarity as Zola, but is farther away from Zola than any authors.
 - That is because **PCA is mainly sensitive to the number** of produced punctuation marks. 
 
-<img src="/images/pca_french_authors.png" alt="Drawing" width="60%" class="center"/>
+<div style="text-align:center"><img src="/images/pca_french_authors.png" alt="Drawing" width="60%"/></div>
 
 Correspondence analysis is successful:
 
 - From correspondence analysis results, Aloz and Zola are close together!
 - It successfully **reveals profile (style) similarity.**
 
-<img src="/images/ca_french_authors.png" alt="Drawing" width="50%" class="center"/>
+<div style="text-align:center"><img src="/images/ca_french_authors.png" alt="Drawing" width="50%"/></div>
 
 ## Methodology Summary
 Correspondence Analysis is based on **generalized singular value decomposition (SVD),** which is similar to **principal component analysis (PCA),** except that the former applies to categorical rather than continuous data; for introduction to PCA and SVD, see [my post](https://bowen0701.github.io/2016/10/05/pca-svd/).
@@ -353,18 +353,18 @@ For interpretation details please see (Greenacre, 2007, p. 66 - 72).
 
 **Example: Smoking dataset:**
 
-<img src="/images/ca_smoking_data.png" alt="Drawing" width="50%" class="center"/>
+<div style="text-align:center"><img src="/images/ca_smoking_data.png" alt="Drawing" width="50%"/></div>
 
 Figures 9.2 in Greenacre (2007):
 
-<img src="/images/ca_asym_rowpricipal.png" alt="Drawing" width="50%" class="center"/>
+<div style="text-align:center"><img src="/images/ca_asym_rowpricipal.png" alt="Drawing" width="50%"/></div>
 
 Figures 9.4 in Greenacre (2007):
 
-<img src="/images/ca_asym_colpricipal.png" alt="Drawing" width="50%" class="center"/>
+<div style="text-align:center"><img src="/images/ca_asym_colpricipal.png" alt="Drawing" width="50%"/></div>
 
 Figures 9.5 in Greenacre (2007):
-<img src="/images/ca_sym.png" alt="Drawing" width="50%" class="center"/>
+<div style="text-align:center"><img src="/images/ca_sym.png" alt="Drawing" width="50%"/></div>
 
 ## Numpy Implementations of Correspondence Analysis 
 
