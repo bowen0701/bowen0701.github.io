@@ -369,7 +369,7 @@ Figures 9.5 in Greenacre (2007):
 ## Numpy Implementations of Correspondence Analysis 
 
 ```python
-# https://github.com/bowen0701/machine-learning/blob/master/numpy_correspondence_analysis.py
+# https://github.com/bowen0701/machine-learning/blob/master/correspondence_analysis.py
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
