@@ -6,7 +6,7 @@ permalink: /about/
 
 I am a Software Engineer working on machine learning research/engineering and building large-scale machine learning products; currently focus on Recommendation Systems.
 
-For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/bowen0701/). The best email address to contact me is *bowen0701 AT gmail.com*.
+For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/bowen0701/). The best email address to contact me is *bowen0701 at gmail dot com*.
 
 ## Research Interests
 
@@ -22,6 +22,7 @@ For brief CV please refer to my [LinkedIn profile](https://www.linkedin.com/in/b
 
 ## Experiences
 
+- TBA, Senior Software Engineer
 - Zalando: Research Engineer (2018/05 - 2020/06)
 - Vpon: Staff Data Scientist (2016 - 2018)
 - KKBOX: Staff Data Scientist (2015 - 2016)
