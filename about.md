@@ -22,6 +22,7 @@ For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0
 
 ## Experiences
 
+- TBA: Senior Software Engineer, Machine Learning
 - Zalando: Research Engineer (2018/05 - 2020/06)
 - Vpon: Staff Data Scientist (2016 - 2018)
 - KKBOX: Staff Data Scientist (2015 - 2016)
