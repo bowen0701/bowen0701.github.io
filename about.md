@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Software Engineer working on machine learning research/engineering and building large-scale machine learning products; currently focus on Recommendation Systems.
+I am a Software Engineer working on machine learning research/engineering and building large-scale machine learning products.
 
 For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0701/). The best email address to contact me is *bowen0701 at gmail dot com*.
 
@@ -22,7 +22,7 @@ For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0
 
 ## Experiences
 
-- TBA: Software Engineer, Machine Learning
+- Facebook: Software Engineer, Machine Learning (2020/08 - Present)
 - Zalando: Research Engineer (2018/05 - 2020/06)
 - Vpon: Staff Data Scientist (2016 - 2018)
 - KKBOX: Staff Data Scientist (2015 - 2016)
