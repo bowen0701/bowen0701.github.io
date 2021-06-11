@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Softwarre Engineer working on machine learning research/engineering and building large-scale machine learning products.
+I am a Software Engineer working on machine learning research/engineering and building large-scale machine learning products.
 
 For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0701/). The best email address to contact me is *bowen0701 at gmail dot com*.
 
