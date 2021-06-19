@@ -11,9 +11,8 @@ For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0
 ## Research Interests
 
 - Recommendation Systems
-- Advertising Systems
+- Computational Advertising
 - Machine Learning
-- Deep Learning
 - Reinforcement Learning
 - Natural Language Processing
 - Bayesian Statistics
