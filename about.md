@@ -13,9 +13,9 @@ For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0
 - Recommendation Systems
 - Computational Advertising
 - Machine Learning
+- Deep Learning
 - Reinforcement Learning
 - Natural Language Processing
-- Bayesian Statistics
 - Survival Analysis
 - Algorithms & Data Structures
 
