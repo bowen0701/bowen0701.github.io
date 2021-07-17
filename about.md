@@ -26,7 +26,7 @@ For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0
 - Vpon: Staff Data Scientist (2016 - 2018)
 - KKBOX: Staff Data Scientist (2015 - 2016)
 - Academia Sinica: Postdoctoral Researcher (2014 - 2015)
-- Macronix: Statistician (2006 - 2008); Principal Statistician (2008 - 2009)
+- Macronix: Principal Statistician (2006 - 2009)
 
 ## Awards
 
