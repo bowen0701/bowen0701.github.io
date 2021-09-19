@@ -6,12 +6,12 @@ permalink: /about/
 
 I am a Machine Learning Engineer enjoying solving hard problems for ML research/engineering and building large-scale machine learning products, specializing in recommendation systems and advertising systems.
 
-For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0701/). Please contact me via bowen0701 at gmail.com.
+For brief CV please see my [LinkedIn profile](https://www.linkedin.com/in/bowen0701/). Contact me via bowen0701 at gmail.com.
 
 ## Research Interests
 
 - Recommendation Systems
-- Computational Advertising
+- Advertising Systems
 - Machine Learning
 - Deep Learning
 - Reinforcement Learning
