@@ -24,7 +24,7 @@ For brief CV please see https://www.linkedin.com/in/bowen0701/. Contact me via b
 - Zalando: Research Engineer (2018/05 - 2020/06)
 - Vpon: Staff Data Scientist (2016 - 2018)
 - KKBOX: Staff Data Scientist (2015 - 2016)
-- Academia Sinica: Postdoctoral Researcher (2014 - 2015)
+- Academia Sinica: Postdoctoral Fellow (2014 - 2015)
 - Macronix: Principal Statistician (2006 - 2009)
 
 ## Awards
