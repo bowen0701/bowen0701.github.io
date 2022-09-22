@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Software Engineer enjoys solving hard problems for ML research/engineering and building large-scale machine learning products, specializing in recommendation systems and advertising systems.
+Software Engineer enjoys solving hard problems for ML research/engineering and building large-scale machine learning products.
 
 For brief CV please see https://www.linkedin.com/in/bowen0701/. Contact me via bowen0701 at gmail.com.
 
