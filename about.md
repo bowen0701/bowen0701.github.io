@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Software Engineer enjoys solving hard problems for ML research/engineering and building large-scale machine learning products.
+I am a Software Engineer enjoying solving hard problems for machine learning research/engineering and building large-scale ML products.
 
-For brief CV please see https://www.linkedin.com/in/bowen0701/. Contact me via bowen0701 at gmail.com.
+For brief CV please see https://www.linkedin.com/in/bowen0701. Contact me via bowen0701 at gmail.com.
 
 ## Research Interests
 
