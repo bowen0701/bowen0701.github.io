@@ -1,11 +1,11 @@
 # Site settings
-title: Bowen Li's Blog
-author: Bowen Li
+title: Bowen Lee's Blog
+author: Bowen Lee
 description: ""
 baseurl: ""
 url: "https://bowen0701.github.io"
 github_username: bowen0701
-twitter_username: bowen0701
+# twitter_username: bowen0701
 linkedin_username: bowen0701
 
 # Build settings
