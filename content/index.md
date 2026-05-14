@@ -1,16 +1,16 @@
 ---
-title: Welcome to my Research Engineering Garden
+title: Bowen's RE Garden
 ---
 
-# Research Engineering Garden
+# Welcome to Bowen's RE Garden
 
-Welcome! This is a collection of my technical notes, derivations, and implementations at the intersection of Deep Learning and Software Engineering.
+Hi, this is Bowen. I’m documenting my learning notes at the intersection of Research and Engineering for Deep Learning, Reinforcement Learning and AI4Science.
 
-## 🚀 Quick Starts
+## Quick Starts
 - [[He Initialization]]
 - [[Manual Linear Layer]]
 
-## 📂 Navigation
+## Navigation
 Use the **Explorer** on the left or the **Graph View** on the right to navigate through concepts.
 
 ---
