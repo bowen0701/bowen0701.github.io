@@ -104,41 +104,41 @@ class Linear:
 	in reverse order during backward().
 	"""
 
-	def __init__(self, in_features: int, out_features: int):
-		# He initialization for ReLU networks
-		self.W = np.random.randn(out_features, in_features) * np.sqrt(2.0 / in_features)
-		self.b = np.zeros((1, out_features))
+    def __init__(self, in_features: int, out_features: int):
+        # He initialization for ReLU networks
+        self.W = np.random.randn(out_features, in_features) * np.sqrt(2.0 / in_features)
+        self.b = np.zeros((1, out_features))
 
-		# Gradients stored after backward()
-		self.dW = None
-		self.db = None
+        # Gradients stored after backward()
+        self.dW = None
+        self.db = None
 
-	def forward(self, X: np.ndarray) -> Tuple[np.ndarray, Dict[str, np.ndarray]]:
-		"""
-		Z = XW^T + b
-		X shape: (batch_size, in_features)
-		W shape: (out_features, in_features)
-		b shape: (1, out_features)
-		"""
-		Z = np.dot(X, self.W.T) + self.b
-		cache = {"X": X}
-		return Z, cache
+    def forward(self, X: np.ndarray) -> Tuple[np.ndarray, Dict[str, np.ndarray]]:
+        """
+        Z = XW^T + b
+        X shape: (batch_size, in_features)
+        W shape: (out_features, in_features)
+        b shape: (1, out_features)
+        """
+        Z = np.dot(X, self.W.T) + self.b
+        cache = {"X": X}
+        return Z, cache
 
-	def backward(self, dZ: np.ndarray, cache: Dict[str, np.ndarray]) -> np.ndarray:
-		"""
-		dZ shape: (batch_size, out_features)
-		"""
-		X = cache["X"]
-		batch_size = X.shape[0]
+    def backward(self, dZ: np.ndarray, cache: Dict[str, np.ndarray]) -> np.ndarray:
+        """
+        dZ shape: (batch_size, out_features)
+        """
+        X = cache["X"]
+        batch_size = X.shape[0]
 
-		# 1. Gradient wrt Weights: (out, batch) @ (batch, in) -> (out, in)
-		self.dW = np.dot(dZ.T, X)
+        # 1. Gradient wrt Weights: (out, batch) @ (batch, in) -> (out, in)
+        self.dW = np.dot(dZ.T, X)
 
-		# 2. Gradient wrt Bias: sum across batch
-		self.db = np.sum(dZ, axis=0, keepdims=True)
+        # 2. Gradient wrt Bias: sum across batch
+        self.db = np.sum(dZ, axis=0, keepdims=True)
 
-		# 3. Gradient wrt Input (to pass to previous layer): (batch, out) @ (out, in) -> (batch, in)
-		dX = np.dot(dZ, self.W)
+        # 3. Gradient wrt Input (to pass to previous layer): (batch, out) @ (out, in) -> (batch, in)
+        dX = np.dot(dZ, self.W)
 
-		return dX
+        return dX
 ```
