@@ -1,5 +1,6 @@
 ---
 title: "He Initialization"
+author: Bowen Lee
 created: 2026-05-13
 publish: true
 tags: [deep-learning, initialization, relu]

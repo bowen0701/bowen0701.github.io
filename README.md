@@ -23,6 +23,7 @@ This repository is powered by an automated "Second Brain" pipeline:
 
 ## 🎯 Focus Areas
 - **Deep Learning Foundations:** From-scratch derivations and manual backprop implementations.
+- **Generative Modeling:** Diffusion models, LLMs, and generative architectures from first principles.
 - **Reinforcement Learning:** Scaling RL algorithms and infra for complex environments.
 - **AI4Science:** Applying ML models to scientific domains like drug discovery and physics.
 - **Systems & Performance:** Optimization, initialization strategies, and efficient training workflows.

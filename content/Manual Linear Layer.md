@@ -1,5 +1,6 @@
 ---
 title: "Manual Linear Layer"
+author: Bowen Lee
 created: 2026-05-13
 publish: true
 tags: [deep-learning, math, backpropagation, implementation]
