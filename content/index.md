@@ -4,7 +4,7 @@ title: Bowen's RE Log
 
 # Welcome to Bowen's RE Log
 
-Hi, this is Bowen. I’m documenting my learning notes at the intersection of Research and Engineering for Deep Learning, Reinforcement Learning and AI4Science.
+Hi, this is Bowen. I’m documenting my learning notes at the intersection of Research and Engineering for Deep Learning, Generative Modeling, Reinforcement Learning and AI4Science.
 
 <div style="display:flex; gap:0.4rem; margin-top:0.75rem; align-items:center; flex-wrap:wrap;">
   <a href="https://www.linkedin.com/in/bowen0701/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
