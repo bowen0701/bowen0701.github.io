@@ -3,12 +3,13 @@
   color: var(--darkgray);
 
   &[show-comma="true"] {
-    > *:not(:last-child) {
-      margin-right: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
 
-      &::after {
-        content: ",";
-      }
+    > * + *::before {
+      content: " | ";
+      margin: 0 4px;
     }
   }
 }
