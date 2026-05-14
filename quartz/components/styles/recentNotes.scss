@@ -25,6 +25,11 @@
         background-color: transparent;
       }
 
+      .section > ul.tags > li > a.tag-link {
+        font-weight: normal;
+        font-size: 0.8rem;
+      }
+
       .section > .meta {
         margin: 0.25rem 0 0.5rem 0;
         opacity: 0.6;
