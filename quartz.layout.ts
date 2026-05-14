@@ -32,7 +32,10 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    Component.ContentMeta(),
+    Component.ConditionalRender({
+      component: Component.ContentMeta(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.TagList(),
   ],
   left: [
@@ -51,7 +54,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      localGraph: { centerForce: 0.6, repelForce: 0.3 },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
