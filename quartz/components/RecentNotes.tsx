@@ -7,6 +7,7 @@ import { Date, getDate } from "./Date"
 import { GlobalConfiguration } from "../cfg"
 import { i18n } from "../i18n"
 import { classNames } from "../util/lang"
+import readingTime from "reading-time"
 
 interface Options {
   title?: string
@@ -53,11 +54,13 @@ export default ((userOpts?: Partial<Options>) => {
                       </a>
                     </h3>
                   </div>
-                  {page.dates && (
-                    <p class="meta">
-                      <Date date={getDate(cfg, page)!} locale={cfg.locale} />
-                    </p>
-                  )}
+                  <p class="meta" show-comma="true">
+                    {page.dates && <Date date={getDate(cfg, page)!} locale={cfg.locale} />}
+                    {page.text && (
+                      <span>{Math.ceil(readingTime(page.text).minutes)} min read</span>
+                    )}
+                    {page.frontmatter?.author && <span>{page.frontmatter.author}</span>}
+                  </p>
                   {opts.showTags && (
                     <ul class="tags">
                       {tags.map((tag) => (
