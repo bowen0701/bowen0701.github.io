@@ -2,7 +2,7 @@
 title: Welcome to my Research Engineering Garden
 ---
 
-# 🧠 Research Engineering Garden
+# Research Engineering Garden
 
 Welcome! This is a collection of my technical notes, derivations, and implementations at the intersection of Deep Learning and Software Engineering.
 

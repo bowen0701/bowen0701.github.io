@@ -4,7 +4,7 @@ created: 2026-05-13
 publish: true
 tags: [deep-learning, math, backpropagation, implementation]
 ---
-# 🧠 Concept: Manual Linear Layer
+# Concept: Manual Linear Layer
 
 ## Core Intuition
 A Linear Layer (or Fully Connected/Dense layer) performs an affine transformation on input data. It is the fundamental building block of neural networks, mapping an input vector to an output vector through weight multiplication and bias addition.

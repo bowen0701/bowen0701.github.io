@@ -4,7 +4,7 @@ created: 2026-05-13
 publish: true
 tags: [deep-learning, initialization, relu]
 ---
-# 🧠 Concept: He Initialization
+# Concept: He Initialization
 
 ## Core Intuition
 Designed to solve the vanishing/exploding gradient problem in deep networks using **ReLU** activations. It ensures that the variance of activations stays roughly constant across layers to enable effective learning in deep architectures.
