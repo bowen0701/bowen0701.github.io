@@ -39,17 +39,29 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    Component.PageTitle(),
+    Component.ConditionalRender({
+      component: Component.PageTitle(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
+    Component.ConditionalRender({
+      component: Component.Flex({
+        components: [
+          { Component: Component.Search(), grow: true },
+          { Component: Component.Darkmode() },
+          { Component: Component.ReaderMode() },
+        ],
+      }),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.Flex({
+        components: [
+          { Component: Component.Darkmode() },
+          { Component: Component.ReaderMode() },
+        ],
+      }),
+      condition: (page) => page.fileData.slug === "index",
     }),
     Component.ConditionalRender({
       component: Component.Explorer(),
@@ -59,6 +71,10 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.Graph({
       localGraph: { centerForce: 0.6, repelForce: 0.3 },
+    }),
+    Component.ConditionalRender({
+      component: Component.Search(),
+      condition: (page) => page.fileData.slug === "index",
     }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
