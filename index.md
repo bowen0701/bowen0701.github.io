@@ -6,15 +6,13 @@ permalink: /
 
 # Bowen Lee
 
-*Staff Machine Learning Engineer at [Meta](https://ai.meta.com/)* · London, UK
-
-Specializing in large-scale ML research and engineering, with expertise in ranking algorithms, model scaling, data-driven improvements, ML infrastructure, and productionization. Interested in reinforcement learning, generative modeling, AI4Science, and LLMs.
+I am ML researcher and engineer. I am Staff Machine Learning Engineer at Meta, where I work on large-scale ads ranking research and engineering.
 
 {% include social.html %}
 
 ## Experience
 
-- **2020 – present** &nbsp; [Meta](https://ai.meta.com/) · Staff Machine Learning Engineer, Ads Ranking & ML Infra
+- **2020 – present** &nbsp; [Meta](https://ai.meta.com/) · Staff Machine Learning Engineer
 - **2018 – 2020** &nbsp; [Zalando](https://www.zalando.com/) · Research Engineer
 - **2016 – 2018** &nbsp; [Vpon](https://www.vpon.com/) · Staff Data Scientist
 - **2015 – 2016** &nbsp; [KKBOX](https://www.kkbox.com/) · Staff Data Scientist
