@@ -27,8 +27,8 @@ W = np.random.randn(n_out, n_in) * np.sqrt(2.0 / n_in)
 Like adjusting a volume knob to be twice as loud because you know half of your speakers are muted—keeping the total sound level consistent across the room.
 
 ## Component of
-- [[Deep Neural Networks]]
-- [[ReLU Activation]]
+- [[Deep Neural Networks]] #todo
+- [[ReLU Activation]] #todo
 
 ## Insights  
 - **Xavier vs. He:** Xavier assumes symmetric activations (Tanh/Sigmoid), whereas He is tailored for asymmetric rectifiers.
@@ -39,8 +39,8 @@ Like adjusting a volume knob to be twice as loud because you know half of your s
 - Using He initialization with Tanh or Sigmoid can lead to exploding gradients as the variance will be too high for those bounded activations.
 
 ## Connections
-- [[Xavier Initialization]]
-- [[Gradient Vanishing]]
+- [[Xavier Initialization]] #todo
+- [[Gradient Vanishing]] #todo
 
 ## Implementation Notes
 - The "He Normal" version uses a truncated normal distribution.
