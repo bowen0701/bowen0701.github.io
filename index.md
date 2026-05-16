@@ -8,6 +8,8 @@ permalink: /
 
 I am ML researcher and engineer. I am Staff Machine Learning Engineer at Meta, where I work on large-scale ads ranking research and engineering.
 
+My research interest include Deep Learning, Generative Modeling, Reinforcement Learning and AI4Science.
+
 {% include social.html %}
 
 ## Experience
