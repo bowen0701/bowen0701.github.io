@@ -1,5 +1,5 @@
 ---
-title: "Manual Linear Layer"
+title: "Manual Layer"
 author: Bowen Lee
 created: 2026-05-13
 publish: true
