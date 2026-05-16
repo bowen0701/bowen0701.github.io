@@ -14,12 +14,12 @@ My research interest include Deep Learning, Generative Modeling (Diffusion/LLMs)
 
 ## Experience
 
-- **2020 – present** &nbsp; [Meta](https://ai.meta.com/) · Staff Machine Learning Engineer
-- **2018 – 2020** &nbsp; [Zalando](https://www.zalando.com/) · Research Engineer
-- **2016 – 2018** &nbsp; [Vpon](https://www.vpon.com/) · Staff Data Scientist
-- **2015 – 2016** &nbsp; [KKBOX](https://www.kkbox.com/) · Staff Data Scientist
-- **2014 – 2015** &nbsp; [Academia Sinica](https://www.sinica.edu.tw/en) · Postdoctoral Fellow
-- **2006 – 2009** &nbsp; [Macronix](https://www.macronix.com/) · Principal Statistician
+- 2020 – present &nbsp; [Meta](https://ai.meta.com/) · Staff Machine Learning Engineer
+- 2018 – 2020 &nbsp; [Zalando](https://www.zalando.com/) · Research Engineer
+- 2016 – 2018 &nbsp; [Vpon](https://www.vpon.com/) · Staff Data Scientist
+- 2015 – 2016 &nbsp; [KKBOX](https://www.kkbox.com/) · Staff Data Scientist
+- 2014 – 2015 &nbsp; [Academia Sinica](https://www.sinica.edu.tw/en) · Postdoctoral Fellow
+- 2006 – 2009 &nbsp; [Macronix](https://www.macronix.com/) · Principal Statistician
 
 ## Publications
 
@@ -38,4 +38,3 @@ My research interest include Deep Learning, Generative Modeling (Diffusion/LLMs)
 ## Education
 
 - **2009 – 2014** &nbsp; PhD, Statistics · National Chiao Tung University
-- **– 2009** &nbsp; BS, Industrial Engineering · National Tsing Hua University
