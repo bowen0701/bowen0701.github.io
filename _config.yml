@@ -18,4 +18,3 @@ kramdown:
   auto_ids: true
   syntax_highlighter: rouge
 
-theme: jekyll-theme-cayman
