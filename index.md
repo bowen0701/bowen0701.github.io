@@ -4,13 +4,18 @@ title: Bowen Lee
 permalink: /
 ---
 
-# Bowen Lee
+<div class="profile">
+  <img class="avatar" src="/images/bowen.jpg" alt="Bowen Lee">
+  <div class="profile-text">
+    <h1>Bowen Lee</h1>
+    <p>I like AI research and engineering.</p>
+    {% include social.html %}
+  </div>
+</div>
 
-I am ML researcher and engineer. I am Staff Machine Learning Engineer at Meta, where I work on large-scale ads ranking research and engineering.
+I am Staff Machine Learning Engineer at Meta, where I work on large-scale ads ranking research and engineering.
 
 My research interests include Deep Learning, Generative Modeling (Diffusion/LLMs), Reinforcement Learning and AI4Science.
-
-{% include social.html %}
 
 ## Experience
 

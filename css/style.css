@@ -85,6 +85,31 @@ em {
   text-decoration: underline;
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 1.5em;
+}
+
+.profile-text h1 {
+  margin-bottom: 0.15em;
+}
+
+.profile-text p {
+  margin: 0.3em 0 0.6em 0;
+  color: #555;
+  font-style: italic;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .social-icons {
   display: flex;
   gap: 10px;
