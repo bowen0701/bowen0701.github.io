@@ -1,3 +1,19 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// Title styles inspired by lilianweng.github.io
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.article-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+article > h1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
