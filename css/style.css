@@ -60,6 +60,30 @@ em {
   color: #555;
 }
 
+.post-meta {
+  font-size: 0.85em;
+  color: #888;
+  margin: 0.3em 0 2em 0;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+  padding: 16px 24px;
+  font-size: 0.9em;
+}
+
+.top-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
 .social-icons {
   display: flex;
   gap: 10px;
