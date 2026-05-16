@@ -1,5 +1,5 @@
 ---
-title: "Concept: PCA and SVD"
+title: "PCA and SVD"
 author: Bowen Lee
 created: 2016-10-05
 publish: true
