@@ -31,10 +31,7 @@ My research interests include Deep Learning, Generative Modeling (Diffusion/LLMs
 - Marginal Inference on Recurrent Events under Competing Risks. [ERCIM 2014](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, Dec 2014.
 - Nonparametric Marginal Analysis of Recurrent Events under Competing Risks. University System of Taiwan Statistics Conference 2014, NCTU, May 2014.
 
-## Awards
-
-- PhD Dissertation Award, University System of Taiwan Statistics Conference 2014.
-
 ## Education
 
 - 2009 – 2014 · PhD, Statistics · National Chiao Tung University
+  * PhD Dissertation Award, University System of Taiwan Statistics Conference 2014.
