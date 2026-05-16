@@ -21,14 +21,6 @@ Specializing in large-scale ML research and engineering, with expertise in ranki
 - **2014 – 2015** &nbsp; [Academia Sinica](https://www.sinica.edu.tw/en) · Postdoctoral Fellow
 - **2006 – 2009** &nbsp; [Macronix](https://www.macronix.com/) · Principal Statistician
 
-## Research Interests
-
-- Large-Scale Ranking & Recommendation Systems
-- Reinforcement Learning for AI4Science
-- Diffusion Models & LLMs
-- Advertising Systems
-- Survival Analysis
-
 ## Publications
 
 - C.-H. Huang, B. Li, C.-M. Chen, W. Wang, Y.-H. Chen (2016). [Subdistribution Regression for Recurrent Events under Competing Risks: with Application to Shunt Thrombosis Study in Dialysis Patients](http://link.springer.com/article/10.1007/s12561-016-9161-0). *Statistics in Biosciences.*
