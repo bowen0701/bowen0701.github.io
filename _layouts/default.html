@@ -4,10 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.baseurl }}">
 </head>
 <body>
   <nav class="top-nav">
+    <a href="/">Home</a>
     <a href="https://bowen0701.github.io/research-eng/">Notes</a>
     <a href="/blog/">Blog</a>
   </nav>
