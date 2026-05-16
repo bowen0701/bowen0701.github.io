@@ -37,4 +37,4 @@ My research interest include Deep Learning, Generative Modeling (Diffusion/LLMs)
 
 ## Education
 
-- **2009 – 2014** &nbsp; PhD, Statistics · National Chiao Tung University
+- 2009 – 2014 &nbsp; PhD, Statistics · National Chiao Tung University
