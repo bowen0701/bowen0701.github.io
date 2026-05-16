@@ -1,0 +1,49 @@
+---
+layout: default
+title: Bowen Lee
+permalink: /
+---
+
+# Bowen Lee
+
+*Staff Machine Learning Engineer at [Meta](https://ai.meta.com/)* · London, UK
+
+Specializing in large-scale ML research and engineering, with expertise in ranking algorithms, model scaling, data-driven improvements, ML infrastructure, and productionization. Interested in reinforcement learning, generative modeling, AI4Science, and LLMs.
+
+[GitHub](https://github.com/bowen0701) · [LinkedIn](https://www.linkedin.com/in/bowen0701) · [Notes](https://bowen0701.github.io/research-eng/) · bowen0701 at gmail.com
+
+## Experience
+
+- **2020 – present** &nbsp; [Meta](https://ai.meta.com/) · Staff Machine Learning Engineer, Ads Ranking & ML Infra
+- **2018 – 2020** &nbsp; [Zalando](https://www.zalando.com/) · Research Engineer
+- **2016 – 2018** &nbsp; [Vpon](https://www.vpon.com/) · Staff Data Scientist
+- **2015 – 2016** &nbsp; [KKBOX](https://www.kkbox.com/) · Staff Data Scientist
+- **2014 – 2015** &nbsp; [Academia Sinica](https://www.sinica.edu.tw/en) · Postdoctoral Fellow
+- **2006 – 2009** &nbsp; [Macronix](https://www.macronix.com/) · Principal Statistician
+
+## Research Interests
+
+- Large-Scale Ranking & Recommendation Systems
+- Reinforcement Learning for AI4Science
+- Diffusion Models & LLMs
+- Advertising Systems
+- Survival Analysis
+
+## Publications
+
+- C.-H. Huang, B. Li, C.-M. Chen, W. Wang, Y.-H. Chen (2016). [Subdistribution Regression for Recurrent Events under Competing Risks: with Application to Shunt Thrombosis Study in Dialysis Patients](http://link.springer.com/article/10.1007/s12561-016-9161-0). *Statistics in Biosciences.*
+- B. Li (2014). [Nonparametric Marginal Analysis of Recurrent Events Data under Competing Risks](https://arxiv.org/abs/1707.01822). PhD Dissertation, National Chiao Tung University.
+
+## Talks
+
+- Marginal Inference on Recurrent Events under Competing Risks. [ERCIM 2014](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, Dec 2014.
+- Nonparametric Marginal Analysis of Recurrent Events under Competing Risks. University System of Taiwan Statistics Conference 2014, NCTU, May 2014.
+
+## Awards
+
+- PhD Dissertation Award, University System of Taiwan Statistics Conference 2014.
+
+## Education
+
+- **2009 – 2014** &nbsp; PhD, Statistics · National Chiao Tung University
+- **– 2009** &nbsp; BS, Industrial Engineering · National Tsing Hua University
