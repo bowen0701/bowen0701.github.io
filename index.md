@@ -10,7 +10,7 @@ permalink: /
 
 Specializing in large-scale ML research and engineering, with expertise in ranking algorithms, model scaling, data-driven improvements, ML infrastructure, and productionization. Interested in reinforcement learning, generative modeling, AI4Science, and LLMs.
 
-[GitHub](https://github.com/bowen0701) · [LinkedIn](https://www.linkedin.com/in/bowen0701) · [Notes](https://bowen0701.github.io/research-eng/) · bowen0701 at gmail.com
+{% include social.html %}
 
 ## Experience
 
