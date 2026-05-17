@@ -45,7 +45,9 @@ Given the gradient of the loss with respect to the output $\frac{\partial L}{\pa
 
 ## Key Equation
 $$Z = XW^T + b$$
+
 $$\nabla_W L = (\nabla_Z L)^T X$$
+
 $$\nabla_X L = (\nabla_Z L) W$$
 ## Intuitive Gradient Rules
 For quick derivation of $Z = XW^T + b$, use these mental shortcuts:
