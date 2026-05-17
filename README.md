@@ -1,6 +1,6 @@
 # research-eng 🧠💻
 
-This repository is a curated collection of notes, derivations, and implementations at the intersection of **Deep Learning, Generative Modeling, Reinforcement Learning and AI4Science Research and Engineering**.
+This repository is a curated collection of notes, derivations, and implementations at the intersection of **DDeep Learning, Generative Modeling (Diffusion/LLMs), Reinforcement Learning and AI4Science Research and Engineering**.
 
 As a Research Engineer, I use this space to bridge the gap between theoretical first principles and high-performance implementations.
 
