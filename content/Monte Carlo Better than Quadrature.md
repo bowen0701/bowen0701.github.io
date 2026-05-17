@@ -26,7 +26,9 @@ Q: Why cubature whose error decays in $\delta^r$? **Taylor's theorem with integr
 
 For a function $f$ with $r$ continuous derivatives on an interval containing $x_0$ and $x$:
 
-$$f(x) = \sum_{k=0}^{r-1} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_r(x)$$
+$$
+f(x) = \sum_{k=0}^{r-1} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_r(x)
+$$
 
 where the remainder can be written as:
 
