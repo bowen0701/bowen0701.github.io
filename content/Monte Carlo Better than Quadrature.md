@@ -26,37 +26,69 @@ Q: Why cubature whose error decays in $\delta^r$? **Taylor's theorem with integr
 
 For a function $f$ with $r$ continuous derivatives on an interval containing $x_0$ and $x$:
 
-$$f(x) = \sum_{k=0}^{r-1} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_r(x)$$
+$$
+
+f(x) = \sum_{k=0}^{r-1} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_r(x)
+
+$$
 
 where the remainder can be written as:
 
-$$R_r(x) = \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt$$
+$$
+
+R_r(x) = \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt
+
+$$
 
 ### Proof of the Error Rate Bound in $\delta^r$
 
 **Step 1:** Take absolute value of the remainder:
 
-$$|R_r(x)| = \left| \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt \right|$$
+$$
+
+|R_r(x)| = \left| \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt \right|
+
+$$
 
 **Step 2:** Apply triangle inequality:
 
-$$|R_r(x)| \leq \frac{1}{(r-1)!} \int_{x_0}^{x} |x-t|^{r-1} |f^{(r)}(t)| \, dt$$
+$$
+
+|R_r(x)| \leq \frac{1}{(r-1)!} \int_{x_0}^{x} |x-t|^{r-1} |f^{(r)}(t)| \, dt
+
+$$
 
 **Step 3:** Use $|f^{(r)}(t)| \leq |f^{(r)}|_{\infty}$ (definition of sup norm):
 
-$$|R_r(x)| \leq \frac{|f^{(r)}|_{\infty}}{(r-1)!} \int_{x_0}^{x} |x-t|^{r-1} \, dt$$
+$$
+
+|R_r(x)| \leq \frac{|f^{(r)}|_{\infty}}{(r-1)!} \int_{x_0}^{x} |x-t|^{r-1} \, dt
+
+$$
 
 **Step 4:** Evaluate the integral. Let $h = |x - x_0|$:
 
-$$\int_{x_0}^{x} |x-t|^{r-1} \, dt = \int_{0}^{h} s^{r-1} \, ds = \frac{h^r}{r}$$
+$$
+
+\int_{x_0}^{x} |x-t|^{r-1} \, dt = \int_{0}^{h} s^{r-1} \, ds = \frac{h^r}{r}
+
+$$
 
 **Step 5:** Combine:
 
-$$|R_r(x)| \leq \frac{|f^{(r)}|_{\infty}}{(r-1)!} \cdot \frac{h^r}{r} = \frac{|f^{(r)}|_{\infty}}{r!} h^r$$
+$$
+
+|R_r(x)| \leq \frac{|f^{(r)}|_{\infty}}{(r-1)!} \cdot \frac{h^r}{r} = \frac{|f^{(r)}|_{\infty}}{r!} h^r
+
+$$
 
 **Step 6:** Set $\delta = h = |x - x_0|$ and $C = \frac{1}{r!}$:
 
-$$\boxed{|R_r(x)| \leq C \cdot \delta^r \cdot |f^{(r)}|_{\infty}}$$
+$$
+
+\boxed{|R_r(x)| \leq C \cdot \delta^r \cdot |f^{(r)}|_{\infty}}
+
+$$
 
 ### Derivation of Taylor's Theorem with Remainder Formula
 
@@ -64,7 +96,11 @@ The key idea is to **repeatedly apply integration by parts** to express the erro
 
 #### Starting Point: Fundamental Theorem of Calculus
 
-$$f(x) = f(x_0) + \int_{x_0}^{x} f'(t) \, dt$$
+$$
+
+f(x) = f(x_0) + \int_{x_0}^{x} f'(t) \, dt
+
+$$
 
 This is just: $f(x) - f(x_0) = \int_{x_0}^x f'(t) \, dt$
 
@@ -74,15 +110,31 @@ Apply integration by parts to $\int_{x_0}^{x} f'(t) \, dt$ with:
 - $u = f'(t)$, so $du = f''(t) \, dt$
 - $dv = dt$, so $v = t - x$
 
-$$\int_{x_0}^{x} f'(t) \, dt = \left[f'(t)(t-x)\right]_{x_0}^{x} - \int_{x_0}^{x} (t-x) f''(t) \, dt$$
+$$
 
-$$= - f'(x_0)(x_0 - x) + \int_{x_0}^{x} (x-t) f''(t) \, dt$$
+\int_{x_0}^{x} f'(t) \, dt = \left[f'(t)(t-x)\right]_{x_0}^{x} - \int_{x_0}^{x} (t-x) f''(t) \, dt
 
-$$= f'(x_0)(x - x_0) + \int_{x_0}^{x} (x-t) f''(t) \, dt$$
+$$
+
+$$
+
+= - f'(x_0)(x_0 - x) + \int_{x_0}^{x} (x-t) f''(t) \, dt
+
+$$
+
+$$
+
+= f'(x_0)(x - x_0) + \int_{x_0}^{x} (x-t) f''(t) \, dt
+
+$$
 
 So:
 
-$$f(x) = f(x_0) + f'(x_0)(x-x_0) + \int_{x_0}^{x} (x-t) f''(t) \, dt$$
+$$
+
+f(x) = f(x_0) + f'(x_0)(x-x_0) + \int_{x_0}^{x} (x-t) f''(t) \, dt
+
+$$
 
 #### Step 2: Integration by Parts (again)
 
@@ -90,23 +142,43 @@ Apply integration by parts to $\int_{x_0}^{x} (x-t) f''(t) \, dt$ with:
 - $u = f''(t)$, so $du = f'''(t) \, dt$
 - $dv = (x-t) \, dt$, so $v = -\frac{(x-t)^2}{2}$
 
-$$\int_{x_0}^{x} (x-t) f''(t) \, dt = \left[-\frac{(x-t)^2}{2} f''(t)\right]_{x_0}^{x} + \int_{x_0}^{x} \frac{(x-t)^2}{2} f'''(t) \, dt$$
+$$
 
-$$= \frac{(x-x_0)^2}{2} f''(x_0) + \int_{x_0}^{x} \frac{(x-t)^2}{2} f'''(t) \, dt$$
+\int_{x_0}^{x} (x-t) f''(t) \, dt = \left[-\frac{(x-t)^2}{2} f''(t)\right]_{x_0}^{x} + \int_{x_0}^{x} \frac{(x-t)^2}{2} f'''(t) \, dt
+
+$$
+
+$$
+
+= \frac{(x-x_0)^2}{2} f''(x_0) + \int_{x_0}^{x} \frac{(x-t)^2}{2} f'''(t) \, dt
+
+$$
 
 So:
 
-$$f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \int_{x_0}^{x} \frac{(x-t)^2}{2!} f'''(t) \, dt$$
+$$
+
+f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \int_{x_0}^{x} \frac{(x-t)^2}{2!} f'''(t) \, dt
+
+$$
 
 #### Pattern Recognition
 
 After k integration by parts, we get:
 
-$$f(x) = \sum_{j=0}^{k-1} \frac{f^{(j)}(x_0)}{j!}(x-x_0)^j + \int_{x_0}^{x} \frac{(x-t)^{k-1}}{(k-1)!} f^{(k)}(t) \, dt$$
+$$
+
+f(x) = \sum_{j=0}^{k-1} \frac{f^{(j)}(x_0)}{j!}(x-x_0)^j + \int_{x_0}^{x} \frac{(x-t)^{k-1}}{(k-1)!} f^{(k)}(t) \, dt
+
+$$
 
 Setting k = r:
 
-$$\boxed{R_r(x) = \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt}$$
+$$
+
+\boxed{R_r(x) = \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt}
+
+$$
 
 #### Intuition
 
@@ -116,11 +188,23 @@ The integral form shows that the remainder is a **weighted average of $f^{(r)}(t
 
 For curvature: If we have a cubature whose **error decays in $\delta^r$**. for some power $r$, then the error decays at a rate of $m^{-r} \simeq n^{-r/d}$.
 
-$$f(x) = \sum_{k=0}^{r-1} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_r(x),$$
+$$
 
-$$R_r(x) = \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt,$$
+f(x) = \sum_{k=0}^{r-1} \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_r(x),
 
-$$|R_r(x)| \leq C \cdot \delta^r \cdot |f^{(r)}|_{\infty}$$
+$$
+
+$$
+
+R_r(x) = \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt,
+
+$$
+
+$$
+
+|R_r(x)| \leq C \cdot \delta^r \cdot |f^{(r)}|_{\infty}
+
+$$
 
 As $\delta = 1/m$, $n=(m+1)^d$, so $m^{-r} \simeq n^{-r/d}$.
 
@@ -156,6 +240,3 @@ For Monte Carlo: The error decays at a rate of $n^{1/2}$**, by the central limit
 
 ## References
 [1] Fearnhead et al. (2025), Scalable Monte Carlo for Bayesian Learning
-
-
-

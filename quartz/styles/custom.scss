@@ -17,3 +17,13 @@ article > h1 {
   font-size: 1.6rem;
   font-weight: 400;
 }
+
+article .katex-display {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  & > .katex {
+    margin: 0 auto;
+  }
+}
