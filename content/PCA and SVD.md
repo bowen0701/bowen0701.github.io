@@ -3,10 +3,7 @@ title: "PCA and SVD"
 author: Bowen Lee
 created: 2016-10-05
 publish: true
-tags:
-  - dimensionality-reduction
-  - linear-algebra
-  - math
+tags: [dimensionality-reduction, linear-algebra, math]
 ---
 # Concept: PCA and SVD
 

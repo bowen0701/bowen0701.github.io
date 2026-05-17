@@ -1,7 +1,7 @@
 ---
-title: "Manual Layer"
+title: Manual Layer
 author: Bowen Lee
-created: 2026-05-13
+created: 2026-05-15
 publish: true
 tags: [deep-learning, math, backpropagation, implementation]
 ---
