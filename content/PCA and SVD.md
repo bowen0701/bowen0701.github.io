@@ -22,7 +22,6 @@ PCA identifies the most meaningful basis to re-express data by maximizing the si
 Let the observed data be
 
 $$
-
 \underset{(m \times n)}X = \{x_{ij}\} =
 \begin{bmatrix}
 x_{11} & \cdots & x_{1n} \\
@@ -35,28 +34,23 @@ x_{m1} & \cdots & x_{mn}
   x^T_{m.}
   \end{bmatrix}
 = [x_{.1}, \cdots, x_{.n}]
-
 $$
 
 where each row $x^T_{i.}$ represents an example on $n$-dimensional features:
 
 $$
-
 x^T_{i.} = [x_{i1} \dots x_{in}]
-
 $$
 
 For notation simplicity, we also denote each row $x^T_{i.}$ by $x^T_i$. Each column
 
 $$
-
 x_{.j}= 
 \begin{bmatrix}
 x_{1j} \\
 \vdots \\ 
 x_{mj}
 \end{bmatrix}
-
 $$
 
 is normalized to zero mean $E(x_{.j}) = 0$ and unit variance $\text{Var}(x_{.j}) = 1$.
@@ -64,7 +58,6 @@ is normalized to zero mean $E(x_{.j}) = 0$ and unit variance $\text{Var}(x_{.j})
 The covariance matrix of $X$ is
 
 $$
-
 \underset{(n \times n)}{\Sigma_X} = \frac{1}{m}X^{T}X 
 = \frac{1}{m}
 \begin{bmatrix}
@@ -79,15 +72,12 @@ x^T_{.1}x_{.1} & \cdots & x^T_{.1}x_{.n} \\
 \vdots     &        & \vdots \\ 
 x^T_{.n}x_{.1} & \cdots & x^T_{.n}x_{.n}
 \end{bmatrix}
-
 $$
 
 Goal: find $Y = f(X)$ such that the covariance of $Y$ is a diagonal matrix,
 
 $$
-
 \underset{(n \times n)}{\Sigma_Y} = \frac{1}{m}Y^TY
-
 $$
 
 ### PCA Assumptions
@@ -95,9 +85,7 @@ $$
 - Linear transformation: let $\underset{n \times n}E = [e_1,\ldots,e_n]$,
 
 $$
-
 Y = XE
-
 $$
 
 - Large variance encodes important structure.
@@ -110,17 +98,13 @@ The last assumption provides an intuitive simplification that makes PCA soluble 
 Suppose $Y = XE$. Its covariance matrix is
 
 $$
-
 \Sigma_Y = \frac{1}{m}Y^TY = \frac{1}{m}(XE)^T(XE) = E^T \left(\frac{1}{m}X^TX \right)E
-
 $$
 
 Since $\frac{1}{m}X^TX$ is symmetric, it admits the spectral decomposition:
 
 $$
-
 \frac{1}{m}X^TX = VDV^T
-
 $$
 
 where $D = \text{diag}(d_1,\ldots,d_n)$ with $d_1 \ge \cdots \ge d_n$, and $V = [v_1,\ldots,v_n]$ has orthonormal columns ($V^TV = VV^T = I$).
@@ -128,9 +112,7 @@ where $D = \text{diag}(d_1,\ldots,d_n)$ with $d_1 \ge \cdots \ge d_n$, and $V = 
 *Sketch of proof:* From the spectral decomposition, for all $j$:
 
 $$
-
 \frac{1}{m}X^T X v_j = d_j v_j
-
 $$
 
 Then $\frac{1}{m}X^T X V = V D$, which implies $\frac{1}{m}X^T X = V D V^T$.
@@ -138,9 +120,7 @@ Then $\frac{1}{m}X^T X V = V D$, which implies $\frac{1}{m}X^T X = V D V^T$.
 Choosing $E = V$:
 
 $$
-
 \Sigma_Y = E^T \left(\frac{1}{m}X^TX\right) E = V^T(VDV^T)V = D
-
 $$
 
 The eigenvalue $d_j$ is the variance of projected feature $y_j$.
@@ -148,33 +128,27 @@ The eigenvalue $d_j$ is the variance of projected feature $y_j$.
 **Alternative derivation via Lagrangian:** PCA finds a unit vector $u$ (with $\|u\| = 1$) maximizing the variance of the projection of all examples $x_i$ onto $u$:
 
 $$
-
 \frac{1}{m} \sum_{i=1}^m (x_i^T u)^2 
 = \frac{1}{m} \sum_{i=1}^m (x_i^T u)^T (x_i^T u)
 = u^T \left(\frac{1}{m} \sum_{i=1}^m x_i x_i^T \right) u
-
 $$
 
 Why does the variance take this form? If the angle between $x_i$ and $u$ is $\theta$, the projection of $x_i$ onto $u$ is
 
 $$
-
 x_i' = x_i \cos\theta
 = x_i \frac{x_i^T u}{|x_i||u|}
 = x_i \frac{x_i^T u}{|x_i|}
-
 $$
 
 since $u$ is a unit vector. The length of this projection is
 
 $$
-
 \left[ x_i'^T x_i' \right]^{1/2}
 = \left[ \left( x_i \frac{x_i^T u}{|x_i|} \right)^T \left( x_i \frac{x_i^T u}{|x_i|} \right) \right]^{1/2}
 = \left[ \left( \frac{x_i^T u}{|x_i|} \right) x_i^T x_i \left( \frac{x_i^T u}{|x_i|} \right) \right]^{1/2}
 = \left[ \left(x_i^T u \right)^2 \right]^{1/2}
 = x_i^T u
-
 $$
 
 since $x_i^T x_i = \|x_i\|^2$. So the projection distance from the origin is $x_i^T u$.
@@ -182,25 +156,19 @@ since $x_i^T x_i = \|x_i\|^2$. So the projection distance from the origin is $x_
 The optimization problem is then
 
 $$
-
 \max_u \; u^T \left(\frac{1}{m} \sum_{i=1}^m x_i x_i^T \right) u \quad \text{s.t. } u^T u = 1
-
 $$
 
 Using Lagrange multipliers:
 
 $$
-
 \max_u \; L(u, d) = u^T \left(\frac{1}{m} X^T X \right) u - d (u^T u - 1)
-
 $$
 
 Taking the partial derivative with respect to $u$ and setting to zero:
 
 $$
-
 \frac{\partial}{\partial u} L(u, d) = \frac{1}{m} X^T X u - d u = 0
-
 $$
 
 Hence $\frac{1}{m} X^T X u = d u$, recovering the eigenvector equation.
@@ -212,9 +180,7 @@ Recall $\frac{1}{m}X^T X v_j = d_j v_j$. Define:
 - Left singular vectors $U = [u_1,\ldots,u_n]$ with
 
 $$
-
 u_j = \frac{1}{\lambda_j}\left( \frac{1}{\sqrt{m}}X \right) v_j
-
 $$
 
 Then:
@@ -224,9 +190,7 @@ Then:
 *Sketch of proof:*
 
 $$
-
 u_i^T u_j = \frac{1}{m} \left( \frac{1}{\lambda_i} X v_i \right)^T \left( \frac{1}{\lambda_j} X v_j \right) = \frac{1}{\lambda_i \lambda_j} v_i^T \frac{1}{m} X^T X v_j = \frac{1}{\lambda_i \lambda_j} v_i^T d_j v_j = \frac{\lambda_j}{\lambda_i} v_i^T v_j
-
 $$
 
 The first result follows from $v_i^T v_j = \mathbf{1}[i=j]$. The second follows similarly.
@@ -234,9 +198,7 @@ The first result follows from $v_i^T v_j = \mathbf{1}[i=j]$. The second follows 
 By rewriting the definition of $u_j$:
 
 $$
-
 \left( \frac{1}{\sqrt{m}}X \right) v_j = \lambda_j u_j
-
 $$
 
 That is, normalized $X$ multiplied by eigenvector $v_j$ of $\frac{1}{m}X^TX$ equals scalar $\lambda_j$ times $u_j$.
@@ -246,9 +208,7 @@ That is, normalized $X$ multiplied by eigenvector $v_j$ of $\frac{1}{m}X^TX$ equ
 Constructing $\Sigma = \text{diag}(\lambda_1,\ldots,\lambda_n)$ with $\lambda_1 \ge \cdots \ge \lambda_n$, and stacking columns $V = [v_1,\ldots,v_n]$, $U = [u_1,\ldots,u_n]$:
 
 $$
-
 \left( \frac{1}{\sqrt{m}}X \right) V = U \Sigma \implies \frac{1}{\sqrt{m}}X = U \Sigma V^T
-
 $$
 
 Any matrix $\frac{1}{\sqrt{m}}X$ decomposes into:
@@ -259,12 +219,10 @@ Any matrix $\frac{1}{\sqrt{m}}X$ decomposes into:
 ### Connection Between PCA and SVD
 
 $$
-
 \frac{1}{m} X^T X = \left( \frac{1}{\sqrt{m}}X \right)^T \left( \frac{1}{\sqrt{m}}X \right)
 = \left( U \Sigma V^T \right)^T \left( U \Sigma V^T \right)
 = V \Sigma U^T U \Sigma V^T
 = V \Sigma^2 V^T \equiv V D V^T
-
 $$
 
 Squared singular values equal PCA variances: $\lambda_j^2 = d_j$.
@@ -282,26 +240,20 @@ Total variance: $\sum_{j=1}^n \lambda_j^2$.
 From SVD:
 
 $$
-
 \frac{1}{\sqrt{m}}X = U \Sigma V^T = \sum_{j=1}^n \lambda_j u_j v_j^T
-
 $$
 
 Let $s < n = \text{rank}(X)$. The reduced rank-$s$ least-squares approximation is
 
 $$
-
 \frac{1}{\sqrt{m}}\widehat{X} = \sum_{j=1}^s \lambda_j u_j v_j^T
-
 $$
 
 which minimizes the Frobenius norm
 
 $$
-
 \frac{1}{m} \sum_{i=1}^m \sum_{j=1}^n \left( x_{ij} - \widehat{x}_{ij} \right)^2
 = \text{tr} \left[ \left(\frac{1}{\sqrt{m}} (X - \widehat{X}) \right) \left(\frac{1}{\sqrt{m}} (X - \widehat{X}) \right)^T \right]
-
 $$
 
 over all matrices $\widehat{X}$ of rank no greater than $s$ (Eckart-Young theorem).
@@ -316,21 +268,15 @@ over all matrices $\widehat{X}$ of rank no greater than $s$ (Eckart-Young theore
 ## Key Equation
 
 $$
-
 \frac{1}{m}X^TX = VDV^T \quad \text{(eigendecomposition / PCA)}
-
 $$
 
 $$
-
 \frac{1}{\sqrt{m}}X = U\Sigma V^T \quad \text{(SVD)}
-
 $$
 
 $$
-
 \frac{1}{\sqrt{m}}\widehat{X} = \sum_{j=1}^s \lambda_j u_j v_j^T \quad \text{(rank-}s\text{ approximation, Eckart-Young)}
-
 $$
 
 ## Analogy
