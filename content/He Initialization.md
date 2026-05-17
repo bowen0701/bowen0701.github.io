@@ -16,6 +16,7 @@ Designed to solve the vanishing/exploding gradient problem in deep networks usin
 3. **The Compensation:** While Xavier initialization uses $\sqrt{1/n_{in}}$, He initialization doubles the variance (using a factor of 2 in the numerator) to compensate for the 50% signal loss caused by ReLU.
 
 ## Key Equation
+
 $$W \sim \mathcal{N}\left(0, \sqrt{\frac{2}{n_{in}}}\right)$$
 
 Code:

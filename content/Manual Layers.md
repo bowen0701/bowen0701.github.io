@@ -15,6 +15,7 @@ For a layer with input $X \in \mathbb{R}^{B \times D_{in}}$, weights $W \in \mat
 
 ### Forward Pass
 The output $Z \in \mathbb{R}^{B \times D_{out}}$ is calculated as:
+
 $$Z = XW^T + b$$
 
 ### Backward Pass (Derivation)
@@ -24,31 +25,45 @@ Given the gradient of the loss with respect to the output $\frac{\partial L}{\pa
    To find $\frac{\partial L}{\partial W}$, consider the element $W_{jk}$ (weight connecting input $k$ to output $j$).
    From $Z = XW^T + b$, an element of the output is: $z_{ij} = \sum_{k} x_{ik} W_{jk} + b_j$.
    The partial derivative of a single output $z_{ij}$ with respect to $W_{jk}$ is:
+
    $$\frac{\partial z_{ij}}{\partial W_{jk}} = x_{ik}$$
+
    Using the chain rule, we sum the contributions of $W_{jk}$ to all outputs it affected (which are only the $j$-th column of $Z$):
+
    $$\frac{\partial L}{\partial W_{jk}} = \sum_{i=1}^{B} \frac{\partial L}{\partial z_{ij}} \frac{\partial z_{ij}}{\partial W_{jk}} = \sum_{i=1}^{B} \frac{\partial L}{\partial z_{ij}} x_{ik}$$
+
    This summation corresponds to the dot product between the $j$-th column of $\frac{\partial L}{\partial Z}$ and the $k$-th column of $X$. In matrix form, this is:
+
    $$\frac{\partial L}{\partial W} = \left(\frac{\partial L}{\partial Z}\right)^T X$$
+
    Resulting shape: $(D_{out} \times B) \times (B \times D_{in}) = (D_{out} \times D_{in})$.
 
 2. **Gradient w.r.t. Bias ($b$):**
    The bias $b_j$ is added to every sample in the batch for the $j$-th output dimension ($z_{ij} = \text{linear\_term}_i + b_j$). Thus, $\frac{\partial z_{ij}}{\partial b_j} = 1$. By the chain rule:
+
    $$\frac{\partial L}{\partial b_j} = \sum_{i=1}^{B} \frac{\partial L}{\partial z_{ij}} \frac{\partial z_{ij}}{\partial b_j} = \sum_{i=1}^{B} \frac{\partial L}{\partial z_{ij}}$$
+
    In vector form, the gradient for the bias vector is the sum of gradients across the batch:
+
    $$\frac{\partial L}{\partial b} = \sum_{batch} \frac{\partial L}{\partial Z}$$
+
    Resulting shape: $(1 \times D_{out})$.
 3. **Gradient w.r.t. Input ($X$):**
    Using the chain rule: $\frac{\partial L}{\partial X} = \frac{\partial L}{\partial Z} \cdot \frac{\partial Z}{\partial X}$
    Since $Z = XW^T + b$, then $\frac{\partial Z}{\partial X} = W$.
+
    $$\frac{\partial L}{\partial X} = \frac{\partial L}{\partial Z} W = {\partial Z} \cdot W$$
+
    Resulting shape: $(B \times D_{out}) \times (D_{out} \times D_{in}) = (B \times D_{in})$.
 
 ## Key Equation
+
 $$Z = XW^T + b$$
 
 $$\nabla_W L = (\nabla_Z L)^T X$$
 
 $$\nabla_X L = (\nabla_Z L) W$$
+
 ## Intuitive Gradient Rules
 For quick derivation of $Z = XW^T + b$, use these mental shortcuts:
 - **Dimension Matching:** If $\nabla_Z L$ is $(B \times D_{out})$ and you need $\nabla_W L$ as $(D_{out} \times D_{in})$, the only valid matrix product is $(\nabla_Z L)^T X$.

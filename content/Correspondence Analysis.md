@@ -64,12 +64,14 @@ CA is based on **generalized singular value decomposition (SVD)**, similar to PC
 Let the observed data be a contingency table of unscaled counts:
 
 $$
+
 \underset{(I \times J)}X = \{x_{ij}\} =
 \begin{bmatrix}
 x_{11} & \cdots & x_{1J} \\
 \vdots &        & \vdots \\ 
 x_{I1} & \cdots & x_{IJ}
 \end{bmatrix}
+
 $$
 
 The rows and columns of $X$ correspond to different **categories (groups)** of different **characteristics.**
@@ -79,27 +81,37 @@ The rows and columns of $X$ correspond to different **categories (groups)** of d
 **Correspondence matrix:** divide $x_{ij}$ by total count $n = \textstyle \sum_{i=1}^I \sum_{j=1}^J x_{ij}$:
 
 $$
+
 p_{ij} = \frac{1}{n} x_{ij}, \quad \underset{I \times J}P = \frac{1}{n} X
+
 $$
 
 **Row and column marginal profiles:**
 
 $$
+
 r_i = \sum_{j=1}^J p_{ij} = \frac{1}{n} \sum_{j=1}^J x_{ij}, \quad \underset{I \times 1}r = P \mathbf{1}_J
+
 $$
 
 $$
+
 c_j = \sum_{i=1}^I p_{ij} = \frac{1}{n} \sum_{i=1}^I x_{ij}, \quad \underset{J \times 1}c = P^T \mathbf{1}_I
+
 $$
 
 **Diagonal weight matrices:**
 
 $$
+
 D_r = \text{diag}(r_1,\ldots,r_I)
+
 $$
 
 $$
+
 D_c = \text{diag}(c_1,\ldots,c_J)
+
 $$
 
 ### Weighted Least Squares Formulation
@@ -107,14 +119,18 @@ $$
 CA finds a reduced rank-$K$ approximation $\widehat{P} = \{\hat{p}_{ij}\}$ minimizing:
 
 $$
+
 \sum_{i=1}^I \sum_{j=1}^J \frac{\left( p_{ij} - \widehat{p}_{ij} \right)^2}{r_i c_j}
 = \text{tr} \left[ \left( D_r^{-1/2} (P - \widehat{P}) D_c^{-1/2} \right) \left( D_r^{-1/2} (P - \widehat{P}) D_c^{-1/2} \right)^T \right]
+
 $$
 
 **Result from (Johnson & Wichern, 2002, p. 72):** The term $r c^T$ is common to the approximation $\widehat{P}$ whatever the correspondence matrix $P$. Thus it is equivalent to minimize:
 
 $$
+
 \text{tr} \left[ \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right) \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right)^T \right]
+
 $$
 
 ### Generalized SVD
@@ -122,20 +138,26 @@ $$
 Compute the SVD of $D_r^{-1/2} (P - r c^T) D_c^{-1/2}$:
 
 $$
+
 D_r^{-1/2} (P - r c^T) D_c^{-1/2} = U \Sigma V^T
+
 $$
 
 where $U$ and $V$ are orthogonal matrices with $U^T U = V^T V = I$, and $\Sigma$ is a rank-$K$ diagonal matrix. Thus:
 
 $$
+
 P - r c^T = D_r^{1/2} \left( U \Sigma V^T \right) D_c^{1/2}
           = A \Sigma B^T
+
 $$
 
 where $A = D_r^{1/2} U$ and $B = D_c^{1/2} V$. This decomposition is called the **generalized SVD:**
 
 $$
+
 P - r c^T = A \Sigma B^T, \quad \text{with } A^T D_r^{-1} A = B^T D_c^{-1} B = I
+
 $$
 
 ### Row and Column Profile Matrices
@@ -143,40 +165,48 @@ $$
 **Row profile matrix** (divide each row by its sum):
 
 $$
+
 R = D_r^{-1} P = 
 \begin{bmatrix}
 \frac{p_{11}}{r_1} & \frac{p_{12}}{r_1} & \cdots & \frac{p_{1J}}{r_1} \\
 \vdots &        & & \vdots \\ 
 \frac{p_{I1}}{r_I} & \frac{p_{I2}}{r_I} & \cdots & \frac{p_{IJ}}{r_I}
 \end{bmatrix}
+
 $$
 
 **Column profile matrix** (divide each column by its sum):
 
 $$
+
 C = P D_c^{-1} = 
 \begin{bmatrix}
 \frac{p_{11}}{c_1} & \frac{p_{12}}{c_2} & \cdots & \frac{p_{1J}}{c_J} \\
 \vdots &        & & \vdots \\ 
 \frac{p_{I1}}{c_1} & \frac{p_{I2}}{c_2} & \cdots & \frac{p_{IJ}}{c_J}
 \end{bmatrix}
+
 $$
 
 **Row deviations from average row profile:**
 
 $$
+
 R - \mathbf{1}_I c^T = D_r^{-1} P - \mathbf{1}_I c^T
          = D_r^{-1} (P - rc^T)
          = D_r^{-1} A \Sigma B^T
          = D_r^{-1} \left( D_r^{1/2} U \right) \Sigma B^T
          = D_r^{-1/2} U \Sigma B^T
+
 $$
 
 **Column deviations from average column profile:** similarly,
 
 $$
+
 (C - r\mathbf{1}_J^T)^T = D_c^{-1} P - r\mathbf{1}_J^T
                         = D_c^{-1/2} V \Sigma A^T
+
 $$
 
 ### Principal and Standard Coordinates
@@ -186,35 +216,47 @@ Hence, we can obtain coordinates of the row and column profiles:
 **Principal coordinates of rows:** the coordinates for $(R - \mathbf{1}_I c^T)$ w.r.t. the axes of $b_1,\ldots,b_J$ are given by the columns of
 
 $$
+
 F = D_r^{-1/2} U \Sigma
+
 $$
 
 **Principal coordinates of columns:** the coordinates for $(C - r\mathbf{1}_J^T)^T$ w.r.t. the axes of $a_1,\ldots,a_I$ are given by the columns of
 
 $$
+
 G = D_c^{-1/2} V \Sigma
+
 $$
 
 **Standard coordinates of rows:**
 
 $$
+
 \Phi = D_r^{-1/2} U
+
 $$
 
 **Standard coordinates of columns:**
 
 $$
+
 \Gamma = D_c^{-1/2} V
+
 $$
 
 **Relationships:**
 
 $$
+
 F^T D_r F = G^T D_c G = \Sigma^2
+
 $$
 
 $$
+
 \Phi^T D_r \Phi = \Gamma^T D_c \Gamma = I
+
 $$
 
 ### Inertia
@@ -222,8 +264,10 @@ $$
 Total variance of the correspondence matrix $P$, resembling a chi-square statistic:
 
 $$
+
 \text{Inertia} = \sum_{i=1}^I \sum_{j=1}^J \frac{\left( p_{ij} - r_i c_j \right)^2}{r_i c_j}
         = \sum_{k=1}^K \lambda_k^2
+
 $$
 
 **Evaluation of 2D graphical display:**
@@ -231,7 +275,9 @@ $$
 - **Proportion of total inertia:** explained total variance; the larger, the better.
 
 $$
+
 \frac{\left(\lambda_1^2 + \lambda_2^2 \right)}{\sum_{k=1}^K \lambda_k^2}
+
 $$
 
 ### Visualization Maps
@@ -313,15 +359,21 @@ data = pd.DataFrame(data, columns=['period', 'comma', 'others'],
 ## Key Equation
 
 $$
+
 D_r^{-1/2} (P - r c^T) D_c^{-1/2} = U \Sigma V^T \quad \text{(generalized SVD)}
+
 $$
 
 $$
+
 F = D_r^{-1/2} U \Sigma, \quad G = D_c^{-1/2} V \Sigma \quad \text{(principal coordinates)}
+
 $$
 
 $$
+
 \text{Inertia} = \sum_{k=1}^K \lambda_k^2 \quad \text{(total variance)}
+
 $$
 
 ## Analogy
