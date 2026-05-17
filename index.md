@@ -19,12 +19,17 @@ My research interests include Recommendation Systems, Deep Learning, Generative 
 
 ## Experience
 
-- 2020 – present · [Meta](https://ai.meta.com/) · Staff Machine Learning Engineer
-- 2018 – 2020 · [Zalando](https://www.zalando.com/) · Research Engineer
-- 2016 – 2018 · [Vpon](https://www.vpon.com/) · Staff Data Scientist
-- 2015 – 2016 · [KKBOX](https://www.kkbox.com/) · Staff Data Scientist
-- 2014 – 2015 · [Academia Sinica](https://www.sinica.edu.tw/en) · Postdoctoral Fellow
-- 2006 – 2009 · [Macronix](https://www.macronix.com/) · Principal Statistician
+- 2020 – present · <img src="/images/icons/meta.png" height="16" style="vertical-align:middle;margin-right:3px">[Meta](https://ai.meta.com/) · Staff Machine Learning Engineer
+- 2018 – 2020 · <img src="/images/icons/zalando.png" height="16" style="vertical-align:middle;margin-right:3px">[Zalando](https://www.zalando.com/) · Research Engineer
+- 2016 – 2018 · <img src="/images/icons/vpon.png" height="16" style="vertical-align:middle;margin-right:3px">[Vpon](https://www.vpon.com/) · Staff Data Scientist
+- 2015 – 2016 · <img src="/images/icons/kkbox.png" height="16" style="vertical-align:middle;margin-right:3px">[KKBOX](https://www.kkbox.com/) · Staff Data Scientist
+- 2014 – 2015 · <img src="/images/icons/sinica.png" height="16" style="vertical-align:middle;margin-right:3px">[Academia Sinica](https://www.sinica.edu.tw/en) · Postdoctoral Fellow
+- 2006 – 2009 · <img src="/images/icons/macronix.png" height="16" style="vertical-align:middle;margin-right:3px">[Macronix](https://www.macronix.com/) · Principal Statistician
+
+## Education
+
+- 2009 – 2014 · PhD, Statistics · <img src="/images/icons/nctu.png" height="16" style="vertical-align:middle;margin-right:3px">[National Chiao Tung University](https://www.nycu.edu.tw/nycu/en/index)
+  * PhD Dissertation Award, University System of Taiwan Statistics Conference 2014.
 
 ## Publications
 
@@ -35,8 +40,3 @@ My research interests include Recommendation Systems, Deep Learning, Generative 
 
 - Marginal Inference on Recurrent Events under Competing Risks. [ERCIM 2014](http://cmstatistics.org/ERCIM2014/index.php), University of Pisa, Italy, Dec 2014.
 - Nonparametric Marginal Analysis of Recurrent Events under Competing Risks. University System of Taiwan Statistics Conference 2014, NCTU, May 2014.
-
-## Education
-
-- 2009 – 2014 · PhD, Statistics · National Chiao Tung University
-  * PhD Dissertation Award, University System of Taiwan Statistics Conference 2014.
