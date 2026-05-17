@@ -28,7 +28,7 @@ My research interests include Recommendation Systems, Deep Learning, Generative 
 
 ## Education
 
-- 2009 – 2014 · PhD, Statistics · <img src="/images/icons/nctu.png" height="16" style="vertical-align:middle;margin-right:3px">[National Chiao Tung University](https://www.nycu.edu.tw/nycu/en/index)
+- 2009 – 2014 · <img src="/images/icons/nctu.png" height="16" style="vertical-align:middle;margin-right:3px">[National Chiao Tung University](https://www.nycu.edu.tw/nycu/en/index) · PhD, Statistics
   * PhD Dissertation Award, University System of Taiwan Statistics Conference 2014.
 
 ## Publications
