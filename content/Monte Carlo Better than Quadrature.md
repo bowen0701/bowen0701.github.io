@@ -3,7 +3,7 @@ title: Monte Carlo Better than Quadrature
 author: Bowen Lee
 created: 2026-05-17
 publish: true
-tags: []
+tags: [monte-carlo, numerical-methods, bayesian, statistics, math]
 ---
 # Concept: Monte Carlo Better than Quadrature
 
@@ -78,9 +78,9 @@ For Monte Carlo: The error decays at a rate of $n^{1/2}$**, by the central limit
 
 ## Component of
 
-- Numerical integration / quadrature theory
-- Bayesian computation and probabilistic inference
-- Scalable machine learning methods
+- [[Numerical Integration]] #todo
+- [[Bayesian Computation]] #todo
+- [[Scalable Machine Learning]] #todo
 
 ## Insights
 
