@@ -3,11 +3,7 @@ title: "Correspondence Analysis"
 author: Bowen Lee
 created: 2016-10-06
 publish: true
-tags:
-  - dimensionality-reduction
-  - linear-algebra
-  - math
-  - statistics
+tags: [dimensionality-reduction, linear-algebra, math, statistics]
 ---
 # Concept: Correspondence Analysis
 
