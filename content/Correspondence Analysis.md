@@ -1,5 +1,5 @@
 ---
-title: "Correspondence Analysis"
+title: Correspondence Analysis
 author: Bowen Lee
 created: 2016-10-06
 publish: true
