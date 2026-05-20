@@ -34,7 +34,6 @@ My research interests include Recommendation Systems, Deep Learning, Generative 
 ## Publications
 
 - C.-H. Huang, B. Li, C.-M. Chen, W. Wang, Y.-H. Chen (2016). [Subdistribution Regression for Recurrent Events under Competing Risks: with Application to Shunt Thrombosis Study in Dialysis Patients](http://link.springer.com/article/10.1007/s12561-016-9161-0). *Statistics in Biosciences.*
-- B. Li (2014). [Nonparametric Marginal Analysis of Recurrent Events Data under Competing Risks](https://arxiv.org/abs/1707.01822). PhD Dissertation, National Chiao Tung University.
 
 ## Talks
 
