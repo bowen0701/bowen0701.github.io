@@ -8,7 +8,7 @@ tags: [dimensionality-reduction, linear-algebra, math, statistics]
 # Concept: Correspondence Analysis
 
 ## Core Intuition
-Correspondence Analysis (CA) is a dimensionality reduction and data visualization technique for **contingency tables of counts**. It reveals associations between row and column categories by mapping them into a shared low-dimensional space, where proximity indicates similarity of profiles.
+Correspondence Analysis (CA) is a dimensionality reduction and data visualization technique for **contingency tables of counts**. It reveals associations between row and column categories by mapping them into a shared low-dimensional space, where proximity indicates similarity of profiles.[^3]
 
 Three key properties:
 - **Aggregate data based:** operates on summarized count tables, not raw observations.
@@ -57,7 +57,7 @@ CA visualization:
 
 ## Mathematical Foundation
 
-CA is based on **generalized singular value decomposition (SVD)**, similar to PCA, except it applies to categorical rather than continuous data.
+CA is based on **generalized singular value decomposition (SVD)**, similar to PCA, except it applies to categorical rather than continuous data.[^1]
 
 ### Setup
 
@@ -240,7 +240,7 @@ $$
 - **(2) Asymmetric map with row principal:** $(F, \Gamma)$, rows (of more interest) in principal and columns in standard coordinates.
 - **(3) Asymmetric map with column principal:** $(\Phi, G)$, rows in standard and columns (of more interest) in principal coordinates.
 
-For interpretation details see (Greenacre, 2007, p. 66-72).
+For interpretation details, see p. 66-72.[^3]
 
 **Symmetric map (1):**
 - Since principal coordinates $(F, G)$ are scaled similarly, **joint display of two separate maps** finds some justification.
@@ -249,7 +249,7 @@ For interpretation details see (Greenacre, 2007, p. 66-72).
 
 **Asymmetric maps (2) and (3):**
 - The **row and column points lie in the same space** (since $F$ is with respect to basis $B$, and $\Gamma B^T = I$), thus not only **row-to-row and column-to-column distance interpretations**, but also **row-to-column distance interpretation** are meaningful.
-- Closeness of a row and column point indicates a high association; row-to-column distances can be calculated **one column at a time.**
+- Closeness of a row and column point indicates a high association; row-to-column distances can be calculated **one column at a time.**[^4]
 
 **Interpretations:**
 - Asymmetric plots allow intuitively interpreting **row-to-row, column-to-column, and row-to-column distances**, especially when the first two components have a large proportion of total inertia.
@@ -348,6 +348,8 @@ CA is PCA applied to a normalized residual table: instead of centering by subtra
 - [[Chi-Square Statistic]] #todo
 
 ## Implementation Notes
+
+Algorithm follows Nenadic & Greenacre (2007).[^2]
 
 ```python
 # https://github.com/bowen0701/machine-learning/blob/master/correspondence_analysis.py
@@ -494,7 +496,8 @@ class CorrespondenceAnalysis(object):
 ```
 
 ## References
-[1] Johnson & Wichern (2002). Applied Multivariate Statistical Analysis.
-[2] Nenadic & Greenacre (JSS, 2007). Correspondence Analysis in R, with Two- and Three-dimensional Graphics: The ca Package.
-[3] Greenacre (2007). Correspondence Analysis in Practice.
-[4] Greenacre (2010). Biplots in Practice.
+[^1]: Johnson & Wichern (2002). Applied Multivariate Statistical Analysis.
+[^2]: Nenadic & Greenacre (JSS, 2007). Correspondence Analysis in R, with Two- and Three-dimensional Graphics: The ca Package.
+[^3]: Greenacre (2007). Correspondence Analysis in Practice.
+[^4]: Greenacre (2010). Biplots in Practice.
+

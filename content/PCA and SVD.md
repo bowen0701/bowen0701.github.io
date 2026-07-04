@@ -8,7 +8,7 @@ tags: [dimensionality-reduction, linear-algebra, math]
 # Concept: PCA and SVD
 
 ## Core Intuition
-PCA identifies the most meaningful basis to re-express data by maximizing the signal-to-noise ratio (SNR): $\sigma^2_{signal} / \sigma^2_{noise}$.
+PCA identifies the most meaningful basis to re-express data by maximizing the signal-to-noise ratio (SNR): $\sigma^2_{signal} / \sigma^2_{noise}$.[^1]
 
 <div style="text-align:center"><img src="/images/pca_snr.png" alt="SNR" style="width: 300px;"/></div>
 
@@ -53,7 +53,7 @@ x_{mj}
 \end{bmatrix}
 $$
 
-is normalized to zero mean $E(x_{.j}) = 0$ and unit variance $\text{Var}(x_{.j}) = 1$.
+is normalized to zero mean $E(x_{.j}) = 0$ and unit variance $\text{Var}(x_{.j}) = 1$.[^2]
 
 The covariance matrix of $X$ is
 
@@ -305,5 +305,6 @@ PCA is like finding the natural axes of an ellipse fitted to a point cloud: the 
 - For large $n$, use randomized SVD (e.g., `sklearn.utils.extmath.randomized_svd`) to avoid the $O(n^3)$ cost.
 
 ## References
-[1] Shlens (arXiv, 2014). A Tutorial on Principal Component Analysis.
-[2] Johnson & Wichern (2002). Applied Multivariate Statistical Analysis.
+[^1]: Shlens (arXiv, 2014). A Tutorial on Principal Component Analysis.
+[^2]: Johnson & Wichern (2002). Applied Multivariate Statistical Analysis.
+
