@@ -9,7 +9,7 @@ tags: [monte-carlo, numerical-methods, bayesian, statistics, math]
 
 ## Core Intuition
 
-Q: Why **Monte Carlo method** is often the default method for high-dimensional integral approximation, **instead of Quadrature methods?** I got this question while reading Fearnhead et al. (2025, p. 6)[^1].
+Q: Why **Monte Carlo method** is often the default method for high-dimensional integral approximation, **instead of Quadrature methods?** I got this question while reading Fearnhead et al. (2025, p. 6).
 
 This comes directly from the following:
 - Suppose we apply a cubature rule based on a grid of $m+1$ equally spaced points in each dimension.
@@ -196,5 +196,7 @@ For Monte Carlo: The error decays at a rate of $n^{1/2}$**, by the central limit
 - [[Curse of Dimensionality]] #todo: $n^{-r/d}$ cubature rate is the canonical example of exponential cost growth with $d$.
 - [[Central Limit Theorem]] #todo: source of Monte Carlo's $n^{-1/2}$ guarantee for i.i.d. estimators.
 
-[^1]: Fearnhead et al. (2025). Scalable Monte Carlo for Bayesian Learning. https://arxiv.org/abs/2407.12751
+## References
+
+- Fearnhead et al. (2025). Scalable Monte Carlo for Bayesian Learning. https://arxiv.org/abs/2407.12751
 

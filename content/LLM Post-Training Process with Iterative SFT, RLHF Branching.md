@@ -72,14 +72,14 @@ $\text{RM}_i$ is a *learned proxy* for human preferences, trained on finite data
 
 | Pattern                    | Mechanism                                                                                   | Reference |
 | -------------------------- | ------------------------------------------------------------------------------------------- | --------- |
-| **Length bias**            | Annotators mildly prefer longer answers, RM learns "longer = better", PPO inflates length   | [^1] [^5] |
-| **Sycophancy**             | Annotators rate agreeable answers higher, policy mirrors user's stated view even when wrong | [^3] [^4] |
+| **Length bias**            | Annotators mildly prefer longer answers, RM learns "longer = better", PPO inflates length   | (Stiennon et al. 2020), (Singhal et al. 2023) |
+| **Sycophancy**             | Annotators rate agreeable answers higher, policy mirrors user's stated view even when wrong | (Perez et al. 2022), (Sharma et al. 2023) |
 | **Formatting tics**        | Markdown/headers/lists correlate with "looks organized", over-produced                      |           |
 | **Refusal miscalibration** | Refusal proxy over-fires on benign requests, under-fires on rephrased unsafe ones           |           |
 | **Confidence inflation**   | Hedged answers rated lower, unwarranted certainty, worse calibration, more hallucination    |           |
-| **RM-specific exploits**   | Any quirk in $\text{RM}_i$ (token-position weighting, favored phrases) gets found by PPO    | [^2]      |
+| **RM-specific exploits**   | Any quirk in $\text{RM}_i$ (token-position weighting, favored phrases) gets found by PPO    | (Gao et al. 2022)      |
 
-**Key empirical result** [^2]: as you optimize harder against the RM, *proxy reward keeps climbing while gold-standard reward eventually drops*. The gap is the hacking. Bigger RMs and more preference data push the turnover point out, but don't eliminate it.
+**Key empirical result** (Gao et al. 2022): as you optimize harder against the RM, *proxy reward keeps climbing while gold-standard reward eventually drops*. The gap is the hacking. Bigger RMs and more preference data push the turnover point out, but don't eliminate it.
 
 **Why this compounds across rounds:**
 1. **SFT can't easily unlearn diffuse biases.** Cross-entropy increases probability on demonstrated tokens but doesn't actively suppress diffuse output-distribution properties (length, sycophancy, formatting habits).
@@ -103,7 +103,7 @@ The KL penalty inverts its purpose: correcting inherited biases *costs* KL (gets
 **Mitigations within a round:**
 - **Length-controlled RMs:** Regress out length as a confounding variable before scoring, so PPO cannot exploit "longer = better."
 - **KL penalty tuning / early stopping:** Adaptively adjust $\beta$ or halt training once $\text{KL}(\pi \| \pi_{\text{ref}})$ exceeds a threshold. Beyond that point, proxy reward may still rise but gold reward is already declining.
-- **RM ensembling** [^6]: Average scores from multiple independently trained RMs. Individual quirks cancel out, making it harder for PPO to find an exploit that fools all RMs simultaneously.
+- **RM ensembling** (Coste et al. 2023): Average scores from multiple independently trained RMs. Individual quirks cancel out, making it harder for PPO to find an exploit that fools all RMs simultaneously.
 - **Explicit length/format penalties:** Add direct penalty terms to the reward (e.g., $-\alpha_{\text{len}} \cdot \max(0, \text{len} - \text{len}_{\text{max}})$) to hard-cap known hacking modes. Here $\text{len}$ is the token length of the generated response and $\text{len}_{\text{max}}$ is a pre-set maximum length threshold. The penalty is zero when the response is within budget and linearly increases for every token beyond it.
 - **Aggressive filtering in RFT-style pipelines:** Generate many candidates from the policy but only keep those passing strict filters (verifiers, length caps, factuality checks) for the next SFT round. Acts as a safety valve between RL output and SFT data.
 
@@ -137,11 +137,13 @@ None fully solve hacking; they push the Goodhart frontier outward.
 - [[GRPO]] #todo: group relative policy optimization, used in DeepSeek-R1
 - [[Rejection Sampling Fine-Tuning]] #todo: on-policy SFT variant where starting from RL checkpoint is safe
 
-[^1]: Stiennon et al. 2020. Learning to summarize with human feedback.
-[^2]: Gao, Schulman & Hilton 2022. Scaling Laws for Reward Model Overoptimization.
-[^3]: Perez et al. 2022. Discovering Language Model Behaviors with Model-Written Evaluations.
-[^4]: Sharma et al. 2023. Towards Understanding Sycophancy in Language Models.
-[^5]: Singhal et al. 2023. A Long Way to Go: Investigating Length Correlations in RLHF.
-[^6]: Coste et al. 2023. Reward Model Ensembles Help Mitigate Overoptimization.
+## References
+
+- Stiennon et al. (2020). Learning to summarize with human feedback.
+- Gao, Schulman & Hilton (2022). Scaling Laws for Reward Model Overoptimization.
+- Perez et al. (2022). Discovering Language Model Behaviors with Model-Written Evaluations.
+- Sharma et al. (2023). Towards Understanding Sycophancy in Language Models.
+- Singhal et al. (2023). A Long Way to Go: Investigating Length Correlations in RLHF.
+- Coste et al. (2023). Reward Model Ensembles Help Mitigate Overoptimization.
 
 
