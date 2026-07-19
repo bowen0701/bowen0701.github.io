@@ -196,6 +196,5 @@ For Monte Carlo: The error decays at a rate of $n^{1/2}$**, by the central limit
 - [[Curse of Dimensionality]] #todo: $n^{-r/d}$ cubature rate is the canonical example of exponential cost growth with $d$.
 - [[Central Limit Theorem]] #todo: source of Monte Carlo's $n^{-1/2}$ guarantee for i.i.d. estimators.
 
-## References
 [^1]: Fearnhead et al. (2025). Scalable Monte Carlo for Bayesian Learning. https://arxiv.org/abs/2407.12751
 

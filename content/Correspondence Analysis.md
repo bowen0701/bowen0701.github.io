@@ -495,7 +495,6 @@ class CorrespondenceAnalysis(object):
         return inertia_prop
 ```
 
-## References
 [^1]: Johnson & Wichern (2002). Applied Multivariate Statistical Analysis.
 [^2]: Nenadic & Greenacre (JSS, 2007). Correspondence Analysis in R, with Two- and Three-dimensional Graphics: The ca Package.
 [^3]: Greenacre (2007). Correspondence Analysis in Practice.

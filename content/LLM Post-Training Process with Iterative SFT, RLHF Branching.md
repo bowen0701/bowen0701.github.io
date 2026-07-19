@@ -137,8 +137,6 @@ None fully solve hacking; they push the Goodhart frontier outward.
 - [[GRPO]] #todo: group relative policy optimization, used in DeepSeek-R1
 - [[Rejection Sampling Fine-Tuning]] #todo: on-policy SFT variant where starting from RL checkpoint is safe
 
-## References
-
 [^1]: Stiennon et al. 2020. Learning to summarize with human feedback.
 [^2]: Gao, Schulman & Hilton 2022. Scaling Laws for Reward Model Overoptimization.
 [^3]: Perez et al. 2022. Discovering Language Model Behaviors with Model-Written Evaluations.

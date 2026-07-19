@@ -304,7 +304,6 @@ PCA is like finding the natural axes of an ellipse fitted to a point cloud: the 
 - Prefer `np.linalg.svd` over explicit eigendecomposition for numerical stability.
 - For large $n$, use randomized SVD (e.g., `sklearn.utils.extmath.randomized_svd`) to avoid the $O(n^3)$ cost.
 
-## References
 [^1]: Shlens (arXiv, 2014). A Tutorial on Principal Component Analysis.
 [^2]: Johnson & Wichern (2002). Applied Multivariate Statistical Analysis.
 
