@@ -1,5 +1,5 @@
 ---
-title: LLM Post-Training Process with Iterative SFT, RLHF Branching
+title: LLM Post-Training Iterative SFT, RLHF Branching
 author: Bowen Lee
 created: 2026-06-24
 publish: true
@@ -10,7 +10,7 @@ tags:
   - post-training
   - llm
 ---
-# Concept: LLM Post-Training Process with Iterative SFT, RLHF Branching
+# Concept: LLM Post-Training Iterative SFT, RLHF Branching
 
 ## Core Intuition
 
