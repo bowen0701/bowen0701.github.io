@@ -13,23 +13,23 @@ tags:
 We want to maximize log-evidence $\log p(x)$ but integrating over all $z$ is intractable. The VAE framework (Kingma & Welling, 2014) introduces a variational posterior $q(z|x)$ and multiplies/divides inside the log:
 
 $$
-\begin{align}
+\begin{aligned}
 \log p(x)
 &= \log \int p_\theta(x|z)\,p(z)\,\frac{q(z|x)}{q(z|x)}\,dz \\
 &= \log \mathbb{E}_{q(z|x)} \!\left[ \frac{p(x,z)}{q(z|x)} \right]
-\end{align}
+\end{aligned}
 $$
 
 Apply Jensen's inequality ($\log \mathbb{E}[f] \geq \mathbb{E}[\log f]$ for concave $\log$) and expand using $p(x,z) = p_\theta(x|z)\,p(z)$:
 
 $$
-\begin{align}
+\begin{aligned}
 \log p(x)
 &\geq \mathbb{E}_{q(z|x)} \!\left[ \log \frac{p(x,z)}{q(z|x)} \right] \\
 &= \mathbb{E}_{q(z|x)} \!\left[ \log \frac{p_\theta(x|z)\,p(z)}{q(z|x)} \right] \\
 &= \mathbb{E}_{q(z|x)} \!\left[ \log p_\theta(x|z) \right] - \text{KL}(q(z|x) \,\|\, p(z)) \\
 &:= \text{ELBO}
-\end{align}
+\end{aligned}
 $$
 
 This lower bound is the Evidence Lower Bound (ELBO). The gap $\log p(x) - \text{ELBO} = \text{KL}(q_\phi(z|x) \| p_\theta(z|x))$, the posterior approximation error (see below). Maximizing the ELBO simultaneously maximizes likelihood and minimizes the posterior gap.
@@ -47,14 +47,14 @@ where $\text{ELBO}(\phi, \theta) = \mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z)
 **Derivation of the gap:**
 
 $$
-\begin{align}
+\begin{aligned}
 \log p(x) - \text{ELBO}
 &= \mathbb{E}_q[\log p(x)] - \mathbb{E}_q\!\left[\log \frac{p(x,z)}{q(z|x)}\right] \\
 &= \mathbb{E}_q\!\left[\log q(z|x) - \log p(x,z) + \log p(x)\right] \\
 &= \mathbb{E}_q\!\left[\log q(z|x) - \log p(z|x) - \log p(x) + \log p(x)\right] \\
 &= \mathbb{E}_q\!\left[\log \frac{q(z|x)}{p(z|x)}\right] \\
 &= \text{KL}(q(z|x) \,\|\, p(z|x))
-\end{align}
+\end{aligned}
 $$
 
 Step 3 uses $\log p(x,z) = \log p(z|x) + \log p(x)$.
@@ -164,20 +164,20 @@ $$
 Substituting the Gaussian log-densities:
 
 $$
-\begin{align}
+\begin{aligned}
 \log q_\phi(z|x) &= -\tfrac{1}{2}\log(2\pi\sigma^2_\phi) - \tfrac{(z-\mu_\phi)^2}{2\sigma^2_\phi} \\
 \log p(z) &= -\tfrac{1}{2}\log(2\pi) - \tfrac{z^2}{2}
-\end{align}
+\end{aligned}
 $$
 
 Taking expectations under $z \sim q_\phi(z|x) = \mathcal{N}(\mu_\phi, \sigma^2_\phi)$, using $\mathbb{E}[(z-\mu_\phi)^2] = \sigma^2_\phi$ and $\mathbb{E}[z^2] = \mu^2_\phi + \sigma^2_\phi$:
 
 $$
-\begin{align}
+\begin{aligned}
 \text{KL}(q_\phi(z|x) \,\|\, p(z))
 &= \left(-\tfrac{1}{2}\log\sigma^2_\phi - \tfrac{1}{2}\right) - \left(-\tfrac{\mu^2_\phi + \sigma^2_\phi}{2}\right) \\
 &= \frac{1}{2}\left(\mu^2_\phi + \sigma^2_\phi - \log\sigma^2_\phi - 1\right)
-\end{align}
+\end{aligned}
 $$
 
 **Gradient w.r.t. $\phi$:** In practice the encoder outputs $\mu_\phi(x)$ and $s_\phi(x) := \log\sigma^2_\phi(x)$ (log-variance, for numerical stability), so $\sigma^2 = e^s$:
