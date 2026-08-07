@@ -192,7 +192,7 @@ $$
 
 These are exact, zero-variance gradients: no sampling required for the KL term.
 
-## Training Algorithm for VAE
+## VAE Training Algorithm
 
 ```python
 # Pseudo codes.
@@ -295,7 +295,7 @@ $$
 
 Backprop flows from loss through the entire graph. The reparameterization $z = \mu_\phi + \sigma_\phi \cdot \epsilon$ is what makes the encoder-to-decoder connection differentiable: without it, the sampling step $z \sim q_\phi(z|x)$ would sever the gradient path.
 
-## Training Algorithm for VAE in PyTorch Implementation (Gaussian Decoder)
+## VAE Training Algorithm in PyTorch (Gaussian Decoder)
 
 ```python
 import torch
