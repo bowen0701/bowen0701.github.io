@@ -76,9 +76,9 @@ For quick derivation of $Z = XW^T + b$, use these mental shortcuts:
 Think of a linear layer as a **projection screen**. The input is the object, the weights are the angle and properties of the lens that project it into a new space (dimension), and the bias is the translation (moving the projection on the screen).
 
 ## Component of
-- [[Multi-Layer Perceptron (MLP)]] #todo
-- [[Transformer]] (Feed-forward blocks)
-- [[Convolutional Neural Networks]] (Final classification layers) #todo
+- Multi-Layer Perceptron (MLP) #todo
+- Transformer (Feed-forward blocks)
+- Convolutional Neural Networks (Final classification layers) #todo
 
 ## Insights  
 - **Affine Transformation:** It's linear transformation + translation.
@@ -90,9 +90,9 @@ Think of a linear layer as a **projection screen**. The input is the object, the
 - **Initialization:** Poor initialization (e.g., all zeros) leads to broken symmetry where all neurons learn the same features.
 
 ## Connections
-- [[Backpropagation]] #todo
-- [[Chain Rule]] #todo
-- [[Xavier Initialization]] #todo
+- Backpropagation #todo
+- Chain Rule #todo
+- Xavier Initialization #todo
 - [[He Initialization]]
 
 ## Implementation Notes
