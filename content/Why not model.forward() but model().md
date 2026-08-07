@@ -16,8 +16,8 @@ tags: [deep-learning, pytorch]
 Think of `__call__` as the interface designed for the user, and `forward()` as the implementation detail meant for the developer. Using `model(x)` ensures the entire ecosystem of PyTorch features remains fully functional.
 
 ## Component of
-- [[nn.Module]] #todo
-- [[PyTorch Training Loop]] #todo
+- nn.Module #todo
+- PyTorch Training Loop #todo
 
 ## Insights
 - **Never call `model.forward(x)` directly in user code; always use `model(x)`.**
@@ -26,11 +26,11 @@ Think of `__call__` as the interface designed for the user, and `forward()` as t
 - **Distributed issues:** In distributed training (e.g., DDP), skipping `__call__` means the necessary synchronization logic between GPUs will not be triggered.
 
 ## Connections
-- [[PyTorch Hooks]] #todo (forward_pre_hooks, forward_hooks)
-- [[Autograd and Computation Graph]] #todo
-- [[DistributedDataParallel (DDP)]] #todo
-- [[model.train() and model.eval()]] #todo
-- [[torch.compile]] #todo
+- PyTorch Hooks #todo (forward_pre_hooks, forward_hooks)
+- Autograd and Computation Graph #todo
+- DistributedDataParallel (DDP) #todo
+- model.train() and model.eval() #todo
+- torch.compile #todo
 
 ## Implementation Notes
 
