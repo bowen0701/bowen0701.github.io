@@ -328,8 +328,8 @@ $$
 CA is PCA applied to a normalized residual table: instead of centering by subtracting the mean, it centers by subtracting the independence model $r c^T$, and instead of unit weighting it uses $D_r^{-1/2}$ and $D_c^{-1/2}$ to weight by marginal frequency — making profiles, not counts, the object of study.
 
 ## Component of
-- [[Dimensionality Reduction]] #todo
-- [[Exploratory Data Analysis]] #todo
+- Dimensionality Reduction #todo
+- Exploratory Data Analysis #todo
 
 ## Insights
 - CA operates on profiles (relative frequencies), making it invariant to overall count magnitude — this is why it correctly identifies Aloz as stylistically similar to Zola.
@@ -344,8 +344,8 @@ CA is PCA applied to a normalized residual table: instead of centering by subtra
 
 ## Connections
 - [[PCA and SVD]]: CA is generalized SVD applied to the standardized residual of a correspondence matrix; PCA is ordinary SVD applied to continuous data.
-- [[Generalized SVD]] #todo
-- [[Chi-Square Statistic]] #todo
+- Generalized SVD #todo
+- Chi-Square Statistic #todo
 
 ## Implementation Notes
 
