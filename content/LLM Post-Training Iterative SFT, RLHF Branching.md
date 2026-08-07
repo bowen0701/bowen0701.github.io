@@ -33,12 +33,12 @@ Stacking SFT -> RL -> SFT -> RL means alternately broadening and narrowing and r
 
 ### PPO in RLHF
 
-[[PPO]] (Proximal Policy Optimization) is a policy-gradient RL algorithm that updates the LLM policy to maximize a reward signal from the reward model while staying close to a reference policy via a clipped surrogate objective. The RLHF loop: generate response $\rightarrow$ score with RM $\rightarrow$ update policy with PPO.
+PPO (Proximal Policy Optimization) is a policy-gradient RL algorithm that updates the LLM policy to maximize a reward signal from the reward model while staying close to a reference policy via a clipped surrogate objective. The RLHF loop: generate response $\rightarrow$ score with RM $\rightarrow$ update policy with PPO.
 
 **Why PPO aggressively sharpens the output distribution:**
 
 - **Reward maximization concentrates probability mass.** Once PPO identifies token sequences that score high, it rapidly increases their probability at the expense of alternatives.
-- **Mode collapse / reward hacking.** The RM is an imperfect proxy; PPO exploits its peaks, concentrating probability on a narrow set of "high-scoring" outputs rather than maintaining diversity. (See [[#Reward Hacking: Deep Dive]] below.)
+- **Mode collapse / reward hacking.** The RM is an imperfect proxy; PPO exploits its peaks, concentrating probability on a narrow set of "high-scoring" outputs rather than maintaining diversity. (See #Reward Hacking: Deep Dive below.)
 - **Weak entropy regularization.** Without a strong entropy bonus, the gradient signal from reward maximization dominates, collapsing the distribution toward greedy modes.
 - **Finite KL budget.** The KL divergence constraint (vs. the SFT reference) slows but doesn't prevent sharpening. Given enough updates, the policy drifts toward low-entropy outputs that maximize cumulative reward within the KL budget.
 
@@ -111,11 +111,11 @@ None fully solve hacking; they push the Goodhart frontier outward.
 
 ## Component of
 
-- [[LLM Post-Training Pipeline]] #todo
-- [[Supervised Fine-Tuning (SFT)]] #todo 
-- [[RLHF]] #todo
-- [[Rejection Sampling Fine-Tuning]] #todo
-- [[PPO]] #todo 
+- LLM Post-Training Pipeline #todo
+- Supervised Fine-Tuning (SFT) #todo 
+- RLHF #todo
+- Rejection Sampling Fine-Tuning #todo
+- PPO #todo 
 
 ## Insights
 
@@ -131,11 +131,11 @@ None fully solve hacking; they push the Goodhart frontier outward.
 
 ## Connections
 
-- [[Reward Hacking]] #todo: Goodhart's law applied to learned reward proxies
-- [[PPO]] #todo: the dominant RL algorithm for RLHF; responsible for entropy collapse
-- [[DPO]] #todo: gentler alternative to PPO that avoids explicit reward modeling
-- [[GRPO]] #todo: group relative policy optimization, used in DeepSeek-R1
-- [[Rejection Sampling Fine-Tuning]] #todo: on-policy SFT variant where starting from RL checkpoint is safe
+- Reward Hacking #todo: Goodhart's law applied to learned reward proxies
+- PPO #todo: the dominant RL algorithm for RLHF; responsible for entropy collapse
+- DPO #todo: gentler alternative to PPO that avoids explicit reward modeling
+- GRPO #todo: group relative policy optimization, used in DeepSeek-R1
+- Rejection Sampling Fine-Tuning #todo: on-policy SFT variant where starting from RL checkpoint is safe
 
 ## References
 
