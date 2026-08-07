@@ -170,9 +170,9 @@ For Monte Carlo: The error decays at a rate of $n^{1/2}$**, by the central limit
 
 ## Component of
 
-- [[Numerical Integration]] #todo
-- [[Bayesian Computation]] #todo
-- [[Scalable Machine Learning]] #todo
+- Numerical Integration #todo
+- Bayesian Computation #todo
+- Scalable Machine Learning #todo
 
 ## Insights
 
@@ -190,11 +190,11 @@ For Monte Carlo: The error decays at a rate of $n^{1/2}$**, by the central limit
 
 ## Connections
 
-- [[Quasi-Monte Carlo]] #todo: low-discrepancy sequences beat i.i.d. draws, achieving $O((\log n)^d/n)$ error for moderate $d$.
-- [[MCMC]] #todo: Markov chains replace i.i.d. draws when the target is known up to a constant; $n^{-1/2}$ rate survives asymptotically via ergodic theory.
-- [[Importance Sampling]] #todo: reweights a surrogate distribution to reduce variance; $n^{-1/2}$ rate holds with a smaller constant.
-- [[Curse of Dimensionality]] #todo: $n^{-r/d}$ cubature rate is the canonical example of exponential cost growth with $d$.
-- [[Central Limit Theorem]] #todo: source of Monte Carlo's $n^{-1/2}$ guarantee for i.i.d. estimators.
+- Quasi-Monte Carlo #todo: low-discrepancy sequences beat i.i.d. draws, achieving $O((\log n)^d/n)$ error for moderate $d$.
+- MCMC #todo: Markov chains replace i.i.d. draws when the target is known up to a constant; $n^{-1/2}$ rate survives asymptotically via ergodic theory.
+- Importance Sampling #todo: reweights a surrogate distribution to reduce variance; $n^{-1/2}$ rate holds with a smaller constant.
+- Curse of Dimensionality #todo: $n^{-r/d}$ cubature rate is the canonical example of exponential cost growth with $d$.
+- Central Limit Theorem #todo: source of Monte Carlo's $n^{-1/2}$ guarantee for i.i.d. estimators.
 
 ## References
 
