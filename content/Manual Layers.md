@@ -92,8 +92,7 @@ Think of a linear layer as a **projection screen**. The input is the object, the
 ## Connections
 - Backpropagation #todo
 - Chain Rule #todo
-- Xavier Initialization #todo
-- [[He Initialization]]
+- [[Xavier Initialization vs He Initialization]]
 
 ## Implementation Notes
 ```python
