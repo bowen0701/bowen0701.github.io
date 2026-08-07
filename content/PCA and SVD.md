@@ -283,8 +283,8 @@ $$
 PCA is like finding the natural axes of an ellipse fitted to a point cloud: the major axis captures the most spread (highest variance), the minor axis captures the least. SVD is the same operation written in terms of the data matrix directly rather than its covariance.
 
 ## Component of
-- [[Dimensionality Reduction]] #todo
-- [[Singular Value Decomposition]] #todo
+- Dimensionality Reduction #todo
+- Singular Value Decomposition #todo
 
 ## Insights
 - SVD and PCA are two views of the same decomposition: $\lambda_j^2 = d_j$.
@@ -297,8 +297,8 @@ PCA is like finding the natural axes of an ellipse fitted to a point cloud: the 
 
 ## Connections
 - [[Correspondence Analysis]]: generalized SVD applied to categorical count data.
-- [[Kernel PCA]] #todo
-- [[Eckart-Young Theorem]] #todo
+- Kernel PCA #todo
+- Eckart-Young Theorem #todo
 
 ## Implementation Notes
 - Prefer `np.linalg.svd` over explicit eigendecomposition for numerical stability.
