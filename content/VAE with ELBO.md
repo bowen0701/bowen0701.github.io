@@ -295,6 +295,8 @@ Backprop flows from loss through the entire graph. The reparameterization $z = \
 
 ## VAE Training Algorithm in PyTorch (Gaussian Decoder)
 
+See [[Conv2d - PyTorch 2D Convolutional Layer]] for details on `Conv2d` parameters and output size formula.
+
 ```python
 import torch
 import torch.nn as nn
