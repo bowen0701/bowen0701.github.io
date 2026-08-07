@@ -1,7 +1,7 @@
 ---
 title: VAE with ELBO
 author: Bowen Lee
-created: 2026-08-03
+created: 2026-08-06
 publish: true
 tags:
   - deep-learning
@@ -26,13 +26,13 @@ $$
 \begin{aligned}
 \log p(x)
 &\geq \mathbb{E}_{q(z|x)} \!\left[ \log \frac{p(x,z)}{q(z|x)} \right] \\
-&= \mathbb{E}_{q(z|x)} \!\left[ \log \frac{p_\theta(x|z)\,p(z)}{q(z|x)} \right] \\
-&= \mathbb{E}_{q(z|x)} \!\left[ \log p_\theta(x|z) \right] - \text{KL}(q(z|x) \,\|\, p(z)) \\
+&= \mathbb{E}_{q(z|x)} \!\left[ \log \frac{p(x|z)\,p(z)}{q(z|x)} \right] \\
+&= \mathbb{E}_{q(z|x)} \!\left[ \log p(x|z) \right] - \text{KL}(q(z|x) \,\|\, p(z)) \\
 &:= \text{ELBO}
 \end{aligned}
 $$
 
-This lower bound is the Evidence Lower Bound (ELBO). The gap $\log p(x) - \text{ELBO} = \text{KL}(q_\phi(z|x) \| p_\theta(z|x))$, the posterior approximation error (see below). Maximizing the ELBO simultaneously maximizes likelihood and minimizes the posterior gap.
+This lower bound is the Evidence Lower Bound (ELBO). The gap between log-evidence $\log p(x)$ and ELBO is $\log p(x) - \text{ELBO} = \text{KL}(q_\phi(z|x) \| p_\theta(z|x))$ (for derivations see below), the posterior approximation error. Maximizing the ELBO simultaneously maximizes likelihood and minimizes the posterior gap.
 
 ## Interpreting the ELBO
 
@@ -57,8 +57,6 @@ $$
 \end{aligned}
 $$
 
-Step 3 uses $\log p(x,z) = \log p(z|x) + \log p(x)$.
-
 **Key insights of ELBO:**
 
 1. **The gap is always non-negative**: Since $\text{KL}(q_\phi(z|x) \,||\, p_\theta(z|x)) \geq 0$, this confirms ELBO $\leq \log p(x)$: the ELBO is always a lower bound on $\log p(x)$
@@ -69,7 +67,7 @@ Step 3 uses $\log p(x,z) = \log p(z|x) + \log p(x)$.
 
 3. **Two competing terms in ELBO**:
    - **Reconstruction term** $\mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ]$: encourages $q$ to find latent codes $z$ that explain the data well
-   - **Prior matching term** $-\text{KL}( q_\phi(z|x) \,||\, p(z) )$: regularizes $q$ to stay close to the prior, preventing overfitting
+   - **Prior matching term** $\text{KL}( q_\phi(z|x) \,||\, p(z) )$: regularizes $q$ to stay close to the prior, preventing overfitting
 
 4. **Perfect bound when $q(z|x) = p(z|x)$**: The KL gap becomes zero, and ELBO equals the true log-evidence
 
@@ -101,7 +99,7 @@ $$
 \nabla_\phi \mathcal{L} = \nabla_\phi \mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ] - \nabla_\phi \text{KL}( q_\phi(z|x) \,||\, p(z) )
 $$
 
-**Problem**: We can't push $\nabla_\phi$ inside the expectation because the distribution $q_\phi$ itself depends on $\phi$. If we sample $z \sim q_\phi(z|x)$, the gradient $\nabla_\phi \log p_\theta(x|z)$ is zero!
+**Problem**: We can't push $\nabla_\phi$ inside the expectation because the distribution $q_\phi$ itself depends on $\phi$. If we sample $z \sim q_\phi(z|x)$, the gradient $\nabla_\phi \log p_\theta(x|z)$ is zero.
 
 **Solution: The Reparameterization Trick (Kingma & Welling, 2014)**
 
@@ -194,17 +192,17 @@ These are exact, zero-variance gradients: no sampling required for the KL term.
 
 ## VAE Training Algorithm
 
+Pseudo codes:
 ```python
-# Pseudo codes.
 for each minibatch (x₁, ..., xₙ):
-    # Encoder NN (q_φ(z|x)): outputs parameters of approximate posterior
+    # Encoder (q_φ(z|x)): outputs parameters of approximate posterior
     μ, log_σ² = encoder(x)
 
     # Reparameterization: makes sampling differentiable w.r.t. φ
     ε ~ N(0, I)
     z = μ + exp(log_σ²/2) · ε
 
-    # Decoder NN (p_θ(x|z)): outputs parameters of reconstruction distribution
+    # Decoder (p_θ(x|z)): outputs parameters of reconstruction distribution
     x_recon = decoder(z)
 
     # Compute ELBO loss
@@ -229,7 +227,7 @@ The decoder outputs parameters of a distribution over $x$, not $x$ directly. The
 
 **Derivation: Gaussian decoder → MSE**
 
-Assume $p_\theta(x|z) = \mathcal{N}(\mu_\theta(z),\, \sigma^2 I)$. The PDF is:
+Assume the decoder $p_\theta(x|z) = \mathcal{N}(\mu_\theta(z),\, \sigma^2 I)$. The PDF is:
 
 $$
 p_\theta(x|z) = \frac{1}{(2\pi\sigma^2)^{d/2}} \exp\!\left(-\frac{\|x - \mu_\theta(z)\|^2}{2\sigma^2}\right)
@@ -245,7 +243,7 @@ The constant doesn't affect optimization, so minimizing $-\log p_\theta(x|z)$ w.
 
 **Derivation: Bernoulli decoder → BCE**
 
-Assume each dimension $x_i \in \{0, 1\}$ and the decoder outputs $\hat{x}_i = \sigma(f_\theta(z))_i$:
+Assume each dimension $x_i \in \{0, 1\}$ and the decoder $p_\theta(x|z)$ outputs $\hat{x}_i = \sigma(f_\theta(z))_i$:
 
 $$
 p_\theta(x|z) = \prod_i \hat{x}_i^{\,x_i}(1-\hat{x}_i)^{1-x_i}
@@ -287,7 +285,7 @@ A single `loss.backward()` call jointly optimizes both $\phi$ and $\theta$. Here
 | $\nabla_\phi \mathcal{L}$: reconstruction | Encoder ($q_\phi(z\|x)$) | Reparameterization trick, chain rule through $z$ | Finds latent codes that decode well |
 | $\nabla_\phi \mathcal{L}$: KL | Encoder ($q_\phi(z\|x)$) | Closed-form gradient (exact, no sampling) | Tightens bound by reducing $\text{KL}(q_\phi(z\|x) \,\|\, p_\theta(z\|x))$ |
 
-The computational graph in one forward pass:
+The **computational graph in one forward pass:**
 
 $$
 x \xrightarrow{\text{encoder } q_\phi} (\mu_\phi, \sigma^2_\phi) \xrightarrow{z = \mu_\phi + \sigma_\phi \cdot \epsilon} z \xrightarrow{\text{decoder } p_\theta} \hat{x}
@@ -306,13 +304,13 @@ from torchvision import datasets, transforms
 
 
 class VAE(nn.Module):
-    """Conv VAE with Gaussian decoder for 1x28x28 images."""
+    """Conv VAE with Gaussian decoder for MNIST dataset of 1x28x28 images: 1 channel (grayscale), 28x28 pixels."""
 
     def __init__(self, latent_dim: int = 16):
         super().__init__()
         self.latent_dim = latent_dim
 
-        # Encoder: x -> (μ_φ, log σ²_φ)
+        # Encoder (q_φ(z|x)): x -> (μ_φ, log σ²_φ)
         self.encoder = nn.Sequential(
             nn.Conv2d(1, 32, 3, stride=2, padding=1),   # -> 32x14x14
             nn.ReLU(),
@@ -323,7 +321,7 @@ class VAE(nn.Module):
         self.fc_mu = nn.Linear(3136, latent_dim)
         self.fc_logvar = nn.Linear(3136, latent_dim)
 
-        # Decoder: z -> μ_θ(z)
+        # Decoder (p_θ(x|z)): z -> μ_θ(z)
         self.decoder = nn.Sequential(
             nn.Linear(latent_dim, 3136),
             nn.ReLU(),
