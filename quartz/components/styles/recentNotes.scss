@@ -1,0 +1,47 @@
+.recent-notes {
+  & > h3 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.4rem;
+  }
+
+  & > ul.recent-ul {
+    list-style: none;
+    margin-top: 1rem;
+    padding-left: 0;
+
+    & > li {
+      margin: 0.75rem 0;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--lightgray);
+      border-radius: 8px;
+      background-color: var(--light);
+      transition: border-color 0.2s ease;
+
+      &:hover {
+        border-color: var(--gray);
+      }
+
+      .section > .desc > h3 > a {
+        background-color: transparent;
+      }
+
+      .section > ul.tags > li > a.tag-link {
+        font-weight: normal;
+        font-size: 0.8rem;
+      }
+
+      .section > .meta {
+        margin: 0.25rem 0 0.5rem 0;
+        opacity: 0.6;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+
+        > * + *::before {
+          content: " | ";
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}
