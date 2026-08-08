@@ -9,11 +9,13 @@ tags:
 - implementation
 title: Manual Layer
 ---
-## Table of Contents
-{:.no_toc}
+<details class="toc-details">
+<summary><b>Table of Contents</b></summary>
 
 * TOC
 {:toc}
+
+</details>
 
 
 ## Core Intuition

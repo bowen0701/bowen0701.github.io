@@ -10,11 +10,13 @@ tags:
 - llm
 title: LLM Post-Training Iterative SFT, RLHF Branching
 ---
-## Table of Contents
-{:.no_toc}
+<details class="toc-details">
+<summary><b>Table of Contents</b></summary>
 
 * TOC
 {:toc}
+
+</details>
 
 
 ## Core Intuition
