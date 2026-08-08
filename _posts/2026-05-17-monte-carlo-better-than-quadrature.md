@@ -62,13 +62,13 @@ $$
 |R_r(x)| \leq \frac{1}{(r-1)!} \int_{x_0}^{x} |x-t|^{r-1} |f^{(r)}(t)| \, dt
 $$
 
-**Step 3:** Use $\mid f^{(r)}(t)\mid  \leq \mid f^{(r)}\mid _{\infty}$ (definition of sup norm):
+**Step 3:** Use $|f^{(r)}(t)| \leq |f^{(r)}|_{\infty}$ (definition of sup norm):
 
 $$
 |R_r(x)| \leq \frac{|f^{(r)}|_{\infty}}{(r-1)!} \int_{x_0}^{x} |x-t|^{r-1} \, dt
 $$
 
-**Step 4:** Evaluate the integral. Let $h = \mid x - x_0\mid $:
+**Step 4:** Evaluate the integral. Let $h = |x - x_0|$:
 
 $$
 \int_{x_0}^{x} |x-t|^{r-1} \, dt = \int_{0}^{h} s^{r-1} \, ds = \frac{h^r}{r}
@@ -80,7 +80,7 @@ $$
 |R_r(x)| \leq \frac{|f^{(r)}|_{\infty}}{(r-1)!} \cdot \frac{h^r}{r} = \frac{|f^{(r)}|_{\infty}}{r!} h^r
 $$
 
-**Step 6:** Set $\delta = h = \mid x - x_0\mid $ and $C = \frac{1}{r!}$:
+**Step 6:** Set $\delta = h = |x - x_0|$ and $C = \frac{1}{r!}$:
 
 $$
 \boxed{|R_r(x)| \leq C \cdot \delta^r \cdot |f^{(r)}|_{\infty}}

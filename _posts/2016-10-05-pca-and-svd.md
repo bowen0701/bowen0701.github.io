@@ -135,7 +135,7 @@ $$
 
 The eigenvalue $d_j$ is the variance of projected feature $y_j$.
 
-**Alternative derivation via Lagrangian:** PCA finds a unit vector $u$ (with $\lVert u \rVert = 1$) maximizing the variance of the projection of all examples $x_i$ onto $u$:
+**Alternative derivation via Lagrangian:** PCA finds a unit vector $u$ (with $\|u\| = 1$) maximizing the variance of the projection of all examples $x_i$ onto $u$:
 
 $$
 \frac{1}{m} \sum_{i=1}^m (x_i^T u)^2 
@@ -147,21 +147,21 @@ Why does the variance take this form? If the angle between $x_i$ and $u$ is $\th
 
 $$
 x_i' = x_i \cos\theta
-= x_i \frac{x_i^T u}{\lVert x_i \rVert \lVert u \rVert}
-= x_i \frac{x_i^T u}{\lVert x_i \rVert}
+= x_i \frac{x_i^T u}{|x_i||u|}
+= x_i \frac{x_i^T u}{|x_i|}
 $$
 
 since $u$ is a unit vector. The length of this projection is
 
 $$
 \left[ x_i'^T x_i' \right]^{1/2}
-= \left[ \left( x_i \frac{x_i^T u}{\lVert x_i \rVert} \right)^T \left( x_i \frac{x_i^T u}{\lVert x_i \rVert} \right) \right]^{1/2}
-= \left[ \left( \frac{x_i^T u}{\lVert x_i \rVert} \right) x_i^T x_i \left( \frac{x_i^T u}{\lVert x_i \rVert} \right) \right]^{1/2}
+= \left[ \left( x_i \frac{x_i^T u}{|x_i|} \right)^T \left( x_i \frac{x_i^T u}{|x_i|} \right) \right]^{1/2}
+= \left[ \left( \frac{x_i^T u}{|x_i|} \right) x_i^T x_i \left( \frac{x_i^T u}{|x_i|} \right) \right]^{1/2}
 = \left[ \left(x_i^T u \right)^2 \right]^{1/2}
 = x_i^T u
 $$
 
-since $x_i^T x_i = \lVert x_i \rVert^2$. So the projection distance from the origin is $x_i^T u$.
+since $x_i^T x_i = \|x_i\|^2$. So the projection distance from the origin is $x_i^T u$.
 
 The optimization problem is then
 
@@ -195,7 +195,7 @@ $$
 
 Then:
 - (1) $U$ is orthonormal: $u_i^T u_j = \begin{cases} 1, & i = j \\ 0, & \text{otherwise} \end{cases}$
-- (2) $\lVert X v_i \rVert = \lambda_i$
+- (2) $\|X v_i\| = \lambda_i$
 
 *Sketch of proof:*
 

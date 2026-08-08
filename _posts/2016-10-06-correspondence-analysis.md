@@ -28,9 +28,9 @@ Three key properties:
 
 **Why not PCA?** PCA is sensitive to the magnitude of counts, not their relative profiles. In the French authors dataset (punctuation style by author), PCA places Aloz far from Zola despite identical punctuation style — because Aloz wrote a short novel. CA normalizes by profile, correctly grouping Aloz and Zola together.
 
-![](/images/attachments/pca_french_authors.png)
+![pca_french_authors](/images/attachments/pca_french_authors.png)
 
-![](/images/attachments/ca_french_authors.png)
+![ca_french_authors](/images/attachments/ca_french_authors.png)
 
 ### Example applications
 - Segments vs. genders / hours / weekdays / locations / app detection
@@ -40,15 +40,15 @@ Three key properties:
 
 ### Archaeological example: sites vs. types
 
-![](/images/attachments/contingency_table.png)
+![contingency_table](/images/attachments/contingency_table.png)
 
 Common bar charts cannot quantify associations:
 
-![](/images/attachments/site_type_profile.png)
+![site_type_profile](/images/attachments/site_type_profile.png)
 
 CA visualization:
 
-![](/images/attachments/ca_demo.png)
+![ca_demo](/images/attachments/ca_demo.png)
 
 - **Sites association:**
   * *P1* and *P2* are close together, thus have similar **type profiles**
@@ -268,19 +268,19 @@ For interpretation details, see p. 66-72 (Greenacre 2007).
 
 **Example: Smoking dataset:**
 
-![](/images/attachments/ca_smoking_data.png)
+![ca_smoking_data](/images/attachments/ca_smoking_data.png)
 
 Asymmetric map, row principal (Greenacre 2007, Fig. 9.2):
 
-![](/images/attachments/ca_asym_rowpricipal.png)
+![ca_asym_rowpricipal](/images/attachments/ca_asym_rowpricipal.png)
 
 Asymmetric map, column principal (Greenacre 2007, Fig. 9.4):
 
-![](/images/attachments/ca_asym_colpricipal.png)
+![ca_asym_colpricipal](/images/attachments/ca_asym_colpricipal.png)
 
 Symmetric map (Greenacre 2007, Fig. 9.5):
 
-![](/images/attachments/ca_sym.png)
+![ca_sym](/images/attachments/ca_sym.png)
 
 ### French Authors Dataset
 
