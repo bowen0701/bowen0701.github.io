@@ -13,9 +13,9 @@ permalink: /
   </div>
 </div>
 
-I am Staff Machine Learning Engineer at Meta, where I work on large-scale ads ranking research and engineering.
+I am a Staff Machine Learning Engineer at Meta, where I work on large-scale ads ranking research and engineering.
 
-My research interests include Recommendation Systems, Deep Learning, Generative Modeling (Diffusion/LLMs), Reinforcement Learning and AI4Science.
+I specialize in Large-Scale Recommendation Systems, Multi-Task & Multi-Domain Architectures, Distributed ML Systems, ML Infrastructure. My research interests include Reinforcement Learning, Generative Modeling (Diffusion/LLMs). I hold a PhD in Statistics with a dissertation in Survival Analysis.
 
 <div class="home-section" markdown="1">
 
