@@ -11,6 +11,7 @@ linkedin_username: bowen0701
 markdown: kramdown
 permalink: /re-log/:title/
 excerpt_separator: <!--more-->
+future: true
 
 highlighter: rouge
 kramdown:
