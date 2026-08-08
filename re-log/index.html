@@ -13,7 +13,7 @@ title: RE-Log
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
         {% if post.excerpt %}
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+          <p class="post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
         {% endif %}
         <span class="post-meta">
           Date: {{ post.date | date: "%b %-d, %Y" }}
