@@ -22,9 +22,9 @@ $crimson-color: #e0491f;
 $crimson-color-light: #f9493f;
 $crimson-color-very-light: lighten($crimson-color, 40%);
 
-$content-width: 800px;
+$content-width: 900px;
 $on-palm: 600px;
-$on-laptop: 800px;
+$on-laptop: 900px;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {

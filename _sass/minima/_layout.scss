@@ -277,6 +277,13 @@
   }
 }
 
+.post-card-full {
+  background: #fff;
+  border-radius: 8px;
+  padding: $spacing-unit * 1.5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 .image-caption {
   text-align: center;
   width: 85%;
