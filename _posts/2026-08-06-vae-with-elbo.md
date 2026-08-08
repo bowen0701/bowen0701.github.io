@@ -46,10 +46,10 @@ This lower bound is the Evidence Lower Bound (ELBO). The gap between log-evidenc
 The ELBO can be rewritten to show the gap between evidence and bound (see Kingma & Welling, 2019):
 
 $$
-\log p(x) = \text{ELBO}(\phi, \theta) + \text{KL}(q_\phi(z|x) \,||\, p_\theta(z|x))
+\log p(x) = \text{ELBO}(\phi, \theta) + \text{KL}(q_\phi(z|x) \,\Vert\, p_\theta(z|x))
 $$
 
-where $\text{ELBO}(\phi, \theta) = \mathbb{E}_{q_\phi(z\mid x)} [ \log p_\theta(x\mid z) ] - \text{KL}( q_\phi(z\mid x) \,||\, p(z) )$
+where $\text{ELBO}(\phi, \theta) = \mathbb{E}_{q_\phi(z\mid x)} [ \log p_\theta(x\mid z) ] - \text{KL}( q_\phi(z\mid x) \,\Vert\, p(z) )$
 
 **Derivation of the gap:**
 
@@ -66,15 +66,15 @@ $$
 
 **Key insights of ELBO:**
 
-1. **The gap is always non-negative**: Since $\text{KL}(q_\phi(z\mid x) \,||\, p_\theta(z\mid x)) \geq 0$, this confirms ELBO $\leq \log p(x)$: the ELBO is always a lower bound on $\log p(x)$
+1. **The gap is always non-negative**: Since $\text{KL}(q_\phi(z\mid x) \,\Vert\, p_\theta(z\mid x)) \geq 0$, this confirms ELBO $\leq \log p(x)$: the ELBO is always a lower bound on $\log p(x)$
 
 2. **Maximizing ELBO "pushes up" the evidence**: 
    - When we maximize ELBO w.r.t. model parameters $\theta$, we increase $\log p(x)$ (the thing we actually care about)
-   - When we maximize ELBO w.r.t. variational parameters $\phi$ (optimizing $q$), we tighten the bound by reducing $\text{KL}(q_\phi(z\mid x) \,||\, p_\theta(z\mid x))$. Specifically, from the identity $\log p(x) = \text{ELBO}(\phi, \theta) + \text{KL}(q_\phi(z\mid x) \,||\, p_\theta(z\mid x))$: when $\theta$ is held fixed, $\log p(x)$ is a constant, so maximizing ELBO w.r.t. $\phi$ is exactly equivalent to minimizing the KL gap. This is classical variational inference (Blei et al., 2017): finding the member of the family $\{q_\phi\}$ closest (in reverse KL) to the intractable true posterior $p_\theta(z\mid x)$.
+   - When we maximize ELBO w.r.t. variational parameters $\phi$ (optimizing $q$), we tighten the bound by reducing $\text{KL}(q_\phi(z\mid x) \,\Vert\, p_\theta(z\mid x))$. Specifically, from the identity $\log p(x) = \text{ELBO}(\phi, \theta) + \text{KL}(q_\phi(z\mid x) \,\Vert\, p_\theta(z\mid x))$: when $\theta$ is held fixed, $\log p(x)$ is a constant, so maximizing ELBO w.r.t. $\phi$ is exactly equivalent to minimizing the KL gap. This is classical variational inference (Blei et al., 2017): finding the member of the family $\{q_\phi\}$ closest (in reverse KL) to the intractable true posterior $p_\theta(z\mid x)$.
 
 3. **Two competing terms in ELBO**:
    - **Reconstruction term** $\mathbb{E}_{q_\phi(z\mid x)} [ \log p_\theta(x\mid z) ]$: encourages $q$ to find latent codes $z$ that explain the data well
-   - **Prior matching term** $\text{KL}( q_\phi(z\mid x) \,||\, p(z) )$: regularizes $q$ to stay close to the prior, preventing overfitting
+   - **Prior matching term** $\text{KL}( q_\phi(z\mid x) \,\Vert\, p(z) )$: regularizes $q$ to stay close to the prior, preventing overfitting
 
 4. **Perfect bound when $q(z\mid x) = p(z\mid x)$**: The KL gap becomes zero, and ELBO equals the true log-evidence
 
@@ -83,7 +83,7 @@ $$
 We have the ELBO:
 
 $$
-\mathcal{L}(\phi, \theta) = \mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ] - \text{KL}( q_\phi(z|x) \,||\, p(z) )
+\mathcal{L}(\phi, \theta) = \mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ] - \text{KL}( q_\phi(z|x) \,\Vert\, p(z) )
 $$
 
 Two neural networks, two parameter sets:
@@ -103,7 +103,7 @@ We want to take gradients w.r.t. both $\phi$ and $\theta$ to jointly train them:
 The naive gradient is:
 
 $$
-\nabla_\phi \mathcal{L} = \nabla_\phi \mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ] - \nabla_\phi \text{KL}( q_\phi(z|x) \,||\, p(z) )
+\nabla_\phi \mathcal{L} = \nabla_\phi \mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ] - \nabla_\phi \text{KL}( q_\phi(z|x) \,\Vert\, p(z) )
 $$
 
 **Problem**: We can't push $\nabla_\phi$ inside the expectation because the distribution $q_\phi$ itself depends on $\phi$. If we sample $z \sim q_\phi(z\mid x)$, the gradient $\nabla_\phi \log p_\theta(x\mid z)$ is zero.
@@ -155,7 +155,7 @@ Both gradients route through $\partial \log p_\theta / \partial z$: the decoder'
 3. **Estimate gradient**:
 
 $$
-\nabla_\phi \mathcal{L} \approx \nabla_\phi \log p_\theta(x|z) - \nabla_\phi \text{KL}(q_\phi(z|x) \,||\, p(z))
+\nabla_\phi \mathcal{L} \approx \nabla_\phi \log p_\theta(x|z) - \nabla_\phi \text{KL}(q_\phi(z|x) \,\Vert\, p(z))
 $$
 
 The KL term often has a closed form. 
