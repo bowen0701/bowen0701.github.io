@@ -183,12 +183,16 @@
   .post-excerpt {
     color: #555;
     margin-bottom: 0.5em;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
 
   .post-meta {
-    font-size: 13px;
+    font-size: $small-font-size;
   }
 }
 
