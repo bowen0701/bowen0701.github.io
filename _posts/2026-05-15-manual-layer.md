@@ -9,6 +9,12 @@ tags:
 - implementation
 title: Manual Layer
 ---
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
 
 ## Core Intuition
 A Linear Layer (or Fully Connected/Dense layer) performs an affine transformation on input data. It is the fundamental building block of neural networks, mapping an input vector to an output vector through weight multiplication and bias addition.

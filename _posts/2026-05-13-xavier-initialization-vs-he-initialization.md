@@ -9,6 +9,12 @@ tags:
 - relu
 title: Xavier Initialization vs He Initialization
 ---
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
 
 [Updated on 2026-08-07: Extend to Xavier Initialization vs He Initialization.]
 

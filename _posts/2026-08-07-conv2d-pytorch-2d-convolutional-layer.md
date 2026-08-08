@@ -8,6 +8,12 @@ tags:
 - deep-learning
 title: Conv2d - PyTorch 2D Convolutional Layer
 ---
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
 
 `torch.nn.Conv2d` applies a 2D convolution over an input signal (e.g., an image).
 

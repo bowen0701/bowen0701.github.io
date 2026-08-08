@@ -9,6 +9,12 @@ tags:
 - statistics
 title: Correspondence Analysis
 ---
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
 
 ## Core Intuition
 Correspondence Analysis (CA) is a dimensionality reduction and data visualization technique for **contingency tables of counts**. It reveals associations between row and column categories by mapping them into a shared low-dimensional space, where proximity indicates similarity of profiles (Greenacre 2007).

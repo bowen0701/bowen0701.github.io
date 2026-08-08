@@ -7,6 +7,12 @@ tags:
 - pytorch
 title: Why not model.forward() but model()
 ---
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+
 
 ## Core Intuition
 - Calling `model(x)` invokes `nn.Module.__call__`, a wrapper around `forward()` that runs hooks, manages state, sets up autograd, and handles distributed sync.

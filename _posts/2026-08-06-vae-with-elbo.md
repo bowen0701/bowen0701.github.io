@@ -8,8 +8,14 @@ tags:
 - generative-models
 title: VAE with ELBO
 ---
+## Table of Contents
+{:.no_toc}
 
-We want to maximize log-evidence $\log p(x)$ but integrating over all $z$ is intractable. The VAE framework (Kingma & Welling, 2014) introduces a variational posterior $q(z|x)$ and multiplies/divides inside the log:
+* TOC
+{:toc}
+
+
+We want to maximize log-evidence $\log p(x)$ but integrating over all $z$ is intractable. The VAE framework (Kingma & Welling, 2014) introduces a variational posterior $q(z\mid x)$ and multiplies/divides inside the log:
 
 $$
 \begin{aligned}
@@ -19,7 +25,7 @@ $$
 \end{aligned}
 $$
 
-Apply Jensen's inequality ($\log \mathbb{E}[f] \geq \mathbb{E}[\log f]$ for concave $\log$) and expand using $p(x,z) = p_\theta(x|z)\,p(z)$:
+Apply Jensen's inequality ($\log \mathbb{E}[f] \geq \mathbb{E}[\log f]$ for concave $\log$) and expand using $p(x,z) = p_\theta(x\mid z)\,p(z)$:
 
 $$
 \begin{aligned}
@@ -31,7 +37,7 @@ $$
 \end{aligned}
 $$
 
-This lower bound is the Evidence Lower Bound (ELBO). The gap between log-evidence $\log p(x)$ and ELBO is $\log p(x) - \text{ELBO} = \text{KL}(q_\phi(z|x) \| p_\theta(z|x))$ (for derivations see below), the posterior approximation error. Maximizing the ELBO simultaneously maximizes likelihood and minimizes the posterior gap.
+This lower bound is the Evidence Lower Bound (ELBO). The gap between log-evidence $\log p(x)$ and ELBO is $\log p(x) - \text{ELBO} = \text{KL}(q_\phi(z\mid x) \| p_\theta(z\mid x))$ (for derivations see below), the posterior approximation error. Maximizing the ELBO simultaneously maximizes likelihood and minimizes the posterior gap.
 
 ## Interpreting the ELBO
 
@@ -41,7 +47,7 @@ $$
 \log p(x) = \text{ELBO}(\phi, \theta) + \text{KL}(q_\phi(z|x) \,||\, p_\theta(z|x))
 $$
 
-where $\text{ELBO}(\phi, \theta) = \mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ] - \text{KL}( q_\phi(z|x) \,||\, p(z) )$
+where $\text{ELBO}(\phi, \theta) = \mathbb{E}_{q_\phi(z\mid x)} [ \log p_\theta(x\mid z) ] - \text{KL}( q_\phi(z\mid x) \,||\, p(z) )$
 
 **Derivation of the gap:**
 
@@ -58,17 +64,17 @@ $$
 
 **Key insights of ELBO:**
 
-1. **The gap is always non-negative**: Since $\text{KL}(q_\phi(z|x) \,||\, p_\theta(z|x)) \geq 0$, this confirms ELBO $\leq \log p(x)$: the ELBO is always a lower bound on $\log p(x)$
+1. **The gap is always non-negative**: Since $\text{KL}(q_\phi(z\mid x) \,||\, p_\theta(z\mid x)) \geq 0$, this confirms ELBO $\leq \log p(x)$: the ELBO is always a lower bound on $\log p(x)$
 
 2. **Maximizing ELBO "pushes up" the evidence**: 
    - When we maximize ELBO w.r.t. model parameters $\theta$, we increase $\log p(x)$ (the thing we actually care about)
-   - When we maximize ELBO w.r.t. variational parameters $\phi$ (optimizing $q$), we tighten the bound by reducing $\text{KL}(q_\phi(z|x) \,||\, p_\theta(z|x))$. Specifically, from the identity $\log p(x) = \text{ELBO}(\phi, \theta) + \text{KL}(q_\phi(z|x) \,||\, p_\theta(z|x))$: when $\theta$ is held fixed, $\log p(x)$ is a constant, so maximizing ELBO w.r.t. $\phi$ is exactly equivalent to minimizing the KL gap. This is classical variational inference (Blei et al., 2017): finding the member of the family $\{q_\phi\}$ closest (in reverse KL) to the intractable true posterior $p_\theta(z|x)$.
+   - When we maximize ELBO w.r.t. variational parameters $\phi$ (optimizing $q$), we tighten the bound by reducing $\text{KL}(q_\phi(z\mid x) \,||\, p_\theta(z\mid x))$. Specifically, from the identity $\log p(x) = \text{ELBO}(\phi, \theta) + \text{KL}(q_\phi(z\mid x) \,||\, p_\theta(z\mid x))$: when $\theta$ is held fixed, $\log p(x)$ is a constant, so maximizing ELBO w.r.t. $\phi$ is exactly equivalent to minimizing the KL gap. This is classical variational inference (Blei et al., 2017): finding the member of the family $\{q_\phi\}$ closest (in reverse KL) to the intractable true posterior $p_\theta(z\mid x)$.
 
 3. **Two competing terms in ELBO**:
-   - **Reconstruction term** $\mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ]$: encourages $q$ to find latent codes $z$ that explain the data well
-   - **Prior matching term** $\text{KL}( q_\phi(z|x) \,||\, p(z) )$: regularizes $q$ to stay close to the prior, preventing overfitting
+   - **Reconstruction term** $\mathbb{E}_{q_\phi(z\mid x)} [ \log p_\theta(x\mid z) ]$: encourages $q$ to find latent codes $z$ that explain the data well
+   - **Prior matching term** $\text{KL}( q_\phi(z\mid x) \,||\, p(z) )$: regularizes $q$ to stay close to the prior, preventing overfitting
 
-4. **Perfect bound when $q(z|x) = p(z|x)$**: The KL gap becomes zero, and ELBO equals the true log-evidence
+4. **Perfect bound when $q(z\mid x) = p(z\mid x)$**: The KL gap becomes zero, and ELBO equals the true log-evidence
 
 ## Maximizing the ELBO: The Reparameterization Trick
 
@@ -87,8 +93,8 @@ Two neural networks, two parameter sets:
 
 We want to take gradients w.r.t. both $\phi$ and $\theta$ to jointly train them:
 
-- $\nabla_\theta \mathcal{L}$: straightforward: $p_\theta(x|z)$ is a standard neural network forward pass from $z$ to $x$, so standard backprop works. No trick needed.
-- $\nabla_\phi \mathcal{L}$: the hard part: sampling $z \sim q_\phi(z|x)$ blocks gradients, which is why the reparameterization trick is needed (see below).
+- $\nabla_\theta \mathcal{L}$: straightforward: $p_\theta(x\mid z)$ is a standard neural network forward pass from $z$ to $x$, so standard backprop works. No trick needed.
+- $\nabla_\phi \mathcal{L}$: the hard part: sampling $z \sim q_\phi(z\mid x)$ blocks gradients, which is why the reparameterization trick is needed (see below).
 
 **The Problem with $\nabla_\phi$ (Naive Gradients)**
 
@@ -98,17 +104,17 @@ $$
 \nabla_\phi \mathcal{L} = \nabla_\phi \mathbb{E}_{q_\phi(z|x)} [ \log p_\theta(x|z) ] - \nabla_\phi \text{KL}( q_\phi(z|x) \,||\, p(z) )
 $$
 
-**Problem**: We can't push $\nabla_\phi$ inside the expectation because the distribution $q_\phi$ itself depends on $\phi$. If we sample $z \sim q_\phi(z|x)$, the gradient $\nabla_\phi \log p_\theta(x|z)$ is zero.
+**Problem**: We can't push $\nabla_\phi$ inside the expectation because the distribution $q_\phi$ itself depends on $\phi$. If we sample $z \sim q_\phi(z\mid x)$, the gradient $\nabla_\phi \log p_\theta(x\mid z)$ is zero.
 
 **Solution: The Reparameterization Trick (Kingma & Welling, 2014)**
 
-Instead of sampling $z$ directly from $q_\phi(z|x)$, express $z$ as a deterministic function of $\phi$ and noise $\epsilon$:
+Instead of sampling $z$ directly from $q_\phi(z\mid x)$, express $z$ as a deterministic function of $\phi$ and noise $\epsilon$:
 
 $$
 z = g(\phi, x, \epsilon), \quad \epsilon \sim p(\epsilon)
 $$
 
-For example, if $q_\phi(z|x) = \mathcal{N}(\mu_\phi(x), \sigma^2_\phi(x))$:
+For example, if $q_\phi(z\mid x) = \mathcal{N}(\mu_\phi(x), \sigma^2_\phi(x))$:
 
 $$
 z = \mu_\phi(x) + \sigma_\phi(x) \cdot \epsilon, \quad \epsilon \sim \mathcal{N}(0, 1)
@@ -128,7 +134,7 @@ $$
 
 **Chain rule through $z$**
 
-With $s_\phi = \log\sigma^2_\phi$ (so $\sigma_\phi = e^{s_\phi/2}$), the gradient flows from the decoder ($p_\theta(x|z)$) back through $z = \mu_\phi + \sigma_\phi \cdot \epsilon$ to the encoder ($q_\phi(z|x)$) outputs:
+With $s_\phi = \log\sigma^2_\phi$ (so $\sigma_\phi = e^{s_\phi/2}$), the gradient flows from the decoder ($p_\theta(x\mid z)$) back through $z = \mu_\phi + \sigma_\phi \cdot \epsilon$ to the encoder ($q_\phi(z\mid x)$) outputs:
 
 $$
 \nabla_{\mu_\phi} \log p_\theta(x|z) = \frac{\partial \log p_\theta}{\partial z} \cdot \underbrace{\frac{\partial z}{\partial \mu_\phi}}_{=\,1}
@@ -138,7 +144,7 @@ $$
 \nabla_{s_\phi} \log p_\theta(x|z) = \frac{\partial \log p_\theta}{\partial z} \cdot \underbrace{\frac{\partial z}{\partial s_\phi}}_{=\,\epsilon \cdot \sigma_\phi / 2}
 $$
 
-Both gradients route through $\partial \log p_\theta / \partial z$: the decoder's ($p_\theta(x|z)$) gradient w.r.t. its input. In practice, autograd handles this automatically: `z = mu + sigma * eps` is a tensor op, so backprop flows from the reconstruction loss through $z$ to $\mu_\phi$ and $\sigma_\phi$, then to encoder ($q_\phi(z|x)$) weights. The reparameterization trick is the design choice that makes this computational graph connected.
+Both gradients route through $\partial \log p_\theta / \partial z$: the decoder's ($p_\theta(x\mid z)$) gradient w.r.t. its input. In practice, autograd handles this automatically: `z = mu + sigma * eps` is a tensor op, so backprop flows from the reconstruction loss through $z$ to $\mu_\phi$ and $\sigma_\phi$, then to encoder ($q_\phi(z\mid x)$) weights. The reparameterization trick is the design choice that makes this computational graph connected.
 
 **Complete Gradient Estimator**
 
@@ -152,7 +158,7 @@ $$
 
 The KL term often has a closed form. 
 
-For example, with encoder $q_\phi(z|x) = \mathcal{N}(\mu_\phi, \sigma^2_\phi)$ and prior $p(z) = \mathcal{N}(0, 1)$, start from the definition:
+For example, with encoder $q_\phi(z\mid x) = \mathcal{N}(\mu_\phi, \sigma^2_\phi)$ and prior $p(z) = \mathcal{N}(0, 1)$, start from the definition:
 
 $$
 \text{KL}(q_\phi(z|x) \,\|\, p(z)) = \mathbb{E}_{q_\phi}\!\left[\log \frac{q_\phi(z|x)}{p(z)}\right] = \mathbb{E}_{q_\phi}[\log q_\phi(z|x)] - \mathbb{E}_{q_\phi}[\log p(z)]
@@ -167,7 +173,7 @@ $$
 \end{aligned}
 $$
 
-Taking expectations under $z \sim q_\phi(z|x) = \mathcal{N}(\mu_\phi, \sigma^2_\phi)$, using $\mathbb{E}[(z-\mu_\phi)^2] = \sigma^2_\phi$ and $\mathbb{E}[z^2] = \mu^2_\phi + \sigma^2_\phi$:
+Taking expectations under $z \sim q_\phi(z\mid x) = \mathcal{N}(\mu_\phi, \sigma^2_\phi)$, using $\mathbb{E}[(z-\mu_\phi)^2] = \sigma^2_\phi$ and $\mathbb{E}[z^2] = \mu^2_\phi + \sigma^2_\phi$:
 
 $$
 \begin{aligned}
@@ -215,7 +221,7 @@ for each minibatch (x₁, ..., xₙ):
     optimizer.step()
 ```
 
-**Reconstruction Loss: $-\log p_\theta(x|z)$**
+**Reconstruction Loss: $-\log p_\theta(x\mid z)$**
 
 The decoder outputs parameters of a distribution over $x$, not $x$ directly. The reconstruction loss is the negative log-likelihood of the true $x$ under that distribution. The choice of distribution determines the loss function:
 
@@ -226,7 +232,7 @@ The decoder outputs parameters of a distribution over $x$, not $x$ directly. The
 
 **Derivation: Gaussian decoder → MSE**
 
-Assume the decoder $p_\theta(x|z) = \mathcal{N}(\mu_\theta(z),\, \sigma^2 I)$. The PDF is:
+Assume the decoder $p_\theta(x\mid z) = \mathcal{N}(\mu_\theta(z),\, \sigma^2 I)$. The PDF is:
 
 $$
 p_\theta(x|z) = \frac{1}{(2\pi\sigma^2)^{d/2}} \exp\!\left(-\frac{\|x - \mu_\theta(z)\|^2}{2\sigma^2}\right)
@@ -238,11 +244,11 @@ $$
 -\log p_\theta(x|z) = \frac{\|x - \mu_\theta(z)\|^2}{2\sigma^2} + \underbrace{\frac{d}{2}\log(2\pi\sigma^2)}_{\text{constant w.r.t. } \theta}
 $$
 
-The constant doesn't affect optimization, so minimizing $-\log p_\theta(x|z)$ w.r.t. $\theta$ is equivalent to minimizing $\|x - \mu_\theta(z)\|^2$ (MSE).
+The constant doesn't affect optimization, so minimizing $-\log p_\theta(x\mid z)$ w.r.t. $\theta$ is equivalent to minimizing $\|x - \mu_\theta(z)\|^2$ (MSE).
 
 **Derivation: Bernoulli decoder → BCE**
 
-Assume each dimension $x_i \in \{0, 1\}$ and the decoder $p_\theta(x|z)$ outputs $\hat{x}_i = \sigma(f_\theta(z))_i$:
+Assume each dimension $x_i \in \{0, 1\}$ and the decoder $p_\theta(x\mid z)$ outputs $\hat{x}_i = \sigma(f_\theta(z))_i$:
 
 $$
 p_\theta(x|z) = \prod_i \hat{x}_i^{\,x_i}(1-\hat{x}_i)^{1-x_i}
@@ -260,7 +266,7 @@ In both cases, `x_recon = decoder(z)` outputs the distributional parameters ($\m
 
 **Practical Architectures**
 
-No special architecture required. They are standard NNs with one VAE-specific constraint: the encoder $q_\phi(z|x)$ must output **two vectors** ($\mu_\phi$ and $\log\sigma^2_\phi$), not a single embedding.
+No special architecture required. They are standard NNs with one VAE-specific constraint: the encoder $q_\phi(z\mid x)$ must output **two vectors** ($\mu_\phi$ and $\log\sigma^2_\phi$), not a single embedding.
 
 | Data type | Encoder | Decoder |
 |---|---|---|
@@ -290,7 +296,7 @@ $$
 x \xrightarrow{\text{encoder } q_\phi} (\mu_\phi, \sigma^2_\phi) \xrightarrow{z = \mu_\phi + \sigma_\phi \cdot \epsilon} z \xrightarrow{\text{decoder } p_\theta} \hat{x}
 $$
 
-Backprop flows from loss through the entire graph. The reparameterization $z = \mu_\phi + \sigma_\phi \cdot \epsilon$ is what makes the encoder-to-decoder connection differentiable: without it, the sampling step $z \sim q_\phi(z|x)$ would sever the gradient path.
+Backprop flows from loss through the entire graph. The reparameterization $z = \mu_\phi + \sigma_\phi \cdot \epsilon$ is what makes the encoder-to-decoder connection differentiable: without it, the sampling step $z \sim q_\phi(z\mid x)$ would sever the gradient path.
 
 ## VAE Training Algorithm in PyTorch (Gaussian Decoder)
 
