@@ -165,9 +165,22 @@
 .post-list {
   margin-left: 0;
   list-style: none;
+}
 
-  > li {
-    margin-bottom: $spacing-unit * 1.5;
+.post-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: $spacing-unit * 1.2;
+  margin-bottom: $spacing-unit;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  h2 {
+    margin-bottom: 0.4em;
+  }
+
+  .post-excerpt {
+    color: #555;
+    margin-bottom: 0.8em;
   }
 }
 
