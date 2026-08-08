@@ -1,20 +1,24 @@
 # Site settings
 title: Bowen Lee
 author: Bowen Lee
-description: ""
+description: "AI Research and Engineering"
 baseurl: ""
 url: "https://bowen0701.github.io"
 github_username: bowen0701
-# twitter_username: bowen0701
 linkedin_username: bowen0701
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /re-log/:title/
+excerpt_separator: <!--more-->
 
 highlighter: rouge
 kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+  toc_levels: 1..4
+  math_engine: null
 
+plugins:
+  - jekyll-feed
