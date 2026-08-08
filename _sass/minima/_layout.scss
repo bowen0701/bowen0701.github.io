@@ -300,34 +300,22 @@
   margin-bottom: $spacing-unit;
 
   h2 {
-    @include relative-font-size(1.95);
+    @include relative-font-size(1.45);
     margin-top: $spacing-unit * 1.55;
     font-weight: 700;
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
-    }
   }
 
   h3 {
-    @include relative-font-size(1.5);
+    @include relative-font-size(1.09);
     margin-top: $spacing-unit * 1.1;
     line-height: 1.25;
     font-weight: 600;
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
-    }
   }
 
   h4 {
-    @include relative-font-size(1.1);
+    @include relative-font-size(0.97);
     font-weight: $base-font-weight * 2.0;
     color: $grey-color;
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
-    }
   }
 }
 
