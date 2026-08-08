@@ -1,0 +1,15 @@
+.content-meta {
+  margin-top: 0;
+  color: var(--darkgray);
+
+  &[show-comma="true"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+
+    > * + *::before {
+      content: " | ";
+      margin: 0 4px;
+    }
+  }
+}

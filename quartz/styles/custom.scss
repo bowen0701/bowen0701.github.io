@@ -1,0 +1,29 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+
+// Title styles inspired by lilianweng.github.io
+.page-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.article-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+article > h1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+article .katex-display {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  & > .katex {
+    margin: 0 auto;
+  }
+}
