@@ -18,9 +18,9 @@ title: PCA and SVD
 
 
 ## Core Intuition
-PCA identifies the most meaningful basis to re-express data by maximizing the signal-to-noise ratio (SNR): $\sigma^2_{signal} / \sigma^2_{noise}$ (Shlens 2014).
+PCA identifies the most meaningful basis to re-express data by maximizing the signal-to-noise ratio (SNR): $\sigma^2_{\text{signal}} / \sigma^2_{\text{noise}}$ (Shlens 2014).
 
-<div style="text-align:center"><img src="/images/pca_snr.png" alt="SNR" style="width: 300px;"/></div>
+<div style="text-align:center"><img src="/images/attachments/pca_snr.png" alt="SNR" style="width: 300px;"/></div>
 
 - Maximize signal: measured by variance magnitude; large variance encodes interesting structure.
 - Minimize redundancy (noise): measured by covariance magnitude.
@@ -155,8 +155,8 @@ since $u$ is a unit vector. The length of this projection is
 
 $$
 \left[ x_i'^T x_i' \right]^{1/2}
-= \left[ \left( x_i \frac{x_i^T u}{|x_i|} \right)^T \left( x_i \frac{x_i^T u}{|x_i|} \right) \right]^{1/2}
-= \left[ \left( \frac{x_i^T u}{|x_i|} \right) x_i^T x_i \left( \frac{x_i^T u}{|x_i|} \right) \right]^{1/2}
+= \left[ \left( x_i \frac{x_i^T u}{\lVert x_i \rVert} \right)^T \left( x_i \frac{x_i^T u}{\lVert x_i \rVert} \right) \right]^{1/2}
+= \left[ \left( \frac{x_i^T u}{\lVert x_i \rVert} \right) x_i^T x_i \left( \frac{x_i^T u}{\lVert x_i \rVert} \right) \right]^{1/2}
 = \left[ \left(x_i^T u \right)^2 \right]^{1/2}
 = x_i^T u
 $$
@@ -243,7 +243,7 @@ Total variance: $\sum_{j=1}^n \lambda_j^2$.
 
 *Scree plot:* choose the number of principal components by the elbow method.
 
-<div style="text-align:center"><img src="/images/pca_scree_plot.png" alt="Scree plot" style="width: 300px;"/></div>
+<div style="text-align:center"><img src="/images/attachments/pca_scree_plot.png" alt="Scree plot" style="width: 300px;"/></div>
 
 ### Reduced Rank Approximation by SVD
 
