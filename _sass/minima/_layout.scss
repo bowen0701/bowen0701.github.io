@@ -169,17 +169,22 @@
 .post-card {
   background: #fff;
   border-radius: 8px;
-  padding: $spacing-unit * 1.2;
-  margin-bottom: $spacing-unit;
+  padding: $spacing-unit * 1.5 $spacing-unit * 1.5;
+  margin-bottom: $spacing-unit * 1.2;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 
   h2 {
-    margin-bottom: 0.4em;
+    margin-bottom: 0.6em;
+    @include relative-font-size(1.8);
+    font-weight: 800;
+    line-height: 1.25;
   }
 
   .post-excerpt {
-    color: #555;
-    margin-bottom: 0.8em;
+    color: #444;
+    margin-bottom: 1em;
+    @include relative-font-size(1.05);
+    line-height: 1.6;
   }
 }
 
@@ -207,8 +212,6 @@
 
 .post-link {
   display: block;
-  @include relative-font-size(1.5);
-  font-weight: 700;
   color: #000;
   text-decoration: none;
 
