@@ -21,16 +21,16 @@ My research interests include Recommendation Systems, Deep Learning, Generative 
 
 ## Experience
 
-- 2020 – present · [Meta](https://ai.meta.com/) <img src="/images/icons/meta.png" height="16" style="vertical-align:middle;margin-left:3px"> · Staff Machine Learning Engineer
-- 2018 – 2020 · [Zalando](https://www.zalando.com/) <img src="/images/icons/zalando.png" height="16" style="vertical-align:middle;margin-left:3px"> · Research Engineer
-- 2016 – 2018 · [Vpon](https://www.vpon.com/) <img src="/images/icons/vpon.png" height="16" style="vertical-align:middle;margin-left:3px"> · Staff Data Scientist
-- 2015 – 2016 · [KKBOX](https://www.kkbox.com/) <img src="/images/icons/kkbox.png" height="16" style="vertical-align:middle;margin-left:3px"> · Staff Data Scientist
-- 2014 – 2015 · [Academia Sinica](https://www.sinica.edu.tw/en) <img src="/images/icons/sinica.png" height="16" style="vertical-align:middle;margin-left:3px"> · Postdoctoral Fellow
-- 2006 – 2009 · [Macronix](https://www.macronix.com/) <img src="/images/icons/macronix.png" height="16" style="vertical-align:middle;margin-left:3px"> · Principal Statistician
+- 2020 – present · [Meta](https://ai.meta.com/) <span><img src="/images/icons/meta.png" height="16" style="vertical-align:middle;margin-left:3px;display:inline"></span> · Staff Machine Learning Engineer
+- 2018 – 2020 · [Zalando](https://www.zalando.com/) <span><img src="/images/icons/zalando.png" height="16" style="vertical-align:middle;margin-left:3px;display:inline"></span> · Research Engineer
+- 2016 – 2018 · [Vpon](https://www.vpon.com/) <span><img src="/images/icons/vpon.png" height="16" style="vertical-align:middle;margin-left:3px;display:inline"></span> · Staff Data Scientist
+- 2015 – 2016 · [KKBOX](https://www.kkbox.com/) <span><img src="/images/icons/kkbox.png" height="16" style="vertical-align:middle;margin-left:3px;display:inline"></span> · Staff Data Scientist
+- 2014 – 2015 · [Academia Sinica](https://www.sinica.edu.tw/en) <span><img src="/images/icons/sinica.png" height="16" style="vertical-align:middle;margin-left:3px;display:inline"></span> · Postdoctoral Fellow
+- 2006 – 2009 · [Macronix](https://www.macronix.com/) <span><img src="/images/icons/macronix.png" height="16" style="vertical-align:middle;margin-left:3px;display:inline"></span> · Principal Statistician
 
 ## Education
 
-- 2009 – 2014 · [National Chiao Tung University](https://www.nycu.edu.tw/nycu/en/index) <img src="/images/icons/nctu.png" height="16" style="vertical-align:middle;margin-left:3px"> · PhD, Statistics
+- 2009 – 2014 · [National Chiao Tung University](https://www.nycu.edu.tw/nycu/en/index) <span><img src="/images/icons/nctu.png" height="16" style="vertical-align:middle;margin-left:3px;display:inline"></span> · PhD, Statistics
   * PhD Dissertation Award, University System of Taiwan Statistics Conference 2014.
 
 ## Publications
