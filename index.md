@@ -13,7 +13,7 @@ permalink: /
   </div>
 </div>
 
-I am a Staff Machine Learning Engineer, specializing in large-scale ML research and engineering, bridging AI research with production at scale.
+I am a Staff Machine Learning Engineer at Meta, where I work on large-scale ML research and engineering, bridging AI research with production at scale.
 
 My technical expertise is in Large-Scale Recommendation Systems, Multi-Task & Multi-Domain Architectures, Distributed ML Systems, ML Infrastructure. My research interests include Reinforcement Learning, Generative Modeling (Diffusion/LLMs). I hold a PhD in Statistics with a dissertation in Survival Analysis.
 
