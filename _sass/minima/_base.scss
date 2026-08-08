@@ -1,0 +1,160 @@
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dd, ol,
+ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $crimson-color-very-light;
+  margin: 2em 0;
+  padding: 0;
+}
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: block;
+  margin: 0 auto;
+}
+
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $crimson-color-light;
+    text-decoration: underline;
+  }
+}
+
+blockquote {
+  color: #777;
+  border-left: 4px solid #bbb;
+  padding: 10px 10px 10px 25px;
+  margin: 10px;
+  @include relative-font-size(0.95);
+  background: #f0f0f0;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+pre,
+code {
+  @include relative-font-size(0.9375);
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 4px 6px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.wrapper {
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+}
+
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+  max-width: 100%;
+  border-top: 2px solid $grey-color;
+  border-bottom: 2px solid $grey-color;
+  margin: 20px auto;
+  font-size: 90%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 4px 8px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid $grey-color-light;
+  }
+
+  th {
+    text-align: center;
+    border-bottom: 2px solid $grey-color;
+  }
+}
+
+.page-navigation {
+  font-size: 90%;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+
+  a {
+    display: block;
+    overflow: hidden;
+    width: 50%;
+    float: left;
+    margin: 1em 0;
+  }
+
+  .next {
+    text-align: right;
+  }
+}
