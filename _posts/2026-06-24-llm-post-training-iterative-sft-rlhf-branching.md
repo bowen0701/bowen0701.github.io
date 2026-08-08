@@ -57,7 +57,7 @@ Practical consequence: after PPO the model produces more confident, stylisticall
 
 2. **Reward hacking artifacts get baked in**: $\text{RL}_i$ inherits whatever pathologies $\text{RM}_i$ has: length bias, sycophancy, formatting tics, miscalibrated refusals. SFT teaches imitation, not avoidance, so these become the *prior* for the next round and are hard to wash out.
 
-3. **KL reference cleanliness**: In $\text{RL}_{i+1}$, the KL penalty $\text{KL}(\pi \| \pi_\text{ref})$ uses $\text{SFT}_{i+1}$ as $\pi_\text{ref}$. You want $\pi_\text{ref}$ to be broad and well-behaved. If $\text{SFT}_{i+1}$ descends from $\text{RL}_i$, the reference is already RL-shaped, and the KL constraint anchors to biased behavior.
+3. **KL reference cleanliness**: In $\text{RL}_{i+1}$, the KL penalty $\text{KL}(\pi \,\Vert\, \pi_\text{ref})$ uses $\text{SFT}_{i+1}$ as $\pi_\text{ref}$. You want $\pi_\text{ref}$ to be broad and well-behaved. If $\text{SFT}_{i+1}$ descends from $\text{RL}_i$, the reference is already RL-shaped, and the KL constraint anchors to biased behavior.
 
 4. **Pipeline interpretability**: Keeping the SFT lineage as the trunk and RL as side-branches makes ablation/rollback clean. Continuing from RL entangles the stages.
 
@@ -94,7 +94,7 @@ $\text{RM}_i$ is a *learned proxy* for human preferences, trained on finite data
 
 **KL penalty explained:** In RLHF, the PPO objective includes a KL divergence term:
 $$
-R_{\text{total}} = R_{\text{RM}}(\pi) - \beta \cdot \text{KL}(\pi \| \pi_{\text{ref}})
+R_{\text{total}} = R_{\text{RM}}(\pi) - \beta \cdot \text{KL}(\pi \,\Vert\, \pi_{\text{ref}})
 $$
 
 where $\pi_{\text{ref}}$ is the SFT checkpoint for that round. The KL term penalizes the policy for deviating too far from the reference, acting as a "safety leash" against reward hacking. However, this only works when $\pi_{\text{ref}}$ itself is clean.
@@ -109,7 +109,7 @@ The KL penalty inverts its purpose: correcting inherited biases *costs* KL (gets
 
 **Mitigations within a round:**
 - **Length-controlled RMs:** Regress out length as a confounding variable before scoring, so PPO cannot exploit "longer = better."
-- **KL penalty tuning / early stopping:** Adaptively adjust $\beta$ or halt training once $\text{KL}(\pi \| \pi_{\text{ref}})$ exceeds a threshold. Beyond that point, proxy reward may still rise but gold reward is already declining.
+- **KL penalty tuning / early stopping:** Adaptively adjust $\beta$ or halt training once $\text{KL}(\pi \,\Vert\, \pi_{\text{ref}})$ exceeds a threshold. Beyond that point, proxy reward may still rise but gold reward is already declining.
 - **RM ensembling** (Coste et al. 2023): Average scores from multiple independently trained RMs. Individual quirks cancel out, making it harder for PPO to find an exploit that fools all RMs simultaneously.
 - **Explicit length/format penalties:** Add direct penalty terms to the reward (e.g., $-\alpha_{\text{len}} \cdot \max(0, \text{len} - \text{len}_{\text{max}})$) to hard-cap known hacking modes. Here $\text{len}$ is the token length of the generated response and $\text{len}_{\text{max}}$ is a pre-set maximum length threshold. The penalty is zero when the response is within budget and linearly increases for every token beyond it.
 - **Aggressive filtering in RFT-style pipelines:** Generate many candidates from the policy but only keep those passing strict filters (verifiers, length caps, factuality checks) for the next SFT round. Acts as a safety valve between RL output and SFT data.

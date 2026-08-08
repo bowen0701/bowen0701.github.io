@@ -34,12 +34,12 @@ $$
 \log p(x)
 &\geq \mathbb{E}_{q(z|x)} \!\left[ \log \frac{p(x,z)}{q(z|x)} \right] \\
 &= \mathbb{E}_{q(z|x)} \!\left[ \log \frac{p(x|z)\,p(z)}{q(z|x)} \right] \\
-&= \mathbb{E}_{q(z|x)} \!\left[ \log p(x|z) \right] - \text{KL}(q(z|x) \,\|\, p(z)) \\
+&= \mathbb{E}_{q(z|x)} \!\left[ \log p(x|z) \right] - \text{KL}(q(z|x) \,\Vert\, p(z)) \\
 &:= \text{ELBO}
 \end{aligned}
 $$
 
-This lower bound is the Evidence Lower Bound (ELBO). The gap between log-evidence $\log p(x)$ and ELBO is $\log p(x) - \text{ELBO} = \text{KL}(q_\phi(z\mid x) \| p_\theta(z\mid x))$ (for derivations see below), the posterior approximation error. Maximizing the ELBO simultaneously maximizes likelihood and minimizes the posterior gap.
+This lower bound is the Evidence Lower Bound (ELBO). The gap between log-evidence $\log p(x)$ and ELBO is $\log p(x) - \text{ELBO} = \text{KL}(q_\phi(z\mid x) \,\Vert\, p_\theta(z\mid x))$ (for derivations see below), the posterior approximation error. Maximizing the ELBO simultaneously maximizes likelihood and minimizes the posterior gap.
 
 ## Interpreting the ELBO
 
@@ -60,7 +60,7 @@ $$
 &= \mathbb{E}_q\!\left[\log q(z|x) - \log p(x,z) + \log p(x)\right] \\
 &= \mathbb{E}_q\!\left[\log q(z|x) - \log p(z|x) - \log p(x) + \log p(x)\right] \\
 &= \mathbb{E}_q\!\left[\log \frac{q(z|x)}{p(z|x)}\right] \\
-&= \text{KL}(q(z|x) \,\|\, p(z|x))
+&= \text{KL}(q(z|x) \,\Vert\, p(z|x))
 \end{aligned}
 $$
 
@@ -163,7 +163,7 @@ The KL term often has a closed form.
 For example, with encoder $q_\phi(z\mid x) = \mathcal{N}(\mu_\phi, \sigma^2_\phi)$ and prior $p(z) = \mathcal{N}(0, 1)$, start from the definition:
 
 $$
-\text{KL}(q_\phi(z|x) \,\|\, p(z)) = \mathbb{E}_{q_\phi}\!\left[\log \frac{q_\phi(z|x)}{p(z)}\right] = \mathbb{E}_{q_\phi}[\log q_\phi(z|x)] - \mathbb{E}_{q_\phi}[\log p(z)]
+\text{KL}(q_\phi(z|x) \,\Vert\, p(z)) = \mathbb{E}_{q_\phi}\!\left[\log \frac{q_\phi(z|x)}{p(z)}\right] = \mathbb{E}_{q_\phi}[\log q_\phi(z|x)] - \mathbb{E}_{q_\phi}[\log p(z)]
 $$
 
 Substituting the Gaussian log-densities:
@@ -179,7 +179,7 @@ Taking expectations under $z \sim q_\phi(z\mid x) = \mathcal{N}(\mu_\phi, \sigma
 
 $$
 \begin{aligned}
-\text{KL}(q_\phi(z|x) \,\|\, p(z))
+\text{KL}(q_\phi(z|x) \,\Vert\, p(z))
 &= \left(-\tfrac{1}{2}\log\sigma^2_\phi - \tfrac{1}{2}\right) - \left(-\tfrac{\mu^2_\phi + \sigma^2_\phi}{2}\right) \\
 &= \frac{1}{2}\left(\mu^2_\phi + \sigma^2_\phi - \log\sigma^2_\phi - 1\right)
 \end{aligned}
@@ -229,7 +229,7 @@ The decoder outputs parameters of a distribution over $x$, not $x$ directly. The
 
 | Decoder assumption | $p_\theta(x\|z)$                           | $-\log p_\theta(x\|z)$ becomes                                 | When to use                                                |
 | ------------------ | ------------------------------------------ | -------------------------------------------------------------- | ---------------------------------------------------------- |
-| Gaussian           | $\mathcal{N}(\mu_\theta(z),\, \sigma^2 I)$ | MSE: $\|\|x - \mu_\theta(z)\|\|^2$ (up to constants)           | Continuous data (images with pixel values in $\mathbb{R}$) |
+| Gaussian           | $\mathcal{N}(\mu_\theta(z),\, \sigma^2 I)$ | MSE: $\lVert x - \mu_\theta(z) \rVert^2$ (up to constants)           | Continuous data (images with pixel values in $\mathbb{R}$) |
 | Bernoulli          | $\text{Bernoulli}(\sigma(f_\theta(z)))$    | BCE: $-\sum_i [x_i \log \hat{x}_i + (1-x_i)\log(1-\hat{x}_i)]$ | Binary/bounded data (e.g., binarized MNIST)                |
 
 **Derivation: Gaussian decoder → MSE**
@@ -237,16 +237,16 @@ The decoder outputs parameters of a distribution over $x$, not $x$ directly. The
 Assume the decoder $p_\theta(x\mid z) = \mathcal{N}(\mu_\theta(z),\, \sigma^2 I)$. The PDF is:
 
 $$
-p_\theta(x|z) = \frac{1}{(2\pi\sigma^2)^{d/2}} \exp\!\left(-\frac{\|x - \mu_\theta(z)\|^2}{2\sigma^2}\right)
+p_\theta(x|z) = \frac{1}{(2\pi\sigma^2)^{d/2}} \exp\!\left(-\frac{\lVert x - \mu_\theta(z) \rVert^2}{2\sigma^2}\right)
 $$
 
 Taking $-\log$:
 
 $$
--\log p_\theta(x|z) = \frac{\|x - \mu_\theta(z)\|^2}{2\sigma^2} + \underbrace{\frac{d}{2}\log(2\pi\sigma^2)}_{\text{constant w.r.t. } \theta}
+-\log p_\theta(x|z) = \frac{\lVert x - \mu_\theta(z) \rVert^2}{2\sigma^2} + \underbrace{\frac{d}{2}\log(2\pi\sigma^2)}_{\text{constant w.r.t. } \theta}
 $$
 
-The constant doesn't affect optimization, so minimizing $-\log p_\theta(x\mid z)$ w.r.t. $\theta$ is equivalent to minimizing $\|x - \mu_\theta(z)\|^2$ (MSE).
+The constant doesn't affect optimization, so minimizing $-\log p_\theta(x\mid z)$ w.r.t. $\theta$ is equivalent to minimizing $\lVert x - \mu_\theta(z) \rVert^2$ (MSE).
 
 **Derivation: Bernoulli decoder → BCE**
 
@@ -290,7 +290,7 @@ A single `loss.backward()` call jointly optimizes both $\phi$ and $\theta$. Here
 |---|---|---|---|
 | $\nabla_\theta \mathcal{L}$ | Decoder ($p_\theta(x\|z)$) | Standard backprop through decoder | Increases $\log p(x)$ (better generative model) |
 | $\nabla_\phi \mathcal{L}$: reconstruction | Encoder ($q_\phi(z\|x)$) | Reparameterization trick, chain rule through $z$ | Finds latent codes that decode well |
-| $\nabla_\phi \mathcal{L}$: KL | Encoder ($q_\phi(z\|x)$) | Closed-form gradient (exact, no sampling) | Tightens bound by reducing $\text{KL}(q_\phi(z\|x) \,\|\, p_\theta(z\|x))$ |
+| $\nabla_\phi \mathcal{L}$: KL | Encoder ($q_\phi(z\|x)$) | Closed-form gradient (exact, no sampling) | Tightens bound by reducing $\text{KL}(q_\phi(z\|x) \,\Vert\, p_\theta(z\|x))$ |
 
 The **computational graph in one forward pass:**
 
