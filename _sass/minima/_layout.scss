@@ -141,6 +141,23 @@
   fill: #fff;
 }
 
+.home-section a {
+  color: $text-color;
+  border-bottom: 1px dotted #bbb;
+  padding-bottom: 1px;
+
+  &:hover {
+    color: $crimson-color-light;
+    border-bottom: 1px solid $crimson-color-light;
+    text-decoration: none;
+  }
+}
+
+.home-section img {
+  display: inline;
+  margin: 0;
+}
+
 .home-section h2 {
   @include relative-font-size(1.1);
   font-weight: 600;
