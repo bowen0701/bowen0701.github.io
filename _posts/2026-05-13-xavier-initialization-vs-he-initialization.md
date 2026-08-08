@@ -9,7 +9,6 @@ tags:
 - relu
 title: Xavier Initialization vs He Initialization
 ---
-# Concept: Xavier Initialization vs He Initialization
 
 [Updated on 2026-08-07: Extend to Xavier Initialization vs He Initialization.]
 

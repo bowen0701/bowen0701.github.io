@@ -8,7 +8,6 @@ tags:
 - generative-models
 title: VAE with ELBO
 ---
-# Concept: VAE with ELBO
 
 We want to maximize log-evidence $\log p(x)$ but integrating over all $z$ is intractable. The VAE framework (Kingma & Welling, 2014) introduces a variational posterior $q(z|x)$ and multiplies/divides inside the log:
 

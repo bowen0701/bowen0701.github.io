@@ -10,7 +10,6 @@ tags:
 - math
 title: Monte Carlo Better than Quadrature
 ---
-# Concept: Monte Carlo Better than Quadrature
 
 ## Core Intuition
 

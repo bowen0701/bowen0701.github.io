@@ -8,7 +8,6 @@ tags:
 - math
 title: PCA and SVD
 ---
-# Concept: PCA and SVD
 
 ## Core Intuition
 PCA identifies the most meaningful basis to re-express data by maximizing the signal-to-noise ratio (SNR): $\sigma^2_{signal} / \sigma^2_{noise}$ (Shlens 2014).

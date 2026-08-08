@@ -10,7 +10,6 @@ tags:
 - llm
 title: LLM Post-Training Iterative SFT, RLHF Branching
 ---
-# Concept: LLM Post-Training Iterative SFT, RLHF Branching
 
 ## Core Intuition
 
