@@ -8,7 +8,7 @@ tags:
 - deep-learning
 title: Conv2d - PyTorch 2D Convolutional Layer
 ---
-<details class="toc-details">
+<details class="toc-details" markdown="1">
 <summary><b>Table of Contents</b></summary>
 
 * TOC

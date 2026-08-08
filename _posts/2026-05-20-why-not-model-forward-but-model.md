@@ -7,7 +7,7 @@ tags:
 - pytorch
 title: Why not model.forward() but model()
 ---
-<details class="toc-details">
+<details class="toc-details" markdown="1">
 <summary><b>Table of Contents</b></summary>
 
 * TOC

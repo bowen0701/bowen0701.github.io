@@ -9,7 +9,7 @@ tags:
 - implementation
 title: Manual Layer
 ---
-<details class="toc-details">
+<details class="toc-details" markdown="1">
 <summary><b>Table of Contents</b></summary>
 
 * TOC

@@ -10,7 +10,7 @@ tags:
 - llm
 title: LLM Post-Training Iterative SFT, RLHF Branching
 ---
-<details class="toc-details">
+<details class="toc-details" markdown="1">
 <summary><b>Table of Contents</b></summary>
 
 * TOC

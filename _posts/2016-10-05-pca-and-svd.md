@@ -8,7 +8,7 @@ tags:
 - math
 title: PCA and SVD
 ---
-<details class="toc-details">
+<details class="toc-details" markdown="1">
 <summary><b>Table of Contents</b></summary>
 
 * TOC
