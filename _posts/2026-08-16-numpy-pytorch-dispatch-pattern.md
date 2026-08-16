@@ -107,11 +107,7 @@ module/
 
 No major ML framework uses `functools.singledispatch` for core dispatch. It is a stdlib convenience, not a framework architecture pattern.
 
-**Anti-patterns** for small research libraries:
-
-- registry / protocol / adapter / factory hierarchies
-- custom `Tensor` wrappers
-- reimplementing `dtype`, `shape`, broadcasting, or autograd
+`array-api-compat` is different: real scientific Python libraries use it for array interoperability. SciPy uses it in its experimental Array API support, and scikit-learn vendors it for estimators/metrics that can run against Array API compatible inputs. This is still not "framework core dispatch" like PyTorch's dispatcher; it is a practical way for array-consuming libraries to share one implementation across NumPy-like backends.
 
 ---
 
@@ -174,6 +170,12 @@ Do not copy PyTorch's dispatcher, JAX's tracing model, or Triton's JIT cache int
 - custom kernels
 - graph transformations
 - binary compatibility
+
+For small research libraries, this usually means avoiding:
+
+- registry / protocol / adapter / factory hierarchies
+- custom `Tensor` wrappers
+- reimplementing `dtype`, `shape`, broadcasting, or autograd
 
 ### Practical Rule
 
