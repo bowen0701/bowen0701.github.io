@@ -101,7 +101,7 @@ module/
 
 | Approach | Mechanism | Pros | Cons | Best for |
 |---|---|---|---|---|
-| **`isinstance` dispatch** | Manual type check | Explicit, easy to debug, implementations stay visible | Boilerplate per function | Research / learning repos |
+| **manual dispatch via `isinstance`** | Manual type check | Explicit, easy to debug, implementations stay visible | Boilerplate per function | Research / learning repos |
 | **`functools.singledispatch`** | Decorator-based type dispatch | Stdlib, Pythonic, extensible | Implementations become scattered | Small Python libraries |
 | **`array-api-compat`** | Unified namespace via Python Array API standard | One implementation across array libraries | Hides backend details; external dependency | Library interoperability |
 
