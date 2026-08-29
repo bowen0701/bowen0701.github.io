@@ -301,7 +301,7 @@ This is identical in structure to the softmax CE result $\nabla_z L = p - \text{
 
 The naive computation $-[y \log \sigma(z) + (1-y) \log(1 - \sigma(z))]$ is unstable because $\sigma(z)$ saturates to 0 or 1, causing $\log(0)$. The stable form avoids computing $\sigma(z)$ explicitly:
 
-$$L = \max(z, 0) - zy + \log(1 + e^{-|z|})$$
+$$L = \max(z, 0) - zy + \log(1 + e^{-\lvert z \rvert})$$
 
 **Derivation**: Start from the BCE definition and eliminate $\sigma(z)$:
 
@@ -327,13 +327,13 @@ $$= y\log(1 + e^z) - yz + \log(1 + e^z) - y\log(1 + e^z)$$
 
 $$= -zy + \log(1 + e^z)$$
 
-**Step 4**: Make it overflow-safe. The term $e^z$ overflows for large positive $z$. Rewrite the key identity $\log(1 + e^z) = \max(z, 0) + \log(1 + e^{-|z|})$:
+**Step 4**: Make it overflow-safe. The term $e^z$ overflows for large positive $z$. Rewrite the key identity $\log(1 + e^z) = \max(z, 0) + \log(1 + e^{-\lvert z \rvert})$:
 - If $z \ge 0$: $\log(1 + e^z) = z + \log(e^{-z} + 1) = z + \log(1 + e^{-z})$, and $e^{-z} \le 1$.
 - If $z < 0$: $\log(1 + e^z) = \log(1 + e^z)$, and $e^z < 1$.
 
 This gives the final stable form (what PyTorch's `F.binary_cross_entropy_with_logits` uses):
 
-$$L = \max(z, 0) - zy + \log(1 + e^{-|z|})$$
+$$L = \max(z, 0) - zy + \log(1 + e^{-\lvert z \rvert})$$
 
 #### Batched form
 
@@ -342,7 +342,7 @@ For $N$ samples with logits $z \in \mathbb{R}^{N}$ and labels $y \in \{0, 1\}^{N
 $$\nabla_z L = \frac{1}{N}(\sigma(z) - y)$$
 
 ### Pitfalls
-- **Saturation**: For large $|z|$, $\sigma'(z) \approx 0$, causing vanishing gradients. This is why ReLU is preferred in hidden layers.
+- **Saturation**: For large $\lvert z \rvert$, $\sigma'(z) \approx 0$, causing vanishing gradients. This is why ReLU is preferred in hidden layers.
 - **Not zero-centered**: Outputs are always positive, which can cause zig-zag gradient updates. BatchNorm or careful initialization helps.
 - **Numerical stability**: For very negative $z$, $e^{-z}$ overflows. Branch: use $\frac{1}{1+e^{-z}}$ for $z \ge 0$, $\frac{e^z}{1+e^z}$ for $z < 0$ (implementation below uses `np.where` for this).
 
