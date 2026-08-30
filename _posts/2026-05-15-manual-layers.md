@@ -18,6 +18,9 @@ title: Manual Layers
 </details>
 
 
+*[Updated on 2026-08-29: Add Fused Sigmoid + Binary Cross-Entropy Gradient derivation.]*
+*[Updated on 2026-08-30: Add Log-sum-exp trick derivation for Softmax numerical stability.]*
+
 **Repo**: [dl_eng/models/manual_layers.py](https://github.com/bowen0701/dl-eng/blob/main/dl_eng/models/manual_layers.py)
 
 ---
