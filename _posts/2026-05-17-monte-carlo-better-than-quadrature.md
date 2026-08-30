@@ -48,7 +48,7 @@ $$
 R_r(x) = \frac{1}{(r-1)!} \int_{x_0}^{x} (x-t)^{r-1} f^{(r)}(t) \, dt
 $$
 
-### Proof of the Error Rate Bound in $\delta^r$
+### Proof of the Error Rate Bound in δʳ
 
 **Step 1:** Take absolute value of the remainder:
 
