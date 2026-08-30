@@ -51,7 +51,7 @@ PPO (Proximal Policy Optimization) is a policy-gradient RL algorithm that update
 
 Practical consequence: after PPO the model produces more confident, stylistically uniform outputs but loses coverage of the tail of valid responses. This motivates the "branch from SFT" default below.
 
-### Why $\text{SFT}_i \rightarrow \text{SFT}_{i+1}$ is the Default
+### Why SFT_i → SFT_{i+1} is the Default
 
 1. **Entropy collapse / mode narrowing**: PPO aggressively sharpens the output distribution. The policy commits to a few RM-preferred modes; rare-but-valid behaviors get squeezed out. SFT (cross-entropy MLE) on top of a low-entropy policy creates large gradients when targets are far from the current distribution, causing instability and uncontrolled erosion of RL gains. $\text{SFT}_i$ has a healthier entropy profile as a starting point.
 
@@ -63,7 +63,7 @@ Practical consequence: after PPO the model produces more confident, stylisticall
 
 5. **Optimization stability**: Empirically, SFT on top of heavily RL'd checkpoints is finicky: LR-sensitive, loss spikes, occasional catastrophic forgetting.
 
-### When Starting from $\text{RL}_i$ is Fine
+### When Starting from RL_i is Fine
 
 The "branch from SFT" rule is really about *uncurated, off-policy* SFT data. It relaxes when SFT data is on-policy w.r.t. $\text{RL}_i$:
 
