@@ -18,7 +18,7 @@ title: Xavier Initialization vs He Initialization
 </details>
 
 
-[Updated on 2026-08-07: Extend to Xavier Initialization vs He Initialization.]
+*[Updated on 2026-08-07: Extend to Xavier Initialization vs He Initialization.]*
 
 ## Core Intuition
 
