@@ -411,6 +411,20 @@ $$p_i = \text{softmax}(z)_i = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$$
 
 $$p_i = \frac{e^{z_i - \max(z)}}{\sum_{j=1}^{K} e^{z_j - \max(z)}}$$
 
+**Log-sum-exp trick**: Computing $\log \text{softmax}$ or cross-entropy requires $\log\!\sum_j e^{z_j}$, which overflows for the same reason. The fix is the same max-shift, applied in log-space:
+
+$$
+\text{logsumexp}(z) = \max(z) + \log\!\sum_j e^{z_j - \max(z)}
+$$
+
+**Derivation**: Let $m = \max(z)$. Factor $e^m$ out of the sum:
+
+$$
+\log\!\sum_i e^{z_i} = \log\!\sum_i e^{m} \cdot e^{z_i - m} = \log\!\left(e^{m} \sum_i e^{z_i - m}\right) = m + \log\!\sum_i e^{z_i - m}
+$$
+
+Now every exponent $z_i - m \le 0$, so $e^{z_i - m} \in (0, 1]$: no overflow. The sum is $\ge 1$ (the $i = \arg\max$ term contributes $e^0 = 1$), so the $\log$ is $\ge 0$: no log-of-tiny-number issue either. This gives the stable identity $\log \text{softmax}(z)_i = z_i - \text{logsumexp}(z)$.
+
 #### Backward Pass (Derivation)
 Unlike ReLU and sigmoid, softmax is **not element-wise**: each output $p_i$ depends on all inputs $z_j$ through the denominator. This makes the Jacobian a full (non-diagonal) matrix.
 
