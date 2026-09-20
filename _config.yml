@@ -19,7 +19,7 @@ kramdown:
   auto_ids: true
   syntax_highlighter: rouge
   toc_levels: 1..4
-  math_engine: null
+  math_engine: mathjax
 
 plugins:
   - jekyll-feed

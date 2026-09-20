@@ -13,13 +13,32 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-  <!-- MathJax -->
+  <!-- MathJax v3: Kramdown with math_engine: mathjax outputs <script type="math/tex"> -->
   <script>
     MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
         processEscapes: true
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+          // Convert Kramdown's <script type="math/tex"> to MathJax v3 math items
+          document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+            var display = !!node.type.match(/;\s*mode=display/);
+            var math = new MathJax.startup.document.options.MathItem(
+              node.textContent,
+              MathJax.startup.document.inputJax[0],
+              display
+            );
+            var text = document.createTextNode('');
+            node.parentNode.replaceChild(text, node);
+            math.start = {node: text, delim: '', n: 0};
+            math.end = {node: text, delim: '', n: 0};
+            MathJax.startup.document.math.push(math);
+          });
+          MathJax.startup.document.clear();
+          MathJax.startup.document.updateDocument();
+        }
       }
     };
   </script>
