@@ -31,35 +31,35 @@ title: Manual Layers
 A Linear Layer (or Fully Connected/Dense layer) performs an affine transformation on input data. It is the fundamental building block of neural networks, mapping an input vector to an output vector through weight multiplication and bias addition.
 
 ### Mathematical Foundation
-For a layer with input \(X \in \mathbb{R}^{B \times D_{in}}\), weights \(W \in \mathbb{R}^{D_{out} \times D_{in}}\), and bias \(b \in \mathbb{R}^{D_{out}}\):
+For a layer with input $$X \in \mathbb{R}^{B \times D_{in}}$$, weights $$W \in \mathbb{R}^{D_{out} \times D_{in}}$$, and bias $$b \in \mathbb{R}^{D_{out}}$$:
 
 #### Forward Pass
-The output \(Z \in \mathbb{R}^{B \times D_{out}}\) is calculated as:
+The output $$Z \in \mathbb{R}^{B \times D_{out}}$$ is calculated as:
 
 $$Z = XW^T + b$$
 
 #### Backward Pass (Derivation)
-Given the gradient of the loss with respect to the output \(\frac{\partial L}{\partial Z} \in \mathbb{R}^{B \times D_{out}}\), we need to calculate:
+Given the gradient of the loss with respect to the output $$\frac{\partial L}{\partial Z} \in \mathbb{R}^{B \times D_{out}}$$, we need to calculate:
 
-1. **Gradient w.r.t. Weights (\(W\)):**
-   To find \(\frac{\partial L}{\partial W}\), consider the element \(W_{jk}\) (weight connecting input \(k\) to output \(j\)).
-   From \(Z = XW^T + b\), an element of the output is: \(z_{ij} = \sum_{k} x_{ik} W_{jk} + b_j\).
-   The partial derivative of a single output \(z_{ij}\) with respect to \(W_{jk}\) is:
+1. **Gradient w.r.t. Weights ($$W$$):**
+   To find $$\frac{\partial L}{\partial W}$$, consider the element $$W_{jk}$$ (weight connecting input $$k$$ to output $$j$$).
+   From $$Z = XW^T + b$$, an element of the output is: $$z_{ij} = \sum_{k} x_{ik} W_{jk} + b_j$$.
+   The partial derivative of a single output $$z_{ij}$$ with respect to $$W_{jk}$$ is:
 
    $$\frac{\partial z_{ij}}{\partial W_{jk}} = x_{ik}$$
 
-   Using the chain rule, we sum the contributions of \(W_{jk}\) to all outputs it affected (which are only the \(j\)-th column of \(Z\)):
+   Using the chain rule, we sum the contributions of $$W_{jk}$$ to all outputs it affected (which are only the $$j$$-th column of $$Z$$):
 
    $$\frac{\partial L}{\partial W_{jk}} = \sum_{i=1}^{B} \frac{\partial L}{\partial z_{ij}} \frac{\partial z_{ij}}{\partial W_{jk}} = \sum_{i=1}^{B} \frac{\partial L}{\partial z_{ij}} x_{ik}$$
 
-   This summation corresponds to the dot product between the \(j\)-th column of \(\frac{\partial L}{\partial Z}\) and the \(k\)-th column of \(X\). In matrix form, this is:
+   This summation corresponds to the dot product between the $$j$$-th column of $$\frac{\partial L}{\partial Z}$$ and the $$k$$-th column of $$X$$. In matrix form, this is:
 
    $$\frac{\partial L}{\partial W} = \left(\frac{\partial L}{\partial Z}\right)^T X$$
 
-   Resulting shape: \((D_{out} \times B) \times (B \times D_{in}) = (D_{out} \times D_{in})\).
+   Resulting shape: $$(D_{out} \times B) \times (B \times D_{in}) = (D_{out} \times D_{in})$$.
 
-2. **Gradient w.r.t. Bias (\(b\)):**
-   The bias \(b_j\) is added to every sample in the batch for the \(j\)-th output dimension (\(z_{ij} = \text{linear\_term}_i + b_j\)). Thus, \(\frac{\partial z_{ij}}{\partial b_j} = 1\). By the chain rule:
+2. **Gradient w.r.t. Bias ($$b$$):**
+   The bias $$b_j$$ is added to every sample in the batch for the $$j$$-th output dimension ($$z_{ij} = \text{linear\_term}_i + b_j$$). Thus, $$\frac{\partial z_{ij}}{\partial b_j} = 1$$. By the chain rule:
 
    $$\frac{\partial L}{\partial b_j} = \sum_{i=1}^{B} \frac{\partial L}{\partial z_{ij}} \frac{\partial z_{ij}}{\partial b_j} = \sum_{i=1}^{B} \frac{\partial L}{\partial z_{ij}}$$
 
@@ -67,14 +67,14 @@ Given the gradient of the loss with respect to the output \(\frac{\partial L}{\p
 
    $$\frac{\partial L}{\partial b} = \sum_{batch} \frac{\partial L}{\partial Z}$$
 
-   Resulting shape: \((1 \times D_{out})\).
-3. **Gradient w.r.t. Input (\(X\)):**
-   Using the chain rule: \(\frac{\partial L}{\partial X} = \frac{\partial L}{\partial Z} \cdot \frac{\partial Z}{\partial X}\)
-   Since \(Z = XW^T + b\), then \(\frac{\partial Z}{\partial X} = W\).
+   Resulting shape: $$(1 \times D_{out})$$.
+3. **Gradient w.r.t. Input ($$X$$):**
+   Using the chain rule: $$\frac{\partial L}{\partial X} = \frac{\partial L}{\partial Z} \cdot \frac{\partial Z}{\partial X}$$
+   Since $$Z = XW^T + b$$, then $$\frac{\partial Z}{\partial X} = W$$.
 
    $$\frac{\partial L}{\partial X} = \frac{\partial L}{\partial Z} W$$
 
-   Resulting shape: \((B \times D_{out}) \times (D_{out} \times D_{in}) = (B \times D_{in})\).
+   Resulting shape: $$(B \times D_{out}) \times (D_{out} \times D_{in}) = (B \times D_{in})$$.
 
 ### Key Equation
 
@@ -85,12 +85,12 @@ $$\nabla_W L = (\nabla_Z L)^T X$$
 $$\nabla_X L = (\nabla_Z L) W$$
 
 ### Intuitive Gradient Rules
-For quick derivation of \(Z = XW^T + b\), use these mental shortcuts:
-- **Dimension Matching:** If \(\nabla_Z L\) is \((B \times D_{out})\) and you need \(\nabla_W L\) as \((D_{out} \times D_{in})\), the only valid matrix product is \((\nabla_Z L)^T X\).
-- **The "Mirror" Rule:** To find the gradient of a term, you multiply the incoming gradient (\(\nabla_Z L\)) by the *other* term in the product, transposed.
-    - For \(W\): multiply by \(X^T\) (adjusted for the \(W^T\) layout in \(Z = XW^T + b\)).
-    - For \(X\): multiply by \(W\).
-- **Batch Pooling (for Bias):** Since the bias \(b\) is "shared" (added to every single sample), its gradient must aggregate the error signals from the entire batch. Summing across the batch is the natural way to "pool" this shared influence.
+For quick derivation of $$Z = XW^T + b$$, use these mental shortcuts:
+- **Dimension Matching:** If $$\nabla_Z L$$ is $$(B \times D_{out})$$ and you need $$\nabla_W L$$ as $$(D_{out} \times D_{in})$$, the only valid matrix product is $$(\nabla_Z L)^T X$$.
+- **The "Mirror" Rule:** To find the gradient of a term, you multiply the incoming gradient ($$\nabla_Z L$$) by the *other* term in the product, transposed.
+    - For $$W$$: multiply by $$X^T$$ (adjusted for the $$W^T$$ layout in $$Z = XW^T + b$$).
+    - For $$X$$: multiply by $$W$$.
+- **Batch Pooling (for Bias):** Since the bias $$b$$ is "shared" (added to every single sample), its gradient must aggregate the error signals from the entire batch. Summing across the batch is the natural way to "pool" this shared influence.
 
 ### Analogy
 Think of a linear layer as a **projection screen**. The input is the object, the weights are the angle and properties of the lens that project it into a new space (dimension), and the bias is the translation (moving the projection on the screen).
@@ -103,7 +103,7 @@ Think of a linear layer as a **projection screen**. The input is the object, the
 ### Insights
 - **Affine Transformation:** It's linear transformation + translation.
 - **Dimensionality Change:** Used to expand or compress the feature space.
-- **Weight Shape:** In PyTorch, weights are stored as `(out_features, in_features)` to optimize the matrix multiplication as \(XW^T\).
+- **Weight Shape:** In PyTorch, weights are stored as `(out_features, in_features)` to optimize the matrix multiplication as $$XW^T$$.
 
 ### Pitfalls
 - **Vanishing Gradients:** Without non-linear activations, stacking linear layers is equivalent to a single linear layer.
@@ -192,7 +192,7 @@ Element-wise gating: pass the input through if positive, block it (zero) otherwi
 #### Forward Pass
 $$A = \max(0, Z)$$
 
-Element-wise: \(a_i = \max(0, z_i)\).
+Element-wise: $$a_i = \max(0, z_i)$$.
 
 #### Backward Pass (Derivation)
 The derivative of ReLU is a step function:
@@ -203,7 +203,7 @@ By the chain rule, the gradient flows through unchanged where the input was posi
 
 $$\frac{\partial L}{\partial Z} = \frac{\partial L}{\partial A} \odot \mathbf{1}(Z > 0)$$
 
-where \(\odot\) is element-wise (Hadamard) multiplication. This is a **gradient gate**: the binary mask \(\mathbf{1}(Z > 0)\) from the forward pass decides which gradients survive.
+where $$\odot$$ is element-wise (Hadamard) multiplication. This is a **gradient gate**: the binary mask $$\mathbf{1}(Z > 0)$$ from the forward pass decides which gradients survive.
 
 ### Key Equation
 
@@ -212,8 +212,8 @@ $$A = \max(0, Z)$$
 $$\nabla_Z L = \nabla_A L \odot \mathbf{1}(Z > 0)$$
 
 ### Pitfalls
-- **Dying ReLU**: If a neuron's pre-activation \(Z \le 0\) for all inputs in the dataset, its gradient is permanently zero and it stops learning. Common with large learning rates that push weights too negative.
-- **Variants**: LeakyReLU (\(\max(\alpha z, z)\), \(\alpha = 0.01\)) and GELU (used in Transformers) allow small gradients for negative inputs.
+- **Dying ReLU**: If a neuron's pre-activation $$Z \le 0$$ for all inputs in the dataset, its gradient is permanently zero and it stops learning. Common with large learning rates that push weights too negative.
+- **Variants**: LeakyReLU ($$\max(\alpha z, z)$$, $$\alpha = 0.01$$) and GELU (used in Transformers) allow small gradients for negative inputs.
 
 ### Implementation
 ```python
@@ -239,7 +239,7 @@ class ReLU:
 ## Sigmoid (Logistic)
 
 ### Core Intuition
-Squashes any real number into \((0, 1)\), acting as a smooth "switch." Used as the output activation for binary classification and as a gating mechanism in LSTMs/GRUs. No learnable parameters.
+Squashes any real number into $$(0, 1)$$, acting as a smooth "switch." Used as the output activation for binary classification and as a gating mechanism in LSTMs/GRUs. No learnable parameters.
 
 ### Mathematical Foundation
 
@@ -252,15 +252,15 @@ The sigmoid has an elegant derivative expressed purely in terms of its own outpu
 
 $$\frac{d\sigma}{dz} = \sigma(z)(1 - \sigma(z))$$
 
-**Derivation**: Let \(\sigma = (1 + e^{-z})^{-1}\). By the chain rule:
+**Derivation**: Let $$\sigma = (1 + e^{-z})^{-1}$$. By the chain rule:
 
 $$\frac{d\sigma}{dz} = \frac{e^{-z}}{(1 + e^{-z})^2} = \frac{1}{1 + e^{-z}} \cdot \frac{e^{-z}}{1 + e^{-z}} = \sigma \cdot (1 - \sigma)$$
 
-With \(A = \sigma(Z)\), applying the chain rule:
+With $$A = \sigma(Z)$$, applying the chain rule:
 
 $$\frac{\partial L}{\partial Z} = \frac{\partial L}{\partial A} \odot A \odot (1 - A)$$
 
-The gradient is computed entirely from the forward output \(A\): no need to cache the input \(Z\).
+The gradient is computed entirely from the forward output $$A$$: no need to cache the input $$Z$$.
 
 ### Key Equation
 
@@ -274,11 +274,11 @@ The binary analogue of #Fused Softmax + Cross-Entropy Gradient. In practice, sig
 
 #### Setup
 
-For a single sample with logit \(z \in \mathbb{R}\), binary label \(y \in \{0, 1\}\), and sigmoid output \(a = \sigma(z)\):
+For a single sample with logit $$z \in \mathbb{R}$$, binary label $$y \in \{0, 1\}$$, and sigmoid output $$a = \sigma(z)$$:
 
 $$L = -[y \log a + (1 - y) \log(1 - a)]$$
 
-**Goal**: Find \(\frac{\partial L}{\partial z}\) directly.
+**Goal**: Find $$\frac{\partial L}{\partial z}$$ directly.
 
 #### Derivation
 
@@ -286,7 +286,7 @@ $$L = -[y \log a + (1 - y) \log(1 - a)]$$
 
 $$\frac{\partial L}{\partial z} = -\left[y \cdot \frac{\sigma'(z)}{\sigma(z)} + (1 - y) \cdot \frac{-\sigma'(z)}{1 - \sigma(z)}\right]$$
 
-**Step 2: Substitute \(\sigma'(z) = \sigma(z)(1 - \sigma(z))\).** Both denominators cancel:
+**Step 2: Substitute $$\sigma'(z) = \sigma(z)(1 - \sigma(z))$$.** Both denominators cancel:
 
 $$= -\left[y(1 - \sigma(z)) - (1 - y)\sigma(z)\right]$$
 
@@ -298,19 +298,19 @@ In vector form:
 
 $$\boxed{\nabla_z L = \sigma(z) - y}$$
 
-This is identical in structure to the softmax CE result \(\nabla_z L = p - \text{onehot}(y)\): predicted minus truth.
+This is identical in structure to the softmax CE result $$\nabla_z L = p - \text{onehot}(y)$$: predicted minus truth.
 
 #### Numerically stable forward
 
-The naive computation \(-[y \log \sigma(z) + (1-y) \log(1 - \sigma(z))]\) is unstable because \(\sigma(z)\) saturates to 0 or 1, causing \(\log(0)\). The stable form avoids computing \(\sigma(z)\) explicitly:
+The naive computation $$-[y \log \sigma(z) + (1-y) \log(1 - \sigma(z))]$$ is unstable because $$\sigma(z)$$ saturates to 0 or 1, causing $$\log(0)$$. The stable form avoids computing $$\sigma(z)$$ explicitly:
 
 $$L = \max(z, 0) - zy + \log(1 + e^{-\lvert z \rvert})$$
 
-**Derivation**: Start from the BCE definition and eliminate \(\sigma(z)\):
+**Derivation**: Start from the BCE definition and eliminate $$\sigma(z)$$:
 
 $$L = -[y \log \sigma(z) + (1 - y) \log(1 - \sigma(z))]$$
 
-**Step 1**: Rewrite the log-sigmoid terms. Since \(\sigma(z) = \frac{1}{1+e^{-z}}\) and \(1 - \sigma(z) = \frac{1}{1+e^{z}}\):
+**Step 1**: Rewrite the log-sigmoid terms. Since $$\sigma(z) = \frac{1}{1+e^{-z}}$$ and $$1 - \sigma(z) = \frac{1}{1+e^{z}}$$:
 
 $$\log \sigma(z) = -\log(1 + e^{-z}), \quad \log(1 - \sigma(z)) = -\log(1 + e^{z})$$
 
@@ -318,7 +318,7 @@ $$\log \sigma(z) = -\log(1 + e^{-z}), \quad \log(1 - \sigma(z)) = -\log(1 + e^{z
 
 $$L = y \log(1 + e^{-z}) + (1 - y) \log(1 + e^{z})$$
 
-**Step 3**: Unify the two \(\log\) terms. The key identity is \(\log(1 + e^{-z}) = \log(1 + e^z) - z\), which follows from multiplying inside the log by \(\frac{e^z}{e^z}\):
+**Step 3**: Unify the two $$\log$$ terms. The key identity is $$\log(1 + e^{-z}) = \log(1 + e^z) - z$$, which follows from multiplying inside the log by $$\frac{e^z}{e^z}$$:
 
 $$\log(1 + e^{-z}) = \log\frac{e^z + 1}{e^z} = \log(1 + e^z) - z$$
 
@@ -330,9 +330,9 @@ $$= y\log(1 + e^z) - yz + \log(1 + e^z) - y\log(1 + e^z)$$
 
 $$= -zy + \log(1 + e^z)$$
 
-**Step 4**: Make it overflow-safe. The term \(e^z\) overflows for large positive \(z\). Rewrite the key identity \(\log(1 + e^z) = \max(z, 0) + \log(1 + e^{-\lvert z \rvert})\):
-- If \(z \ge 0\): \(\log(1 + e^z) = z + \log(e^{-z} + 1) = z + \log(1 + e^{-z})\), and \(e^{-z} \le 1\).
-- If \(z < 0\): \(\log(1 + e^z) = \log(1 + e^z)\), and \(e^z < 1\).
+**Step 4**: Make it overflow-safe. The term $$e^z$$ overflows for large positive $$z$$. Rewrite the key identity $$\log(1 + e^z) = \max(z, 0) + \log(1 + e^{-\lvert z \rvert})$$:
+- If $$z \ge 0$$: $$\log(1 + e^z) = z + \log(e^{-z} + 1) = z + \log(1 + e^{-z})$$, and $$e^{-z} \le 1$$.
+- If $$z < 0$$: $$\log(1 + e^z) = \log(1 + e^z)$$, and $$e^z < 1$$.
 
 This gives the final stable form (what PyTorch's `F.binary_cross_entropy_with_logits` uses):
 
@@ -340,14 +340,14 @@ $$L = \max(z, 0) - zy + \log(1 + e^{-\lvert z \rvert})$$
 
 #### Batched form
 
-For \(N\) samples with logits \(z \in \mathbb{R}^{N}\) and labels \(y \in \{0, 1\}^{N}\):
+For $$N$$ samples with logits $$z \in \mathbb{R}^{N}$$ and labels $$y \in \{0, 1\}^{N}$$:
 
 $$\nabla_z L = \frac{1}{N}(\sigma(z) - y)$$
 
 ### Pitfalls
-- **Saturation**: For large \(\lvert z \rvert\), \(\sigma'(z) \approx 0\), causing vanishing gradients. This is why ReLU is preferred in hidden layers.
+- **Saturation**: For large $$\lvert z \rvert$$, $$\sigma'(z) \approx 0$$, causing vanishing gradients. This is why ReLU is preferred in hidden layers.
 - **Not zero-centered**: Outputs are always positive, which can cause zig-zag gradient updates. BatchNorm or careful initialization helps.
-- **Numerical stability**: For very negative \(z\), \(e^{-z}\) overflows. Branch: use \(\frac{1}{1+e^{-z}}\) for \(z \ge 0\), \(\frac{e^z}{1+e^z}\) for \(z < 0\) (implementation below uses `np.where` for this).
+- **Numerical stability**: For very negative $$z$$, $$e^{-z}$$ overflows. Branch: use $$\frac{1}{1+e^{-z}}$$ for $$z \ge 0$$, $$\frac{e^z}{1+e^z}$$ for $$z < 0$$ (implementation below uses `np.where` for this).
 
 ### Implementation
 ```python
@@ -401,61 +401,61 @@ class BinaryCrossEntropyLoss:
 ## Softmax
 
 ### Core Intuition
-Generalizes sigmoid to \(K\) classes: converts a vector of logits into a probability distribution that sums to 1. Used as the output activation for multi-class classification (paired with cross-entropy loss). No learnable parameters.
+Generalizes sigmoid to $$K$$ classes: converts a vector of logits into a probability distribution that sums to 1. Used as the output activation for multi-class classification (paired with cross-entropy loss). No learnable parameters.
 
 ### Mathematical Foundation
 
 #### Forward Pass
-For logits \(z \in \mathbb{R}^K\):
+For logits $$z \in \mathbb{R}^K$$:
 
 $$p_i = \text{softmax}(z)_i = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$$
 
-**Numerical stability**: Subtract the max before exponentiation (the result is mathematically identical because \(\frac{e^{z_i - c}}{\sum_j e^{z_j - c}} = \frac{e^{z_i}}{\sum_j e^{z_j}}\) for any constant \(c\)):
+**Numerical stability**: Subtract the max before exponentiation (the result is mathematically identical because $$\frac{e^{z_i - c}}{\sum_j e^{z_j - c}} = \frac{e^{z_i}}{\sum_j e^{z_j}}$$ for any constant $$c$$):
 
 $$p_i = \frac{e^{z_i - \max(z)}}{\sum_{j=1}^{K} e^{z_j - \max(z)}}$$
 
-**Log-sum-exp trick**: Computing \(\log \text{softmax}\) or cross-entropy requires \(\log\!\sum_j e^{z_j}\), which overflows for the same reason. The fix is the same max-shift, applied in log-space:
+**Log-sum-exp trick**: Computing $$\log \text{softmax}$$ or cross-entropy requires $$\log\!\sum_j e^{z_j}$$, which overflows for the same reason. The fix is the same max-shift, applied in log-space:
 
 $$
 \text{logsumexp}(z) = \max(z) + \log\!\sum_j e^{z_j - \max(z)}
 $$
 
-**Derivation**: Let \(m = \max(z)\). Factor \(e^m\) out of the sum:
+**Derivation**: Let $$m = \max(z)$$. Factor $$e^m$$ out of the sum:
 
 $$
 \log\!\sum_i e^{z_i} = \log\!\sum_i e^{m} \cdot e^{z_i - m} = \log\!\left(e^{m} \sum_i e^{z_i - m}\right) = m + \log\!\sum_i e^{z_i - m}
 $$
 
-Now every exponent \(z_i - m \le 0\), so \(e^{z_i - m} \in (0, 1]\): no overflow. The sum is \(\ge 1\) (the \(i = \arg\max\) term contributes \(e^0 = 1\)), so the \(\log\) is \(\ge 0\): no log-of-tiny-number issue either. This gives the stable identity \(\log \text{softmax}(z)_i = z_i - \text{logsumexp}(z)\).
+Now every exponent $$z_i - m \le 0$$, so $$e^{z_i - m} \in (0, 1]$$: no overflow. The sum is $$\ge 1$$ (the $$i = \arg\max$$ term contributes $$e^0 = 1$$), so the $$\log$$ is $$\ge 0$$: no log-of-tiny-number issue either. This gives the stable identity $$\log \text{softmax}(z)_i = z_i - \text{logsumexp}(z)$$.
 
 #### Backward Pass (Derivation)
-Unlike ReLU and sigmoid, softmax is **not element-wise**: each output \(p_i\) depends on all inputs \(z_j\) through the denominator. This makes the Jacobian a full (non-diagonal) matrix.
+Unlike ReLU and sigmoid, softmax is **not element-wise**: each output $$p_i$$ depends on all inputs $$z_j$$ through the denominator. This makes the Jacobian a full (non-diagonal) matrix.
 
-**Jacobian elements**: Consider two cases for \(\frac{\partial p_i}{\partial z_j}\):
+**Jacobian elements**: Consider two cases for $$\frac{\partial p_i}{\partial z_j}$$:
 
-**Case \(i = j\)** (diagonal): Using the quotient rule on \(p_i = \frac{e^{z_i}}{S}\) where \(S = \sum_k e^{z_k}\):
+**Case $$i = j$$** (diagonal): Using the quotient rule on $$p_i = \frac{e^{z_i}}{S}$$ where $$S = \sum_k e^{z_k}$$:
 
 $$\frac{\partial p_i}{\partial z_i} = \frac{e^{z_i} S - e^{z_i} e^{z_i}}{S^2} = p_i - p_i^2 = p_i(1 - p_i)$$
 
-**Case \(i \neq j\)** (off-diagonal): The numerator \(e^{z_i}\) does not depend on \(z_j\), so:
+**Case $$i \neq j$$** (off-diagonal): The numerator $$e^{z_i}$$ does not depend on $$z_j$$, so:
 
 $$\frac{\partial p_i}{\partial z_j} = e^{z_i} \cdot \frac{-e^{z_j}}{S^2} = -p_i p_j$$
 
-**Combined** using the Kronecker delta \(\delta_{ij}\):
+**Combined** using the Kronecker delta $$\delta_{ij}$$:
 
 $$\frac{\partial p_i}{\partial z_j} = p_i(\delta_{ij} - p_j)$$
 
-In matrix form: \(J = \text{diag}(p) - pp^T\).
+In matrix form: $$J = \text{diag}(p) - pp^T$$.
 
-**Chain rule**: For a single sample, let \(g = \nabla_p L\) (the incoming gradient):
+**Chain rule**: For a single sample, let $$g = \nabla_p L$$ (the incoming gradient):
 
 $$\frac{\partial L}{\partial z_j} = \sum_i g_i \cdot p_i(\delta_{ij} - p_j) = g_j p_j - p_j \sum_i g_i p_i$$
 
-Let \(s = \langle g, p \rangle = \sum_i g_i p_i\) (scalar dot product). Then:
+Let $$s = \langle g, p \rangle = \sum_i g_i p_i$$ (scalar dot product). Then:
 
 $$\nabla_z L = p \odot (g - s)$$
 
-For a batch \(P \in \mathbb{R}^{N \times K}\) and \(G = \nabla_P L \in \mathbb{R}^{N \times K}\): compute \(s\) per sample as a row-wise dot product, then broadcast.
+For a batch $$P \in \mathbb{R}^{N \times K}$$ and $$G = \nabla_P L \in \mathbb{R}^{N \times K}$$: compute $$s$$ per sample as a row-wise dot product, then broadcast.
 
 ### Key Equation
 
@@ -471,29 +471,29 @@ In practice, softmax is never backpropped through in isolation. It is always fus
 
 #### Setup
 
-For a single sample with logits \(z \in \mathbb{R}^K\), true class label \(y \in \{0, \dots, K-1\}\) (integer index), and softmax output \(p = \text{softmax}(z) \in \mathbb{R}^K\):
+For a single sample with logits $$z \in \mathbb{R}^K$$, true class label $$y \in \{0, \dots, K-1\}$$ (integer index), and softmax output $$p = \text{softmax}(z) \in \mathbb{R}^K$$:
 
 $$L = -\log p_y$$
 
-**Goal**: Find \(\frac{\partial L}{\partial z_j}\) directly (end-to-end from loss to logits).
+**Goal**: Find $$\frac{\partial L}{\partial z_j}$$ directly (end-to-end from loss to logits).
 
 #### Derivation
 
-**Step 1: Gradient of loss w.r.t. softmax output.** Only the \(y\)-th probability appears in the loss:
+**Step 1: Gradient of loss w.r.t. softmax output.** Only the $$y$$-th probability appears in the loss:
 
 $$\frac{\partial L}{\partial p_i} = -\frac{\delta_{iy}}{p_y}$$
 
-where \(\delta_{iy} = 1\) if \(i = y\), else \(0\). So \(\nabla_p L\) is a sparse vector: zero everywhere except \(-\frac{1}{p_y}\) at position \(y\).
+where $$\delta_{iy} = 1$$ if $$i = y$$, else $$0$$. So $$\nabla_p L$$ is a sparse vector: zero everywhere except $$-\frac{1}{p_y}$$ at position $$y$$.
 
-**Step 2: Chain through the softmax Jacobian.** Using \(\frac{\partial p_i}{\partial z_j} = p_i(\delta_{ij} - p_j)\) from above:
+**Step 2: Chain through the softmax Jacobian.** Using $$\frac{\partial p_i}{\partial z_j} = p_i(\delta_{ij} - p_j)$$ from above:
 
 $$\frac{\partial L}{\partial z_j} = \sum_i \frac{\partial L}{\partial p_i} \cdot \frac{\partial p_i}{\partial z_j}$$
 
-Since \(\frac{\partial L}{\partial p_i}\) is nonzero only at \(i = y\), the sum collapses to a single term:
+Since $$\frac{\partial L}{\partial p_i}$$ is nonzero only at $$i = y$$, the sum collapses to a single term:
 
 $$\frac{\partial L}{\partial z_j} = \left(-\frac{1}{p_y}\right) \cdot \frac{\partial p_y}{\partial z_j} = -\frac{1}{p_y} \cdot p_y(\delta_{yj} - p_j)$$
 
-**Step 3: Simplify.** The \(p_y\) cancels:
+**Step 3: Simplify.** The $$p_y$$ cancels:
 
 $$\frac{\partial L}{\partial z_j} = -(\delta_{yj} - p_j) = p_j - \delta_{yj}$$
 
@@ -501,23 +501,23 @@ In vector form:
 
 $$\boxed{\nabla_z L = p - \text{onehot}(y) = \text{softmax}(z) - \text{onehot}(y)}$$
 
-where \(p = \text{softmax}(z) \in \mathbb{R}^K\) and \(\text{onehot}(y) \in \mathbb{R}^K\) is a vector of zeros with a 1 at index \(y\): \([\text{onehot}(y)]_j = \delta_{yj}\). Both are \(K\)-dimensional (one entry per class), so the gradient \(\nabla_z L \in \mathbb{R}^K\) has the same shape as the input logits \(z\).
+where $$p = \text{softmax}(z) \in \mathbb{R}^K$$ and $$\text{onehot}(y) \in \mathbb{R}^K$$ is a vector of zeros with a 1 at index $$y$$: $$[\text{onehot}(y)]_j = \delta_{yj}$$. Both are $$K$$-dimensional (one entry per class), so the gradient $$\nabla_z L \in \mathbb{R}^K$$ has the same shape as the input logits $$z$$.
 
 #### Why this matters
-- **No Jacobian matrix needed**: The full \(K \times K\) Jacobian \(\text{diag}(p) - pp^T\) never needs to be materialized. The sparsity of \(\nabla_p L\) (only one nonzero entry) collapses the matrix-vector product to a single row.
-- **Numerically stable**: Computing \(p - \text{onehot}(y)\) involves no division by small probabilities and no log of near-zero values (the log happens in the forward pass via `log_softmax`).
-- **Intuitive**: The gradient at each logit is the model's predicted probability minus the truth. If \(p_y = 0.9\) for the correct class, the gradient there is \(0.9 - 1 = -0.1\) (small push up). If \(p_j = 0.05\) for a wrong class, the gradient is \(0.05 - 0 = 0.05\) (small push down).
+- **No Jacobian matrix needed**: The full $$K \times K$$ Jacobian $$\text{diag}(p) - pp^T$$ never needs to be materialized. The sparsity of $$\nabla_p L$$ (only one nonzero entry) collapses the matrix-vector product to a single row.
+- **Numerically stable**: Computing $$p - \text{onehot}(y)$$ involves no division by small probabilities and no log of near-zero values (the log happens in the forward pass via `log_softmax`).
+- **Intuitive**: The gradient at each logit is the model's predicted probability minus the truth. If $$p_y = 0.9$$ for the correct class, the gradient there is $$0.9 - 1 = -0.1$$ (small push up). If $$p_j = 0.05$$ for a wrong class, the gradient is $$0.05 - 0 = 0.05$$ (small push down).
 
 #### Batched form
-For a batch of \(N\) samples with logits \(Z \in \mathbb{R}^{N \times K}\) and labels \(y \in \mathbb{Z}^N\):
+For a batch of $$N$$ samples with logits $$Z \in \mathbb{R}^{N \times K}$$ and labels $$y \in \mathbb{Z}^N$$:
 
 $$\nabla_Z L = \frac{1}{N}(P - Y_{\text{onehot}})$$
 
-where \(P = \text{softmax}(Z) \in \mathbb{R}^{N \times K}\), \(Y_{\text{onehot}} \in \mathbb{R}^{N \times K}\) has a 1 at column \(y_n\) in each row \(n\) (and 0 elsewhere), and the \(\frac{1}{N}\) comes from mean reduction over the batch.
+where $$P = \text{softmax}(Z) \in \mathbb{R}^{N \times K}$$, $$Y_{\text{onehot}} \in \mathbb{R}^{N \times K}$$ has a 1 at column $$y_n$$ in each row $$n$$ (and 0 elsewhere), and the $$\frac{1}{N}$$ comes from mean reduction over the batch.
 
 ### Pitfalls
-- **Never used alone in practice**: Softmax + cross-entropy is always fused into a single `log_softmax + NLLLoss` operation, because the fused gradient simplifies to \(\nabla_z L = p - \text{onehot}(y)\) (derived above), which is simpler, faster, and numerically stable. See ML Coding#2. Numerical stability intuition.
-- **Temperature scaling**: Dividing logits by temperature \(\tau\) before softmax controls sharpness: \(\tau < 1\) sharpens (more confident), \(\tau > 1\) flattens (more uniform). Used in knowledge distillation and language model sampling.
+- **Never used alone in practice**: Softmax + cross-entropy is always fused into a single `log_softmax + NLLLoss` operation, because the fused gradient simplifies to $$\nabla_z L = p - \text{onehot}(y)$$ (derived above), which is simpler, faster, and numerically stable. See ML Coding#2. Numerical stability intuition.
+- **Temperature scaling**: Dividing logits by temperature $$\tau$$ before softmax controls sharpness: $$\tau < 1$$ sharpens (more confident), $$\tau > 1$$ flattens (more uniform). Used in knowledge distillation and language model sampling.
 
 ### Implementation
 This is exactly what `stable_cross_entropy` computes. The full implementation (also in ML Coding#2. Numerical stability intuition):
@@ -591,12 +591,12 @@ class SoftmaxCrossEntropyLoss:
 ```
 
 **Line-by-line connection to the math**:
-- `_stable_logsumexp(Z)`: computes \(\text{logsumexp}(z) = \max(z) + \log\sum_j e^{z_j - \max(z)}\). Input \((N, K)\), output \((N{,})\): the sum reduces the class dimension \(K\), leaving one scalar per sample.
-- `_stable_log_softmax(Z)`: computes \(\log p = z - \text{logsumexp}(z)\). Broadcasts \((N, K) - (N, 1) \to (N, K)\).
-- `logp[np.arange(N), y]`: **advanced indexing** that picks one element per row. `np.arange(N)` = row indices \([0, 1, \dots, N{-}1]\), `y` = column indices \([y_0, y_1, \dots, y_{N-1}]\). Result: \((N{,})\) vector of \(\log p_{y_n}\) values.
-- `.mean()`: reduces \((N{,}) \to\) scalar, giving \(L = -\frac{1}{N}\sum_n \log p_{y_n}\).
-- `np.exp(logp)`: recovers \(p = \text{softmax}(z) \in \mathbb{R}^{N \times K}\) from \(\log p\) (no second forward pass).
-- `grad[np.arange(N), y] -= 1.0`: same advanced indexing pattern. Subtracts 1 at position \((n, y_n)\) for each sample, giving \(p - \text{onehot}(y)\). Avoids constructing the full \((N, K)\) onehot matrix.
-- `grad /= N`: the \(\frac{1}{N}\) from mean reduction.
+- `_stable_logsumexp(Z)`: computes $$\text{logsumexp}(z) = \max(z) + \log\sum_j e^{z_j - \max(z)}$$. Input $$(N, K)$$, output $$(N{,})$$: the sum reduces the class dimension $$K$$, leaving one scalar per sample.
+- `_stable_log_softmax(Z)`: computes $$\log p = z - \text{logsumexp}(z)$$. Broadcasts $$(N, K) - (N, 1) \to (N, K)$$.
+- `logp[np.arange(N), y]`: **advanced indexing** that picks one element per row. `np.arange(N)` = row indices $$[0, 1, \dots, N{-}1]$$, `y` = column indices $$[y_0, y_1, \dots, y_{N-1}]$$. Result: $$(N{,})$$ vector of $$\log p_{y_n}$$ values.
+- `.mean()`: reduces $$(N{,}) \to$$ scalar, giving $$L = -\frac{1}{N}\sum_n \log p_{y_n}$$.
+- `np.exp(logp)`: recovers $$p = \text{softmax}(z) \in \mathbb{R}^{N \times K}$$ from $$\log p$$ (no second forward pass).
+- `grad[np.arange(N), y] -= 1.0`: same advanced indexing pattern. Subtracts 1 at position $$(n, y_n)$$ for each sample, giving $$p - \text{onehot}(y)$$. Avoids constructing the full $$(N, K)$$ onehot matrix.
+- `grad /= N`: the $$\frac{1}{N}$$ from mean reduction.
 
-**Note**: Unlike the activation layers, `SoftmaxCrossEntropyLoss.backward()` takes no incoming gradient `dL` argument: it is the terminal node of the computation graph, so \(\frac{\partial L}{\partial L} = 1\) is implicit. It also takes `y` (labels) in `forward()` alongside the logits.
+**Note**: Unlike the activation layers, `SoftmaxCrossEntropyLoss.backward()` takes no incoming gradient `dL` argument: it is the terminal node of the computation graph, so $$\frac{\partial L}{\partial L} = 1$$ is implicit. It also takes `y` (labels) in `forward()` alongside the logits.
