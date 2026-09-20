@@ -103,7 +103,7 @@ $$
 
 where $\pi_{\text{ref}}$ is the SFT checkpoint for that round. The KL term penalizes the policy for deviating too far from the reference, acting as a "safety leash" against reward hacking. However, this only works when $\pi_{\text{ref}}$ itself is clean.
 
-**How KL is computed (per-token):** KL divergence is defined as $D_{KL}(P \| Q) = \mathbb{E}_{x \sim P}[\log \frac{P(x)}{Q(x)}]$. The $\pi_{ref}$ in the denominator is not importance sampling: it's the definition of KL: "how much more likely is each token under $\pi_\theta$ than under $\pi_{ref}$?" It's "on-policy" because the expectation samples from $\pi_\theta$ (the first argument of KL), so no importance weights are needed. The true KL:
+**How KL is computed (per-token):** KL divergence is defined as $D_{KL}(P \Vert Q) = \mathbb{E}_{x \sim P}[\log \frac{P(x)}{Q(x)}]$. The $\pi_{ref}$ in the denominator is not importance sampling: it's the definition of KL: "how much more likely is each token under $\pi_\theta$ than under $\pi_{ref}$?" It's "on-policy" because the expectation samples from $\pi_\theta$ (the first argument of KL), so no importance weights are needed. The true KL:
 
 $$
 D_{KL}(\pi_\theta \| \pi_{ref}) = \mathbb{E}_{y \sim \pi_\theta}\!\left[\sum_{t=1}^{T} \log \frac{\pi_\theta(a_t \mid x, a_{<t})}{\pi_{ref}(a_t \mid x, a_{<t})}\right]
