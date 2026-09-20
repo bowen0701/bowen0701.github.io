@@ -61,9 +61,9 @@ CA visualization:
   * Sites *P1*, *P2* and *P3* (to lesser degrees) are associated with type *A*
 - **Measure of retained information:**
   * **Inertia:** amount of retained information with
-    - 1st dimension: $\lambda^2_1 = 0.28\ (55\%)$
-    - 2nd dimension: $\lambda^2_2 = 0.17\ (28\%)$
-  * The two dimensions account for $55\% + 28\% = 88\%$ of the total inertia
+    - 1st dimension: \(\lambda^2_1 = 0.28\ (55\%)\)
+    - 2nd dimension: \(\lambda^2_2 = 0.17\ (28\%)\)
+  * The two dimensions account for \(55\% + 28\% = 88\%\) of the total inertia
   * The representation fits the data well
 
 ## Mathematical Foundation
@@ -83,11 +83,11 @@ x_{I1} & \cdots & x_{IJ}
 \end{bmatrix}
 $$
 
-The rows and columns of $X$ correspond to different **categories (groups)** of different **characteristics.**
+The rows and columns of \(X\) correspond to different **categories (groups)** of different **characteristics.**
 
 ### Correspondence Matrix and Profiles
 
-**Correspondence matrix:** divide $x_{ij}$ by total count $n = \textstyle \sum_{i=1}^I \sum_{j=1}^J x_{ij}$:
+**Correspondence matrix:** divide \(x_{ij}\) by total count \(n = \textstyle \sum_{i=1}^I \sum_{j=1}^J x_{ij}\):
 
 $$
 p_{ij} = \frac{1}{n} x_{ij}, \quad \underset{I \times J}P = \frac{1}{n} X
@@ -115,14 +115,14 @@ $$
 
 ### Weighted Least Squares Formulation
 
-CA finds a reduced rank-$K$ approximation $\widehat{P} = \{\hat{p}_{ij}\}$ minimizing:
+CA finds a reduced rank-\(K\) approximation \(\widehat{P} = \{\hat{p}_{ij}\}\) minimizing:
 
 $$
 \sum_{i=1}^I \sum_{j=1}^J \frac{\left( p_{ij} - \widehat{p}_{ij} \right)^2}{r_i c_j}
 = \text{tr} \left[ \left( D_r^{-1/2} (P - \widehat{P}) D_c^{-1/2} \right) \left( D_r^{-1/2} (P - \widehat{P}) D_c^{-1/2} \right)^T \right]
 $$
 
-**Result from (Johnson & Wichern, 2002, p. 72):** The term $r c^T$ is common to the approximation $\widehat{P}$ whatever the correspondence matrix $P$. Thus it is equivalent to minimize:
+**Result from (Johnson & Wichern, 2002, p. 72):** The term \(r c^T\) is common to the approximation \(\widehat{P}\) whatever the correspondence matrix \(P\). Thus it is equivalent to minimize:
 
 $$
 \text{tr} \left[ \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right) \left( D_r^{-1/2} (P - r c^T - \widehat{P}) D_c^{-1/2} \right)^T \right]
@@ -130,20 +130,20 @@ $$
 
 ### Generalized SVD
 
-Compute the SVD of $D_r^{-1/2} (P - r c^T) D_c^{-1/2}$:
+Compute the SVD of \(D_r^{-1/2} (P - r c^T) D_c^{-1/2}\):
 
 $$
 D_r^{-1/2} (P - r c^T) D_c^{-1/2} = U \Sigma V^T
 $$
 
-where $U$ and $V$ are orthogonal matrices with $U^T U = V^T V = I$, and $\Sigma$ is a rank-$K$ diagonal matrix. Thus:
+where \(U\) and \(V\) are orthogonal matrices with \(U^T U = V^T V = I\), and \(\Sigma\) is a rank-\(K\) diagonal matrix. Thus:
 
 $$
 P - r c^T = D_r^{1/2} \left( U \Sigma V^T \right) D_c^{1/2}
           = A \Sigma B^T
 $$
 
-where $A = D_r^{1/2} U$ and $B = D_c^{1/2} V$. This decomposition is called the **generalized SVD:**
+where \(A = D_r^{1/2} U\) and \(B = D_c^{1/2} V\). This decomposition is called the **generalized SVD:**
 
 $$
 P - r c^T = A \Sigma B^T, \quad \text{with } A^T D_r^{-1} A = B^T D_c^{-1} B = I
@@ -194,13 +194,13 @@ $$
 
 Hence, we can obtain coordinates of the row and column profiles:
 
-**Principal coordinates of rows:** the coordinates for $(R - \mathbf{1}_I c^T)$ w.r.t. the axes of $b_1,\ldots,b_J$ are given by the columns of
+**Principal coordinates of rows:** the coordinates for \((R - \mathbf{1}_I c^T)\) w.r.t. the axes of \(b_1,\ldots,b_J\) are given by the columns of
 
 $$
 F = D_r^{-1/2} U \Sigma
 $$
 
-**Principal coordinates of columns:** the coordinates for $(C - r\mathbf{1}_J^T)^T$ w.r.t. the axes of $a_1,\ldots,a_I$ are given by the columns of
+**Principal coordinates of columns:** the coordinates for \((C - r\mathbf{1}_J^T)^T\) w.r.t. the axes of \(a_1,\ldots,a_I\) are given by the columns of
 
 $$
 G = D_c^{-1/2} V \Sigma
@@ -230,7 +230,7 @@ $$
 
 ### Inertia
 
-Total variance of the correspondence matrix $P$, resembling a chi-square statistic:
+Total variance of the correspondence matrix \(P\), resembling a chi-square statistic:
 
 $$
 \text{Inertia} = \sum_{i=1}^I \sum_{j=1}^J \frac{\left( p_{ij} - r_i c_j \right)^2}{r_i c_j}
@@ -238,7 +238,7 @@ $$
 $$
 
 **Evaluation of 2D graphical display:**
-- **Inertia associated with dimension $k$, for $k = 1,2$:** $\lambda_k^2$.
+- **Inertia associated with dimension \(k\), for \(k = 1,2\):** \(\lambda_k^2\).
 - **Proportion of total inertia:** explained total variance; the larger, the better.
 
 $$
@@ -247,19 +247,19 @@ $$
 
 ### Visualization Maps
 
-- **(1) Symmetric map:** $(F, G)$, rows and columns in principal coordinates.
-- **(2) Asymmetric map with row principal:** $(F, \Gamma)$, rows (of more interest) in principal and columns in standard coordinates.
-- **(3) Asymmetric map with column principal:** $(\Phi, G)$, rows in standard and columns (of more interest) in principal coordinates.
+- **(1) Symmetric map:** \((F, G)\), rows and columns in principal coordinates.
+- **(2) Asymmetric map with row principal:** \((F, \Gamma)\), rows (of more interest) in principal and columns in standard coordinates.
+- **(3) Asymmetric map with column principal:** \((\Phi, G)\), rows in standard and columns (of more interest) in principal coordinates.
 
 For interpretation details, see p. 66-72 (Greenacre 2007).
 
 **Symmetric map (1):**
-- Since principal coordinates $(F, G)$ are scaled similarly, **joint display of two separate maps** finds some justification.
+- Since principal coordinates \((F, G)\) are scaled similarly, **joint display of two separate maps** finds some justification.
 - Thus, **row-to-row** and **column-to-column distance interpretations** are meaningful.
 - However, there is a **danger in row-to-column distance interpretation:** not possible to deduce from the closeness of a row and column point that the corresponding row and column necessarily have a high association, since the row space and column space are different.
 
 **Asymmetric maps (2) and (3):**
-- The **row and column points lie in the same space** (since $F$ is with respect to basis $B$, and $\Gamma B^T = I$), thus not only **row-to-row and column-to-column distance interpretations**, but also **row-to-column distance interpretation** are meaningful.
+- The **row and column points lie in the same space** (since \(F\) is with respect to basis \(B\), and \(\Gamma B^T = I\)), thus not only **row-to-row and column-to-column distance interpretations**, but also **row-to-column distance interpretation** are meaningful.
 - Closeness of a row and column point indicates a high association; row-to-column distances can be calculated **one column at a time** (Greenacre 2010).
 
 **Interpretations:**
@@ -336,7 +336,7 @@ $$
 $$
 
 ## Analogy
-CA is PCA applied to a normalized residual table: instead of centering by subtracting the mean, it centers by subtracting the independence model $r c^T$, and instead of unit weighting it uses $D_r^{-1/2}$ and $D_c^{-1/2}$ to weight by marginal frequency — making profiles, not counts, the object of study.
+CA is PCA applied to a normalized residual table: instead of centering by subtracting the mean, it centers by subtracting the independence model \(r c^T\), and instead of unit weighting it uses \(D_r^{-1/2}\) and \(D_c^{-1/2}\) to weight by marginal frequency — making profiles, not counts, the object of study.
 
 ## Component of
 - Dimensionality Reduction #todo
@@ -344,7 +344,7 @@ CA is PCA applied to a normalized residual table: instead of centering by subtra
 
 ## Insights
 - CA operates on profiles (relative frequencies), making it invariant to overall count magnitude — this is why it correctly identifies Aloz as stylistically similar to Zola.
-- The generalized SVD of $D_r^{-1/2}(P - rc^T)D_c^{-1/2}$ is the core computation; all coordinates follow from $U$, $V$, $\Sigma$.
+- The generalized SVD of \(D_r^{-1/2}(P - rc^T)D_c^{-1/2}\) is the core computation; all coordinates follow from \(U\), \(V\), \(\Sigma\).
 - Inertia is a chi-square-like statistic: it measures total departure from independence.
 - For interpretation, prefer asymmetric maps when row-to-column distances matter; use symmetric maps when within-group distances are the focus.
 
