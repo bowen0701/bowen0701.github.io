@@ -44,7 +44,7 @@ nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, bias=True
 
 ## Output Size Formula
 
-For a square input of size \(H\):
+For a square input of size $$H$$:
 
 ```
 H_out = floor((H_in + 2*padding - kernel_size) / stride) + 1
