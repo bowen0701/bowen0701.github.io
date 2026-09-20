@@ -19,6 +19,8 @@ title: LLM Post-Training Iterative SFT, RLHF Branching
 </details>
 
 
+*[Updated on 2026-09-20: Add per-token KL divergence computation with derivation, pseudocode, and AV (MAGNIFIED) connection.]*
+
 ## Core Intuition
 
 In multi-round LLM post-training, the standard pattern is:
@@ -73,18 +75,20 @@ The "branch from SFT" rule is really about *uncurated, off-policy* SFT data. It 
 
 ### Reward Hacking: Deep Dive
 
-$\text{RM}_i$ is a *learned proxy* for human preferences, trained on finite data. PPO optimizes against this proxy, not the true objective. Goodhart's law: the policy finds regions where RM score is high but humans wouldn't actually prefer the output. The gap between proxy reward and true quality *is* reward hacking. Not malicious: just gradient descent on a flawed objective.
+$\text{RM}_i$ is a *learned proxy* for human preferences, trained on finite data. PPO optimizes against this proxy, not the true objective. 
+- **Goodhart's law:** the policy finds regions where RM score is high but humans wouldn't actually prefer the output. 
+- **Reward hacking**: The gap between proxy reward and true quality *is* reward hacking. Not malicious: just gradient descent on a flawed objective.
 
 **Common patterns:**
 
-| Pattern                    | Mechanism                                                                                   | Reference |
-| -------------------------- | ------------------------------------------------------------------------------------------- | --------- |
-| **Length bias**            | Annotators mildly prefer longer answers, RM learns "longer = better", PPO inflates length   | (Stiennon et al. 2020), (Singhal et al. 2023) |
-| **Sycophancy**             | Annotators rate agreeable answers higher, policy mirrors user's stated view even when wrong | (Perez et al. 2022), (Sharma et al. 2023) |
-| **Formatting tics**        | Markdown/headers/lists correlate with "looks organized", over-produced                      |           |
-| **Refusal miscalibration** | Refusal proxy over-fires on benign requests, under-fires on rephrased unsafe ones           |           |
-| **Confidence inflation**   | Hedged answers rated lower, unwarranted certainty, worse calibration, more hallucination    |           |
-| **RM-specific exploits**   | Any quirk in $\text{RM}_i$ (token-position weighting, favored phrases) gets found by PPO    | (Gao et al. 2022)      |
+| Pattern                    | Mechanism                                                                                   | Reference                                     |
+| -------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| **Length bias**            | Annotators mildly prefer longer answers, RM learns "longer = better", PPO inflates length   | Stiennon et al. 2020, Singhal et al. 2023 |
+| **Sycophancy**             | Annotators rate agreeable answers higher, policy mirrors user's stated view even when wrong | Perez et al. 2022, Sharma et al. 2023     |
+| **Formatting tics**        | Markdown/headers/lists correlate with "looks organized", over-produced                      |                                           |
+| **Refusal miscalibration** | Refusal proxy over-fires on benign requests, under-fires on rephrased unsafe ones           |                                           |
+| **Confidence inflation**   | Hedged answers rated lower, unwarranted certainty, worse calibration, more hallucination    |                                           |
+| **RM-specific exploits**   | Any quirk in $\text{RM}_i$ (token-position weighting, favored phrases) gets found by PPO    | Gao et al. 2022                           |
 
 **Key empirical result** (Gao et al. 2022): as you optimize harder against the RM, *proxy reward keeps climbing while gold-standard reward eventually drops*. The gap is the hacking. Bigger RMs and more preference data push the turnover point out, but don't eliminate it.
 
@@ -99,13 +103,45 @@ $$
 
 where $\pi_{\text{ref}}$ is the SFT checkpoint for that round. The KL term penalizes the policy for deviating too far from the reference, acting as a "safety leash" against reward hacking. However, this only works when $\pi_{\text{ref}}$ itself is clean.
 
+**How KL is computed (per-token):** KL divergence is defined as $D_{KL}(P \| Q) = \mathbb{E}_{x \sim P}[\log \frac{P(x)}{Q(x)}]$. The $\pi_{ref}$ in the denominator is not importance sampling: it's the definition of KL: "how much more likely is each token under $\pi_\theta$ than under $\pi_{ref}$?" It's "on-policy" because the expectation samples from $\pi_\theta$ (the first argument of KL), so no importance weights are needed. The true KL:
+
+$$
+D_{KL}(\pi_\theta \| \pi_{ref}) = \mathbb{E}_{y \sim \pi_\theta}\!\left[\sum_{t=1}^{T} \log \frac{\pi_\theta(a_t \mid x, a_{<t})}{\pi_{ref}(a_t \mid x, a_{<t})}\right]
+$$
+
+For a single sampled sequence $y = (a_1, \ldots, a_T)$ from $\pi_\theta$, the **unbiased Monte Carlo estimate** is:
+
+$$
+\hat{D}_{KL} = \sum_{t=1}^{T} \left[\log \pi_\theta(a_t \mid x, a_{<t}) - \log \pi_{ref}(a_t \mid x, a_{<t})\right]
+$$
+
+PPO averages over the batch of rollouts to reduce variance. Critical: tokens must be sampled from $\pi_\theta$ **(on-policy)**. If from a dataset or $\pi_{ref}$, you'd need **importance weights**. Implementation:
+
+```python
+# Forward pass through BOTH models on the same sampled tokens
+logits_policy = policy.forward(prompt + tokens)      # (T, vocab)
+logits_ref    = ref_model.forward(prompt + tokens)    # (T, vocab) frozen
+
+# Per-token KL = difference of log-probs of the sampled token
+log_p_policy = log_softmax(logits_policy).gather(tokens)  # (T,)
+log_p_ref    = log_softmax(logits_ref).gather(tokens)      # (T,)
+kl_per_token = log_p_policy - log_p_ref                    # (T,)
+
+# Penalty in reward
+reward_with_kl = reward - beta * kl_per_token.sum()
+```
+
+- $\pi_{ref}$ is **frozen**: doubles GPU memory (must hold both models)
+- **Per-token** penalty, not per-sequence: prevents drift at any position
+- For AV (MAGNIFIED): tokens = waypoints, $\pi_{ref}$ = frozen IL-pretrained model
+
 **Monotonic drift across rounds (when branching from RL):**
 - Round $i$: $\text{RM}_i$'s biases get hacked by PPO → $\text{RL}_i$ carries bias set A
 - Round $i+1$: $\pi_{\text{ref}}$ inherits bias A (KL protects it), $\text{RM}_{i+1}$ adds new bias B on top
 - Round $i+2$: $\pi_{\text{ref}}$ inherits bias A+B (KL protects both), $\text{RM}_{i+2}$ adds bias C
 - ...biases only accumulate, never decay
 
-The KL penalty inverts its purpose: correcting inherited biases *costs* KL (gets penalized), while preserving them *saves* KL (gets rewarded). This is why branching SFT from the previous SFT keeps $\pi_{\text{ref}}$ clean so KL can function as intended.
+The **KL penalty inverts its purpose: correcting inherited biases *costs* KL (gets penalized), while preserving them *saves* KL (gets rewarded)**. This is why branching SFT from the previous SFT keeps $\pi_{\text{ref}}$ clean so KL can function as intended.
 
 **Mitigations within a round:**
 - **Length-controlled RMs:** Regress out length as a confounding variable before scoring, so PPO cannot exploit "longer = better."
